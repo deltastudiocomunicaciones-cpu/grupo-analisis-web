@@ -78,10 +78,7 @@ export default function MicrositeHero({
           </motion.div>
         </div>
 
-       {imageSrc === "sadi-isotype" ? (
-  <SadiIsotype />
-) : (
-  imageSrc && (
+    {imageSrc && imageSrc !== "sadi-isotype" && (   
     <motion.div
       initial={{ opacity: 0, scale: 0.9, rotate: -8 }}
       animate={{ opacity: 1, scale: 1, rotate: 0 }}
