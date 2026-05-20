@@ -46,16 +46,14 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
   opacity: 0.035;
-  z-index: 1;
-
   background-image:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.08) 1px, transparent 1px),
-    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.06) 1px, transparent 1px),
-    radial-gradient(circle at 40% 80%, rgba(255,255,255,0.05) 1px, transparent 1px);
-
-  background-size: 180px 180px;
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, rgba(255,255,255,0.12) 0 1px, transparent 1px);
+  background-size: 4px 4px, 6px 6px;
+  mix-blend-mode: overlay;
 }
 html,
 body {

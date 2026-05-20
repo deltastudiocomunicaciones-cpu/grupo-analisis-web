@@ -78,44 +78,44 @@ export default function MicrositeHero({
           </motion.div>
         </div>
 
-    {imageSrc && imageSrc !== "sadi-isotype" && (   
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9, rotate: -8 }}
-      animate={{ opacity: 1, scale: 1, rotate: 0 }}
-      transition={{
-        duration: 1.6,
-        ease: [0.16, 1, 0.3, 1],
-        delay: 0.4,
-      }}
-      className="relative hidden lg:flex items-center justify-center min-h-[520px]"
-    >
-      <div
-        className="absolute w-[520px] h-[520px] blur-[150px] rounded-full"
-        style={{
-          backgroundColor: `${ambientColor}26`,
-        }}
-      />
+        {imageSrc && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9, rotate: -8 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{
+              duration: 1.6,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.4,
+            }}
+            className="relative hidden lg:flex items-center justify-center min-h-[520px]"
+          >
+            <div
+              className="absolute w-[520px] h-[520px] blur-[150px] rounded-full"
+              style={{
+                backgroundColor: `${ambientColor}26`,
+              }}
+            />
 
-      <motion.div
-        animate={{
-          y: [0, -12, 0],
-          rotate: [0, 2, 0],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="relative"
-      >
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-[800px] object-contain drop-shadow-[0_20px_80px_rgba(255,120,0,0.35)]"
-        />
-      </motion.div>
-    </motion.div>
-)}
+            <motion.div
+              animate={{
+                y: [0, -12, 0],
+                rotate: [0, 2, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="relative"
+            >
+              <img
+                src={imageSrc}
+                alt={imageAlt}
+                className="w-[800px] object-contain drop-shadow-[0_20px_80px_rgba(255,120,0,0.35)]"
+              />
+            </motion.div>
+          </motion.div>
+        )}
       </div>
     </section>
   );

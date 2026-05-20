@@ -1,50 +1,50 @@
 "use client";
 
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
-
-import { useEffect } from "react";
+import { motion, useMotionValue, useSpring } from "framer-motion";
+import { useEffect, useState } from "react";
 
 export default function CustomCursor() {
+  const [visible, setVisible] = useState(false);
 
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
-  const smoothX = useSpring(mouseX, {
-    stiffness: 500,
-    damping: 28,
-  });
-
-  const smoothY = useSpring(mouseY, {
-    stiffness: 500,
-    damping: 28,
-  });
+  const smoothX = useSpring(x, { stiffness: 260, damping: 28 });
+  const smoothY = useSpring(y, { stiffness: 260, damping: 28 });
 
   useEffect(() => {
-
-    const moveCursor = (e: MouseEvent) => {
-      mouseX.set(e.clientX - 10);
-      mouseY.set(e.clientY - 10);
+    const move = (e: MouseEvent) => {
+      setVisible(true);
+      x.set(e.clientX - 12);
+      y.set(e.clientY - 12);
     };
 
-    window.addEventListener("mousemove", moveCursor);
-
-    return () => {
-      window.removeEventListener("mousemove", moveCursor);
-    };
-
-  }, [mouseX, mouseY]);
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, [x, y]);
 
   return (
     <motion.div
-      className="fixed top-0 left-0 w-5 h-5 rounded-full bg-[#c96a1b] pointer-events-none z-[9999] mix-blend-difference"
       style={{
         x: smoothX,
         y: smoothY,
       }}
+      className={`
+        pointer-events-none
+        fixed
+        top-0
+        left-0
+        z-[100000]
+        h-6
+        w-6
+        rounded-full
+        border
+        border-[#c96a1b]/70
+        mix-blend-difference
+        transition-opacity
+        duration-300
+        ${visible ? "opacity-100" : "opacity-0"}
+      `}
     />
   );
 }

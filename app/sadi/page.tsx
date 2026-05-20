@@ -13,7 +13,7 @@ export default function SadiPage() {
   description="SADI es el software contable inteligente del ecosistema Grupo A&C, diseñado para automatizar procesos, estructurar información y elevar el rol del contador hacia auditoría, análisis y estrategia."
   button="Solicitar Demo"
   ambientColor="#d97706"
-  imageSrc="sadi-isotype"
+  imageSrc="/brands/sadi-isotype.png"
   imageAlt="Isotipo SADI ERP"
 />
 

@@ -1,11 +1,24 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+
 import MagneticButton from "@/components/ui/MagneticButton";
+
+const VIDEOS = [
+  "/videos/chess_final.mp4",
+  "/videos/chess_final1.mp4",
+  "/videos/chess_final2.mp4",
+];
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [videoIndex, setVideoIndex] = useState(0);
+
   const { scrollY } = useScroll();
 
   const y = useTransform(scrollY, [0, 1000], [0, 250]);
@@ -14,31 +27,33 @@ export default function HeroSection() {
 
   useEffect(() => {
     const video = videoRef.current;
+
     if (!video) return;
+
     video.muted = true;
+    video.load();
     video.play().catch(() => {});
-  }, []);
+  }, [videoIndex]);
 
   return (
     <section className="relative h-screen overflow-hidden bg-black">
       <motion.video
+        key={videoIndex}
         ref={videoRef}
-        style={{ y, opacity }}
+        style={{ y, opacity, scale }}
         autoPlay
         muted
-        loop
         playsInline
+        onEnded={() => {
+          setVideoIndex((prev) => (prev + 1) % VIDEOS.length);
+        }}
         className="absolute inset-0 w-full h-full object-cover opacity-40 scale-105"
       >
-        <source src="/videos/chess_final.mp4" type="video/mp4" />
+        <source src={VIDEOS[videoIndex]} type="video/mp4" />
       </motion.video>
 
-      
-
-      {/* OVERLAY */}
       <div className="absolute inset-0 bg-black/45" />
 
-      {/* GRID */}
       <div
         className="absolute inset-0 opacity-[0.06]"
         style={{
@@ -50,12 +65,10 @@ export default function HeroSection() {
         }}
       />
 
-      {/* AMBIENT LIGHT */}
       <div className="absolute top-1/2 left-1/2 w-[1000px] h-[1000px] -translate-x-1/2 -translate-y-1/2 bg-[#c96a1b]/10 blur-[180px]" />
 
-      {/* LIGHT EFFECT */}
-     <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/85" />
-      {/* FLOATING ORBS */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/85" />
+
       <motion.div
         animate={{ y: [0, -30, 0] }}
         transition={{
@@ -76,7 +89,6 @@ export default function HeroSection() {
         className="absolute bottom-[18%] left-[10%] w-56 h-56 rounded-full bg-white/5 blur-[100px]"
       />
 
-      {/* CONTENT */}
       <div className="relative z-10 h-full flex items-center">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <motion.div
@@ -104,7 +116,7 @@ export default function HeroSection() {
                 delay: 0.4,
                 duration: 1.2,
               }}
-              className="text-white text-4xl  sm:text-5xl md:text-7xl lg:text-[6rem] font-semibold tracking-[-0.04em] leading-[0.92] mb-8 md:mb-10 max-w-[95%]"
+              className="text-white text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] font-semibold tracking-[-0.04em] leading-[0.92] mb-8 md:mb-10 max-w-[95%]"
             >
               Inteligencia
               <br />
@@ -126,9 +138,9 @@ export default function HeroSection() {
               }}
               className="text-white/65 text-base md:text-[1.15rem] max-w-2xl leading-[1.9] mb-12 md:mb-14 font-light"
             >
-              Grupo Análisis & Consultorías desarrolla estructuras
-              tributarias, financieras y estratégicas para organizaciones
-              que entienden el valor de anticiparse.
+              Grupo Análisis & Consultorías desarrolla estructuras tributarias,
+              financieras y estratégicas para organizaciones que entienden el
+              valor de anticiparse.
             </motion.p>
 
             <motion.div
@@ -140,7 +152,6 @@ export default function HeroSection() {
               }}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6"
             >
-              
               <MagneticButton>
                 Agendar Consultoría
               </MagneticButton>
