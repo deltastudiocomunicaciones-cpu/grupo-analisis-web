@@ -390,10 +390,11 @@ md:group-hover:opacity-100
         style={{
   transform: `translate(${unitX}px, ${unitY}px)`,
 }}
-        className="
+       className="
   absolute
   z-50
-  flex
+  hidden
+  md:flex
   h-14
   w-14
   items-center
@@ -404,10 +405,10 @@ md:group-hover:opacity-100
   bg-black/70
   shadow-[0_0_35px_rgba(255,255,255,0.12)]
   backdrop-blur-xl
-  opacity-100 md:opacity-0
-transition-all
-duration-500
-md:group-hover:opacity-100
+  opacity-0
+  transition-all
+  duration-500
+  group-hover:opacity-100
   hover:scale-110
   hover:border-[#c96a1b]/60
   hover:shadow-[0_0_45px_rgba(201,106,27,0.28)]
