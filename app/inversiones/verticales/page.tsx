@@ -15,10 +15,10 @@ export default function VerticalesPage() {
   <img
     src="/fotos/sinapsis-empresarial.jpeg"
     alt="Sinapsis Empresarial Grupo A&C"
-    className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105"
+   className="absolute inset-0 h-full w-full object-cover object-center md:object-cover brightness-110 contrast-105"
   />
 
-  <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/45 to-black/80 md:bg-gradient-to-r md:from-black/75 md:via-black/35 md:to-transparent" />
 
   <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black" />
 </div>
@@ -28,18 +28,18 @@ export default function VerticalesPage() {
         <div className="absolute bottom-[-20%] right-[-10%] h-[800px] w-[800px] rounded-full bg-white/[0.03] blur-[160px]" />
       </div>
 
-      <section className="relative z-10 px-6 pt-44 pb-20">
+      <section className="relative z-10 px-5 sm:px-6 pt-36 md:pt-44 pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl">
           <Reveal>
             <p className="mb-8 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
               Inversiones · Sinapsis Empresarial
             </p>
 
-            <h1 className="max-w-6xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
+            <h1 className="max-w-6xl text-4xl sm:text-5xl font-semibold leading-[0.98] md:leading-[0.95] tracking-[-0.055em] md:tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
               Una red viva de empresas, activos y marcas conectadas.
             </h1>
 
-            <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-white/55">
+            <p className="mt-7 md:mt-10 max-w-3xl text-base md:text-lg font-light leading-[1.8] md:leading-[1.9] text-white/60 md:text-white/55">
               Grupo A&C funciona como el núcleo estratégico desde donde se
               conectan capital, tecnología, operación, deporte, salud,
               hospitalidad, real estate e impacto social.
