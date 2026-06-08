@@ -215,7 +215,7 @@ export default function InvestmentNetworkSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="relative h-[780px] overflow-hidden rounded-[48px] border border-white/10 bg-[#1a1a1a]/80 shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
+        <div className="relative h-[620px] md:h-[780px] overflow-hidden rounded-[32px] md:rounded-[48px] border border-white/10 bg-[#1a1a1a]/80 shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
           <svg className="pointer-events-none absolute inset-0 h-full w-full">
             {ecosystem.map((node, index) => (
               <motion.line
@@ -244,7 +244,7 @@ export default function InvestmentNetworkSection() {
             viewport={{ once: true }}
             className="absolute left-[50%] top-[50%] z-20 -translate-x-1/2 -translate-y-1/2"
           >
-            <div className="relative flex h-56 w-56 items-center justify-center rounded-full border border-[#c96a1b]/40 bg-black/55 backdrop-saturate-150 shadow-[0_0_120px_rgba(201,106,27,0.35)] backdrop-blur-2xl">
+            <div className="relative flex h-36 w-36 md:h-56 md:w-56 items-center justify-center rounded-full border border-[#c96a1b]/40 bg-black/55 backdrop-saturate-150 shadow-[0_0_120px_rgba(201,106,27,0.35)] backdrop-blur-2xl">
               <div className="absolute inset-[-45px] rounded-full bg-[#c96a1b]/20 blur-[70px]" />
 
               <motion.div
@@ -268,7 +268,7 @@ export default function InvestmentNetworkSection() {
       left-[1px]
       top-[-7.5px]
       z-10
-      h-[220px]
+      h-[130px] md:h-[220px]
       object-contain
       opacity-95
       drop-shadow-[0_10px_30px_rgba(255,255,255,0.08)]
@@ -328,7 +328,7 @@ export default function InvestmentNetworkSection() {
               >
                 <div className="absolute inset-[-12px] rounded-full bg-white/5 blur-[22px] transition-all duration-500 group-hover:bg-[#c96a1b]/20" />
 
-                <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-white/15 bg-black/70 backdrop-blur-xl transition-all duration-500 group-hover:border-[#c96a1b]/60 group-hover:shadow-[0_0_60px_rgba(201,106,27,0.28)]">
+                <div className="relative flex h-16 w-16 md:h-24 md:w-24 items-center justify-center rounded-full border border-white/15 bg-black/70 backdrop-blur-xl transition-all duration-500 group-hover:border-[#c96a1b]/60 group-hover:shadow-[0_0_60px_rgba(201,106,27,0.28)]">
                   <div
                     className="absolute inset-[-18px] rounded-full opacity-0 blur-[35px] transition-opacity duration-500 group-hover:opacity-100"
                     style={{
@@ -342,8 +342,10 @@ export default function InvestmentNetworkSection() {
   className="
   relative
   z-10
-  h-[150px]
-  w-[150px]
+  h-[90px]
+w-[90px]
+md:h-[150px]
+md:w-[150px]
   object-contain
   opacity-95
   drop-shadow-[0_6px_18px_rgba(255,255,255,0.08)]
