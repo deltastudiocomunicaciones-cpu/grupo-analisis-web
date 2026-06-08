@@ -131,7 +131,7 @@ export default function ContactoPage() {
     <div className="mt- h-px w-12 bg-[#c96a1b]/30" />
   </div>
 
-  <div className="flex-1">
+  <div className="flex-1 text-center md:text-left">
     <p className="mb-2 text-[10px] uppercase tracking-[0.32em] text-[#c96a1b]">
       Atención humana
     </p>
@@ -149,7 +149,7 @@ export default function ContactoPage() {
       href="https://wa.me/573126901475"
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-4 inline-flex rounded-full border border-[#c96a1b]/30 bg-[#c96a1b]/10 px-2 py-2 text-sm text-[#c96a1b] transition-all duration-500 hover:bg-[#c96a1b] hover:text-white"
+      className="mt-5 inline-flex w-full md:w-auto justify-center rounded-full border border-[#c96a1b]/30 bg-[#c96a1b]/10 px-5 py-3 text-sm text-[#c96a1b] transition-all duration-500 hover:bg-[#c96a1b] hover:text-white"
     >
       Escribir por WhatsApp →
     </a>
