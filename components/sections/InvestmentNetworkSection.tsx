@@ -360,10 +360,10 @@ md:w-[150px]
                <div
   className={`
     absolute
-    opacity-0
-    transition-opacity
-    duration-500
-    group-hover:opacity-100
+    opacity-100 md:opacity-0
+transition-opacity
+duration-500
+md:group-hover:opacity-100
     ${
       node.direction === "orbit"
         ? "left-1/2 top-1/2 h-0 w-0"
@@ -404,10 +404,10 @@ md:w-[150px]
   bg-black/70
   shadow-[0_0_35px_rgba(255,255,255,0.12)]
   backdrop-blur-xl
-  opacity-0
-  transition-all
-  duration-500
-  group-hover:opacity-100
+  opacity-100 md:opacity-0
+transition-all
+duration-500
+md:group-hover:opacity-100
   hover:scale-110
   hover:border-[#c96a1b]/60
   hover:shadow-[0_0_45px_rgba(201,106,27,0.28)]
