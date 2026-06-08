@@ -85,17 +85,17 @@ export default function ContactoPage() {
               <div className="grid gap-4 md:gap-5">
                 <input
                   placeholder="Nombre completo"
-                  className="w-full rounded-full bg-black/40 border border-white/15 px-5 md:px-4 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-[22px] md:rounded-full bg-black/40 border border-white/15 px-5 md:px-4 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
                   placeholder="Empresa"
-                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-[22px] md:rounded-full bg-black/40 border border-white/15 px-5 md:px-4 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
                   placeholder="Correo electrónico"
-                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-[22px] md:rounded-full bg-black/40 border border-white/15 px-5 md:px-4 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <textarea
@@ -114,7 +114,7 @@ export default function ContactoPage() {
   Una conversación puede cambiar el rumbo de una empresa.
 </p>
 
-<div className="mt-6 md:mt-8 flex flex-col md:flex-row min-h-0 md:min-h-[410px] items-center gap-5 md:gap-8 rounded-[28px] md:rounded-[32px] border border-white/15 bg-[#080808]/90 p-5 md:p-8 backdrop-blur-2xl shadow-[0_25px_90px_rgba(0,0,0,0.45)]">
+<div className="mt-6 md:mt-8 flex flex-col md:flex-row min-h-0 md:min-h-[410px] items-center gap-5 md:gap-8 rounded-[28px] md:rounded-[32px] border border-white/15 bg-[#080808]/90 p-5 sm:p-6 md:p-10 backdrop-blur-2xl shadow-[0_25px_90px_rgba(0,0,0,0.45)]">
   <div className="flex w-full md:w-[220px] flex-col items-center">
     <div className="h-[170px] w-[140px] md:h-[220px] md:w-[180px] overflow-hidden rounded-[22px] md:rounded-[24px] border border-white/10">
       <img
