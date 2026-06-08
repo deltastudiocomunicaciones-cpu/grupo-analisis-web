@@ -3,10 +3,22 @@
 import Link from "next/link";
 
 const ecosystem = [
-  "SADI ERP",
-  "Análisis & Consultorías",
-  "TRACO",
-  "Contadores en Colombia",
+  {
+    name: "SADI ERP",
+    href: "/sadi",
+  },
+  {
+    name: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+  },
+  {
+    name: "TRACO",
+    href: "/traco",
+  },
+  {
+    name: "CEC",
+    href: "/contadores-en-colombia",
+  },
 ];
 
 export default function Footer() {
@@ -53,14 +65,27 @@ export default function Footer() {
               <div className="flex flex-col gap-5">
 
                 {ecosystem.map((item) => (
-                  <Link
-                    key={item}
-                    href="/"
-                    className="text-white/70 hover:text-[#c96a1b] transition-colors duration-300"
-                  >
-                    {item}
-                  </Link>
-                ))}
+  <Link
+    key={item.name}
+    href={item.href}
+    className="
+group
+flex
+items-center
+gap-2
+text-white/70
+transition-all
+duration-300
+hover:text-[#c96a1b]
+"
+  >
+    <>
+  <span className="w-0 h-px bg-[#c96a1b] transition-all duration-300 group-hover:w-4" />
+  
+</>
+    {item.name}
+  </Link>
+))}
 
               </div>
 
@@ -78,18 +103,20 @@ export default function Footer() {
                 <p>Medellín, Colombia</p>
 
                 <a
-                  href="mailto:contacto@grupoac.com"
+                  href="mailto:grupoayc@gmail.com"
                   className="hover:text-[#c96a1b] transition-colors duration-300"
                 >
-                  contacto@grupoac.com
+                  grupoayc@gmail.com
                 </a>
 
                 <a
-                  href="#"
-                  className="hover:text-[#c96a1b] transition-colors duration-300"
-                >
-                  WhatsApp Business
-                </a>
+  href="https://wa.me/573126901475"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-[#c96a1b] transition-colors duration-300"
+>
+  WhatsApp Business
+</a>
 
               </div>
 
@@ -107,7 +134,7 @@ export default function Footer() {
           </p>
 
           <p className="text-white/25 text-sm uppercase tracking-[0.25em]">
-            Strategic Intelligence Ecosystem
+            SEMA BRAND INTELLIGENCE
           </p>
 
         </div>

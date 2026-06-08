@@ -8,9 +8,11 @@ interface MicrositeHeroProps {
   title: string;
   description: string;
   button: string;
+ buttonLink?: string; 
   ambientColor?: string;
   imageSrc?: string;
   imageAlt?: string;
+  backgroundImage?: string;
 }
 
 export default function MicrositeHero({
@@ -18,12 +20,27 @@ export default function MicrositeHero({
   title,
   description,
   button,
+  buttonLink = "#",
   ambientColor = "#c96a1b",
   imageSrc,
   imageAlt = "Brand visual",
+  backgroundImage,
 }: MicrositeHeroProps) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden px-6 pt-32 bg-black text-white">
+      {backgroundImage && (
+        <div className="absolute inset-0 overflow-hidden">
+          <img
+            src={backgroundImage}
+            alt=""
+            className="h-full w-full object-cover opacity-[0.20] scale-[1.04]"
+          />
+
+          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/70 to-black" />
+        </div>
+      )}
+
       <div
         className="absolute inset-0"
         style={{
@@ -72,9 +89,15 @@ export default function MicrositeHero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <PremiumButton variant="gold">
-              {button}
-            </PremiumButton>
+           <a
+  href={buttonLink}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <PremiumButton>
+    {button}
+  </PremiumButton>
+</a>
           </motion.div>
         </div>
 

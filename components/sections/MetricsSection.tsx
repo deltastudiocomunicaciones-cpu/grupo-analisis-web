@@ -5,11 +5,11 @@ import FadeIn from "@/components/ui/FadeIn";
 
 const metrics = [
   {
-    value: "+120",
+    value: "+1720",
     label: "Empresas acompañadas",
   },
   {
-    value: "+15",
+    value: "+20",
     label: "Años de experiencia estratégica",
   },
   {

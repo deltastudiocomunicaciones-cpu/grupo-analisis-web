@@ -1,3 +1,5 @@
+import StrategicDivider from "@/components/ui/StrategicDivider";
+import EcosystemSection from "@/components/sections/EcosystemSection";
 import MetricsSection from "@/components/sections/MetricsSection";
 import FinalCtaSection from "@/components/sections/FinalCtaSection";
 import CeoSection from "@/components/sections/CeoSection";
@@ -7,14 +9,15 @@ import Navbar from "@/components/layout/Navbar";
 import HeroSection from "@/components/hero/HeroSection";
 import LegacySection from "@/components/sections/LegacySection";
 import TransitionSection from "@/components/sections/TransitionSection";
-import EcosystemSection from "@/components/sections/EcosystemSection";
 import Footer from "@/components/layout/Footer";
 import CaseStudiesSection from "@/components/sections/CaseStudiesSection";
 
-export default function HomePage() {
+
+export default function InversionesPage() {
   return (
-    <main className="relative overflow-hidden bg-black">
+    <main className="bg-black text-white min-h-screen">
       <Navbar />
+
 
       <HeroSection />
 
@@ -26,8 +29,6 @@ export default function HomePage() {
 
       <EcosystemSection />
 
-      <IndustriesSection />
-
       <CeoSection />
 
       <IntelligenceSection />
@@ -35,8 +36,12 @@ export default function HomePage() {
       <MetricsSection />
 
       <CaseStudiesSection />
-      
+
       <FinalCtaSection />
+
+      <StrategicDivider
+  quote="La estrategia sin táctica es el camino más lento hacia la victoria."
+/>
 
       <Footer />
     </main>
