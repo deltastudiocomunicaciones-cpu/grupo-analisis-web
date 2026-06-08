@@ -81,11 +81,11 @@ export default function ContactoPage() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="rounded-[36px] border border-white/15 bg-[#050505]/88 p-8 md:p-10 backdrop-blur-2xl shadow-[0_40px_140px_rgba(0,0,0,0.55)]">
-              <div className="grid gap-5">
+            <div className="rounded-[28px] md:rounded-[36px] border border-white/15 bg-[#050505]/90 p-5 sm:p-6 md:p-10 backdrop-blur-2xl shadow-[0_30px_90px_rgba(0,0,0,0.45)] md:shadow-[0_40px_140px_rgba(0,0,0,0.55)]">
+              <div className="grid gap-4 md:gap-5">
                 <input
                   placeholder="Nombre completo"
-                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-full bg-black/40 border border-white/15 px-5 md:px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
@@ -101,7 +101,7 @@ export default function ContactoPage() {
                 <textarea
                   placeholder="Cuéntanos qué necesitas estructurar"
                   rows={6}
-                  className="w-full rounded-[28px] bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b] resize-none"
+                  className="w-full rounded-[22px] md:rounded-[28px] bg-black/40 border border-white/10 px-5 md:px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b] resize-none"
                 />
 
                 
