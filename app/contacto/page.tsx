@@ -8,18 +8,28 @@ export default function ContactoPage() {
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-black via-[#17120d] to-[#f5f2eb] text-white">
       <Navbar />
 
-      <section className="relative z-10 pt-40 pb-40 min-h-screen overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(201,106,27,0.18),transparent_32%),linear-gradient(to_bottom,#050505_0%,#17120d_42%,#2a2118_68%,#f5f2eb_100%)] pointer-events-none" />
-        <div className="absolute top-0 right-0 w-[900px] h-[900px] bg-[#c96a1b]/10 blur-[180px]" />
+      <section className="relative z-10 pt-32 md:pt-40 pb-24 md:pb-32 min-h-screen overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.10),transparent_28%),radial-gradient(circle_at_82%_12%,rgba(201,106,27,0.24),transparent_34%),linear-gradient(to_bottom,#050505_0%,#18110b_34%,#3a2b1d_62%,#f5f2eb_100%)]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+  <div className="absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-[#f5f2eb] via-[#f5f2eb]/65 to-transparent" />
+
+  <div className="absolute left-1/2 top-[18%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-[#c96a1b]/10 blur-[160px]" />
+
+  <div className="absolute right-0 top-0 h-[780px] w-[780px] rounded-full bg-[#c96a1b]/12 blur-[180px]" />
+
+  <div className="absolute left-0 bottom-[12%] h-[420px] w-[420px] rounded-full bg-white/10 blur-[160px]" />
+</div>
+        
+
+        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <Reveal>
             <div>
               <p className="uppercase tracking-[0.45em] text-sm text-[#c96a1b] mb-8">
                 Contacto Estratégico
               </p>
 
-              <h1 className="text-5xl sm:text-6xl md:text-8xl font-semibold tracking-[-0.05em] leading-[0.9] mb-10">
+              <h1 className="text-4xl sm:text-6xl md:text-8xl font-semibold tracking-[-0.05em] leading-[0.95] md:leading-[0.9] mb-8 md:mb-10">
                 Toda gran decisión empieza con una conversación.
               </h1>
 
@@ -27,7 +37,7 @@ export default function ContactoPage() {
                 Agenda una conversación con Grupo A&C para analizar el estado
                 tributario, financiero y corporativo de tu empresa.
               </p>
-              <div className="mt-16 rounded-[32px] border border-white/10 bg-black/35 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.28)] backdrop-blur-2xl">
+              <div className="mt-16 rounded-[32px] border border-white/15 bg-[#060606]/85 p-8 backdrop-blur-2xl shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
 
   <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#c96a1b]">
     Lo que ocurre después
@@ -71,27 +81,27 @@ export default function ContactoPage() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <div className="rounded-[36px] border border-white/10 bg-black/40 p-8 shadow-[0_30px_100px_rgba(0,0,0,0.32)] backdrop-blur-2xl md:p-10">
+            <div className="rounded-[36px] border border-white/15 bg-[#050505]/88 p-8 md:p-10 backdrop-blur-2xl shadow-[0_40px_140px_rgba(0,0,0,0.55)]">
               <div className="grid gap-5">
                 <input
                   placeholder="Nombre completo"
-                  className="w-full rounded-full bg-black/40 border border-white/10 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
                   placeholder="Empresa"
-                  className="w-full rounded-full bg-black/40 border border-white/10 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
                   placeholder="Correo electrónico"
-                  className="w-full rounded-full bg-black/40 border border-white/10 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-full bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <textarea
                   placeholder="Cuéntanos qué necesitas estructurar"
                   rows={6}
-                  className="w-full rounded-[28px] bg-black/40 border border-white/10 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b] resize-none"
+                  className="w-full rounded-[28px] bg-black/40 border border-white/15 px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b] resize-none"
                 />
 
                 
@@ -104,7 +114,7 @@ export default function ContactoPage() {
   Una conversación puede cambiar el rumbo de una empresa.
 </p>
 
-<div className="mt-8 flex min-h-[410px] items-center gap-8 rounded-[32px] border border-white/10 bg-white/[0.05] p-8 backdrop-blur-2xl">
+<div className="mt-8 flex min-h-[410px] items-center gap-8 rounded-[32px] border border-white/15 bg-[#080808]/90 p-8 backdrop-blur-2xl shadow-[0_25px_90px_rgba(0,0,0,0.45)]">
   <div className="flex w-[220px] flex-col items-center">
     <div className="h-[220px] w-[180px] overflow-hidden rounded-[24px] border border-white/10">
       <img
@@ -118,7 +128,7 @@ export default function ContactoPage() {
       Consultor Senior
     </p>
 
-    <div className="mt-3 h-px w-12 bg-[#c96a1b]/30" />
+    <div className="mt- h-px w-12 bg-[#c96a1b]/30" />
   </div>
 
   <div className="flex-1">
