@@ -4,11 +4,14 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
+  { label: "Nosotros", href: "/nosotros" },
   { label: "Ecosistema", href: "/#ecosystem" },
   { label: "Servicios", href: "/soluciones" },
-  { label: "Industrias", href: "/industrias" },
-  { label: "Inteligencia", href: "/inteligencia" },
-  { label: "Contacto", href: "/contacto" },
+  { label: "Noticias", href: "/industrias" },
+  { label: "Artículos", href: "/inteligencia" },
+  { label: "Inversiones", href: "/inversiones" },
+  { label: "Podcast", href: "/podcast" },
+  { label: "Contactar", href: "/contacto" },
 ];
 
 type MobileMenuProps = {
