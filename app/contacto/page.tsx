@@ -85,7 +85,7 @@ export default function ContactoPage() {
               <div className="grid gap-4 md:gap-5">
                 <input
                   placeholder="Nombre completo"
-                  className="w-full rounded-full bg-black/40 border border-white/15 px-5 md:px-6 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
+                  className="w-full rounded-full bg-black/40 border border-white/15 px-5 md:px-4 py-4 text-white placeholder:text-white/35 outline-none focus:border-[#c96a1b]"
                 />
 
                 <input
@@ -114,9 +114,9 @@ export default function ContactoPage() {
   Una conversación puede cambiar el rumbo de una empresa.
 </p>
 
-<div className="mt-8 flex min-h-[410px] items-center gap-8 rounded-[32px] border border-white/15 bg-[#080808]/90 p-8 backdrop-blur-2xl shadow-[0_25px_90px_rgba(0,0,0,0.45)]">
-  <div className="flex w-[220px] flex-col items-center">
-    <div className="h-[220px] w-[180px] overflow-hidden rounded-[24px] border border-white/10">
+<div className="mt-6 md:mt-8 flex flex-col md:flex-row min-h-0 md:min-h-[410px] items-center gap-5 md:gap-8 rounded-[28px] md:rounded-[32px] border border-white/15 bg-[#080808]/90 p-5 md:p-8 backdrop-blur-2xl shadow-[0_25px_90px_rgba(0,0,0,0.45)]">
+  <div className="flex w-full md:w-[220px] flex-col items-center">
+    <div className="h-[170px] w-[140px] md:h-[220px] md:w-[180px] overflow-hidden rounded-[22px] md:rounded-[24px] border border-white/10">
       <img
         src="/fotos/asesor-contacto.jpg"
         alt="Asesor Grupo A&C"
