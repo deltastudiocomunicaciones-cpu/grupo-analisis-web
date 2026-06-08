@@ -67,40 +67,24 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
             </div>
 
             {/* LINKS */}
-            <nav className="flex flex-col gap-5">
-              {links.map((link, index) => (
-                <motion.div
-                  key={link.href}
-                  initial={{ opacity: 0, x: -28 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    delay: 0.15 + index * 0.08,
-                    duration: 0.65,
-                    ease: "easeOut",
-                  }}
-                >
-                  <Link
-                    href={link.href}
-                    onClick={onClose}
-                    className="
-                      block
-                      text-[3.2rem]
-                      sm:text-6xl
-                      font-semibold
-                      tracking-[-0.075em]
-                      leading-[0.9]
-                      text-white
-                      hover:text-[#c96a1b]
-                      hover:translate-x-2
-                      transition-all
-                      duration-500
-                    "
-                  >
-                    {link.label}
-                  </Link>
-                </motion.div>
-              ))}
-            </nav>
+            <nav className="flex flex-col gap-6 text-center">
+  {links.map((link, index) => (
+    <motion.div
+      key={link.href}
+      initial={{ opacity: 0, y: 18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.06 }}
+    >
+      <Link
+        href={link.href}
+        onClick={onClose}
+        className="text-2xl font-light tracking-[0.18em] uppercase text-white/80 hover:text-white transition-colors"
+      >
+        {link.label}
+      </Link>
+    </motion.div>
+  ))}
+</nav>
 
             {/* FOOTER */}
             <div className="border-t border-white/10 pt-6">
