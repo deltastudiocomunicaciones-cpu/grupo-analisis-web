@@ -30,80 +30,76 @@ export default async function ArticlePage({ params }: PageProps) {
 
       {/* HERO */}
 
-      <section className="relative pt-44 pb-20">
-        <div className="mx-auto max-w-4xl px-6">
+<section className="relative overflow-hidden pt-44 pb-28">
 
-          <p className="text-sm uppercase tracking-[0.3em] text-[#c96a1b]">
-            {article.category}   
-          </p>
+  {/* Imagen editorial */}
 
-          <div className="mt-8 h-px w-20 bg-[#c96a1b]/50" />
+  <div className="absolute inset-0">
+    <img
+      src={article.coverImage}
+      alt={article.title}
+      className="h-full w-full object-cover"
+    />
 
-          <h1 className="mt-8 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
-            {article.title}
-          </h1>
+    <div className="absolute inset-0 bg-black/10" />
 
-          <p className="mt-8 max-w-3xl text-xl text-white/55">
-            {article.excerpt}
-          </p>
+    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
 
-          <div className="mt-10 flex gap-6 text-sm text-white/40">
-            <span>{article.author}</span>
-            <span>{article.date}</span>
-            <span>{article.readTime}</span>
-          </div>
-
-          {article.tags && (
-  <div className="mt-10 flex flex-wrap gap-3">
-    {article.tags.map((tag) => (
-      <Link
-  key={tag}
-  href={`/inteligencia/tag/${encodeURIComponent(tag)}`}
-  className="
-    rounded-full
-    border
-    border-[#c96a1b]/25
-    bg-[#c96a1b]/10
-    px-4
-    py-2
-    text-xs
-    uppercase
-    tracking-[0.2em]
-    text-[#c96a1b]
-    transition-all
-    duration-500
-    hover:bg-[#c96a1b]
-    hover:text-white
-  "
->
-  {tag}
-</Link>
-    ))}
+    <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
   </div>
-)}
 
-        </div>
-      </section>
+  {/* Contenido */}
 
-      {/* COVER */}
+  <div className="relative z-10 mx-auto max-w-4xl px-6">
 
-      <section className="pb-20">
-        <div className="mx-auto max-w-6xl px-6">
+    <p className="text-sm uppercase tracking-[0.3em] text-[#c96a1b]">
+      {article.category}
+    </p>
 
-          <img
-  src={article.coverImage}
-  alt={article.title}
-  className="
-    h-[560px]
-    w-full
-    rounded-[2.5rem]
-    object-cover
-    shadow-[0_35px_120px_rgba(0,0,0,0.45)]
-  "
-/>
+    <div className="mt-8 h-px w-20 bg-[#c96a1b]/50" />
 
-        </div>
-      </section>
+    <h1 className="mt-8 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+      {article.title}
+    </h1>
+
+    <p className="mt-8 max-w-3xl text-xl text-white/65">
+      {article.excerpt}
+    </p>
+
+    <div className="mt-10 flex gap-6 text-sm text-white/50">
+      <span>{article.author}</span>
+      <span>{article.date}</span>
+      <span>{article.readTime}</span>
+    </div>
+
+    {article.tags && (
+      <div className="mt-10 flex flex-wrap gap-3">
+        {article.tags.map((tag) => (
+          <span
+            key={tag}
+            className="
+              rounded-full
+              border
+              border-[#c96a1b]/25
+              bg-[#c96a1b]/10
+              px-4
+              py-2
+              text-xs
+              uppercase
+              tracking-[0.2em]
+              text-[#c96a1b]
+            "
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
+
+  </div>
+</section>
+
+      
 
       {/* CONTENT */}
 <section className="bg-[#f5f2eb] px-6 py-32 text-black">

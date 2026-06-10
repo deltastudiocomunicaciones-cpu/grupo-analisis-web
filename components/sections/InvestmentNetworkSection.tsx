@@ -446,14 +446,14 @@ md:group-hover:opacity-100
           ))}
 
           <div className="absolute bottom-2 left-1/2 z-20 flex -translate-x-1/2 flex-wrap justify-center gap-5 whitespace-nowrap text-[9px] uppercase tracking-[0.28em] text-white/25">
-            <span className="text-[#78ffbe]/45">Verde · Flujo operativo</span>
+            <span className="text-[#78ffbe]/45"></span>
 
             <span className="text-[#c96a1b]/45">
-              Ámbar · Sinergia estratégica
+              
             </span>
 
             <span className="text-blue-300/45">
-              Azul · Pertenencia de ecosistema
+          
             </span>
           </div>
         </div>

@@ -47,7 +47,7 @@ const sections = [
         integral de la información.
       </p>
 
-      <ul className="grid gap-3 pt-2 text-white/50 md:grid-cols-2">
+      <ul className="grid gap-3 pt-2 text-black/55 md:grid-cols-2">
         <li>Planeación y optimización tributaria</li>
         <li>Declaraciones de renta</li>
         <li>Devoluciones y compensaciones de IVA</li>
@@ -69,11 +69,13 @@ const sections = [
   ),
 },
   {
-    title: "Misión",
-    eyebrow: "Propósito",
-    content:
-      "Transformamos el conocimiento contable, tributario, administrativo y tecnológico en soluciones estratégicas que generan tranquilidad, crecimiento y rentabilidad. Acompañamos a empresas, empresarios y personas naturales con asesoría especializada, herramientas tecnológicas propias y un equipo humano altamente calificado.",
-  },
+  title: "Misión",
+  eyebrow: "Propósito",
+  preview:
+    "Convertimos conocimiento contable, tributario y tecnológico en soluciones estratégicas para empresas que buscan crecer con tranquilidad.",
+  content:
+    "Transformamos el conocimiento contable, tributario, administrativo y tecnológico en soluciones estratégicas...",
+},
   {
     title: "Visión",
     eyebrow: "Futuro",
@@ -313,15 +315,23 @@ hover:shadow-[0_20px_70px_rgba(0,0,0,0.08)]
                       onClick={() => setOpenIndex(isOpen ? null : index)}
                       className="flex w-full items-center justify-between gap-6 px-6 py-7 text-left md:px-10"
                     >
-                      <div>
-                        <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-                          {section.eyebrow}
-                        </p>
+                      <div className="grid flex-1 gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-end">
+  <div>
+    <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
+      {section.eyebrow}
+    </p>
 
-                        <h3 className="text-3xl font-semibold tracking-[-0.04em] md:text-4xl">
-                          {section.title}
-                        </h3>
-                      </div>
+    <h3 className="text-3xl font-semibold tracking-[-0.04em] md:text-4xl">
+      {section.title}
+    </h3>
+  </div>
+
+  {"preview" in section && (
+    <p className="hidden max-w-2xl text-sm font-light leading-[1.7] text-black/45 md:block">
+      {section.preview}
+    </p>
+  )}
+</div>
 
                       <span
   className={`
