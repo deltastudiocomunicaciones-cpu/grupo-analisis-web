@@ -768,7 +768,7 @@ export default function NosotrosPage() {
   loop
   playsInline
   preload="auto"
-  className="absolute inset-0 h-full w-full object-cover opacity-80"
+  className="absolute inset-0 h-full w-full object-cover opacity-100 md:opacity-80"
 >
                   <source src="/videos/intelligence.mp4" type="video/mp4" />
                   <div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
@@ -776,7 +776,7 @@ export default function NosotrosPage() {
 </div>
                 </video>
 
-                <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/10 via-black/30 to-black/70"/>
+                <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/10 via-black/10 to-black/35 md:via-black/30 md:to-black/70" />
 
                 <div className="relative z-10">
                   <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/50">
