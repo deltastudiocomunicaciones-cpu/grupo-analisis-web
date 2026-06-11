@@ -761,16 +761,19 @@ export default function NosotrosPage() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <GlassCard className="min-h-[420px] overflow-hidden">
-              <div className="relative flex h-full min-h-[380px] items-end overflow-hidden rounded-[2rem] border border-black/10 bg-white/70 p-8">
+              <div className="relative flex min-h-[420px] md:min-h-[380px] items-end overflow-hidden rounded-[2rem] bg-black p-8">
                 <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 h-full w-full object-cover opacity-75"
-                >
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="absolute inset-0 h-full w-full object-cover opacity-80"
+>
                   <source src="/videos/intelligence.mp4" type="video/mp4" />
+                  <div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
+  VIDEO TEST
+</div>
                 </video>
 
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/10 via-black/30 to-black/70"/>
