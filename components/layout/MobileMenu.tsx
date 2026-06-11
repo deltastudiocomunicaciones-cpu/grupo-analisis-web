@@ -10,7 +10,7 @@ const links = [
   { label: "Noticias", href: "/industrias" },
   { label: "Artículos", href: "/inteligencia" },
   { label: "Inversiones", href: "/inversiones" },
-  { label: "Podcast", href: "/podcast" },
+  { label: "Podcast", href: "/sadi" },
   { label: "Contactar", href: "/contacto" },
 ];
 

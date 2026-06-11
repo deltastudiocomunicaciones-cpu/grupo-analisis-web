@@ -144,10 +144,11 @@ hover:text-[#c96a1b]
       width={200}
       height={70}
       className="
-        opacity-20
-        hover:opacity-100
-        transition-all
-        duration-500
+  opacity-100
+  scale-110
+  md:scale-100
+  drop-shadow-[0_0_35px_rgba(236,72,153,0.85)]
+  md:drop-shadow-[0_0_10px_rgba(236,72,153,0.25)]
       "
     />
 
