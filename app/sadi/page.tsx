@@ -115,8 +115,8 @@ export default function SadiPage() {
   eyebrow="Podcast · SADI ERP"
   title="Conversaciones sobre tecnología, contabilidad e inteligencia empresarial."
   description="Un espacio para explicar cómo la automatización, los sistemas de información y el criterio contable pueden transformar la operación empresarial."
-  youtubeUrl="https://www.youtube.com/"
-  embedUrl="https://www.youtube.com/embed/VIDEO_ID"
+  youtubeUrl="https://www.youtube.com/@SADISOFTWARE"
+  embedUrl="https://www.youtube.com/embed/HVvMr-08xbI"
   accentColor="#d97706"
 />
 

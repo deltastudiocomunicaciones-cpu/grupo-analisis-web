@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const ecosystem = [
@@ -129,18 +130,33 @@ hover:text-[#c96a1b]
         {/* BOTTOM */}
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
 
-          <p className="text-white/35 text-sm">
-            © 2026 Grupo Análisis & Consultorías.
-          </p>
+  <p className="text-white/35 text-sm">
+    © 2026 Grupo Análisis & Consultorías.
+  </p>
 
-          <p className="text-white/25 text-sm uppercase tracking-[0.25em]">
-            SEMA BRAND INTELLIGENCE
-          </p>
+  <div className="flex items-center gap-4">
 
-        </div>
+    <div className="h-px w-12 bg-fuchsia-500/40" />
 
+    <Image
+      src="/brands/sema-footer-v2.png"
+      alt="SEMA Strategic Intelligence Studio"
+      width={200}
+      height={70}
+      className="
+        opacity-20
+        hover:opacity-100
+        transition-all
+        duration-500
+      "
+    />
+
+    <div className="h-px w-12 bg-fuchsia-500/40" />
+
+  </div>
+
+</div>
       </div>
-
     </footer>
   );
 }

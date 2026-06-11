@@ -91,7 +91,7 @@ const recentArticles = editorialArticles.filter(
                       preload="metadata"
                       className="absolute inset-0 h-full w-full object-cover opacity-80"
                     >
-                      <source src="/videos/intelligence.mp4" type="video/mp4" />
+                      <source src="/videos/articulo-destacado.mp4" type="video/mp4" />
                     </video>
 
                     <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/25 via-black/40 to-black" />
