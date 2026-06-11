@@ -762,7 +762,7 @@ export default function NosotrosPage() {
           <Reveal>
             <GlassCard className="min-h-[420px] overflow-hidden">
               <div className="relative flex min-h-[420px] md:min-h-[380px] items-end overflow-hidden rounded-[2rem] bg-black p-8">
-                <video
+               <video
   autoPlay
   muted
   loop
@@ -771,11 +771,13 @@ export default function NosotrosPage() {
   poster="/fotos/nosotros-video-poster.jpg"
   className="absolute inset-0 h-full w-full object-cover opacity-100 md:opacity-80"
 >
-                  <source src="/videos/intelligence.mp4" type="video/mp4" />
-                  <div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
+  <source src="/videos/intelligence.mp4" type="video/mp4" />
+</video>
+
+<div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
   VIDEO TEST
 </div>
-                </video>
+                
 
                 <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/10 via-black/10 to-black/35 md:via-black/30 md:to-black/70" />
 
