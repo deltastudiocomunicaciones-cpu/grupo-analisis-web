@@ -767,7 +767,8 @@ export default function NosotrosPage() {
   muted
   loop
   playsInline
-  preload="auto"
+  preload="metadata"
+  poster="/fotos/nosotros-video-poster.jpg"
   className="absolute inset-0 h-full w-full object-cover opacity-100 md:opacity-80"
 >
                   <source src="/videos/intelligence.mp4" type="video/mp4" />
