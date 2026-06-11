@@ -771,7 +771,7 @@ export default function NosotrosPage() {
   poster="/fotos/nosotros-video-poster.jpg"
   className="absolute inset-0 h-full w-full object-cover opacity-100 md:opacity-80"
 >
-  <source src="/videos/intelligence.mp4" type="video/mp4" />
+  <source src="/videos/intelligence-v2.mp4" type="video/mp4" />
 </video>
 
 <div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
