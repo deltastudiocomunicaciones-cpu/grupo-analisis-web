@@ -774,8 +774,7 @@ export default function NosotrosPage() {
   <source src="/videos/intelligence-v2.mp4" type="video/mp4" />
 </video>
 
-<div className="absolute top-4 left-4 z-50 bg-red-500 px-2 py-1 text-xs">
-  VIDEO TEST
+<div className="absolute top-4 left-4 z-50 bg-red-00 px-2 py-1 text-xs">
 </div>
                 
 
