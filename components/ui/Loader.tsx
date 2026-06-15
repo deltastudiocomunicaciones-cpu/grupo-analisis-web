@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -63,13 +64,44 @@ export default function Loader() {
   }}
   className="absolute left-0 top-1/2 h-[1px] w-full bg-gradient-to-r from-transparent via-[#c96a1b]/80 to-transparent"
 />
-            <p className="uppercase tracking-[0.5em] text-[#c96a1b] text-sm mb-6">
-              Grupo A&C
-            </p>
+            <div className="flex flex-col items-center">
 
-            <h1 className="text-white text-4xl md:text-6xl font-semibold tracking-[-0.04em]">
-              Strategic Intelligence
-            </h1>
+  <Image
+    src="/logos/grupoayc-navbar.png"
+    alt="Grupo Análisis & Consultorías"
+    width={320}
+    height={90}
+    priority
+    className="
+      w-auto
+      h-20
+      md:h-24
+      object-contain
+      drop-shadow-[0_0_40px_rgba(201,106,27,0.35)]
+    "
+  />
+  <p className="mt-6 text-[#c96a1b] uppercase tracking-[0.45em] text-xs">
+  Inteligencia Estratégica
+</p>
+
+<p className="mt-4 text-white/45 text-sm tracking-[0.2em]">
+  Medellín · Colombia · Desde 2006
+</p>
+
+  <p
+    className="
+      mt-8
+      text-sm
+      md:text-base
+      uppercase
+      tracking-[0.45em]
+      text-white/55
+    "
+  >
+    20 años transformando información en decisiones
+  </p>
+
+</div>
 
             <motion.div
               initial={{ scaleX: 0 }}
@@ -79,7 +111,15 @@ export default function Loader() {
                 delay: 0.4,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="h-[1px] bg-[#c96a1b] mt-8 origin-left"
+              className="
+  h-[1px]
+  mt-10
+  bg-gradient-to-r
+  from-transparent
+  via-[#c96a1b]
+  to-transparent
+  origin-left
+"
             />
           </motion.div>
         </motion.div>

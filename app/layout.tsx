@@ -6,44 +6,58 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Grupo A&C — Strategic Intelligence",
+  metadataBase: new URL("https://grupoayc.co"),
+
+  title: {
+    default: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
+    template: "%s | Grupo A&C",
+  },
+
   description:
-    "Grupo Análisis & Consultorías desarrolla estructuras tributarias, financieras y estratégicas para empresas que piensan a largo plazo.",
+    "Planeación tributaria, auditoría financiera, protección patrimonial, software contable SADI y consultoría estratégica para empresas en Colombia.",
 
   keywords: [
-    "consultoría financiera",
-    "planeación tributaria",
-    "auditoría estratégica",
-    "SADI ERP",
+    "Grupo Análisis y Consultorías",
     "Grupo A&C",
+    "planeación tributaria",
+    "auditoría financiera",
+    "protección patrimonial",
+    "consultoría financiera",
     "consultoría empresarial",
-    "inteligencia corporativa",
+    "SADI ERP",
+    "TRACO",
+    "Contadores en Colombia",
     "contabilidad estratégica",
+    "Medellín Colombia",
   ],
 
-  authors: [
-    {
-      name: "Grupo A&C",
-    },
-  ],
-
-  creator: "SEMA Brand Intelligence",
+  authors: [{ name: "Grupo A&C" }],
+  creator: "SEMA Strategic Intelligence Studio",
 
   openGraph: {
-    title: "Grupo A&C — Strategic Intelligence",
+    title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
     description:
-      "Arquitectura financiera, tributaria y estratégica para empresas de alto impacto.",
-    url: "https://grupoac.vercel.app",
+      "Arquitectura financiera, tributaria y estratégica para empresas que piensan a largo plazo.",
+    url: "https://grupoayc.co",
     siteName: "Grupo A&C",
     locale: "es_CO",
     type: "website",
+    images: [
+      {
+        url: "/og/grupo-ayc-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Grupo Análisis & Consultorías",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Grupo A&C — Strategic Intelligence",
+    title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
     description:
-      "Estrategia financiera y visión empresarial para compañías que evolucionan.",
+      "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
+    images: ["/og/grupo-ayc-og.jpg"],
   },
 
   robots: {
