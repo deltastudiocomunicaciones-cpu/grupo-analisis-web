@@ -118,7 +118,7 @@ export default function ContactoPage() {
   <div className="flex w-full md:w-[220px] flex-col items-center">
     <div className="h-[170px] w-[140px] md:h-[220px] md:w-[180px] overflow-hidden rounded-[22px] md:rounded-[24px] border border-white/10">
       <img
-        src="/fotos/asesor-contacto.jpg"
+        src="/fotos/asesor-contacto.png"
         alt="Asesor Grupo A&C"
         className="h-full w-full object-cover"
       />

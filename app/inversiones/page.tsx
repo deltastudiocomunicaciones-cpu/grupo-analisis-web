@@ -248,7 +248,7 @@ hover:shadow-[0_0_30px_rgba(201,106,27,0.18)]
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
-            <source src="/videos/intelligence-v2.mp4" type="video/mp4" />
+            <source src="/videos/inversiones-v2.mp4" type="video/mp4" />
           </video>
 
           <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/30 to-black/85" />

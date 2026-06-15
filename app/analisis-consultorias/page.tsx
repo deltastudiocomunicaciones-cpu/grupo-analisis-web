@@ -1,4 +1,3 @@
-import StrategicDivider from "@/components/ui/StrategicDivider";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -41,122 +40,55 @@ export default function AnalisisConsultoriasPage() {
       </p>
     </div>
 
-    <div className="grid gap-8 lg:grid-cols-2">
+  {/* VISIÓN ESTRATEGICA */}
 
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-          Servicio Estratégico 01
-        </p>
+<div className="mt-20 mb-24">
 
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Auditorías Financieras
-        </h3>
+  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+    Strategic Insights
+  </p>
 
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Una auditoría no solo revisa cifras. Permite identificar riesgos,
-          validar información, fortalecer el control interno y construir una
-          visión confiable del estado real de la organización.
-        </p>
+  <h3 className="max-w-4xl text-4xl font-semibold leading-[1] tracking-[-0.04em] md:text-5xl">
+    Decisiones complejas requieren una lectura más profunda de la realidad empresarial.
+  </h3>
 
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Diagnóstico financiero</li>
-          <li>• Revisión contable</li>
-          <li>• Control interno</li>
-          <li>• Identificación de riesgos</li>
-          <li>• Recomendaciones estratégicas</li>
-        </ul>
-      </div>
+</div>
 
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-          Servicio Estratégico 02
-        </p>
+<div className="grid gap-8 md:grid-cols-2">
 
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Asesoría Tributaria y Financiera
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Las decisiones tributarias y financieras deben leerse como parte de
-          una misma arquitectura empresarial: liquidez, cumplimiento, eficiencia,
-          crecimiento y sostenibilidad patrimonial.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Planeación tributaria</li>
-          <li>• Análisis financiero</li>
-          <li>• Eficiencia fiscal</li>
-          <li>• Gestión de riesgos</li>
-          <li>• Estrategia empresarial</li>
-        </ul>
-      </div>
-
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-          Servicio Estratégico 03
-        </p>
-
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Reestructuración Patrimonial
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Proteger patrimonio requiere ordenar estructuras, anticipar riesgos y
-          diseñar mecanismos que permitan continuidad, seguridad jurídica y
-          sostenibilidad en el largo plazo.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Protección patrimonial</li>
-          <li>• Organización de activos</li>
-          <li>• Continuidad empresarial</li>
-          <li>• Gobierno corporativo</li>
-          <li>• Planeación de largo plazo</li>
-        </ul>
-      </div>
-
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-          Servicio Estratégico 04
-        </p>
-
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Insolvencias y Asesoría Jurídica
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Cuando una organización enfrenta presión financiera o decisiones
-          jurídicas complejas, necesita una lectura integral que conecte
-          estrategia, riesgo, negociación y protección empresarial.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Reorganización empresarial</li>
-          <li>• Protección frente a acreedores</li>
-          <li>• Acompañamiento jurídico</li>
-          <li>• Estrategia contractual</li>
-          <li>• Continuidad operativa</li>
-        </ul>
-      </div>
-
+  {[
+    "/fotos/analisis-card-1.png",
+    "/fotos/analisis-card-2.png",
+    "/fotos/analisis-card-3.png",
+    "/fotos/analisis-card-4.png",
+  ].map((image, index) => (
+    <div
+      key={index}
+      className="
+        group
+        overflow-hidden
+        rounded-[2rem]
+        border
+        border-black/10
+        bg-white
+        shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+      "
+    >
+      <img
+        src={image}
+        alt={`Strategic Insight ${index + 1}`}
+        className="
+          w-full
+          h-auto
+          transition-all
+          duration-700
+          group-hover:scale-[1.03]
+        "
+      />
     </div>
+  ))}
 
-    <div className="mt-24 border-t border-black/10 pt-16">
-      <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
-        Por qué existe Análisis & Consultorías
-      </p>
-
-      <h3 className="max-w-4xl text-3xl font-semibold leading-[1.1] tracking-[-0.04em] md:text-5xl">
-        Porque las empresas no necesitan más información. Necesitan criterio para decidir.
-      </h3>
-
-      <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-black/60">
-        Análisis & Consultorías funciona como la unidad de pensamiento estratégico
-        del ecosistema Grupo A&C: interpreta información, identifica riesgos,
-        diseña escenarios y acompaña decisiones que impactan patrimonio,
-        continuidad y crecimiento empresarial.
-      </p>
-    </div>
+</div>  
 
   </div>
 </section> 
@@ -170,9 +102,7 @@ export default function AnalisisConsultoriasPage() {
   accentColor="#c96a1b"
 />
 
-<StrategicDivider
-  quote="La incertidumbre disminuye cuando existe claridad para decidir."
-/>
+
 
       <Footer />
     </main>

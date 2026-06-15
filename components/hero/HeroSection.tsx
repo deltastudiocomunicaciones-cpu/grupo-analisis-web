@@ -59,7 +59,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/45" />
 
       <div
-        className="absolute inset-0 opacity-[0.06]"
+        className="absolute inset-0 opacity-[0.01]"
         style={{
           backgroundImage: `
             linear-gradient(to right, white 1px, transparent 1px),

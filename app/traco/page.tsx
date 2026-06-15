@@ -1,4 +1,3 @@
-import StrategicDivider from "@/components/ui/StrategicDivider";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
@@ -41,76 +40,49 @@ export default function TracoPage() {
       </p>
     </div>
 
-    <div className="grid gap-8 lg:grid-cols-2">
+    <div className="mb-16">
+  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#2563eb]">
+    Casos de Impacto
+  </p>
 
-      {/* DIAN */}
+  <h3 className="max-w-4xl text-4xl font-semibold leading-[1] tracking-[-0.04em] md:text-5xl">
+    Lo que sucede cuando la estructura documental deja de ser un obstáculo.
+  </h3>
+</div>
 
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-          Servicio Estratégico 01
-        </p>
-
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Trámites DIAN
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          La relación con la DIAN no comienza cuando aparece una sanción.
-          Comienza con una estructura tributaria correctamente diseñada.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Inscripción y actualización RUT</li>
-          <li>• Responsabilidades tributarias</li>
-          <li>• Facturación electrónica</li>
-          <li>• Obligaciones formales</li>
-          <li>• Gestión documental</li>
-        </ul>
-      </div>
-
-      {/* CAMARA */}
-
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#2563eb]">
-          Servicio Estratégico 02
-        </p>
-
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Cámara de Comercio
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Una empresa necesita una estructura jurídica coherente para sostener
-          crecimiento, inversión y gobierno corporativo.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Constitución de sociedades</li>
-          <li>• Reformas estatutarias</li>
-          <li>• Cambios societarios</li>
-          <li>• Renovaciones mercantiles</li>
-          <li>• Registros empresariales</li>
-        </ul>
-      </div>
-
+<div className="grid gap-8 md:grid-cols-2">
+  {[
+    "/fotos/traco-card-1.png",
+    "/fotos/traco-card-2.png",
+    "/fotos/traco-card-3.png",
+    "/fotos/traco-card-4.png",
+  ].map((image, index) => (
+    <div
+      key={index}
+      className="
+        group
+        overflow-hidden
+        rounded-[2rem]
+        border
+        border-black/10
+        bg-white
+        shadow-[0_20px_60px_rgba(0,0,0,0.06)]
+      "
+    >
+      <img
+        src={image}
+        alt={`Caso de impacto TRACO ${index + 1}`}
+        className="
+          h-auto
+          w-full
+          transition-all
+          duration-700
+          group-hover:scale-[1.03]
+        "
+      />
     </div>
-
-    <div className="mt-24 border-t border-black/10 pt-16">
-      <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#2563eb]">
-        Por qué existe TRACO
-      </p>
-
-      <h3 className="max-w-4xl text-3xl font-semibold leading-[1.1] tracking-[-0.04em] md:text-5xl">
-        Porque una gran estrategia empresarial puede fracasar por una mala ejecución documental.
-      </h3>
-
-      <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-black/60">
-        TRACO funciona como la capa operativa que conecta la visión estratégica
-        de Grupo A&C con las obligaciones formales necesarias para que una empresa
-        opere correctamente ante las entidades de control y supervisión.
-      </p>
-    </div>
-
+  ))}
+</div>
   </div>
 </section>
 
@@ -123,9 +95,7 @@ export default function TracoPage() {
   accentColor="#2563eb"
 />
 
-<StrategicDivider
-  quote="La formalidad no es burocracia; es la infraestructura del crecimiento."
-/>
+
       <Footer />
     </main>
   );

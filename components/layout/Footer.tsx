@@ -137,20 +137,32 @@ hover:text-[#c96a1b]
   <div className="flex items-center gap-4">
 
     <div className="h-px w-12 bg-fuchsia-500/40" />
+<div className="relative">
 
-    <Image
-      src="/brands/sema-footer-v2.png"
-      alt="SEMA Strategic Intelligence Studio"
-      width={200}
-      height={70}
-      className="
-  opacity-100
-  scale-110
-  md:scale-100
-  drop-shadow-[0_0_35px_rgba(236,72,153,0.85)]
-  md:drop-shadow-[0_0_10px_rgba(236,72,153,0.25)]
-      "
-    />
+  <div
+    className="
+      absolute
+      inset-0
+      bg-fuchsia-500/20
+      blur-3xl
+      scale-100
+    "
+  />
+
+  <Image
+    src="/brands/sema-footer-v2.png"
+    alt="SEMA Strategic Intelligence Studio"
+    width={160}
+    height={60}
+    className="
+      relative
+      z-10
+      opacity-100
+      drop-shadow-[0_0_30px_rgba(236,72,153,0.75)]
+    "
+  />
+
+</div>
 
     <div className="h-px w-12 bg-fuchsia-500/40" />
 

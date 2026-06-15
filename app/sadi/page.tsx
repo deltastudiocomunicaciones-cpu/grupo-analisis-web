@@ -1,4 +1,3 @@
-import StrategicDivider from "@/components/ui/StrategicDivider";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -13,7 +12,7 @@ export default function SadiPage() {
   eyebrow="SADI ERP"
   title="El salto del contador operativo al estratega empresarial."
   description="SADI es el software contable inteligente del ecosistema Grupo A&C, diseñado para automatizar procesos, estructurar información y elevar el rol del contador hacia auditoría, análisis y estrategia."
-  button="Solicitar Demo"
+  button="Listo para Simplificar?"
   buttonLink="https://portalgrupoayc.com"
   ambientColor="#d97706"
   imageSrc="/brands/sadi-isotype.png"
@@ -41,56 +40,51 @@ export default function SadiPage() {
         a tareas repetitivas y más tiempo a análisis, auditoría y estrategia.
       </p>
     </div>
+<div className="mb-16">
 
-    <div className="grid gap-8 lg:grid-cols-2">
+  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d97706]">
+    Casos de Impacto
+  </p>
 
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#d97706]">
-          Servicio Estratégico 01
-        </p>
+  <h3 className="text-4xl md:text-5xl font-semibold tracking-[-0.04em]">
+    Lo que sucede cuando la información deja de ser un problema.
+  </h3>
 
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Automatización Empresarial
-        </h3>
+</div>
+    <div className="grid gap-8 md:grid-cols-2">
 
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Automatiza procesos críticos para reducir errores, aumentar velocidad
-          operativa y garantizar trazabilidad de la información.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Facturación electrónica</li>
-          <li>• Nómina electrónica</li>
-          <li>• Compras y proveedores</li>
-          <li>• Control documental</li>
-          <li>• Información financiera integrada</li>
-        </ul>
-      </div>
-
-      <div className="rounded-[2rem] border border-black/10 bg-white p-10 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-        <p className="mb-5 text-xs uppercase tracking-[0.3em] text-[#d97706]">
-          Servicio Estratégico 02
-        </p>
-
-        <h3 className="text-3xl font-semibold tracking-[-0.04em]">
-          Diseño de Procesos
-        </h3>
-
-        <p className="mt-6 text-base leading-[1.9] text-black/60">
-          Estructuramos flujos de trabajo que conectan personas, tecnología
-          e información para mejorar control y escalabilidad.
-        </p>
-
-        <ul className="mt-8 space-y-3 text-sm text-black/60">
-          <li>• Procesos administrativos</li>
-          <li>• Flujos de aprobación</li>
-          <li>• Gestión financiera</li>
-          <li>• Trazabilidad operativa</li>
-          <li>• Optimización de recursos</li>
-        </ul>
-      </div>
-
+  {[
+    "/fotos/sadi-impacto-1.png",
+    "/fotos/sadi-impacto-2.png",
+    "/fotos/sadi-impacto-3.png",
+    "/fotos/sadi-impacto-4.png",
+  ].map((image, index) => (
+    <div
+      key={index}
+      className="
+        group
+        overflow-hidden
+        rounded-[2rem]
+        border
+        border-black/10
+        bg-white
+        shadow-[0_20px_60px_rgba(0,0,0,0.06)]
+      "
+    >
+      <img
+        src={image}
+        alt={`Caso de impacto SADI ${index + 1}`}
+        className="
+          w-full
+          h-auto
+          transition-all
+          duration-700
+          group-hover:scale-[1.03]
+        "
+      />
     </div>
+  ))}
+</div>
 
     <div className="mt-24 border-t border-black/10 pt-16">
       <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#d97706]">
@@ -118,10 +112,6 @@ export default function SadiPage() {
   youtubeUrl="https://www.youtube.com/@SADISOFTWARE"
   embedUrl="https://www.youtube.com/embed/HVvMr-08xbI"
   accentColor="#d97706"
-/>
-
-<StrategicDivider
-  quote="La tecnología no reemplaza el juicio humano; libera tiempo para ejercerlo mejor."
 />
 
       <Footer />
