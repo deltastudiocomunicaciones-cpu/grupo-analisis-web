@@ -73,9 +73,9 @@ export default function CaseStudiesSection() {
                     alt=""
                     className="
                       absolute
-                      bottom-0
-                      right-0
-                      w-[55%]
+                      bottom-90
+                      right-[30]
+                      w-[50%]
                       opacity-[0.30]
                       object-contain
                     "
