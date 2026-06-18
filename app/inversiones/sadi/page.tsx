@@ -52,33 +52,65 @@ export default function SadiPage() {
           </Reveal>
 
           <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2">
-            <GlassCard>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-                ERP
-              </p>
-              <h3 className="mt-8 text-4xl font-semibold tracking-[-0.04em]">
-                SADI ERP
-              </h3>
-              <p className="mt-8 text-white/50 leading-[1.9]">
-                Sistema administrativo diseñado para organizar, controlar y
-                optimizar procesos empresariales.
-              </p>
-            </GlassCard>
 
-            <GlassCard>
-              <p className="text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-                CDF
-              </p>
-              <h3 className="mt-8 text-4xl font-semibold tracking-[-0.04em]">
-                SADI CDF
-              </h3>
-              <p className="mt-8 text-white/50 leading-[1.9]">
-                Sistema orientado a la gestión de clubes de fútbol, procesos
-                deportivos, información y estructura institucional.
-              </p>
-            </GlassCard>
-          </div>
-        </div>
+  {/* SADI ERP */}
+
+  <a
+    href="https://www.misadi.co"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      overflow-hidden
+      rounded-[2rem]
+      border
+      border-white/10
+      bg-white/5
+      backdrop-blur-xl
+      shadow-[0_20px_80px_rgba(0,0,0,0.35)]
+      transition-all
+      duration-700
+      hover:-translate-y-2
+      hover:scale-[1.01]
+      block
+    "
+  >
+    <img
+      src="/fotos/sadi-erp-card.png"
+      alt="SADI ERP"
+      className="h-full w-full object-cover"
+    />
+  </a>
+
+  {/* SADI CDF */}
+
+  <a
+    href="https://lobosfc.net/sadi-login"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      overflow-hidden
+      rounded-[2rem]
+      border
+      border-white/10
+      bg-white/5
+      backdrop-blur-xl
+      shadow-[0_20px_80px_rgba(0,0,0,0.35)]
+      transition-all
+      duration-700
+      hover:-translate-y-2
+      hover:scale-[1.01]
+      block
+    "
+  >
+    <img
+      src="/fotos/sadi-cdf-card.png"
+      alt="SADI CDF"
+      className="h-full w-full object-cover"
+    />
+  </a>
+
+</div>
+</div>
       </section>
 
       <Footer />
