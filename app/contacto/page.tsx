@@ -37,7 +37,7 @@ export default function ContactoPage() {
                 Agenda una conversación con Grupo A&C para analizar el estado
                 tributario, financiero y corporativo de tu empresa.
               </p>
-              <div className="mt-16 rounded-[32px] border border-white/15 bg-[#060606]/85 p-8 backdrop-blur-2xl shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
+              <div className="mt-22 rounded-[32px] border border-white/15 bg-[#060606]/85 p-8 backdrop-blur-2xl shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
 
   <p className="mb-4 text-[10px] uppercase tracking-[0.35em] text-[#c96a1b]">
     Lo que ocurre después

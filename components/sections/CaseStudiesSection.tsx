@@ -18,7 +18,7 @@ const cases = [
     name: "Mundo Urbano",
     sector: "Comercio",
     logo: "/brands/casos/aliado-2.png",
-    url: "https://www.mundourbano.com",
+    url: "https://mundourbano.co",
     description:
       "Reseña breve de la empresa aliada y el acompañamiento estratégico desarrollado junto al Grupo A&C.",
   },
