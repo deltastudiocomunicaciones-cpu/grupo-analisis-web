@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import SectionSpacing from "@/components/ui/SectionSpacing";
 import SectionEyebrow from "@/components/ui/SectionEyebrow";
 import Container from "@/components/ui/Container";
@@ -27,9 +28,11 @@ export default function CeoSection() {
               Grupo A&C integra experiencia, tecnología y pensamiento estratégico para acompañar a empresas que requieren claridad tributaria, estructura financiera y protección patrimonial.
             </p>
 
-            <PremiumButton variant="outline">
-             Conocer la Firma
-            </PremiumButton>
+            <Link href="/nosotros">
+  <PremiumButton variant="outline">
+    Conocer la Firma
+  </PremiumButton>
+</Link>
           </div>
         </Reveal>
 
