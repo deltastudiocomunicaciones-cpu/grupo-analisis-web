@@ -1,189 +1,270 @@
 import Link from "next/link";
-import GlassCard from "@/components/ui/GlassCard";
 import PageHero from "@/components/sections/PageHero";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import Container from "@/components/ui/Container";
 
-const services = [
+const strategicServices = [
   {
-  title: "Devoluciones de IVA",
-  description:
-    "Acompañamiento técnico para procesos de devolución, compensación y trazabilidad.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
-{
-  title: "Contabilidad Total o Por Eventos",
-  description:
-    "Arquitectura corporativa para empresas y familias con visión de largo plazo.",
-  brand: "CEC",
-  href: "/contadores-en-colombia",
-},
-{
-  title: "Auditorías Financieras",
-  description:
-    "Diagnóstico financiero y contable orientado a control y evolución empresarial.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
-{
-  title: "Asesoría Tributaria y Financiera",
-  description:
-    "Análisis estructural para decisiones de expansión, sostenibilidad y eficiencia.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
-{
-  title: "Software Contable SADI",
-  description:
-    "Integración del ecosistema SADI para automatización empresarial inteligente.",
-  brand: "SADI",
-  href: "/sadi",
-},
-{
-  title: "Diseño de Procesos",
-  description:
-    "Diseño organizacional y financiero para compañías en crecimiento.",
-  brand: "SADI",
-  href: "/sadi",
-},
-{
-  title: "Declaraciones de Renta",
-  description:
-    "Gestión tributaria precisa para personas naturales, empresarios y compañías.",
-  brand: "CEC",
-  href: "/contadores-en-colombia",
-},
-{
-  title: "Reestructuración Patrimonial",
-  description:
-    "Acompañamiento técnico para procesos de devolución, compensación y trazabilidad.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
-{
-  title: "Trámites DIAN",
-  description:
-    "Gestión especializada ante entidades tributarias con control documental.",
-  brand: "TRACO",
-  href: "/traco",
-},
-{
-  title: "Trámites Cámara de Comercio",
-  description:
-    "Trámites empresariales, registros, reformas y acompañamiento societario.",
-  brand: "TRACO",
-  href: "/traco",
-},
-{
-  title: "Insolvencias",
-  description:
-    "Estrategias legales y financieras para reorganización y protección patrimonial.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
-{
-  title: "Asesoría Jurídica",
-  description:
-    "Soporte jurídico empresarial para decisiones contractuales, fiscales y corporativas.",
-  brand: "Análisis & Consultorías",
-  href: "/analisis-consultorias",
-},
+    title: "Asesoría Tributaria y Financiera",
+    description:
+      "Análisis estructural para decisiones de expansión, sostenibilidad y eficiencia empresarial.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/asesoria-tributaria.jpg",
+  },
+  {
+    title: "Auditorías Financieras",
+    description:
+      "Diagnóstico financiero y contable orientado al control, la trazabilidad y la evolución empresarial.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/auditorias-financieras.jpg",
+  },
+  {
+    title: "Reestructuración Patrimonial",
+    description:
+      "Diseño de estrategias para proteger, reorganizar y proyectar estructuras patrimoniales.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/reestructuracion-patrimonial.jpg",
+  },
+  {
+    title: "Insolvencias",
+    description:
+      "Estrategias legales y financieras para reorganización empresarial y protección patrimonial.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/insolvencias.jpg",
+  },
+  {
+    title: "Asesoría Jurídica",
+    description:
+      "Soporte jurídico empresarial para decisiones contractuales, fiscales y corporativas.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/asesoria-juridica.jpg",
+  },
+  {
+    title: "Diseño de Procesos",
+    description:
+      "Diseño organizacional, contable y financiero para compañías en crecimiento.",
+    brand: "SADI",
+    href: "/sadi",
+    image: "/fotos/servicios/diseno-procesos.jpg",
+  },
 ];
+
+const operationalServices = [
+  {
+    title: "Devoluciones de IVA",
+    description:
+      "Acompañamiento técnico para procesos de devolución, compensación y trazabilidad tributaria.",
+    brand: "Análisis & Consultorías",
+    href: "/analisis-consultorias",
+    image: "/fotos/servicios/devoluciones-iva.jpg",
+  },
+  {
+    title: "Contabilidad Total o Por Eventos",
+    description:
+      "Gestión contable flexible para empresas, empresarios y estructuras familiares.",
+    brand: "CEC",
+    href: "/contadores-en-colombia",
+    image: "/fotos/servicios/contabilidad.jpg",
+  },
+  {
+    title: "Declaraciones de Renta",
+    description:
+      "Gestión tributaria precisa para personas naturales, empresarios y compañías.",
+    brand: "CEC",
+    href: "/contadores-en-colombia",
+    image: "/fotos/servicios/declaraciones-renta.jpg",
+  },
+  {
+    title: "Software Contable SADI",
+    description:
+      "Integración del ecosistema SADI para automatización empresarial inteligente.",
+    brand: "SADI",
+    href: "/sadi",
+    image: "/fotos/servicios/software-contable.jpg",
+  },
+  {
+    title: "Trámites DIAN",
+    description:
+      "Gestión especializada ante entidades tributarias con control documental.",
+    brand: "TRACO",
+    href: "/traco",
+    image: "/fotos/servicios/tramites-dian.jpg",
+  },
+  {
+    title: "Trámites Cámara de Comercio",
+    description:
+      "Registros, reformas y acompañamiento societario para empresas en Colombia.",
+    brand: "TRACO",
+    href: "/traco",
+    image: "/fotos/servicios/camara-comercio.jpg",
+  },
+];
+
+function ServiceCarousel({
+  title,
+  description,
+  services,
+}: {
+  title: string;
+  description: string;
+  services: typeof strategicServices;
+}) {
+  return (
+    <section className="relative py-16">
+      <Container>
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+            Grupo A&C
+          </p>
+
+          <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[#111] md:text-5xl">
+            {title}
+          </h2>
+
+          <p className="mt-5 text-base leading-relaxed text-black/60 md:text-lg">
+            {description}
+          </p>
+        </div>
+
+        <div className="flex gap-6 overflow-x-auto pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {services.map((service, index) => (
+            <Reveal key={service.title} delay={index * 0.04}>
+              <Link
+                href={service.href}
+                className="
+                  group
+                  block
+                  min-w-[310px]
+                  max-w-[310px]
+                  overflow-hidden
+                  rounded-[1.5rem]
+                  bg-white
+                  shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+                  transition-all
+                  duration-500
+                  hover:-translate-y-1
+                  hover:shadow-[0_30px_90px_rgba(0,0,0,0.12)]
+                "
+              >
+                <div className="h-[190px] overflow-hidden bg-black/10">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <p className="mb-4 text-[10px] uppercase tracking-[0.28em] text-[#c96a1b]">
+                    {service.brand}
+                  </p>
+
+                  <h3 className="mb-4 text-xl font-semibold leading-tight tracking-[-0.03em] text-[#111]">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-sm leading-[1.7] text-black/60">
+                    {service.description}
+                  </p>
+
+                  <p className="mt-6 text-xs font-medium text-[#c96a1b]">
+                    Ver solución →
+                  </p>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
 
 export default function SolucionesPage() {
   return (
-    <main className="relative bg-black text-white min-h-screen overflow-hidden">
+    <main className="min-h-screen overflow-hidden bg-[#f5f2eb] text-[#111]">
       <Navbar />
-
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] bg-[#c96a1b]/10 blur-[180px]" />
-
-        <div className="absolute bottom-[-20%] right-[-10%] w-[700px] h-[700px] bg-white/[0.03] blur-[160px]" />
-      </div>
 
       <PageHero
         eyebrow="Soluciones Estratégicas"
         title="Estructuras empresariales diseñadas para decisiones de alto impacto."
-        description="Grupo A&C integra estrategia tributaria, financiera y corporativa para organizaciones que requieren claridad, protección y evolución."
+        description="Grupo A&C integra estrategia tributaria, financiera, contable y corporativa para organizaciones que requieren claridad, protección y evolución."
       />
 
-      <section className="relative z-10 pb-32 overflow-hidden">
+      <section className="px-6 pb-16">
+        <Container>
+          <Reveal>
+            <div className="relative h-[420px] overflow-hidden rounded-[2rem] md:h-[520px]">
+              <img
+                src="/fotos/soluciones-hero.jpg"
+                alt="Consultoría empresarial Grupo A&C"
+                className="h-full w-full object-cover"
+              />
 
-        {/* VIDEO BACKGROUND */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="
-            absolute
-            inset-0
-            w-full
-            h-full
-            object-cover
-            opacity-80
-          "
-        >
-          <source src="/videos/solutions.mp4" type="video/mp4" />
-        </video>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/75" />
+              <div className="absolute bottom-8 left-6 max-w-2xl text-white md:bottom-12 md:left-12">
+                <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#d6a15f]">
+                  Diagnóstico · Estrategia · Ejecución
+                </p>
 
-        <Container className="relative z-10">
-          <div className="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-  {services.map((service, index) => (
-  <Reveal key={service.title} delay={index * 0.04}>
-    <Link href={service.href} className="block h-full">
-      <GlassCard
-        className="
-          min-h-[260px]
-          h-[350px]
-          border
-          border-white/10
-          bg-white/[0.045]
-          backdrop-blur-2xl
-          transition-all
-          duration-500
-          hover:-translate-y-1
-          hover:border-[#c96a1b]/35
-          hover:bg-white/[0.07]
-          hover:shadow-[0_25px_80px_rgba(201,106,27,0.12)]
-        "
-      >
-        <p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#c96a1b]">
-          0{index + 1}
-        </p>
+                <h2 className="text-3xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-6xl">
+                  Servicios diseñados para ordenar, proteger y escalar empresas.
+                </h2>
+              </div>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
-        <h3 className="mb-5 text-xl font-semibold leading-[1.05] tracking-[-0.03em] md:text-2xl">
-          {service.title}
-        </h3>
+      <ServiceCarousel
+        title="Servicios estratégicos para decisiones empresariales."
+        description="Soluciones orientadas a planeación, protección, control financiero y sostenibilidad corporativa."
+        services={strategicServices}
+      />
 
-        <p className="text-sm font-light leading-[1.75] text-white/55">
-          {service.description}
-        </p>
+      <ServiceCarousel
+        title="Servicios operativos para gestión, cumplimiento y continuidad."
+        description="Procesos técnicos y administrativos que permiten mantener la empresa en orden y conectada con sus obligaciones."
+        services={operationalServices}
+      />
 
-        <div className="mt-8 border-t border-white/10 pt-5">
-          <p className="text-[10px] uppercase tracking-[0.28em] text-[#c96a1b]/80">
-            {service.brand}
-          </p>
+      <section className="px-6 py-24">
+        <Container>
+          <div className="rounded-[2rem] bg-[#111] px-8 py-14 text-white md:px-14 md:py-20">
+            <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
+              <div>
+                <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+                  Próximo paso
+                </p>
 
-          <p className="mt-3 text-xs text-white/40">
-            Ver micrositio →
-          </p>
-        </div>
-      </GlassCard>
-    </Link>
-  </Reveal>
-))}
-</div>
-</Container>
-</section>
-<Footer />
-</main>
-);
+                <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.05em] md:text-5xl">
+                  Convirtamos la complejidad de su empresa en una estructura clara de crecimiento.
+                </h2>
+              </div>
+
+              <div className="md:text-right">
+                <Link
+                  href="/contacto"
+                  className="inline-flex rounded-full bg-[#c96a1b] px-8 py-4 text-sm font-medium text-white transition-all duration-300 hover:bg-[#a95515]"
+                >
+                  Solicitar diagnóstico empresarial
+                </Link>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <Footer />
+    </main>
+  );
 }
