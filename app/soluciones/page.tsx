@@ -1,5 +1,4 @@
 import Link from "next/link";
-import PageHero from "@/components/sections/PageHero";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
@@ -192,18 +191,67 @@ export default function SolucionesPage() {
     <main className="min-h-screen overflow-hidden bg-[#f5f2eb] text-[#111]">
       <Navbar />
 
-      <PageHero
-        eyebrow="Soluciones Estratégicas"
-        title="Estructuras empresariales diseñadas para decisiones de alto impacto."
-        description="Grupo A&C integra estrategia tributaria, financiera, contable y corporativa para organizaciones que requieren claridad, protección y evolución."
-      />
+      <section className="relative min-h-[88vh] overflow-hidden">
+        <img
+          src="/fotos/soluciones-main-hero.png"
+          alt="Soluciones estratégicas Grupo A&C"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
+
+        <Container className="relative z-10 flex min-h-[88vh] items-end pb-20 pt-40">
+          <Reveal>
+            <div className="max-w-5xl text-white">
+              <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#d6a15f]">
+                Soluciones Estratégicas
+              </p>
+
+              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.07em] md:text-7xl lg:text-8xl">
+                Estructuras empresariales diseñadas para decisiones de alto impacto.
+              </h1>
+
+              <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-white/75 md:text-xl">
+                Grupo A&C integra estrategia tributaria, financiera, contable y
+                corporativa para organizaciones que requieren claridad, protección
+                y evolución.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      <section className="py-24">
+        <Container>
+          <Reveal>
+            <div className="mx-auto max-w-4xl text-center">
+              <p className="mb-6 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+                Grupo Análisis & Consultorías
+              </p>
+
+              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.05em] text-[#111] md:text-6xl">
+                Más de dos décadas transformando información financiera en
+                decisiones empresariales.
+              </h2>
+
+              <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-black/60">
+                Integramos estrategia tributaria, contable, financiera y
+                tecnológica para construir empresas más sólidas, protegidas y
+                preparadas para crecer.
+              </p>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
 
       <section className="px-6 pb-16">
         <Container>
           <Reveal>
             <div className="relative h-[420px] overflow-hidden rounded-[2rem] md:h-[520px]">
               <img
-                src="/fotos/soluciones-hero.jpg"
+                src="/fotos/soluciones-hero.png"
                 alt="Consultoría empresarial Grupo A&C"
                 className="h-full w-full object-cover"
               />
@@ -247,7 +295,8 @@ export default function SolucionesPage() {
                 </p>
 
                 <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.05em] md:text-5xl">
-                  Convirtamos la complejidad de su empresa en una estructura clara de crecimiento.
+                  Convirtamos la complejidad de su empresa en una estructura
+                  clara de crecimiento.
                 </h2>
               </div>
 
