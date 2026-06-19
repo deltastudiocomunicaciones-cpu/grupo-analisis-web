@@ -1,3 +1,4 @@
+import ServicesShowcaseCarousel from "@/components/sections/ServicesShowcaseCarousel";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -94,7 +95,7 @@ const operationalServices = [
       "Gestión especializada ante entidades tributarias con control documental.",
     brand: "TRACO",
     href: "/traco",
-    image: "/fotos/servicios/tramites-dian.jpg",
+    image: "/fotos/servicios/tramites-dian.png",
   },
   {
     title: "Trámites Cámara de Comercio",
@@ -275,17 +276,19 @@ export default function SolucionesPage() {
         </Container>
       </section>
 
-      <ServiceCarousel
-        title="Servicios estratégicos para decisiones empresariales."
-        description="Soluciones orientadas a planeación, protección, control financiero y sostenibilidad corporativa."
-        services={strategicServices}
-      />
+      <ServicesShowcaseCarousel
+  eyebrow="Servicios estratégicos"
+  title="Servicios estratégicos para decisiones empresariales."
+  description="Soluciones orientadas a planeación, protección, control financiero y sostenibilidad corporativa."
+  items={strategicServices}
+/>
 
-      <ServiceCarousel
-        title="Servicios operativos para gestión, cumplimiento y continuidad."
-        description="Procesos técnicos y administrativos que permiten mantener la empresa en orden y conectada con sus obligaciones."
-        services={operationalServices}
-      />
+<ServicesShowcaseCarousel
+  eyebrow="Gestión y cumplimiento"
+  title="Servicios operativos para continuidad empresarial."
+  description="Procesos técnicos y administrativos que permiten mantener la empresa en orden y conectada con sus obligaciones."
+  items={operationalServices}
+/>
 
       <section className="px-4 py-16 md:px-6 md:py-24">
         <Container>
