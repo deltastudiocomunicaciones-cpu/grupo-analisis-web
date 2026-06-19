@@ -8,102 +8,73 @@ import Container from "@/components/ui/Container";
 const strategicServices = [
   {
     title: "Asesoría Tributaria y Financiera",
-    description:
-      "Análisis estructural para decisiones de expansión, sostenibilidad y eficiencia empresarial.",
     brand: "Análisis & Consultorías",
     href: "/analisis-consultorias",
-    image: "/fotos/servicios/asesoria-tributaria.jpg",
+    image: "/fotos/servicios/asesoria-tributaria.png",
   },
   {
     title: "Auditorías Financieras",
-    description:
-      "Diagnóstico financiero y contable orientado al control, la trazabilidad y la evolución empresarial.",
     brand: "Análisis & Consultorías",
     href: "/analisis-consultorias",
-    image: "/fotos/servicios/auditorias-financieras.jpg",
+    image: "/fotos/servicios/auditorias-financieras.png",
   },
   {
     title: "Reestructuración Patrimonial",
-    description:
-      "Diseño de estrategias para proteger, reorganizar y proyectar estructuras patrimoniales.",
     brand: "Análisis & Consultorías",
     href: "/analisis-consultorias",
-    image: "/fotos/servicios/reestructuracion-patrimonial.jpg",
+    image: "/fotos/servicios/reestructuracion-patrimonial.png",
   },
   {
-    title: "Insolvencias",
-    description:
-      "Estrategias legales y financieras para reorganización empresarial y protección patrimonial.",
-    brand: "Análisis & Consultorías",
+    title: "Estrategia Tributaria",
     href: "/analisis-consultorias",
-    image: "/fotos/servicios/insolvencias.jpg",
+    image: "/fotos/servicios/estrategia-tributaria.png",
   },
   {
-    title: "Asesoría Jurídica",
-    description:
-      "Soporte jurídico empresarial para decisiones contractuales, fiscales y corporativas.",
-    brand: "Análisis & Consultorías",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/asesoria-juridica.jpg",
+    title: "Estructura Empresarial",
+    href: "/traco",
+    image: "/fotos/servicios/estructura-empresarial.png",
   },
   {
-    title: "Diseño de Procesos",
-    description:
-      "Diseño organizacional, contable y financiero para compañías en crecimiento.",
+    title: "Simplificación de Procesos",
     brand: "SADI",
     href: "/sadi",
-    image: "/fotos/servicios/diseno-procesos.jpg",
+    image: "/fotos/servicios/simplicidad-procesos.png",
   },
 ];
 
 const operationalServices = [
   {
     title: "Devoluciones de IVA",
-    description:
-      "Acompañamiento técnico para procesos de devolución, compensación y trazabilidad tributaria.",
     brand: "Análisis & Consultorías",
     href: "/analisis-consultorias",
-    image: "/fotos/servicios/devoluciones-iva.jpg",
+    image: "/fotos/servicios/devoluciones-iva.png",
   },
   {
     title: "Contabilidad Total o Por Eventos",
-    description:
-      "Gestión contable flexible para empresas, empresarios y estructuras familiares.",
-    brand: "CEC",
     href: "/contadores-en-colombia",
-    image: "/fotos/servicios/contabilidad.jpg",
+    image: "/fotos/servicios/contabilidad.png",
   },
   {
-    title: "Declaraciones de Renta",
-    description:
-      "Gestión tributaria precisa para personas naturales, empresarios y compañías.",
+    title: "Formación Profesional Contable",
     brand: "CEC",
     href: "/contadores-en-colombia",
-    image: "/fotos/servicios/declaraciones-renta.jpg",
+    image: "/fotos/servicios/formacion-profesional.png",
   },
   {
-    title: "Software Contable SADI",
-    description:
-      "Integración del ecosistema SADI para automatización empresarial inteligente.",
-    brand: "SADI",
-    href: "/sadi",
-    image: "/fotos/servicios/software-contable.jpg",
+    title: "Fin de la auditoría",
+    brand: "CEC",
+    href: "/contadores-en-colombia",
+    image: "/fotos/servicios/fin-auditoria.png",
   },
   {
     title: "Trámites DIAN",
-    description:
-      "Gestión especializada ante entidades tributarias con control documental.",
-    brand: "TRACO",
     href: "/traco",
-    image: "/fotos/servicios/tramites-dian.png",
+    image: "/fotos/servicios/tramites-dian-v1.png",
   },
   {
     title: "Trámites Cámara de Comercio",
-    description:
-      "Registros, reformas y acompañamiento societario para empresas en Colombia.",
-    brand: "TRACO",
     href: "/traco",
-    image: "/fotos/servicios/camara-comercio.jpg",
+    image: "/fotos/servicios/camara-comercio-v1.png",
   },
 ];
 
@@ -256,7 +227,7 @@ export default function SolucionesPage() {
               <img
                 src="/fotos/soluciones-hero.png"
                 alt="Consultoría empresarial Grupo A&C"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[center_37%]"
               />
 
               <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-transparent" />

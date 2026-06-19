@@ -42,7 +42,9 @@ export default function ServicesShowcaseCarousel({
 
   return (
     <section className="relative overflow-hidden bg-[#efe8dd] py-20 text-[#111] md:py-28">
-      <div className="mx-auto mb-12 w-full max-w-7xl px-5 sm:px-8">
+      <div className="pointer-events-none absolute left-1/2 top-[-200px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#c96a1b]/10 blur-[180px]" />
+
+      <div className="relative z-10 mx-auto mb-12 w-full max-w-7xl px-5 sm:px-8">
         <p className="mb-5 text-xs font-semibold uppercase tracking-[0.34em] text-[#c96a1b]">
           {eyebrow}
         </p>
@@ -56,7 +58,7 @@ export default function ServicesShowcaseCarousel({
         </p>
       </div>
 
-      <div className="relative mx-auto h-[560px] w-full max-w-7xl overflow-hidden md:h-[620px]">
+      <div className="relative z-10 mx-auto h-[560px] w-full max-w-7xl overflow-hidden md:h-[620px]">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-16 bg-gradient-to-r from-[#efe8dd] to-transparent md:w-32" />
         <div className="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 bg-gradient-to-l from-[#efe8dd] to-transparent md:w-32" />
 
@@ -70,6 +72,7 @@ export default function ServicesShowcaseCarousel({
               href={item.href}
               key={`${item.title}-${index}`}
               onClick={() => goToCard(index)}
+              aria-label={`Ver ${item.title}`}
               className="
                 absolute
                 left-1/2
@@ -78,7 +81,7 @@ export default function ServicesShowcaseCarousel({
                 aspect-[9/16]
                 w-[min(78vw,340px)]
                 overflow-hidden
-                rounded-[1.6rem]
+                rounded-[2rem]
                 bg-black
                 shadow-2xl
                 transition-all
@@ -94,35 +97,40 @@ export default function ServicesShowcaseCarousel({
                 zIndex: 10 - Math.abs(offset),
               }}
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="340px"
-                className="object-cover object-center"
-              />
-
-              <div className="absolute inset-0 bg-gradient-to-t from-black/92 via-black/35 to-black/10" />
-
-              <div className="absolute inset-x-6 top-7 text-center">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[#d6a15f]">
-                  {item.brand}
-                </p>
+              <div className="absolute inset-0 overflow-hidden rounded-[2rem]">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="340px"
+                  className="object-cover object-center"
+                />
               </div>
 
-              <div className="absolute inset-x-6 bottom-8 text-center">
-                <h3 className="text-3xl font-semibold uppercase leading-[0.95] tracking-[-0.04em] md:text-4xl">
-                  {item.title}
-                </h3>
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-                <p className="mx-auto mt-5 max-w-[260px] text-sm leading-relaxed text-white/68">
-                  {item.description}
-                </p>
-
-                <p className="mt-6 text-xs font-medium uppercase tracking-[0.22em] text-[#d6a15f]">
-                  Ver solución →
-                </p>
-              </div>
+              <div className="absolute inset-x-0 bottom-8 text-center">
+  <p
+    className="
+      inline-flex
+      items-center
+      rounded-full
+      border
+      border-white/20
+      bg-black/30
+      px-5
+      py-2
+      text-xs
+      font-medium
+      uppercase
+      tracking-[0.25em]
+      text-white
+      backdrop-blur-md
+    "
+  >
+    Ver solución →
+  </p>
+</div>
             </Link>
           );
         })}
@@ -146,12 +154,12 @@ export default function ServicesShowcaseCarousel({
         </button>
       </div>
 
-      <div className="mt-6 flex justify-center gap-3">
+      <div className="relative z-10 mt-6 flex justify-center gap-3">
         {items.map((item, index) => (
           <button
             aria-label={`Ver ${item.title}`}
-            className={`h-3 w-3 rounded-full border border-white/50 transition hover:bg-white ${
-              activeIndex === index ? "bg-white" : "bg-white/25"
+            className={`h-3 w-3 rounded-full border border-[#111]/30 transition hover:bg-[#111] ${
+              activeIndex === index ? "bg-[#111]" : "bg-[#111]/20"
             }`}
             key={`${item.title}-${index}`}
             onClick={() => goToCard(index)}
