@@ -140,8 +140,10 @@ function ServiceCarousel({
                 className="
                   group
                   block
-                  min-w-[310px]
-                  max-w-[310px]
+                  min-w-[82vw]
+                  max-w-[82vw]
+                  sm:min-w-[310px]
+                  sm:max-w-[310px]
                   overflow-hidden
                   rounded-[1.5rem]
                   bg-white
@@ -191,7 +193,7 @@ export default function SolucionesPage() {
     <main className="min-h-screen overflow-hidden bg-[#f5f2eb] text-[#111]">
       <Navbar />
 
-      <section className="relative min-h-[88vh] overflow-hidden">
+      <section className="relative min-h-[78vh] overflow-hidden md:min-h-[88vh]">
         <img
           src="/fotos/soluciones-main-hero.png"
           alt="Soluciones estratégicas Grupo A&C"
@@ -202,18 +204,18 @@ export default function SolucionesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
 
-        <Container className="relative z-10 flex min-h-[88vh] items-end pb-20 pt-40">
+        <Container className="relative z-10 flex min-h-[78vh] items-end pb-14 pt-32 md:min-h-[88vh] md:pb-20 md:pt-40">
           <Reveal>
             <div className="max-w-5xl text-white">
               <p className="mb-6 text-xs uppercase tracking-[0.4em] text-[#d6a15f]">
                 Soluciones Estratégicas
               </p>
 
-              <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.07em] md:text-7xl lg:text-8xl">
+              <h1 className="max-w-5xl text-4xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-5xl md:text-7xl lg:text-8xl">
                 Estructuras empresariales diseñadas para decisiones de alto impacto.
               </h1>
 
-              <p className="mt-8 max-w-2xl text-base font-light leading-relaxed text-white/75 md:text-xl">
+              <p className="mt-6 max-w-2xl text-sm font-light leading-relaxed text-white/75 sm:text-base md:mt-8 md:text-xl">
                 Grupo A&C integra estrategia tributaria, financiera, contable y
                 corporativa para organizaciones que requieren claridad, protección
                 y evolución.
@@ -223,7 +225,7 @@ export default function SolucionesPage() {
         </Container>
       </section>
 
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-4xl text-center">
@@ -231,7 +233,7 @@ export default function SolucionesPage() {
                 Grupo Análisis & Consultorías
               </p>
 
-              <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.05em] text-[#111] md:text-6xl">
+              <h2 className="text-3xl font-semibold leading-[1.05] tracking-[-0.05em] text-[#111] md:text-6xl">
                 Más de dos décadas transformando información financiera en
                 decisiones empresariales.
               </h2>
@@ -246,10 +248,10 @@ export default function SolucionesPage() {
         </Container>
       </section>
 
-      <section className="px-6 pb-16">
+      <section className="px-4 pb-12 md:px-6 md:pb-16">
         <Container>
           <Reveal>
-            <div className="relative h-[420px] overflow-hidden rounded-[2rem] md:h-[520px]">
+            <div className="relative h-[360px] overflow-hidden rounded-[1.5rem] md:h-[520px] md:rounded-[2rem]">
               <img
                 src="/fotos/soluciones-hero.png"
                 alt="Consultoría empresarial Grupo A&C"
@@ -264,7 +266,7 @@ export default function SolucionesPage() {
                   Diagnóstico · Estrategia · Ejecución
                 </p>
 
-                <h2 className="text-3xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-6xl">
+                <h2 className="text-2xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-3xl md:text-6xl">
                   Servicios diseñados para ordenar, proteger y escalar empresas.
                 </h2>
               </div>
@@ -285,9 +287,9 @@ export default function SolucionesPage() {
         services={operationalServices}
       />
 
-      <section className="px-6 py-24">
+      <section className="px-4 py-16 md:px-6 md:py-24">
         <Container>
-          <div className="rounded-[2rem] bg-[#111] px-8 py-14 text-white md:px-14 md:py-20">
+          <div className="rounded-[1.5rem] bg-[#111] px-6 py-12 text-white md:rounded-[2rem] md:px-14 md:py-20">
             <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
               <div>
                 <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
