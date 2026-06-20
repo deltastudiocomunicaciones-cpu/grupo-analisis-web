@@ -1,4 +1,3 @@
-import StrategicDivider from "@/components/ui/StrategicDivider";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -13,12 +12,15 @@ export default function VerticalesPage() {
 
       <div className="absolute inset-0 overflow-hidden">
   <img
-    src="/fotos/sinapsis-empresarial.jpeg"
-    alt="Sinapsis Empresarial Grupo A&C"
-   className="absolute inset-0 h-full w-full object-cover object-center md:object-cover brightness-110 contrast-105"
-  />
+  src="/fotos/sinapsis-empresarial.png"
+  alt="Sinapsis Empresarial Grupo A&C"
+  className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105"
+  style={{
+    objectPosition: "30% 20%",
+  }}
+/>
 
-  <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/45 to-black/80 md:bg-gradient-to-r md:from-black/75 md:via-black/35 md:to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55 md:bg-gradient-to-r md:from-black/45 md:via-black/10 md:to-transparent" />
 
   <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black" />
 </div>
@@ -78,10 +80,7 @@ export default function VerticalesPage() {
         </div>
       </section>
 
-<StrategicDivider
-  quote="Toda batalla se gana antes de ser librada."
-  author="Sun Tzu"
-/>
+
 
 <Footer />
     </main>

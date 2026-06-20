@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -724,7 +725,24 @@ const sections = [
   ),
 },
 ];
-
+const stats = [
+  {
+    value: "20+ años",
+    text: "Experiencia construyendo confianza empresarial.",
+  },
+  {
+    value: "SADI",
+    text: "Tecnología propia para información en tiempo real.",
+  },
+  {
+    value: "2027-2037",
+    text: "Meta de expansión, innovación y liderazgo.",
+  },
+  {
+    value: "Colombia",
+    text: "Origen local con visión nacional e internacional.",
+  },
+];
 export default function NosotrosPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -737,100 +755,113 @@ export default function NosotrosPage() {
         <div className="absolute bottom-[-25%] right-[-10%] h-[700px] w-[700px] rounded-full bg-white/[0.03] blur-[160px]" />
       </div>
 
-      <section className="relative z-10 px-6 pt-44 pb-20">
-        <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
-              Nosotros · Grupo A&C
-            </p>
+      <section className="relative min-h-[78vh] overflow-hidden md:min-h-[88vh]">
 
-            <h1 className="max-w-6xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
-              Más que una firma contable, una arquitectura de confianza.
-            </h1>
+  <img
+    src="/fotos/nosotros-poster.png"
+    alt="Grupo Análisis & Consultorías"
+    className="absolute inset-0 h-full w-full object-cover"
+  />
 
-            <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-white/70">
-              Integramos experiencia, estrategia, tecnología y conocimiento para
-              ayudar a empresas y personas a tomar mejores decisiones, proteger
-              su patrimonio y avanzar con tranquilidad hacia el futuro.
-            </p>
-          </Reveal>
-        </div>
-      </section>
+  <div className="absolute inset-0 bg-black/15" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/20" />
 
-      <section className="relative z-10 px-6 pb-20">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <GlassCard className="min-h-[420px] overflow-hidden">
-              <div className="relative flex min-h-[420px] md:min-h-[380px] items-end overflow-hidden rounded-[2rem] bg-black p-8">
-               <video
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="metadata"
-  poster="/fotos/nosotros-video-poster.jpg"
-  className="absolute inset-0 h-full w-full object-cover opacity-100 md:opacity-80"
->
-  <source src="/videos/intelligence-v2.mp4" type="video/mp4" />
-</video>
+  <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-7xl items-end px-6 pb-16 pt-32 md:min-h-[88vh] md:pb-24 md:pt-40">
 
-<div className="absolute top-4 left-4 z-50 bg-red-00 px-2 py-1 text-xs">
-</div>
-                
+    <Reveal>
+      <div className="max-w-6xl text-white">
 
-                <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/10 via-black/10 to-black/35 md:via-black/30 md:to-black/70" />
+        <p className="mb-6 text-xs uppercase tracking-[0.45em] text-[#d6a15f]">
+          
+        </p>
 
-                <div className="relative z-10">
-                  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/50">
-                    Desde 2006
-                  </p>
-                  <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-5xl">
-                    Tranquilidad, respaldo y crecimiento para decisiones de alto
-                    impacto.
-                  </h2>
-                </div>
-              </div>
-            </GlassCard>
-          </Reveal>
+        <h1 className="max-w-6xl text-4xl font-semibold leading-[0.95] tracking-[-0.06em] sm:text-5xl md:text-7xl lg:text-[6.8rem]">
+          
+        </h1>
+
+        <p className="mt-6 max-w-3xl text-sm font-light leading-relaxed text-white/75 sm:text-base md:mt-8 md:text-xl">
+          
+        </p>
+
+      </div>
+    </Reveal>
+
+  </div>
+</section>
+
+     <section className="relative z-10 overflow-hidden bg-[#b9631c] px-6 py-24 md:py-32">
+      <div className="pointer-events-none absolute left-1/2 top-[-250px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-white/15 blur-[180px]" />
+        <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
+  <Reveal>
+   <GlassCard className="h-full min-h-[500px] overflow-hidden p-0">
+  <div className="relative h-full min-h-[500px] overflow-hidden rounded-[2rem]">
+
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      poster="/fotos/nosotros-poster.png"
+      className="absolute inset-0 h-full w-full object-cover"
+    >
+      <source src="/videos/intelligence-v2.mp4" type="video/mp4" />
+    </video>
+
+    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+
+    <div className="absolute bottom-0 left-0 right-0 z-10 p-8">
+
+      <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/50">
+        Desde 2006
+      </p>
+
+      <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-5xl">
+        Tranquilidad, respaldo y crecimiento para decisiones de alto impacto.
+      </h2>
+
+    </div>
+
+  </div>
+</GlassCard>
+  </Reveal>
 
           <Reveal delay={0.1}>
             <div className="grid h-full grid-cols-1 gap-4 sm:grid-cols-2">
-              {["20+ años", "SADI", "2030", "Colombia"].map((item, index) => (
-                <GlassCard
-  key={item}
+              {stats.map((item, index) => (
+  <GlassCard
+  key={item.value}
   className="
     flex
-    min-h-[222px]
+    min-h-[285px]
     flex-col
     justify-between
     border
-    border-black/10
-    bg-white/70
-    shadow-[0_15px_50px_rgba(0,0,0,0.06)]
-    hover:border-[#c96a1b]/30
-    hover:bg-white/[0.05]
+    border-white/10
+    bg-white/[0.04]
+    backdrop-blur-xl
+    transition-all
+    duration-500
+    hover:border-[#c96a1b]/35
+    hover:bg-white/[0.07]
   "
-                >
-                  <p className="text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-                    0{index + 1}
-                  </p>
+>
+  <p className="text-xs uppercase tracking-[0.3em] text-[#d6a15f]">
+    0{index + 1}
+  </p>
 
-                  <h3 className="text-4xl font-semibold tracking-[-0.05em]">
-                    {item}
-                  </h3>
+  <div>
+    <h3 className="text-4xl font-semibold tracking-[-0.05em] text-white">
+      {item.value}
+    </h3>
 
-                  <p className="text-sm leading-7 text-white/70">
-                    {index === 0 &&
-                      "Experiencia construyendo confianza empresarial."}
-                    {index === 1 &&
-                      "Tecnología propia para información en tiempo real."}
-                    {index === 2 &&
-                      "Meta de expansión, innovación y liderazgo."}
-                    {index === 3 &&
-                      "Origen local con visión nacional e internacional."}
-                  </p>
-                </GlassCard>
-              ))}
+    <p className="mt-4 text-sm leading-7 text-white/65">
+      {item.text}
+    </p>
+  </div>
+</GlassCard>
+))}
             </div>
           </Reveal>
         </div>
@@ -856,6 +887,8 @@ export default function NosotrosPage() {
             {sections.map((section, index) => {
             const isOpen = openIndex === index;
             
+
+
             return (
               <div
               key={section.title}

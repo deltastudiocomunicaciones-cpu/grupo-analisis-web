@@ -97,7 +97,7 @@ const principles = [
 ];
 const metrics = [
   {
-    value: "20+",
+    value: "+20",
     label: "Años gestionando visión patrimonial.",
     href: "/inversiones/patrimonio",
   },

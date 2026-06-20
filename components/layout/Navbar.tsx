@@ -39,11 +39,11 @@ export default function Navbar() {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-between rounded-full border border-white/10 bg-black/50 px-8 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
+            className="flex items-center justify-between gap-8 rounded-full border border-white/10 bg-black/50 px-6 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:px-8"
           >
            <Link
   href="/"
-  className="group relative flex items-center"
+  className="group relative flex min-w-[210px] items-center"
 >
   <div
     className="
@@ -51,12 +51,12 @@ export default function Navbar() {
       left-1/2
       top-1/2
       h-20
-      w-40
+      w-64
       -translate-x-1/2
       -translate-y-1/2
       rounded-full
-      bg-[#c96a1b]/15
-      blur-[40px]
+      bg-[#c96a1b]/10
+      blur-[45px]
       opacity-0
       transition-all
       duration-700
@@ -65,36 +65,24 @@ export default function Navbar() {
   />
 
   <img
-    src="/logos/grupoayc-navbar.png"
-    alt="Grupo A&C"
+    src="/logos/logo-final.png"
+    alt="Grupo Análisis & Consultorías"
     className="
       relative
       z-10
-      h-14
+      h-12
       w-auto
+      max-w-[230px]
       object-contain
       opacity-100
       transition-all
       duration-500
-      drop-shadow-[0_0_30px_rgba(201,106,27,0.35)]
-      group-hover:scale-[1.03]
+      drop-shadow-[0_0_18px_rgba(201,106,27,0.22)]
+      group-hover:scale-[1.02]
+      md:h-14
+      md:max-w-[270px]
     "
   />
-<div
-  className="
-    absolute
-    -bottom-2
-    left-1/2
-    h-px
-    w-16
-    -translate-x-1/2
-    bg-gradient-to-r
-    from-transparent
-    via-[#c96a1b]/50
-    to-transparent
-  "
-/>
-
 </Link>
 
             <nav className="hidden items-center gap-8 text-sm tracking-[0.16em] xl:flex">

@@ -193,9 +193,9 @@ function getUnitsPosition(direction: string) {
 export default function InvestmentNetworkSection() {
   return (
     <section
-      id="investment-network"
-      className="relative min-h-screen overflow-hidden bg-[#111111] py-40 text-white"
-    >
+  id="investment-network"
+  className="relative min-h-screen overflow-hidden bg-transparent py-40 text-white"
+>
       <div className="absolute left-[-10%] top-[10%] h-[600px] w-[600px] rounded-full bg-white/[0.04] blur-[120px]" />
 
       <div className="absolute bottom-[-10%] right-[-10%] h-[700px] w-[700px] rounded-full bg-[#c96a1b]/10 blur-[160px]" />
@@ -215,7 +215,7 @@ export default function InvestmentNetworkSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <div className="relative h-[620px] md:h-[780px] overflow-hidden rounded-[32px] md:rounded-[48px] border border-white/10 bg-[#1a1a1a]/80 shadow-[0_30px_120px_rgba(0,0,0,0.45)]">
+       <div className="relative h-[620px] md:h-[780px] overflow-hidden rounded-[32px] md:rounded-[48px] border border-white/10 bg-black/10 backdrop-blur-[2px]">
           <svg className="pointer-events-none absolute inset-0 h-full w-full">
             {ecosystem.map((node, index) => (
               <motion.line
