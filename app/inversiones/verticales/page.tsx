@@ -11,14 +11,21 @@ export default function VerticalesPage() {
       <Navbar />
 
       <div className="absolute inset-0 overflow-hidden">
+  <picture>
+  <source
+    media="(max-width: 768px)"
+    srcSet="/fotos/sinapsis-empresarial-mobile.png"
+  />
+
   <img
-  src="/fotos/sinapsis-empresarial.png"
-  alt="Sinapsis Empresarial Grupo A&C"
-  className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105"
-  style={{
-    objectPosition: "30% 20%",
-  }}
-/>
+    src="/fotos/sinapsis-empresarial.png"
+    alt="Sinapsis Empresarial Grupo A&C"
+    className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105 -translate-y-[9%]"
+    style={{
+      objectPosition: "31% 20%",
+    }}
+  />
+</picture>
 
   <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/15 to-black/55 md:bg-gradient-to-r md:from-black/45 md:via-black/10 md:to-transparent" />
 
