@@ -1,5 +1,4 @@
 import Script from "next/script";
-import CustomCursor from "@/components/ui/CustomCursor";
 import PageTransition from "@/components/providers/PageTransition";
 import Loader from "@/components/ui/Loader";
 import SmoothScroll from "@/components/providers/SmoothScroll";
@@ -78,7 +77,6 @@ export default function RootLayout({
   <body>
 
     <Loader />
-    <CustomCursor />
 
     <SmoothScroll>
       <PageTransition>
