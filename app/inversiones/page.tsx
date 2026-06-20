@@ -97,7 +97,7 @@ const principles = [
 ];
 const metrics = [
   {
-    value: "+20",
+    value: "+20+",
     label: "Años gestionando visión patrimonial.",
     href: "/inversiones/patrimonio",
   },
@@ -180,22 +180,7 @@ export default function InversionesPage() {
 
 </div>
         <div className="relative z-10 mx-auto max-w-7xl">
-          <Reveal>
-            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
-              Inversiones · Ecosistema Patrimonial
-            </p>
-
-            <h1 className="max-w-6xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
-              Más de 20 años construyendo activos, marcas y ecosistemas
-              empresariales.
-            </h1>
-
-            <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-white/55">
-              Grupo A&C integra operación, tecnología, hospitalidad, salud,
-              deporte, construcción e impacto social dentro de una arquitectura
-              empresarial orientada a proteger y expandir patrimonio.
-            </p>
-          </Reveal>
+          
         </div>
       </section>
 

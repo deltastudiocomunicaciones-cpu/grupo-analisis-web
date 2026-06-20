@@ -39,21 +39,7 @@ export default function VerticalesPage() {
 
       <section className="relative z-10 px-5 sm:px-6 pt-36 md:pt-44 pb-16 md:pb-20">
         <div className="mx-auto max-w-7xl">
-          <Reveal>
-            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
-              Inversiones · Sinapsis Empresarial
-            </p>
-
-            <h1 className="max-w-6xl text-4xl sm:text-5xl font-semibold leading-[0.98] md:leading-[0.95] tracking-[-0.055em] md:tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
-              Una red viva de empresas, activos y marcas conectadas.
-            </h1>
-
-            <p className="mt-7 md:mt-10 max-w-3xl text-base md:text-lg font-light leading-[1.8] md:leading-[1.9] text-white/60 md:text-white/55">
-              Grupo A&C funciona como el núcleo estratégico desde donde se
-              conectan capital, tecnología, operación, deporte, salud,
-              hospitalidad, real estate e impacto social.
-            </p>
-          </Reveal>
+          
         </div>
       </section>
 

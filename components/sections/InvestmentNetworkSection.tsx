@@ -194,7 +194,7 @@ export default function InvestmentNetworkSection() {
   return (
     <section
   id="investment-network"
-  className="relative min-h-screen overflow-hidden bg-transparent py-40 text-white"
+  className="relative min-h-screen overflow-hidden bg-transparent pt-16 pb-40 text-white md:pt-20"
 >
       <div className="absolute left-[-10%] top-[10%] h-[600px] w-[600px] rounded-full bg-white/[0.04] blur-[120px]" />
 
@@ -204,7 +204,7 @@ export default function InvestmentNetworkSection() {
 
       <div className="absolute inset-0 opacity-[0.018] bg-[linear-gradient(to_right,white_1px,transparent_1px),linear-gradient(to_bottom,white_1px,transparent_1px)] bg-[size:120px_120px]" />
 
-      <div className="relative z-10 mx-auto mb-20 max-w-7xl px-6">
+      <div className="relative z-10 mx-auto mb-8 max-w-7xl px-6 -mt-16 md:-mt-21">
         <p className="mb-8 text-sm uppercase tracking-[0.45em] text-[#c96a1b]">
           Ecosistema Inteligente
         </p>
@@ -214,7 +214,7 @@ export default function InvestmentNetworkSection() {
         </h2>
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6">
+      <div className="relative z-10 mx-auto mt-80 max-w-7xl px-6">
        <div className="relative h-[620px] md:h-[780px] overflow-hidden rounded-[32px] md:rounded-[48px] border border-white/10 bg-black/10 backdrop-blur-[2px]">
           <svg className="pointer-events-none absolute inset-0 h-full w-full">
             {ecosystem.map((node, index) => (
