@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
   description:
     "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
-  images: ["/og/grupo-ayc-og.png"],
+  images: ["/og/grupo-ayc-og-v1.png"],
 },
 
   robots: {
