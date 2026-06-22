@@ -55,7 +55,7 @@ export default function SadiPage() {
 
   {[
     "/fotos/sadi-impacto-1.png",
-    "/fotos/sadi-impacto-2.png",
+    "/fotos/sadi-impacto-v2.png",
     "/fotos/sadi-impacto-3.png",
     "/fotos/sadi-impacto-4.png",
   ].map((image, index) => (

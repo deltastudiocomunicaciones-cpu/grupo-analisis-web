@@ -59,7 +59,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/45" />
 
       <div
-        className="absolute inset-0 opacity-[0.01]"
+        className="absolute inset-0 opacity-[0.0]"
         style={{
           backgroundImage: `
             linear-gradient(to right, white 1px, transparent 1px),
@@ -112,7 +112,7 @@ export default function HeroSection() {
             {/* EYEBROW */}
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
               transition={{
                 delay: 0.3,
                 duration: 1,
