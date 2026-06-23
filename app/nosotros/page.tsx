@@ -761,6 +761,9 @@ export default function NosotrosPage() {
   <source
     media="(max-width: 768px)"
     srcSet="/fotos/nosotros-poster-mobile.png"
+    style={{
+      objectPosition: "50% 20%",
+    }}
   />
 
   <img
