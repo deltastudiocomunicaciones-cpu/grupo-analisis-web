@@ -757,11 +757,21 @@ export default function NosotrosPage() {
 
       <section className="relative min-h-[78vh] overflow-hidden md:min-h-[88vh]">
 
+  <picture>
+  <source
+    media="(max-width: 768px)"
+    srcSet="/fotos/nosotros-poster-mobile.png"
+  />
+
   <img
     src="/fotos/nosotros-poster.png"
     alt="Grupo Análisis & Consultorías"
     className="absolute inset-0 h-full w-full object-cover"
+    style={{
+      objectPosition: "50% 50%",
+    }}
   />
+</picture>
 
   <div className="absolute inset-0 bg-black/15" />
   <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/15 to-transparent" />
