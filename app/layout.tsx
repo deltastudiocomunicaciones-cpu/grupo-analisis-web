@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 
        images: [
   {
-    url: "/og/grupo-ayc-og.png",
+    url: "/og/grupo-ayc-og-v1.png",
     width: 1200,
     height: 630,
     alt: "Grupo Análisis & Consultorías",
