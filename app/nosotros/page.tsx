@@ -761,18 +761,20 @@ export default function NosotrosPage() {
   <source
     media="(max-width: 768px)"
     srcSet="/fotos/nosotros-poster-mobile.png"
-    style={{
-      objectPosition: "50% 20%",
-    }}
   />
 
   <img
     src="/fotos/nosotros-poster.png"
     alt="Grupo Análisis & Consultorías"
-    className="absolute inset-0 h-full w-full object-cover"
-    style={{
-      objectPosition: "50% 50%",
-    }}
+    className="
+      absolute
+      inset-0
+      h-full
+      w-full
+      object-cover
+      object-[20%_20%]
+      md:object-[50%_50%]
+    "
   />
 </picture>
 
