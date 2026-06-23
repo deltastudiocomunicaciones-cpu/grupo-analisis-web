@@ -131,7 +131,7 @@ hover:text-[#c96a1b]
         <div className="pt-10 flex flex-col md:flex-row items-center justify-between gap-6">
 
   <p className="text-white/35 text-sm">
-    © 2026 Grupo Análisis & Consultorías.
+    © 2006-2026 Grupo Análisis & Consultorías.
   </p>
 
   <div className="flex items-center gap-4">

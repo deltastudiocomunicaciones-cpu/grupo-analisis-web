@@ -97,7 +97,7 @@ const principles = [
 ];
 const metrics = [
   {
-    value: "+20+",
+    value: "+20",
     label: "Años gestionando visión patrimonial.",
     href: "/inversiones/patrimonio",
   },
@@ -151,39 +151,64 @@ export default function InversionesPage() {
   <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black" />
 </div>
 
+{/* HERO */}
+<section className="relative z-10 min-h-[78vh] overflow-hidden px-6 pt-44 pb-28 md:min-h-screen">
 
-      {/* HERO */}
-      <section className="relative z-10 overflow-hidden px-6 pt-44 pb-28">
-        {/* HERO BACKGROUND IMAGE */}
-<div className="absolute inset-0">
+  {/* HERO BACKGROUND IMAGE */}
+  <div className="absolute inset-0">
 
-  <img
-    src="/fotos/inversiones.png"
-    alt="Grupo A&C"
-    className="
-      h-full
-      w-full
-      object-cover
-      opacity-[150%]
-      scale-[1.03]
-    "
-  />
+    <img
+      src="/fotos/inversiones.png"
+      alt="Grupo A&C"
+      className="h-full w-full object-cover opacity-100 scale-100"
+      style={{
+        objectPosition: "50% 50%",
+      }}
+    />
 
-  {/* DARK OVERLAY */}
-  <div className="absolute inset-0 bg-black/10" />
+    <div className="absolute inset-0 bg-black/5" />
 
-  {/* COPPER LIGHT */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,106,27,0.18),transparent_45%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(201,106,27,0.12),transparent_45%)]" />
 
-  {/* CINEMATIC GRADIENT */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
 
+  </div>
+{/* HERO CONTENT */}
+<div
+  className="
+    relative
+    z-10
+    mx-auto
+    max-w-7xl
+
+    flex
+    min-h-[78vh]
+    items-end
+
+    pb-40
+    md:min-h-screen
+    md:pb-20
+  "
+>
+  <div>
+
+    <p className="mb-6 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
+      Incubadora de ideas · Empresas · Activos · Ecosistemas
+    </p>
+
+    <h1 className="max-w-6xl text-4xl sm:text-5xl font-semibold leading-[0.98] md:leading-[0.95] tracking-[-0.055em] md:tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
+      Inversiones Grupo A&C
+    </h1>
+
+    <p className="mt-8 max-w-3xl text-base md:text-lg font-light leading-[1.9] text-white/70">
+      Desde una idea hasta una empresa sostenible. Construimos, incubamos y conectamos
+      activos, tecnología, operación e impacto social.
+    </p>
+
+  </div>
 </div>
-        <div className="relative z-10 mx-auto max-w-7xl">
-          
-        </div>
-      </section>
 
+</section>
       {/* PRINCIPLES */}
       <section className="relative z-10 px-6 pb-16">
         <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto border-y border-white/10 py-5">
@@ -313,7 +338,60 @@ hover:shadow-[0_0_40px_rgba(201,106,27,0.12)]
 </section>
 
            {/* ECOSYSTEMS */}
-      <section className="relative z-10 px-6 py-32 overflow-hidden">
+      <section className="relative z-10 overflow-hidden px-6 py-32">
+        {/* BACKGROUND */}
+<div className="absolute inset-0 bg-[#0b0b0b]" />
+
+<div
+  className="
+    absolute
+    left-1/2
+    top-[-20%]
+    h-[1200px]
+    w-[1200px]
+    -translate-x-1/2
+    rounded-full
+    bg-[#c96a1b]/12
+    blur-[220px]
+    pointer-events-none
+  "
+/>
+
+<div
+  className="
+    absolute
+    bottom-[-30%]
+    left-[10%]
+    h-[700px]
+    w-[700px]
+    rounded-full
+    bg-[#c96a1b]/6
+    blur-[180px]
+    pointer-events-none
+  "
+/>
+
+<div
+  className="
+    absolute
+    right-[5%]
+    top-[20%]
+    h-[500px]
+    w-[500px]
+    rounded-full
+    bg-white/[0.03]
+    blur-[160px]
+    pointer-events-none
+  "
+/>
+
+<div
+  className="
+    absolute
+    inset-0
+    bg-[linear-gradient(to_bottom,transparent,rgba(201,106,27,0.03),transparent)]
+  "
+/>
   <div className="absolute inset-0 bg-white/[0.08]" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.04] to-transparent" />
 
@@ -457,22 +535,56 @@ hover:shadow-[0_0_40px_rgba(201,106,27,0.12)]
       <section className="relative z-10 px-6 pt-20 pb-32">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <GlassCard className="text-center">
-              <p className="mb-8 text-xs uppercase tracking-[0.4em] text-[#c96a1b]">
-                Nuevos capitales · Alianzas · Expansión
-              </p>
+            <GlassCard
+  className="
+    relative
+    overflow-hidden
+    text-center
 
-              <h2 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-6xl">
-                Un ecosistema preparado para conectar con nuevas oportunidades
-                de inversión.
-              </h2>
+    border
+    border-[#c96a1b]/30
 
-              <p className="mx-auto mt-10 max-w-3xl text-base font-light leading-[1.9] text-white/50">
-                El respaldo del Grupo A&C no está únicamente en su experiencia
-                consultiva, sino en su capacidad demostrada para construir,
-                operar y sostener activos reales durante más de dos décadas.
-              </p>
-            </GlassCard>
+    bg-[linear-gradient(145deg,rgba(201,106,27,0.22),rgba(201,106,27,0.10),rgba(0,0,0,0.55))]
+
+    shadow-[0_0_100px_rgba(201,106,27,0.18)]
+
+    backdrop-blur-3xl
+  "
+>
+  <div
+    className="
+      absolute
+      left-1/2
+      top-[-120px]
+      h-[500px]
+      w-[500px]
+      -translate-x-1/2
+      rounded-full
+      bg-[#c96a1b]/15
+      blur-[120px]
+      pointer-events-none
+    "
+  />
+
+  <div className="relative z-10">
+
+    <p className="mb-8 text-xs uppercase tracking-[0.4em] text-[#d6a15f]">
+      Nuevos capitales · Alianzas · Expansión
+    </p>
+
+    <h2 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-6xl">
+      Un ecosistema preparado para conectar con nuevas oportunidades
+      de inversión.
+    </h2>
+
+    <p className="mx-auto mt-10 max-w-3xl text-base font-light leading-[1.9] text-white/70">
+      El respaldo del Grupo A&C no está únicamente en su experiencia
+      consultiva, sino en su capacidad demostrada para construir,
+      operar y sostener activos reales durante más de dos décadas.
+    </p>
+
+  </div>
+</GlassCard>
           </Reveal>
         </div>
       </section>
