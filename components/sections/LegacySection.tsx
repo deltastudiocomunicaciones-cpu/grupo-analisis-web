@@ -5,15 +5,15 @@ import Reveal from "@/components/ui/Reveal";
 
 const stats = [
   {
-    value: "20+",
+    value: "+20",
     label: "años estructurando decisiones empresariales",
   },
   {
-    value: "10+",
+    value: "+10",
     label: "marcas integradas en un mismo ecosistema",
   },
   {
-    value: "50+",
+    value: "+50",
     label: "profesionales articulados bajo una visión estratégica",
   },
 ];
