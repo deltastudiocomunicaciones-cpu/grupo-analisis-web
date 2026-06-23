@@ -17,7 +17,7 @@ export default function ContadoresEnColombiaPage() {
         ambientColor="#16a34a"
         imageSrc="/brands/cec-isotype.png"
         imageAlt="Isotipo CEC Contadores en Colombia"
-        backgroundImage="/fotos/cec-hero.jpg"
+        backgroundImage="/fotos/cec-ecosistema-hero.png"
       />
 
       <section className="bg-[#f5f2eb] px-6 py-32 text-black">

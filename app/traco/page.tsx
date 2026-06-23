@@ -16,7 +16,7 @@ export default function TracoPage() {
         ambientColor="#2563eb"
         imageSrc="/brands/traco-isotype.png"
         imageAlt="Isotipo TRACO"
-        backgroundImage="/fotos/sadi-hero.jpg"
+        backgroundImage="/fotos/traco-ecosistema-hero.png"
       />
 
       <section className="bg-[#f5f2eb] px-6 py-32 text-black">

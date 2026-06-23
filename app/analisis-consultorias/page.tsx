@@ -18,7 +18,7 @@ export default function AnalisisConsultoriasPage() {
         ambientColor="#c96a1b"
         imageSrc="/brands/analisis-isotype.png"
         imageAlt="Isotipo Análisis & Consultorías"
-        backgroundImage="/fotos/analisis-hero.jpg"
+        backgroundImage="/fotos/analisis-ecosistema-hero.png"
       />
 
      <section className="bg-[#f5f2eb] px-6 py-32 text-black">

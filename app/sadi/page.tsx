@@ -17,7 +17,7 @@ export default function SadiPage() {
   ambientColor="#d97706"
   imageSrc="/brands/sadi-isotype.png"
   imageAlt="Isotipo SADI ERP"
-  backgroundImage="/fotos/.png"
+  backgroundImage="/fotos/sadi-ecosistema-hero.png"
 />
 
 <section className="bg-[#f5f2eb] px-6 py-32 text-black">

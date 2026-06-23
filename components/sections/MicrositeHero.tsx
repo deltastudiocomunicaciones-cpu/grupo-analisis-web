@@ -30,23 +30,27 @@ export default function MicrositeHero({
     <section className="relative min-h-screen flex items-center overflow-hidden px-6 pt-32 bg-black text-white">
       {backgroundImage && (
         <div className="absolute inset-0 overflow-hidden">
-          <img
-            src={backgroundImage}
-            alt=""
-            className="h-full w-full object-cover opacity-[0.20] scale-[1.04]"
-          />
+         <img
+  src={backgroundImage}
+  alt=""
+  className="h-full w-full object-cover opacity-100 scale-[1.02]"
+  style={{
+    objectPosition: "30% 20%",
+  }}
+/>
 
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/70 to-black" />
+<div className="absolute inset-0 bg-black/5" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/10 via-transparent to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
         </div>
       )}
 
       <div
-        className="absolute inset-0"
-        style={{
-          background: `linear-gradient(to bottom right, ${ambientColor}33, black, black)`,
-        }}
-      />
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    background: `linear-gradient(to bottom right, ${ambientColor}08, transparent, transparent)`,
+  }}
+/>
 
       <div
         className="absolute right-0 top-0 w-[900px] h-[900px] blur-[180px]"
