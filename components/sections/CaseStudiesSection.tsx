@@ -9,24 +9,29 @@ const cases = [
     name: "Tuercas y Pernos",
     sector: "Industria",
     logo: "/brands/tuercas-pernos.png",
+    logoClass: "max-h-28 md:max-h-32",
     backgroundLogo: "/brands/tuercas-pernos-fondo.png",
     url: "https://tuercasypernos.co",
     description:
       "Desde 1968, Tuercas y Pernos ha construido una reputación basada en la calidad, la innovación y el servicio al sector industrial. Como aliado estratégico de Grupo A&C, continúa fortaleciendo su estructura empresarial para impulsar crecimiento sostenible, eficiencia operativa y visión de largo plazo.",
   },
   {
-    name: "Mundo Urbano",
+    name: "Industrias OSBE",
     sector: "Comercio",
-    logo: "/brands/casos/aliado-2.png",
-    url: "https://mundourbano.co",
+    logo: "/brands/osbe.png",
+    logoClass: "max-h-36 md:max-h-64",
+    backgroundLogo: "/brands/tuercas-pernos-fondo.png",
+    url: "https://industriasosbe.com/",
     description:
       "Reseña breve de la empresa aliada y el acompañamiento estratégico desarrollado junto al Grupo A&C.",
   },
   {
-    name: "Nombre Empresa Aliada 3",
-    sector: "Empresa Mediana",
-    logo: "/brands/casos/aliado-3.png",
-    url: "/casos-de-exito",
+    name: "Suministros Agromineros",
+    sector: "Empresa",
+    logo: "/brands/agromineros.png",
+    logoClass: "max-h-40 md:max-h-50",
+    url: "https://agromineros.com.co/",
+    backgroundLogo: "/brands/tuercas-pernos-fondo.png",
     description:
       "Reseña breve de la operación, el contexto empresarial y el valor generado a través del acompañamiento financiero.",
   },
@@ -67,17 +72,17 @@ export default function CaseStudiesSection() {
               "
             >
               {item.backgroundLogo && (
-                <div className="absolute inset-0 pointer-events-none">
+                <div className="pointer-events-none absolute inset-0">
                   <img
                     src={item.backgroundLogo}
                     alt=""
                     className="
                       absolute
-                      bottom-90
-                      right-[30]
-                      w-[50%]
-                      opacity-[0.30]
+                      right-[-10%]
+                      top-[-8%]
+                      w-[70%]
                       object-contain
+                      opacity-[0.16]
                     "
                   />
 
@@ -87,11 +92,18 @@ export default function CaseStudiesSection() {
 
               <div className="relative z-10 flex h-full flex-col justify-between">
                 <div>
-                  <div className="mb-8">
+                  <div className="mb-10 flex h-36 items-center">
                     <img
                       src={item.logo}
                       alt={`Logo ${item.name}`}
-                      className="h-16 w-auto object-contain md:h-20"
+                      className={`
+                        w-auto
+                        object-contain
+                        transition-all
+                        duration-700
+                        group-hover:scale-105
+                        ${item.logoClass}
+                      `}
                     />
                   </div>
 
