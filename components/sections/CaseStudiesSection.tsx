@@ -11,6 +11,7 @@ const cases = [
     logo: "/brands/tuercas-pernos.png",
     logoClass: "max-h-28 md:max-h-32",
     url: "https://tuercasypernos.co",
+    backgroundLogo: "",
     description:
       "Desde 1968, Tuercas y Pernos ha construido una reputación basada en la calidad, la innovación y el servicio al sector industrial. Como aliado estratégico de Grupo A&C, continúa fortaleciendo su estructura empresarial para impulsar crecimiento sostenible, eficiencia operativa y visión de largo plazo.",
   },
@@ -20,6 +21,7 @@ const cases = [
     logo: "/brands/osbe.png",
     logoClass: "max-h-36 md:max-h-58",
     url: "https://industriasosbe.com/",
+    backgroundLogo: "",
     description:
       "Reseña breve de la empresa aliada y el acompañamiento estratégico desarrollado junto al Grupo A&C.",
   },
@@ -29,6 +31,7 @@ const cases = [
     logo: "/brands/agromineros.png",
     logoClass: "max-h-40 md:max-h-50",
     url: "https://agromineros.com.co/",
+    backgroundLogo: "",
     description:
       "Reseña breve de la operación, el contexto empresarial y el valor generado a través del acompañamiento financiero.",
   },
