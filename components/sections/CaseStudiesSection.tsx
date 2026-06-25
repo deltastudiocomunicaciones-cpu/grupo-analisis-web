@@ -10,7 +10,6 @@ const cases = [
     sector: "Industria",
     logo: "/brands/tuercas-pernos.png",
     logoClass: "max-h-28 md:max-h-32",
-    backgroundLogo: "/brands/tuercas-pernos-fondo.png",
     url: "https://tuercasypernos.co",
     description:
       "Desde 1968, Tuercas y Pernos ha construido una reputación basada en la calidad, la innovación y el servicio al sector industrial. Como aliado estratégico de Grupo A&C, continúa fortaleciendo su estructura empresarial para impulsar crecimiento sostenible, eficiencia operativa y visión de largo plazo.",
@@ -19,8 +18,7 @@ const cases = [
     name: "Industrias OSBE",
     sector: "Comercio",
     logo: "/brands/osbe.png",
-    logoClass: "max-h-36 md:max-h-64",
-    backgroundLogo: "/brands/tuercas-pernos-fondo.png",
+    logoClass: "max-h-36 md:max-h-58",
     url: "https://industriasosbe.com/",
     description:
       "Reseña breve de la empresa aliada y el acompañamiento estratégico desarrollado junto al Grupo A&C.",
@@ -31,7 +29,6 @@ const cases = [
     logo: "/brands/agromineros.png",
     logoClass: "max-h-40 md:max-h-50",
     url: "https://agromineros.com.co/",
-    backgroundLogo: "/brands/tuercas-pernos-fondo.png",
     description:
       "Reseña breve de la operación, el contexto empresarial y el valor generado a través del acompañamiento financiero.",
   },
