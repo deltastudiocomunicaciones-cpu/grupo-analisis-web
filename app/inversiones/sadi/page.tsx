@@ -11,7 +11,7 @@ export default function SadiPage() {
       <div className="absolute inset-0 overflow-hidden">
 
   <img
-    src="/fotos/sadi-hero.png"
+    src="/fotos/sadi-hero-v1.png"
     alt="SADI ERP"
     className="
       absolute
@@ -19,7 +19,7 @@ export default function SadiPage() {
       h-[60%]
       w-full
       object-cover
-      brightness-60
+      brightness 40
       contrast-110
       "
        style={{
