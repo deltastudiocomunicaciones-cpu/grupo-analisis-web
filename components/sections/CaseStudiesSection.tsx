@@ -23,7 +23,7 @@ const cases = [
     url: "https://industriasosbe.com/",
     backgroundLogo: "",
     description:
-      "Reseña breve de la empresa aliada y el acompañamiento estratégico desarrollado junto al Grupo A&C.",
+      "Con más de 40 años de trayectoria, Industrias OSBE ha construido una historia empresarial basada en la mejora continua, la calidad de sus productos y la atención a sus usuarios. Su presencia en Colombia, Chile, Costa Rica, Puerto Rico, Brasil, Trinidad y Tobago, Panamá, Ecuador y Miami refleja una compañía sólida, con alcance internacional y visión de crecimiento sostenido.",
   },
   {
     name: "Suministros Agromineros",
@@ -33,7 +33,7 @@ const cases = [
     url: "https://agromineros.com.co/",
     backgroundLogo: "",
     description:
-      "Reseña breve de la operación, el contexto empresarial y el valor generado a través del acompañamiento financiero.",
+      "Empresa especializada en operación y consultoría minera, con altos estándares de responsabilidad social, ambiental y de seguridad laboral. Su equipo técnico calificado acompaña la planeación, ejecución y control de operaciones, ayudando a minimizar riesgos y garantizar rentabilidad, confiabilidad y calidad en el servicio.",
   },
 ];
 
