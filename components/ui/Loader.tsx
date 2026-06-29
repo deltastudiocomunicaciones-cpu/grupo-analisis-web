@@ -40,22 +40,36 @@ export default function Loader() {
           className="fixed inset-0 z-[99999] overflow-hidden bg-black"
         >
           {/* Video de introducción */}
-          <video
-            ref={videoRef}
-            src="/videos/intro-grupo-ayc.mp4"
-            poster="/videos/intro-poster.jpg"
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            onEnded={() => setLoading(false)}
-            onError={() => setLoading(false)}
-            className="absolute inset-0 h-full w-full object-cover"
-          />
+          {/* Video desktop */}
+<video
+  ref={videoRef}
+  autoPlay
+  muted
+  playsInline
+  preload="auto"
+  onEnded={() => setLoading(false)}
+  onError={() => setLoading(false)}
+  className="absolute inset-0 hidden h-full w-full object-cover object-center md:block"
+>
+  <source src="/videos/intro-grupo-ayc.mp4" type="video/mp4" />
+</video>
+
+{/* Video mobile */}
+<video
+  autoPlay
+  muted
+  playsInline
+  preload="auto"
+  onEnded={() => setLoading(false)}
+  onError={() => setLoading(false)}
+  className="absolute inset-0 h-full w-full object-cover object-center md:hidden"
+>
+  <source src="/videos/intro-grupo-ayc-mobile.mp4" type="video/mp4" />
+</video>
 
           {/* Capas cinematográficas */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/75" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/55" />
+<div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/65 md:from-black/35 md:via-black/20 md:to-black/75" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 md:from-black/70 md:to-black/55" />
 
           {/* Halo premium */}
           <motion.div
@@ -106,11 +120,11 @@ export default function Loader() {
 
           {/* Botón para saltar intro */}
           <button
-            onClick={() => setLoading(false)}
-            className="absolute bottom-8 right-8 z-20 rounded-full border border-white/15 bg-white/5 px-5 py-3 text-xs uppercase tracking-[0.28em] text-white/50 backdrop-blur-xl transition-all duration-500 hover:border-[#c96a1b]/40 hover:bg-[#c96a1b]/10 hover:text-white"
-          >
-            Saltar
-          </button>
+  onClick={() => setLoading(false)}
+  className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 rounded-full border border-white/15 bg-black/30 px-5 py-3 text-[10px] uppercase tracking-[0.28em] text-white/55 backdrop-blur-xl transition-all duration-500 hover:border-[#c96a1b]/40 hover:bg-[#c96a1b]/10 hover:text-white md:bottom-8 md:left-auto md:right-8 md:translate-x-0 md:text-xs"
+>
+  Saltar
+</button>
         </motion.div>
       )}
     </AnimatePresence>
