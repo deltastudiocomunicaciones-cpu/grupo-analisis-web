@@ -39,25 +39,60 @@ export default function Navbar() {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-            className="flex items-center justify-between gap-8 rounded-full border border-white/10 bg-black/50 px-6 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:px-8"
+           className="relative flex items-center justify-between gap-8 rounded-full border border-white/10 bg-black/55 px-6 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:px-8"
           >
            <Link
   href="/"
-  className="group relative flex min-w-[210px] items-center"
+  className="group relative isolate flex min-w-[210px] items-center"
 >
-  <div
+  {/* Resplandor principal detrás del logo */}
+  <motion.div
+    aria-hidden="true"
+    animate={{
+      opacity: [0.45, 0.68, 0.45],
+      scale: [1, 1.06, 1],
+    }}
+    transition={{
+      duration: 5.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
     className="
+      pointer-events-none
       absolute
       left-1/2
       top-1/2
-      h-20
-      w-64
+      -z-10
+      h-24
+      w-72
       -translate-x-1/2
       -translate-y-1/2
       rounded-full
-      bg-[#c96a1b]/10
-      blur-[45px]
-      opacity-0
+      bg-[radial-gradient(circle,rgba(255,255,255,0.22)_0%,rgba(201,106,27,0.18)_32%,rgba(201,106,27,0.08)_52%,transparent_74%)]
+      blur-[34px]
+      transition-all
+      duration-700
+      group-hover:opacity-70
+    "
+  />
+
+  {/* Luz blanca interna tipo reflejo premium */}
+  <div
+    aria-hidden="true"
+    className="
+      pointer-events-none
+      absolute
+      left-[42%]
+      top-1/2
+      -z-10
+      h-16
+      w-40
+      -translate-x-1/2
+      -translate-y-1/2
+      rounded-full
+      bg-white/12
+      blur-[28px]
+      opacity-70
       transition-all
       duration-700
       group-hover:opacity-100
@@ -77,14 +112,14 @@ export default function Navbar() {
       opacity-100
       transition-all
       duration-500
-      drop-shadow-[0_0_18px_rgba(201,106,27,0.22)]
-      group-hover:scale-[1.02]
+      drop-shadow-[0_0_18px_rgba(255,255,255,0.12)]
+      group-hover:scale-[1.025]
+      group-hover:drop-shadow-[0_0_26px_rgba(201,106,27,0.38)]
       md:h-14
       md:max-w-[270px]
     "
   />
 </Link>
-
             <nav className="hidden items-center gap-8 text-sm tracking-[0.16em] xl:flex">
               <Link
                 href="/nosotros"
