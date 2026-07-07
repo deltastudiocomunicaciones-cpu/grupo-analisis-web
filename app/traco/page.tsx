@@ -1,6 +1,31 @@
+import type { Metadata } from "next";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
+
+export const metadata: Metadata = {
+  title: "TRACO | Trámites empresariales DIAN y Cámara de Comercio",
+  description:
+    "TRACO acompaña trámites empresariales ante DIAN, Cámara de Comercio y entidades clave para formalizar, actualizar y estructurar empresas en Colombia.",
+  alternates: {
+    canonical: "/traco",
+  },
+  openGraph: {
+    title: "TRACO | Trámites empresariales sin fricción",
+    description:
+      "Formalización, trámites DIAN, Cámara de Comercio y acompañamiento empresarial con respaldo del ecosistema Grupo A&C.",
+    url: "/traco",
+    type: "website",
+    images: [
+      {
+        url: "/og/traco-grupo-ayc.png",
+        width: 1200,
+        height: 630,
+        alt: "TRACO trámites empresariales Grupo A&C",
+      },
+    ],
+  },
+};
 
 export default function TracoPage() {
   return (

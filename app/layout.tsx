@@ -1,7 +1,8 @@
 import Script from "next/script";
 import PageTransition from "@/components/providers/PageTransition";
-import Loader from "@/components/ui/Loader";
+import ClientOnlyLoader from "@/components/providers/ClientOnlyLoader";
 import SmoothScroll from "@/components/providers/SmoothScroll";
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -34,6 +35,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Grupo A&C" }],
   creator: "SEMA Strategic Intelligence Studio",
 
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
     title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
     description:
@@ -42,28 +47,34 @@ export const metadata: Metadata = {
     siteName: "Grupo A&C",
     locale: "es_CO",
     type: "website",
-
-       images: [
-  {
-    url: "/og/grupo-ayc-og-v1.png",
-    width: 1200,
-    height: 630,
-    alt: "Grupo Análisis & Consultorías",
-  },
-],
+    images: [
+      {
+        url: "/og/grupo-ayc-og-v1.png",
+        width: 1200,
+        height: 630,
+        alt: "Grupo Análisis & Consultorías",
+      },
+    ],
   },
 
   twitter: {
-  card: "summary_large_image",
-  title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
-  description:
-    "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
-  images: ["/og/grupo-ayc-og-v1.png"],
-},
+    card: "summary_large_image",
+    title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
+    description:
+      "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
+    images: ["/og/grupo-ayc-og-v1.png"],
+  },
 
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
@@ -73,35 +84,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-   <html lang="es">
-  <body>
+    <html lang="es">
+      <body>
+        <OrganizationSchema />
 
-    <Loader />
+        <ClientOnlyLoader />
 
-    <SmoothScroll>
-      <PageTransition>
-        {children}
-      </PageTransition>
-    </SmoothScroll>
+        <SmoothScroll>
+          <PageTransition>{children}</PageTransition>
+        </SmoothScroll>
 
-    {/* GOOGLE ANALYTICS */}
+        {/* GOOGLE ANALYTICS */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GMYHDFLBH0"
+          strategy="afterInteractive"
+        />
 
-    <Script
-      src="https://www.googletagmanager.com/gtag/js?id=G-GMYHDFLBH0"
-      strategy="afterInteractive"
-    />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <Script id="google-analytics" strategy="afterInteractive">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-GMYHDFLBH0');
-      `}
-    </Script>
-
-  </body>
-</html>
+            gtag('config', 'G-GMYHDFLBH0');
+          `}
+        </Script>
+      </body>
+    </html>
   );
 }

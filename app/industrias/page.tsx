@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { articles } from "@/data/articles";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import GlassCard from "@/components/ui/GlassCard";
 import Reveal from "@/components/ui/Reveal";
+
+export const metadata: Metadata = {
+  title: "Noticias empresariales, tributarias y financieras",
+  description:
+    "Actualidad empresarial de Grupo A&C sobre temas tributarios, financieros, contables, tecnológicos y corporativos para empresas en Colombia.",
+  alternates: {
+    canonical: "/industrias",
+  },
+  openGraph: {
+    title: "Noticias empresariales, tributarias y financieras | Grupo A&C",
+    description:
+      "Noticias, novedades y actualidad empresarial para organizaciones que necesitan información clara para tomar mejores decisiones.",
+    url: "/industrias",
+    type: "website",
+    images: [
+      {
+        url: "/og/grupo-ayc-og-v1.png",
+        width: 1200,
+        height: 630,
+        alt: "Noticias empresariales Grupo A&C",
+      },
+    ],
+  },
+};
 
 export default function NoticiasPage() {
   const newsArticles = articles.filter((article) => article.type === "news");

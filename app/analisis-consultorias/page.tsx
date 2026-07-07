@@ -1,8 +1,32 @@
+import type { Metadata } from "next";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
 
+export const metadata: Metadata = {
+  title: "Análisis & Consultorías | Consultoría tributaria y financiera",
+  description:
+    "Firma especializada en consultoría tributaria, financiera, contable y empresarial para compañías que necesitan estructura, control y visión estratégica.",
+  alternates: {
+    canonical: "/analisis-consultorias",
+  },
+  openGraph: {
+    title: "Análisis & Consultorías | Consultoría estratégica empresarial",
+    description:
+      "Acompañamiento tributario, financiero y empresarial para organizaciones que requieren claridad, respaldo y planeación.",
+    url: "/analisis-consultorias",
+    type: "website",
+    images: [
+      {
+        url: "/og/analisis-consultorias-grupo-ayc.png",
+        width: 1200,
+        height: 630,
+        alt: "Análisis & Consultorías Grupo A&C",
+      },
+    ],
+  },
+};
 
 export default function AnalisisConsultoriasPage() {
   return (

@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import StrategicDivider from "@/components/ui/StrategicDivider";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import GlassCard from "@/components/ui/GlassCard";
+
+export const metadata: Metadata = {
+  title: "Inversiones | Activos, proyectos y ecosistema empresarial",
+  description:
+    "Conoce la visión de inversiones de Grupo A&C: activos productivos, tecnología, turismo, deporte, salud, impacto social y proyectos empresariales.",
+  alternates: {
+    canonical: "/inversiones",
+  },
+  openGraph: {
+    title: "Inversiones | Ecosistema empresarial Grupo A&C",
+    description:
+      "Una estructura de inversiones orientada a desarrollar activos productivos, empresas y proyectos con visión de largo plazo.",
+    url: "/inversiones",
+    type: "website",
+    images: [
+      {
+        url: "/og/inversiones-grupo-ayc.png",
+        width: 1200,
+        height: 630,
+        alt: "Inversiones Grupo A&C",
+      },
+    ],
+  },
+};
 
 const ecosystems = [
   {

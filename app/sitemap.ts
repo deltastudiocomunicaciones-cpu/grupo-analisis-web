@@ -1,46 +1,80 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://grupoayc.co";
+
   return [
     {
-      url: "https://grupoayc.co",
+      url: baseUrl,
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
-      url: "https://grupoayc.co/nosotros",
+      url: `${baseUrl}/nosotros`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
-      url: "https://grupoayc.co/soluciones",
+      url: `${baseUrl}/soluciones`,
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
     },
     {
-      url: "https://grupoayc.co/inteligencia",
+      url: `${baseUrl}/inteligencia`,
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
     },
     {
-      url: "https://grupoayc.co/inversiones",
+      url: `${baseUrl}/industrias`,
       lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
-      url: "https://grupoayc.co/sadi",
+      url: `${baseUrl}/inversiones`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
-      url: "https://grupoayc.co/traco",
+      url: `${baseUrl}/inversiones/verticales`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.75,
     },
     {
-      url: "https://grupoayc.co/contadores-en-colombia",
+      url: `${baseUrl}/sadi`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
-      url: "https://grupoayc.co/analisis-consultorias",
+      url: `${baseUrl}/traco`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
     },
     {
-      url: "https://grupoayc.co/contacto",
+      url: `${baseUrl}/contadores-en-colombia`,
       lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/analisis-consultorias`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
   ];
 }

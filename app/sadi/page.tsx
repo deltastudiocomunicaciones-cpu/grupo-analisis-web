@@ -1,7 +1,33 @@
+import type { Metadata } from "next";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
+
+
+export const metadata: Metadata = {
+  title: "SADI ERP | Software contable para empresas y contadores",
+  description:
+    "SADI ERP es una plataforma administrativa y contable diseñada para automatizar procesos, estructurar información y elevar el rol del contador hacia auditoría, análisis y estrategia.",
+  alternates: {
+    canonical: "/sadi",
+  },
+  openGraph: {
+    title: "SADI ERP | Software contable estratégico",
+    description:
+      "Software contable del ecosistema Grupo A&C para empresas y contadores que buscan automatización, control financiero y análisis empresarial.",
+    url: "/sadi",
+    type: "website",
+    images: [
+      {
+        url: "/og/sadi-grupo-ayc.png",
+        width: 1200,
+        height: 630,
+        alt: "SADI ERP software contable Grupo A&C",
+      },
+    ],
+  },
+};
 
 export default function SadiPage() {
   return (

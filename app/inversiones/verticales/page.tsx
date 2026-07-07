@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import GlassCard from "@/components/ui/GlassCard";
 import InvestmentNetworkSection from "@/components/sections/InvestmentNetworkSection";
+
+export const metadata: Metadata = {
+  title: "Verticales de inversión | Ecosistema empresarial Grupo A&C",
+  description:
+    "Explora las verticales empresariales de Grupo A&C en turismo, real estate, tecnología, deporte, salud, arquitectura, impacto social y activos productivos.",
+  alternates: {
+    canonical: "/inversiones/verticales",
+  },
+  openGraph: {
+    title: "Verticales de inversión | Grupo A&C",
+    description:
+      "Un mapa del ecosistema empresarial Grupo A&C y sus verticales de inversión, operación y crecimiento.",
+    url: "/inversiones/verticales",
+    type: "website",
+    images: [
+      {
+        url: "/og/grupo-ayc-og-v1.png",
+        width: 1200,
+        height: 630,
+        alt: "Verticales de inversión Grupo A&C",
+      },
+    ],
+  },
+};
 
 export default function VerticalesPage() {
   return (

@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import ServicesShowcaseCarousel from "@/components/sections/ServicesShowcaseCarousel";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import Container from "@/components/ui/Container";
+
+export const metadata: Metadata = {
+  title: "Servicios tributarios, financieros y empresariales",
+  description:
+    "Soluciones de planeación tributaria, auditoría financiera, protección patrimonial, contabilidad, trámites empresariales y software contable SADI.",
+  alternates: {
+    canonical: "/soluciones",
+  },
+  openGraph: {
+    title: "Servicios tributarios, financieros y empresariales | Grupo A&C",
+    description:
+      "Conoce las soluciones de Grupo A&C para empresas que necesitan estructura, respaldo financiero y claridad tributaria.",
+    url: "/soluciones",
+    type: "website",
+    images: [
+      {
+        url: "/og/soluciones-grupo-ayc.png",
+        width: 1200,
+        height: 630,
+        alt: "Servicios estratégicos Grupo A&C",
+      },
+    ],
+  },
+};
 
 const strategicServices = [
   {
@@ -95,87 +120,7 @@ const operationalServices = [
   },
 ];
 
-function ServiceCarousel({
-  title,
-  description,
-  services,
-}: {
-  title: string;
-  description: string;
-  services: typeof strategicServices;
-}) {
-  return (
-    <section className="relative py-16">
-      <Container>
-        <div className="mb-10 max-w-3xl">
-          <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
-            Grupo A&C
-          </p>
 
-          <h2 className="text-3xl font-semibold tracking-[-0.04em] text-[#111] md:text-5xl">
-            {title}
-          </h2>
-
-          <p className="mt-5 text-base leading-relaxed text-black/60 md:text-lg">
-            {description}
-          </p>
-        </div>
-
-        <div className="flex gap-6 overflow-x-auto pb-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {services.map((service, index) => (
-            <Reveal key={service.title} delay={index * 0.04}>
-              <Link
-                href={service.href}
-                className="
-                  group
-                  block
-                  min-w-[82vw]
-                  max-w-[82vw]
-                  sm:min-w-[310px]
-                  sm:max-w-[310px]
-                  overflow-hidden
-                  rounded-[1.5rem]
-                  bg-white
-                  shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-                  transition-all
-                  duration-500
-                  hover:-translate-y-1
-                  hover:shadow-[0_30px_90px_rgba(0,0,0,0.12)]
-                "
-              >
-                <div className="h-[190px] overflow-hidden bg-black/10">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-
-                <div className="p-6">
-                  <p className="mb-4 text-[10px] uppercase tracking-[0.28em] text-[#c96a1b]">
-                    {service.brand}
-                  </p>
-
-                  <h3 className="mb-4 text-xl font-semibold leading-tight tracking-[-0.03em] text-[#111]">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-sm leading-[1.7] text-black/60">
-                    {service.description}
-                  </p>
-
-                  <p className="mt-6 text-xs font-medium text-[#c96a1b]">
-                    Ver solución →
-                  </p>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 export default function SolucionesPage() {
   return (

@@ -1,9 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { articles } from "@/data/articles";
 import GlassCard from "@/components/ui/GlassCard";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
+
+export const metadata: Metadata = {
+  title: "Artículos de inteligencia empresarial, tributaria y financiera",
+  description:
+    "Pensamiento estratégico de Grupo A&C sobre planeación tributaria, estructura financiera, protección patrimonial, tecnología empresarial y toma de decisiones.",
+  alternates: {
+    canonical: "/inteligencia",
+  },
+  openGraph: {
+    title: "Artículos de inteligencia empresarial | Grupo A&C",
+    description:
+      "Ideas, análisis y pensamiento estratégico para empresas que necesitan decidir con claridad, estructura y visión de largo plazo.",
+    url: "/inteligencia",
+    type: "website",
+    images: [
+      {
+        url: "/og/grupo-ayc-og-v1.png",
+        width: 1200,
+        height: 630,
+        alt: "Inteligencia empresarial Grupo A&C",
+      },
+    ],
+  },
+};
 
 const pillars = [
   "Criterio",

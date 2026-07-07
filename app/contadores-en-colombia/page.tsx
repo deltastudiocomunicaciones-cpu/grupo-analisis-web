@@ -1,7 +1,24 @@
+import type { Metadata } from "next";
 import MicrositePodcast from "@/components/sections/MicrositePodcast";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
+
+export const metadata: Metadata = {
+  title: "Contadores en Colombia | Comunidad contable estratégica",
+  description:
+    "Comunidad para contadores que buscan evolucionar de la operación tradicional hacia un rol más estratégico, consultivo y empresarial.",
+  alternates: {
+    canonical: "/contadores-en-colombia",
+  },
+  openGraph: {
+    title: "Contadores en Colombia | Comunidad contable estratégica",
+    description:
+      "Una comunidad del ecosistema Grupo A&C para fortalecer el criterio, la actualización y el liderazgo del contador colombiano.",
+    url: "/contadores-en-colombia",
+    type: "website",
+  },
+};
 
 export default function ContadoresEnColombiaPage() {
   return (

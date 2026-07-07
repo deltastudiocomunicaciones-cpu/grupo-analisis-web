@@ -1,6 +1,23 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
+
+export const metadata: Metadata = {
+  title: "Contacto estratégico para empresas",
+  description:
+    "Agenda una conversación con Grupo A&C para analizar el estado tributario, financiero, tecnológico y corporativo de tu empresa.",
+  alternates: {
+    canonical: "/contacto",
+  },
+  openGraph: {
+    title: "Contacto estratégico para empresas | Grupo A&C",
+    description:
+      "Solicita una orientación estratégica con Grupo A&C para estructurar decisiones empresariales, financieras y tributarias.",
+    url: "/contacto",
+    type: "website",
+  },
+};
 
 export default function ContactoPage() {
   const whatsappMessage =
