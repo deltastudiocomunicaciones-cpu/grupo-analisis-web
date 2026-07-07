@@ -43,7 +43,7 @@ export default function SadiPage() {
   ambientColor="#d97706"
   imageSrc="/brands/sadi-isotype.png"
   imageAlt="Isotipo SADI ERP"
-  backgroundImage="/fotos/sadi-ecosistema-hero.png"
+  backgroundImage="/fotos/sadi-ecosistema-hero.webp"
 />
 
 <section className="bg-[#f5f2eb] px-6 py-32 text-black">
@@ -80,11 +80,11 @@ export default function SadiPage() {
     <div className="grid gap-8 md:grid-cols-2">
 
   {[
-    "/fotos/sadi-impacto-1.png",
-    "/fotos/sadi-impacto-v2.png",
-    "/fotos/sadi-impacto-3.png",
-    "/fotos/sadi-impacto-4.png",
-  ].map((image, index) => (
+  "/fotos/sadi-impacto-1.webp",
+  "/fotos/sadi-impacto-v2.webp",
+  "/fotos/sadi-impacto-3.webp",
+  "/fotos/sadi-impacto-4.webp",
+].map((image, index) => (
     <div
       key={index}
       className="

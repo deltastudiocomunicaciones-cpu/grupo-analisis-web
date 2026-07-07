@@ -11,9 +11,9 @@ import {
 import MagneticButton from "@/components/ui/MagneticButton";
 
 const VIDEOS = [
-  "/videos/chess_final.mp4",
-  "/videos/chess_final1.mp4",
-  "/videos/chess_final2.mp4",
+  "/videos/optimized/chess_final.mp4",
+"/videos/optimized/chess_final1.mp4",
+"/videos/optimized/chess_final2.mp4",
 ];
 
 export default function HeroSection() {

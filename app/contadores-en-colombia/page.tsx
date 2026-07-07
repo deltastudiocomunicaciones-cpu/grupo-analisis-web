@@ -34,7 +34,7 @@ export default function ContadoresEnColombiaPage() {
         ambientColor="#16a34a"
         imageSrc="/brands/cec-isotype.png"
         imageAlt="Isotipo CEC Contadores en Colombia"
-        backgroundImage="/fotos/cec-ecosistema-hero.png"
+       backgroundImage="/fotos/cec-ecosistema-hero.webp"
       />
 
       <section className="bg-[#f5f2eb] px-6 py-32 text-black">
@@ -69,10 +69,10 @@ export default function ContadoresEnColombiaPage() {
 
 <div className="grid gap-8 md:grid-cols-2">
   {[
-    "/fotos/cec-card-1.png",
-    "/fotos/cec-card-2.png",
-    "/fotos/cec-card-3.png",
-    "/fotos/cec-card-4.png",
+    "/fotos/cec-card-1.webp",
+    "/fotos/cec-card-2.webp",
+    "/fotos/cec-card-3.webp",
+    "/fotos/cec-card-4.webp",
   ].map((image, index) => (
     <div
       key={index}

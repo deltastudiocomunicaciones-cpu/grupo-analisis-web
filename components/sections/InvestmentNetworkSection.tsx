@@ -261,7 +261,7 @@ export default function InvestmentNetworkSection() {
   </p>
 
   <img
-    src="/logos/grupoayc-logo.png"
+    src="/logos/grupoayc-logo.webp"
     alt="Grupo A&C"
     className="
       relative

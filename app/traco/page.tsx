@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og/traco-grupo-ayc.png",
+        url: "/og/traco-grupo-ayc.webp",
         width: 1200,
         height: 630,
         alt: "TRACO trámites empresariales Grupo A&C",
@@ -41,7 +41,7 @@ export default function TracoPage() {
         ambientColor="#2563eb"
         imageSrc="/brands/traco-isotype.png"
         imageAlt="Isotipo TRACO"
-        backgroundImage="/fotos/traco-ecosistema-hero.png"
+        backgroundImage="/fotos/traco-ecosistema-hero.webp"
       />
 
       <section className="bg-[#f5f2eb] px-6 py-32 text-black">
@@ -77,10 +77,10 @@ export default function TracoPage() {
 
 <div className="grid gap-8 md:grid-cols-2">
   {[
-    "/fotos/traco-card-1.png",
-    "/fotos/traco-card-2.png",
-    "/fotos/traco-card-3.png",
-    "/fotos/traco-card-4.png",
+    "/fotos/traco-card-1.webp",
+    "/fotos/traco-card-2.webp",
+    "/fotos/traco-card-3.webp",
+    "/fotos/traco-card-4.webp",
   ].map((image, index) => (
     <div
       key={index}

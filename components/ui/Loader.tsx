@@ -43,8 +43,7 @@ export default function Loader() {
 
   const videoSrc = isMobile
     ? "/videos/intro-grupo-ayc-mobile.mp4"
-    : "/videos/intro-grupo-ayc.mp4";
-
+    : "/videos/optimized/intro-grupo-ayc.mp4";
   return (
     <AnimatePresence>
       {loading && (

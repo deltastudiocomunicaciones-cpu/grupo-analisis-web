@@ -33,7 +33,7 @@ export default function ContactoPage() {
   <div
     className="absolute inset-0 bg-cover bg-center opacity-100"
     style={{
-      backgroundImage: "url('/fotos/contacto-landscape.png')",
+      backgroundImage: "url('/fotos/contacto-landscape.webp')",
     }}
   />
 
@@ -228,7 +228,7 @@ export default function ContactoPage() {
                 <div className="flex w-full flex-col items-center md:w-[190px]">
                   <div className="h-[170px] w-[140px] overflow-hidden rounded-[22px] border border-white/10 md:h-[220px] md:w-[180px] md:rounded-[24px]">
                     <img
-                      src="/fotos/asesor-contacto.png"
+                      src="/fotos/asesor-contacto.webp"
                       alt="Asesor Grupo A&C"
                       className="h-full w-full object-cover"
                     />
