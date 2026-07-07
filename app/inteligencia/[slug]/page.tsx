@@ -106,11 +106,223 @@ export default async function ArticlePage({ params }: PageProps) {
   <div className="mx-auto max-w-3xl">
     <div className="mb-12 h-px w-20 bg-[#c96a1b]/50" />
 
-    <div className="space-y-8 text-xl font-light leading-[2] text-black/70">
-      {article.content.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
-      ))}
-    </div>
+    <div className="space-y-10">
+  {article.content.map((block, index) => {
+    if (typeof block === "string") {
+      return (
+        <p
+          key={index}
+          className="text-xl font-light leading-[2] text-black/70"
+        >
+          {block}
+        </p>
+      );
+    }
+
+    if (block.type === "lead") {
+      return (
+        <p
+          key={index}
+          className="
+            border-l-2
+            border-[#c96a1b]
+            pl-8
+            text-2xl
+            font-light
+            leading-[1.8]
+            tracking-[-0.02em]
+            text-black/80
+            md:text-3xl
+          "
+        >
+          {block.text}
+        </p>
+      );
+    }
+
+    if (block.type === "paragraph") {
+      return (
+        <p
+          key={index}
+          className="text-xl font-light leading-[2] text-black/70"
+        >
+          {block.text}
+        </p>
+      );
+    }
+
+    if (block.type === "heading") {
+      return (
+        <h2
+          key={index}
+          className="
+            pt-10
+            text-4xl
+            font-semibold
+            leading-[1.05]
+            tracking-[-0.05em]
+            text-black
+            md:text-5xl
+          "
+        >
+          {block.text}
+        </h2>
+      );
+    }
+
+    if (block.type === "subheading") {
+      return (
+        <h3
+          key={index}
+          className="
+            pt-6
+            text-2xl
+            font-semibold
+            leading-[1.2]
+            tracking-[-0.04em]
+            text-black
+            md:text-3xl
+          "
+        >
+          {block.text}
+        </h3>
+      );
+    }
+
+    if (block.type === "quote") {
+      return (
+        <blockquote
+          key={index}
+          className="
+            my-16
+            border-y
+            border-[#c96a1b]/25
+            py-12
+            text-4xl
+            font-semibold
+            leading-[1.1]
+            tracking-[-0.05em]
+            text-black
+            md:text-5xl
+          "
+        >
+          “{block.text}”
+        </blockquote>
+      );
+    }
+
+    if (block.type === "list") {
+      return (
+        <ul key={index} className="space-y-4">
+          {block.items.map((item, itemIndex) => (
+            <li
+              key={itemIndex}
+              className="
+                flex
+                gap-4
+                rounded-2xl
+                border
+                border-black/10
+                bg-white/70
+                p-5
+                text-lg
+                font-light
+                leading-[1.7]
+                text-black/70
+                shadow-[0_18px_50px_rgba(0,0,0,0.04)]
+              "
+            >
+              <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#c96a1b]" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      );
+    }
+
+    if (block.type === "callout") {
+      return (
+        <div
+          key={index}
+          className="
+            my-14
+            rounded-[2rem]
+            border
+            border-[#c96a1b]/20
+            bg-[#c96a1b]/10
+            p-8
+            shadow-[0_25px_80px_rgba(201,106,27,0.08)]
+            md:p-10
+          "
+        >
+          {block.title && (
+            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
+              {block.title}
+            </p>
+          )}
+
+          <p className="text-2xl font-light leading-[1.6] tracking-[-0.03em] text-black/75">
+            {block.text}
+          </p>
+        </div>
+      );
+    }
+
+    if (block.type === "cta") {
+      return (
+        <div
+          key={index}
+          className="
+            mt-20
+            rounded-[2.5rem]
+            bg-black
+            p-10
+            text-white
+            shadow-[0_30px_100px_rgba(0,0,0,0.18)]
+            md:p-14
+          "
+        >
+          <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+            Grupo A&C
+          </p>
+
+          <h2 className="text-4xl font-semibold leading-[1.05] tracking-[-0.05em] md:text-5xl">
+            {block.title}
+          </h2>
+
+          <p className="mt-6 max-w-2xl text-lg font-light leading-[1.8] text-white/60">
+            {block.text}
+          </p>
+
+          <Link
+            href={block.href}
+            className="
+              mt-8
+              inline-flex
+              rounded-full
+              border
+              border-[#c96a1b]/40
+              bg-[#c96a1b]/15
+              px-7
+              py-4
+              text-sm
+              text-[#c96a1b]
+              transition-all
+              duration-500
+              hover:bg-[#c96a1b]
+              hover:text-white
+              hover:shadow-[0_20px_70px_rgba(201,106,27,0.28)]
+            "
+          >
+            {block.button}
+          </Link>
+        </div>
+      );
+    }
+
+    return null;
+  })}
+</div>
 
     <div className="mt-16 border-t border-black/10 pt-10">
       <a
