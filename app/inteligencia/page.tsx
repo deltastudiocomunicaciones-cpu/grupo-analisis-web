@@ -5,6 +5,7 @@ import GlassCard from "@/components/ui/GlassCard";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
+import LazyVideo from "@/components/ui/LazyVideo";
 
 export const metadata: Metadata = {
   title: "Artículos de inteligencia empresarial, tributaria y financiera",
@@ -116,7 +117,11 @@ const recentArticles = editorialArticles.filter(
                       preload="metadata"
                       className="absolute inset-0 h-full w-full object-cover opacity-80"
                     >
-                      <source src="/videos/optimized/articulo-destacado.mp4" type="video/mp4" />
+                     <LazyVideo
+  src="/videos/optimized/articulo-destacado.mp4"
+  className="absolute inset-0"
+  videoClassName="h-full w-full object-cover"
+/>
                     </video>
 
                     <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/25 via-black/40 to-black" />

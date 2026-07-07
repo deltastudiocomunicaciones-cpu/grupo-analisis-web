@@ -163,6 +163,12 @@ const images = [
     width: 1200,
     quality: 78,
   },
+  {
+  input: "public/logos/madext-logo.png",
+  output: "public/logos/madext-logo.webp",
+  width: 700,
+  quality: 82,
+},
 ];
 
 for (const image of images) {

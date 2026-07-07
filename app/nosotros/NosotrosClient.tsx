@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import GlassCard from "@/components/ui/GlassCard";
+import LazyVideo from "@/components/ui/LazyVideo";
 
 const sections = [
   {
@@ -821,7 +822,11 @@ export default function NosotrosClient() {
       poster="/fotos/nosotros-poster.png"
       className="absolute inset-0 h-full w-full object-cover"
     >
-      <source src="/videos/optimized/intelligence-v2.mp4" type="video/mp4" />
+      <LazyVideo
+  src="/videos/optimized/intelligence-v2.mp4"
+  className="absolute inset-0"
+  videoClassName="h-full w-full object-cover"
+/>
     </video>
 
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

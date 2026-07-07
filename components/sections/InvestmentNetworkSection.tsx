@@ -161,7 +161,7 @@ direction: "orbit",
 },
   {
     name: "MADEXT",
-    logo: "/logos/madext-logo.png",
+    logo: "/logos/madext-logo.webp",
     x: "86%",
     y: "58%",
     color: "#eab308",

@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Reveal from "@/components/ui/Reveal";
 import GlassCard from "@/components/ui/GlassCard";
+import LazyVideo from "@/components/ui/LazyVideo";
 
 export const metadata: Metadata = {
   title: "Inversiones | Activos, proyectos y ecosistema empresarial",
@@ -283,7 +284,11 @@ hover:shadow-[0_0_30px_rgba(201,106,27,0.18)]
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover opacity-80"
           >
-            <source src="/videos/optimized/inversiones-v2.mp4" type="video/mp4" />
+           <LazyVideo
+  src="/videos/optimized/inversiones-v2.mp4"
+  className="absolute inset-0"
+  videoClassName="h-full w-full object-cover"
+/>
           </video>
 
           <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/30 to-black/85" />
