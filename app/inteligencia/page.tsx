@@ -42,17 +42,16 @@ const pillars = [
 
 export default function InteligenciaPage() {
   const editorialArticles = articles.filter(
-  (article) => article.type === "article"
-);
+    (article) => article.type === "article"
+  );
 
+  const featuredArticle =
+    editorialArticles.find((article) => article.featured) ||
+    editorialArticles[0];
 
-const featuredArticle = editorialArticles.find(
-  (article) => article.featured
-);
-
-const recentArticles = editorialArticles.filter(
-  (article) => article.slug !== featuredArticle?.slug
-);
+  const recentArticles = editorialArticles.filter(
+    (article) => article.slug !== featuredArticle?.slug
+  );
 
   if (!featuredArticle) return null;
 
@@ -60,6 +59,7 @@ const recentArticles = editorialArticles.filter(
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <Navbar />
 
+      {/* HERO */}
       <section className="relative min-h-screen overflow-hidden px-6 pt-44 pb-20">
         <img
           src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
@@ -77,24 +77,44 @@ const recentArticles = editorialArticles.filter(
             </p>
 
             <h1 className="max-w-6xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] md:text-7xl lg:text-[6.8rem]">
-              Pensamiento estratégico para empresas que no deciden en piloto automático.
+              Pensamiento estratégico para empresas que no deciden en piloto
+              automático.
             </h1>
 
             <p className="mt-10 max-w-3xl text-lg font-light leading-[1.9] text-white/55">
-              Un espacio editorial creado para empresarios, contadores, directivos y
-              líderes que necesitan criterio antes de tomar decisiones tributarias,
-              financieras y corporativas.
+              Un espacio editorial creado para empresarios, contadores,
+              directivos y líderes que necesitan criterio antes de tomar
+              decisiones tributarias, financieras y corporativas.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <section className="relative z-10 px-6 pb-12">
+      {/* PILARES */}
+      <section className="relative z-10 bg-black px-6 pb-12">
         <div className="mx-auto flex max-w-7xl gap-3 overflow-x-auto border-y border-white/10 py-5">
           {pillars.map((pillar) => (
             <div
               key={pillar}
-              className="shrink-0 rounded-full border border-[#c96a1b]/30 bg-[#c96a1b]/10 px-5 py-2 text-xs uppercase tracking-[0.25em] text-[#c96a1b] backdrop-blur-xl transition-all duration-500 hover:border-[#c96a1b]/60 hover:bg-[#c96a1b]/20 hover:shadow-[0_10px_30px_rgba(201,106,27,0.18)]"
+              className="
+                shrink-0
+                rounded-full
+                border
+                border-[#c96a1b]/30
+                bg-[#c96a1b]/10
+                px-5
+                py-2
+                text-xs
+                uppercase
+                tracking-[0.25em]
+                text-[#c96a1b]
+                backdrop-blur-xl
+                transition-all
+                duration-500
+                hover:border-[#c96a1b]/60
+                hover:bg-[#c96a1b]/20
+                hover:shadow-[0_10px_30px_rgba(201,106,27,0.18)]
+              "
             >
               {pillar}
             </div>
@@ -102,27 +122,32 @@ const recentArticles = editorialArticles.filter(
         </div>
       </section>
 
-      <section className="relative z-10 px-6 pb-16">
-        <div className="mx-auto max-w-7xl">
+      {/* ARTÍCULO DESTACADO - BLOQUE NARANJA */}
+      <section className="relative z-10 overflow-hidden px-6 py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_20%,rgba(255,190,100,0.45),transparent_34%),radial-gradient(circle_at_82%_25%,rgba(201,106,27,0.45),transparent_32%),linear-gradient(135deg,#4a1808_0%,#9a3f13_34%,#d87524_62%,#6b250b_100%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black/20" />
+        <div className="absolute inset-0 opacity-[0.10] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.35)_1px,transparent_1px)] [background-size:18px_18px]" />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
           <Reveal>
             <Link href={`/inteligencia/${featuredArticle.slug}`}>
-              <GlassCard className="overflow-hidden">
+              <GlassCard
+                className="
+                  overflow-hidden
+                  border
+                  border-white/20
+                  bg-black/45
+                  shadow-[0_45px_140px_rgba(80,25,5,0.35)]
+                  backdrop-blur-2xl
+                "
+              >
                 <div className="grid gap-12 lg:grid-cols-[0.9fr_1.2fr]">
                   <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
-                    <video
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="metadata"
-                      className="absolute inset-0 h-full w-full object-cover opacity-80"
-                    >
-                     <LazyVideo
-  src="/videos/optimized/articulo-destacado.mp4"
-  className="absolute inset-0"
-  videoClassName="h-full w-full object-cover"
-/>
-                    </video>
+                    <LazyVideo
+                      src="/videos/optimized/articulo-destacado.mp4"
+                      className="absolute inset-0"
+                      videoClassName="h-full w-full object-cover opacity-80"
+                    />
 
                     <div className="absolute inset-0 bg-gradient-to-br from-[#c96a1b]/25 via-black/40 to-black" />
 
@@ -134,7 +159,7 @@ const recentArticles = editorialArticles.filter(
                   </div>
 
                   <div className="flex flex-col justify-center">
-                    <p className="mb-8 text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+                    <p className="mb-8 text-xs uppercase tracking-[0.35em] text-[#ffb56b]">
                       Artículo destacado
                     </p>
 
@@ -142,17 +167,17 @@ const recentArticles = editorialArticles.filter(
                       {featuredArticle.title}
                     </h2>
 
-                    <p className="mt-8 max-w-2xl text-base font-light leading-[1.9] text-white/55">
+                    <p className="mt-8 max-w-2xl text-base font-light leading-[1.9] text-white/65">
                       {featuredArticle.excerpt}
                     </p>
 
-                    <div className="mt-10 flex flex-wrap gap-4 text-xs uppercase tracking-[0.25em] text-white/35">
+                    <div className="mt-10 flex flex-wrap gap-4 text-xs uppercase tracking-[0.25em] text-white/40">
                       <span>{featuredArticle.author}</span>
                       <span>·</span>
                       <span>{featuredArticle.readTime}</span>
                     </div>
 
-                    <p className="mt-12 text-sm text-white/45">
+                    <p className="mt-12 text-sm text-white/55">
                       Leer artículo completo →
                     </p>
                   </div>
@@ -163,6 +188,7 @@ const recentArticles = editorialArticles.filter(
         </div>
       </section>
 
+      {/* BIBLIOTECA EDITORIAL */}
       <section className="relative bg-[#f5f2eb] px-6 py-32 text-black">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex items-end justify-between border-b border-black/10 pb-6">
@@ -181,7 +207,26 @@ const recentArticles = editorialArticles.filter(
             {recentArticles.map((article, index) => (
               <Reveal key={article.slug} delay={index * 0.06}>
                 <Link href={`/inteligencia/${article.slug}`}>
-                  <GlassCard className="mx-auto flex h-[430px] max-w-[420px] flex-col justify-between rounded-[2.5rem] border border-black/10 bg-white/85 shadow-[0_25px_80px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-[#c96a1b]/25 hover:shadow-[0_35px_100px_rgba(0,0,0,0.12)]">
+                  <GlassCard
+                    className="
+                      mx-auto
+                      flex
+                      h-[430px]
+                      max-w-[420px]
+                      flex-col
+                      justify-between
+                      rounded-[2.5rem]
+                      border
+                      border-black/10
+                      bg-white/85
+                      shadow-[0_25px_80px_rgba(0,0,0,0.08)]
+                      transition-all
+                      duration-500
+                      hover:-translate-y-1
+                      hover:border-[#c96a1b]/25
+                      hover:shadow-[0_35px_100px_rgba(0,0,0,0.12)]
+                    "
+                  >
                     <div>
                       <p className="mb-6 text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
                         {article.category}
@@ -200,9 +245,7 @@ const recentArticles = editorialArticles.filter(
                       </p>
 
                       <div className="mt-8">
-                        <p className="text-sm text-black/60">
-                          Leer más →
-                        </p>
+                        <p className="text-sm text-black/60">Leer más →</p>
 
                         <div className="mt-4 h-px w-12 bg-[#c96a1b]/40" />
                       </div>
