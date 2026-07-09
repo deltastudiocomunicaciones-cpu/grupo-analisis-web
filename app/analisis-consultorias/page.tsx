@@ -81,10 +81,10 @@ export default function AnalisisConsultoriasPage() {
 <div className="grid gap-8 md:grid-cols-2">
 
   {[
-    "/fotos/analisis-card-1.webp",
-    "/fotos/analisis-card-2.webp",
-    "/fotos/analisis-card-3.webp",
-    "/fotos/analisis-card-4.webp",
+    "/fotos/ecosistema_webp/analisis-card-1.webp",
+    "/fotos/ecosistema_webp/analisis-card-2.webp",
+    "/fotos/ecosistema_webp/analisis-card-3.webp",
+    "/fotos/ecosistema_webp/analisis-card-4.webp",
   ].map((image, index) => (
     <div
       key={index}

@@ -77,10 +77,10 @@ export default function TracoPage() {
 
 <div className="grid gap-8 md:grid-cols-2">
   {[
-    "/fotos/traco-card-1.webp",
-    "/fotos/traco-card-2.webp",
-    "/fotos/traco-card-3.webp",
-    "/fotos/traco-card-4.webp",
+    "/fotos/ecosistema_webp/traco-card-1.webp",
+    "/fotos/ecosistema_webp/traco-card-2.webp",
+    "/fotos/ecosistema_webp/traco-card-3.webp",
+    "/fotos/ecosistema_webp/traco-card-4.webp",
   ].map((image, index) => (
     <div
       key={index}

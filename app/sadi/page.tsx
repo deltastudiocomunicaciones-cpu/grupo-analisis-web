@@ -80,10 +80,10 @@ export default function SadiPage() {
     <div className="grid gap-8 md:grid-cols-2">
 
   {[
-  "/fotos/sadi-impacto-1.webp",
-  "/fotos/sadi-impacto-v2.webp",
-  "/fotos/sadi-impacto-3.webp",
-  "/fotos/sadi-impacto-4.webp",
+  "/fotos/ecosistema_webp/sadi-impacto-1.webp",
+  "/fotos/ecosistema_webp/sadi-impacto-v2.webp",
+  "/fotos/ecosistema_webp/sadi-impacto-3.webp",
+  "/fotos/ecosistema_webp/sadi-impacto-4.webp",
 ].map((image, index) => (
     <div
       key={index}

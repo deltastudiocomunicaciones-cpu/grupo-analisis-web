@@ -69,10 +69,10 @@ export default function ContadoresEnColombiaPage() {
 
 <div className="grid gap-8 md:grid-cols-2">
   {[
-    "/fotos/cec-card-1.webp",
-    "/fotos/cec-card-2.webp",
-    "/fotos/cec-card-3.webp",
-    "/fotos/cec-card-4.webp",
+    "/fotos/ecosistema_webp/cec-card-1.webp",
+    "/fotos/ecosistema_webp/cec-card-2.webp",
+    "/fotos/ecosistema_webp/cec-card-3.webp",
+    "/fotos/ecosistema_webp/cec-card-4.webp",
   ].map((image, index) => (
     <div
       key={index}
