@@ -295,11 +295,11 @@ export default async function NoticiaDetallePage({ params }: PageProps) {
         <img
           src={article.coverImage}
           alt={article.title}
-          className="absolute inset-0 h-full w-full object-cover opacity-45 brightness-75"
+          className="absolute inset-0 h-full w-full object-cover opacity-90 brightness-95"
         />
 
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/85 to-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/45 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/25 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black" />
 
         <div className="relative z-10 mx-auto max-w-7xl">
           <Reveal>

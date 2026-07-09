@@ -48,13 +48,13 @@ export const metadata: Metadata = {
     locale: "es_CO",
     type: "website",
     images: [
-      {
-        url: "/og/grupo-ayc-og-v1.png",
-        width: 1200,
-        height: 630,
-        alt: "Grupo Análisis & Consultorías",
-      },
-    ],
+  {
+    url: "https://grupoayc.co/og/grupo-ayc-og-v1.png",
+    width: 1200,
+    height: 630,
+    alt: "Grupo Análisis & Consultorías",
+  },
+],
   },
 
   twitter: {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
     description:
       "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
-    images: ["/og/grupo-ayc-og-v1.png"],
+    images: ["https://grupoayc.co/og/grupo-ayc-og-v1.png"],
   },
 
   robots: {
