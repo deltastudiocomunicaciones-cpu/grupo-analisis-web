@@ -150,17 +150,19 @@ hover:text-[#c96a1b]
   />
 
   <Image
-    src="/brands/sema-footer-v2.png"
-    alt="SEMA Strategic Intelligence Studio"
-    width={160}
-    height={60}
-    className="
-      relative
-      z-10
-      opacity-100
-      drop-shadow-[0_0_30px_rgba(236,72,153,0.75)]
-    "
-  />
+  src="/brands/sema-footer-v2.png"
+  alt="SEMA Strategic Intelligence Studio"
+  width={160}
+  height={60}
+  className="
+    relative
+    z-10
+    h-auto
+    w-[160px]
+    opacity-100
+    drop-shadow-[0_0_30px_rgba(236,72,153,0.75)]
+  "
+/>
 
 </div>
 
