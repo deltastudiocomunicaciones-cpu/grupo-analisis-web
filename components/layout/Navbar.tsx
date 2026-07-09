@@ -169,7 +169,7 @@ export default function Navbar() {
               </div>
 
               <Link
-                href="/industrias"
+                href="/noticias"
                 className="text-white/70 transition-colors hover:text-white"
               >
                 Noticias

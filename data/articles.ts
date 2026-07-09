@@ -42,18 +42,32 @@ export type ArticleContentBlock =
 export interface Article {
   slug: string;
   type: "article" | "news";
+
   category: string;
   title: string;
   excerpt: string;
+
   author: string;
   date: string;
   readTime: string;
+
   coverImage: string;
   content: ArticleContentBlock[];
+
   tags?: string[];
   featured?: boolean;
+
   seoTitle?: string;
   seoDescription?: string;
+
+  // Campos especiales para noticias
+  sourceName?: string;
+  sourceUrl?: string;
+  sourceTitle?: string;
+  sourceType?: "official" | "media" | "report" | "internal" | "press_release";
+  attributionNote?: string;
+  newsLabel?: "Última hora" | "Actualidad" | "Análisis breve" | "Comunicado" | "Normativa";
+  region?: string;
 }
 
 export const articles: Article[] = [
@@ -2106,11 +2120,20 @@ export const articles: Article[] = [
     excerpt:
       "Los cambios regulatorios exigen mayor capacidad de anticipación por parte de las organizaciones.",
     author: "Mesa Editorial Grupo A&C",
-    date: "Julio 2026",
+    date: "2026-07-08",
     readTime: "4 min",
     coverImage: "/fotos/reforma2026.jpg",
-    featured: false,
+    featured: true,
     tags: ["Actualidad Tributaria", "Regulación", "Empresas", "Colombia"],
+
+    sourceName: "Mesa Editorial Grupo A&C",
+    sourceTitle: "Seguimiento editorial sobre escenarios fiscales 2026",
+    sourceType: "internal",
+    newsLabel: "Análisis breve",
+    region: "Colombia",
+    attributionNote:
+      "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C como lectura editorial del entorno fiscal. El contenido tiene fines informativos y no reemplaza asesoría tributaria especializada.",
+
     seoTitle: "Escenarios fiscales 2026 | Grupo A&C",
     seoDescription:
       "Análisis de los cambios fiscales que podrían impactar a las empresas colombianas.",
@@ -2128,11 +2151,21 @@ export const articles: Article[] = [
   excerpt:
     "Las nuevas medidas buscan mejorar la trazabilidad y el control de las operaciones empresariales.",
   author: "Mesa Editorial Grupo A&C",
-  date: "Julio 2026",
+  date: "2026-07-07",
   readTime: "3 min",
   coverImage: "/fotos/dian-facturacion.jpg",
   featured: false,
   tags: ["DIAN", "Facturación Electrónica", "Regulación"],
+
+  sourceName: "DIAN",
+  sourceUrl: "https://www.dian.gov.co/",
+  sourceTitle: "Información institucional sobre facturación electrónica y control tributario",
+  sourceType: "official",
+  newsLabel: "Normativa",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C a partir de información institucional de la DIAN. El contenido fue redactado y contextualizado editorialmente para fines informativos. Para decisiones específicas, consulte la fuente oficial y reciba acompañamiento profesional.",
+
   seoTitle: "Facturación electrónica y control DIAN 2026",
   seoDescription:
     "Conozca los cambios recientes en materia de facturación electrónica y control tributario.",
@@ -2140,6 +2173,570 @@ export const articles: Article[] = [
     "La administración tributaria continúa fortaleciendo sus mecanismos de control digital.",
     "Las empresas deberán garantizar consistencia entre sus procesos internos y los reportes enviados a la DIAN.",
     "La adopción de sistemas integrados de información será clave para cumplir los nuevos requerimientos."
+  ],
+},
+{
+  slug: "cambios-vencimientos-tributarios-empresas-colombia-2026",
+  type: "news",
+  category: "Tributario",
+  title: "Cambios en vencimientos tributarios generan ajustes operativos en empresas colombianas",
+  excerpt:
+    "Las modificaciones en fechas tributarias están obligando a empresas y equipos contables a revisar cronogramas, procesos internos y mecanismos de seguimiento para evitar retrasos o sanciones.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-08",
+  readTime: "4 min",
+  coverImage: "/fotos/planeacion-tributaria.webp",
+  featured: true,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "Cambios en vencimientos tributarios generan ajustes operativos para empresas y contadores en Colombia",
+  sourceType: "internal",
+  newsLabel: "Actualidad",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C a partir de información suministrada para revisión editorial interna. El contenido fue reorganizado, contextualizado y adaptado con enfoque empresarial para fines informativos.",
+
+  content: [
+    {
+      type: "lead",
+      text: "Los recientes ajustes en vencimientos tributarios han puesto nuevamente sobre la mesa la importancia de que las empresas colombianas mantengan procesos fiscales actualizados, organizados y monitoreados de forma permanente.",
+    },
+    {
+      type: "paragraph",
+      text: "Aunque un cambio de fecha puede parecer una modificación menor, en la práctica implica reorganizar actividades contables, revisar cronogramas internos, coordinar equipos financieros y evitar que una actualización normativa termine generando incumplimientos.",
+    },
+    {
+      type: "paragraph",
+      text: "En un entorno donde las obligaciones tributarias están cada vez más conectadas con procesos electrónicos, sistemas de información y cruces automáticos, los márgenes de error para las organizaciones son cada vez más reducidos.",
+    },
+    {
+      type: "heading",
+      text: "Riesgos para las empresas",
+    },
+    {
+      type: "list",
+      items: [
+        "Presentación extemporánea de obligaciones.",
+        "Sobrecarga operativa en equipos contables.",
+        "Errores administrativos por uso de calendarios desactualizados.",
+        "Sanciones económicas por incumplimientos.",
+        "Desorden en flujos internos de trabajo.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Lectura empresarial",
+      text: "Los cambios en fechas tributarias no deben tratarse solo como una actualización de agenda. Representan una oportunidad para fortalecer seguimiento, comunicación interna y gestión preventiva.",
+    },
+    {
+      type: "heading",
+      text: "Qué deberían revisar las organizaciones",
+    },
+    {
+      type: "list",
+      items: [
+        "Actualizar cronogramas tributarios internos.",
+        "Validar obligaciones vigentes según actividad económica.",
+        "Implementar alertas y responsables por vencimiento.",
+        "Mantener comunicación constante entre administración, contabilidad y gerencia.",
+        "Realizar revisiones preventivas antes de cada fecha crítica.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "La capacidad de anticiparse puede marcar la diferencia entre una gestión tributaria organizada y un escenario de presión operativa, correcciones y sanciones.",
+    },
+    {
+      type: "cta",
+      title: "¿Su empresa tiene control real sobre sus vencimientos tributarios?",
+      text: "Una revisión preventiva puede ayudarle a organizar obligaciones, reducir riesgos y anticipar cargas operativas antes de los vencimientos.",
+      button: "Solicitar revisión tributaria",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "calendario-tributario-2026-empresas-contadores-colombia",
+  type: "news",
+  category: "Tributario",
+  title: "Calendario tributario 2026 marca un nuevo ciclo de obligaciones para empresas y contadores",
+  excerpt:
+    "El inicio del calendario tributario 2026 exige a las organizaciones revisar procesos, fechas, soportes y mecanismos internos de control fiscal.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-07",
+  readTime: "4 min",
+  coverImage: "/fotos/planeacion-tributaria.webp",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "Calendario tributario 2026 marca el inicio de un nuevo ciclo de obligaciones para empresas y contadores en Colombia",
+  sourceType: "internal",
+  newsLabel: "Normativa",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C a partir de información suministrada para curaduría editorial interna. El contenido fue contextualizado para empresas, emprendedores y equipos contables.",
+
+  content: [
+    {
+      type: "lead",
+      text: "Con el inicio de 2026, las empresas colombianas entraron en un nuevo ciclo de obligaciones fiscales que exige planeación, seguimiento y organización documental.",
+    },
+    {
+      type: "paragraph",
+      text: "El calendario tributario no solo define fechas de presentación. También activa procesos internos relacionados con revisión financiera, validación de soportes, preparación de declaraciones y coordinación entre áreas administrativas y contables.",
+    },
+    {
+      type: "paragraph",
+      text: "Durante los últimos años, la digitalización de obligaciones fiscales ha incrementado la necesidad de mantener información consistente entre registros internos, sistemas electrónicos y reportes tributarios.",
+    },
+    {
+      type: "heading",
+      text: "Obligaciones que requieren seguimiento",
+    },
+    {
+      type: "list",
+      items: [
+        "Declaraciones tributarias periódicas.",
+        "Retenciones aplicables según actividad económica.",
+        "Impuestos indirectos.",
+        "Anticipos tributarios.",
+        "Reportes y documentación financiera.",
+        "Obligaciones derivadas de sistemas electrónicos.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Punto clave",
+      text: "El calendario tributario debe convertirse en una herramienta de gestión interna, no solo en una lista de fechas para cumplir.",
+    },
+    {
+      type: "heading",
+      text: "Qué significa para las empresas",
+    },
+    {
+      type: "paragraph",
+      text: "Las organizaciones que planifican sus obligaciones desde el inicio del año pueden reducir cargas operativas, evitar errores y mejorar la coordinación entre gerencia, administración y contabilidad.",
+    },
+    {
+      type: "list",
+      items: [
+        "Actualizar cronogramas internos.",
+        "Revisar vencimientos aplicables.",
+        "Organizar soportes financieros.",
+        "Fortalecer seguimiento periódico.",
+        "Mejorar comunicación entre áreas.",
+      ],
+    },
+    {
+      type: "cta",
+      title: "Organice su calendario tributario antes de que aparezcan los vencimientos críticos",
+      text: "Grupo A&C acompaña empresas en procesos de planeación, revisión preventiva y fortalecimiento de estructuras tributarias.",
+      button: "Hablar con un asesor",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "facturacion-electronica-control-operativo-empresas-2026",
+  type: "news",
+  category: "Tecnología tributaria",
+  title: "Facturación electrónica fortalece controles y aumenta desafíos operativos para empresas",
+  excerpt:
+    "La facturación electrónica sigue consolidándose como un mecanismo de trazabilidad, control y validación tributaria para empresas colombianas.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-06",
+  readTime: "4 min",
+  coverImage: "/fotos/dian-facturacion.jpg",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "Facturación electrónica fortalece controles y aumenta los desafíos operativos para empresas y contadores en Colombia",
+  sourceType: "internal",
+  newsLabel: "Actualidad",
+  region: "Colombia",
+  attributionNote:
+    "Esta publicación fue preparada por la Mesa Editorial de Grupo A&C a partir de información interna de actualidad empresarial. La nota fue redactada y organizada con enfoque de gestión, control y prevención tributaria.",
+
+  content: [
+    {
+      type: "lead",
+      text: "La facturación electrónica continúa redefiniendo la forma en que las empresas colombianas administran sus procesos tributarios, financieros y documentales.",
+    },
+    {
+      type: "paragraph",
+      text: "Más allá de ser una obligación tecnológica, la facturación electrónica se ha convertido en un componente esencial de trazabilidad, control interno y consistencia de la información empresarial.",
+    },
+    {
+      type: "paragraph",
+      text: "Los procesos de validación, transmisión y cruce automático de información hacen que errores pequeños puedan generar revisiones, correcciones o cargas adicionales para los equipos contables.",
+    },
+    {
+      type: "heading",
+      text: "Situaciones que requieren atención",
+    },
+    {
+      type: "list",
+      items: [
+        "Información incompleta o incorrecta en documentos electrónicos.",
+        "Diferencias entre registros internos y sistemas tributarios.",
+        "Errores en datos de clientes o proveedores.",
+        "Falta de soportes asociados a operaciones.",
+        "Retrasos en validación o transmisión de información.",
+        "Inconsistencias entre procesos administrativos y contables.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Lectura empresarial",
+      text: "Tener un sistema electrónico no garantiza por sí solo que el proceso funcione correctamente. La tecnología necesita procedimientos, datos confiables y supervisión humana.",
+    },
+    {
+      type: "heading",
+      text: "Qué pueden hacer las empresas",
+    },
+    {
+      type: "list",
+      items: [
+        "Revisar periódicamente la calidad de la información registrada.",
+        "Mantener procedimientos claros para emisión y validación documental.",
+        "Capacitar equipos internos.",
+        "Realizar auditorías preventivas.",
+        "Integrar tecnología con procesos operativos.",
+        "Fortalecer controles sobre soportes y registros.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "La precisión en los datos ya no es solo una buena práctica administrativa. Es una condición clave para reducir riesgos y fortalecer la gestión empresarial.",
+    },
+    {
+      type: "cta",
+      title: "¿Su facturación electrónica está funcionando con control real?",
+      text: "Una revisión preventiva puede ayudarle a detectar inconsistencias, mejorar procesos y reducir riesgos tributarios.",
+      button: "Solicitar revisión preventiva",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "actualizacion-uvt-2026-topes-obligaciones-tributarias",
+  type: "news",
+  category: "Normativa",
+  title: "Actualización de la UVT 2026 redefine topes y obligaciones tributarias para empresas",
+  excerpt:
+    "La DIAN estableció la UVT 2026 en $52.374, valor que impacta topes, sanciones, retenciones y diferentes cálculos tributarios.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-05",
+  readTime: "4 min",
+  coverImage: "/fotos/planeacion-tributaria.webp",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "Actualización de la UVT 2026 redefine topes y obligaciones tributarias para empresas en Colombia",
+  sourceType: "internal",
+  newsLabel: "Normativa",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C con base en información de actualidad tributaria suministrada para revisión interna. El contenido fue adaptado para lectura empresarial.",
+
+  content: [
+    {
+      type: "lead",
+      text: "La actualización anual de la Unidad de Valor Tributario volvió a convertirse en uno de los temas clave para empresas, emprendedores y profesionales contables durante 2026.",
+    },
+    {
+      type: "paragraph",
+      text: "La UVT funciona como una unidad de medida utilizada por el sistema tributario colombiano para definir obligaciones, sanciones, topes, límites y cálculos establecidos en la normativa fiscal.",
+    },
+    {
+      type: "paragraph",
+      text: "Para 2026, la UVT fue establecida en $52.374, valor que puede modificar distintos procesos internos de cálculo, revisión y cumplimiento tributario.",
+    },
+    {
+      type: "heading",
+      text: "Procesos que pueden verse impactados",
+    },
+    {
+      type: "list",
+      items: [
+        "Topes para obligaciones tributarias.",
+        "Cálculo de sanciones.",
+        "Retenciones en la fuente.",
+        "Responsabilidades fiscales.",
+        "Declaraciones tributarias.",
+        "Beneficios y límites definidos por norma.",
+        "Cálculos asociados a obligaciones empresariales.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Punto crítico",
+      text: "Muchas empresas asumen que sus obligaciones permanecen iguales año tras año, pero algunos topes y límites cambian precisamente por efecto de la actualización de la UVT.",
+    },
+    {
+      type: "heading",
+      text: "Qué deberían revisar las empresas",
+    },
+    {
+      type: "list",
+      items: [
+        "Topes aplicables para 2026.",
+        "Cambios en obligaciones tributarias.",
+        "Procesos internos de cálculo.",
+        "Impactos sobre retenciones y sanciones.",
+        "Necesidad de revisiones preventivas de cumplimiento.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "La revisión temprana permite reducir riesgos operativos y evitar ajustes posteriores que puedan generar cargas administrativas adicionales.",
+    },
+    {
+      type: "cta",
+      title: "Revise si la actualización de la UVT cambia sus obligaciones",
+      text: "Grupo A&C acompaña procesos de actualización tributaria, revisión de topes y prevención de riesgos fiscales.",
+      button: "Solicitar diagnóstico tributario",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "informacion-exogena-2026-cruces-automaticos-control-tributario",
+  type: "news",
+  category: "Tributario",
+  title: "Información exógena 2026 aumenta la atención por cruces automáticos y control tributario",
+  excerpt:
+    "El reporte de información exógena sigue siendo un proceso crítico para empresas y contadores por su relación con validaciones, cruces de datos y consistencia tributaria.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-04",
+  readTime: "4 min",
+  coverImage: "/fotos/dian-facturacion.jpg",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "Información exógena 2026 aumenta la atención de empresas y contadores por cruces automáticos y control tributario",
+  sourceType: "internal",
+  newsLabel: "Normativa",
+  region: "Colombia",
+  attributionNote:
+    "Esta publicación fue elaborada por la Mesa Editorial de Grupo A&C a partir de información suministrada para curaduría interna. El contenido fue organizado con enfoque preventivo y empresarial.",
+
+  content: [
+    {
+      type: "lead",
+      text: "La presentación de información exógena continúa siendo uno de los procesos tributarios que mayor atención exige a empresas y profesionales contables en Colombia.",
+    },
+    {
+      type: "paragraph",
+      text: "También conocida como medios magnéticos, la información exógena corresponde a reportes que determinados contribuyentes deben presentar sobre operaciones económicas realizadas durante un periodo determinado.",
+    },
+    {
+      type: "paragraph",
+      text: "Estos reportes permiten comparar información proveniente de distintas fuentes y verificar consistencia entre pagos, ingresos, retenciones, operaciones y registros tributarios.",
+    },
+    {
+      type: "heading",
+      text: "Información que puede incluirse",
+    },
+    {
+      type: "list",
+      items: [
+        "Pagos realizados a terceros.",
+        "Compras y ventas.",
+        "Retenciones practicadas.",
+        "Información de socios o accionistas.",
+        "Saldos de cartera.",
+        "Ingresos y movimientos económicos definidos por norma.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Riesgo operativo",
+      text: "Errores pequeños en identificación de terceros, soportes incompletos o diferencias entre registros pueden convertirse posteriormente en observaciones, correcciones o revisiones adicionales.",
+    },
+    {
+      type: "heading",
+      text: "Acciones recomendadas",
+    },
+    {
+      type: "list",
+      items: [
+        "Validar bases de datos antes de los vencimientos.",
+        "Actualizar información de clientes y proveedores.",
+        "Verificar soportes y documentos asociados.",
+        "Realizar conciliaciones periódicas.",
+        "Implementar controles preventivos.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "La información exógena ya no debe verse únicamente como una obligación periódica, sino como una oportunidad para revisar la calidad de la información financiera y tributaria de la empresa.",
+    },
+    {
+      type: "cta",
+      title: "Prepare la información exógena antes de los vencimientos",
+      text: "Una revisión anticipada puede reducir errores, evitar correcciones y fortalecer la calidad de la información tributaria.",
+      button: "Solicitar acompañamiento",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "digitalizacion-control-tributario-empresas-colombia-2026",
+  type: "news",
+  category: "Tecnología tributaria",
+  title: "La digitalización y los cruces automáticos aumentan el control tributario en Colombia",
+  excerpt:
+    "La validación electrónica, los cruces automáticos y el fortalecimiento tecnológico de las plataformas tributarias elevan la exigencia sobre la calidad de la información empresarial.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-03",
+  readTime: "4 min",
+  coverImage: "/fotos/dian-facturacion.jpg",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "La digitalización y los cruces automáticos aumentan el control tributario para empresas en Colombia",
+  sourceType: "internal",
+  newsLabel: "Actualidad",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue preparada por la Mesa Editorial de Grupo A&C a partir de información interna de actualidad tributaria. El contenido fue contextualizado para empresas y equipos financieros.",
+
+  content: [
+    {
+      type: "lead",
+      text: "La transformación digital continúa modificando la forma en que empresas, entidades y profesionales gestionan la información tributaria en Colombia.",
+    },
+    {
+      type: "paragraph",
+      text: "Durante 2026, la validación electrónica, los cruces automáticos y el fortalecimiento tecnológico de plataformas tributarias siguen consolidándose como retos centrales para áreas contables y financieras.",
+    },
+    {
+      type: "paragraph",
+      text: "En la práctica, diferentes fuentes de información empresarial pueden ser comparadas mediante sistemas automatizados que identifican diferencias o inconsistencias entre registros.",
+    },
+    {
+      type: "heading",
+      text: "Procesos cada vez más conectados",
+    },
+    {
+      type: "list",
+      items: [
+        "Facturación electrónica.",
+        "Nómina electrónica.",
+        "Información exógena.",
+        "Declaraciones tributarias.",
+        "Registros financieros internos.",
+        "Documentación soporte.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Cambio de rol",
+      text: "El contador y los equipos financieros ya no se limitan al cumplimiento periódico. Ahora necesitan fortalecer revisión, validación y control preventivo.",
+    },
+    {
+      type: "heading",
+      text: "Qué pueden hacer las empresas",
+    },
+    {
+      type: "list",
+      items: [
+        "Revisar la calidad de los registros.",
+        "Actualizar bases de datos internas.",
+        "Implementar controles documentales.",
+        "Realizar validaciones preventivas.",
+        "Integrar procesos administrativos y contables.",
+        "Fortalecer procedimientos internos de seguimiento.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Una adecuada gestión de la información puede facilitar procesos futuros y reducir riesgos asociados con inconsistencias, correcciones o requerimientos posteriores.",
+    },
+    {
+      type: "cta",
+      title: "Convierta la información tributaria en una ventaja de control",
+      text: "Grupo A&C ayuda a empresas a fortalecer procesos financieros y tributarios mediante revisión preventiva, trazabilidad y gestión estratégica.",
+      button: "Solicitar revisión",
+      href: "/contacto",
+    },
+  ],
+},
+{
+  slug: "aumento-costos-laborales-2026-ajustes-financieros-empresas",
+  type: "news",
+  category: "Finanzas empresariales",
+  title: "El aumento de costos laborales en 2026 impulsa ajustes financieros en empresas colombianas",
+  excerpt:
+    "El incremento del salario mínimo, la reducción de la jornada laboral y nuevos recargos están generando presión sobre presupuestos, márgenes y planeación financiera.",
+  author: "Mesa Editorial Grupo A&C",
+  date: "2026-07-02",
+  readTime: "4 min",
+  coverImage: "/fotos/patrimonio-hero.webp",
+  featured: false,
+  sourceName: "Mesa Editorial Grupo A&C",
+  sourceTitle: "El aumento de costos laborales en 2026 comienza a generar ajustes financieros en empresas colombianas",
+  sourceType: "internal",
+  newsLabel: "Análisis breve",
+  region: "Colombia",
+  attributionNote:
+    "Esta nota fue elaborada por la Mesa Editorial de Grupo A&C a partir de información suministrada para revisión editorial interna. El contenido fue adaptado con enfoque financiero, operativo y empresarial.",
+
+  content: [
+    {
+      type: "lead",
+      text: "Durante el primer semestre de 2026, el aumento de costos laborales se ha convertido en uno de los temas con mayor impacto para empresas y equipos financieros en Colombia.",
+    },
+    {
+      type: "paragraph",
+      text: "El incremento del salario mínimo, la implementación gradual de medidas laborales, la reducción de la jornada semanal y los nuevos ajustes en recargos dominicales y festivos han generado desafíos en planeación financiera y sostenibilidad operativa.",
+    },
+    {
+      type: "paragraph",
+      text: "Aunque estas medidas buscan fortalecer condiciones laborales para los trabajadores, su impacto ya comienza a reflejarse en diferentes sectores empresariales.",
+    },
+    {
+      type: "heading",
+      text: "Componentes que pueden aumentar la presión financiera",
+    },
+    {
+      type: "list",
+      items: [
+        "Aportes a seguridad social.",
+        "Prestaciones sociales.",
+        "Horas extras y recargos.",
+        "Servicios tercerizados.",
+        "Presupuestos de nómina.",
+        "Costos operativos generales.",
+        "Planeación financiera anual.",
+      ],
+    },
+    {
+      type: "callout",
+      title: "Lectura financiera",
+      text: "El impacto no se limita al incremento mensual de nómina. También exige revisar productividad, márgenes, flujo de caja, contratos y estructura de costos.",
+    },
+    {
+      type: "heading",
+      text: "Qué deberían revisar las empresas",
+    },
+    {
+      type: "list",
+      items: [
+        "Actualizar presupuestos y proyecciones financieras.",
+        "Revisar estructuras salariales y costos asociados.",
+        "Evaluar productividad por áreas.",
+        "Realizar análisis de escenarios.",
+        "Revisar contratos indexados a salario mínimo.",
+        "Fortalecer procesos internos de planeación.",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "La anticipación puede facilitar decisiones más eficientes y disminuir presiones operativas futuras.",
+    },
+        {
+      type: "cta",
+      title: "Evalúe el impacto real de los costos laborales en su empresa",
+      text: "Grupo A&C acompaña procesos de planeación financiera, análisis de márgenes y revisión estratégica de costos empresariales.",
+      button: "Solicitar análisis financiero",
+      href: "/contacto",
+    },
   ],
 },
 ];
