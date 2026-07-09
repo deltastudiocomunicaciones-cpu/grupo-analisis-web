@@ -42,7 +42,7 @@ function formatDate(date?: string) {
   if (!isIsoDate) {
     return cleanDate;
   }
-
+  const siteUrl = "https://www.grupoayc.co";
   const [year, month, day] = cleanDate.split("-").map(Number);
   const parsedDate = new Date(year, month - 1, day);
 
@@ -83,6 +83,12 @@ export async function generateMetadata({
     };
   }
 
+  const siteUrl = "https://www.grupoayc.co";
+
+  const ogImage = article.coverImage.startsWith("http")
+    ? article.coverImage
+    : `${siteUrl}${article.coverImage}`;
+
   return {
     title: article.seoTitle ?? `${article.title} | Noticias Grupo A&C`,
     description: article.seoDescription ?? article.excerpt,
@@ -92,16 +98,24 @@ export async function generateMetadata({
     openGraph: {
       title: article.title,
       description: article.excerpt,
-      url: `/noticias/${article.slug}`,
+      url: `${siteUrl}/noticias/${article.slug}`,
       type: "article",
+      siteName: "Grupo A&C",
+      locale: "es_CO",
       images: [
         {
-          url: article.coverImage,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: article.title,
         },
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [ogImage],
     },
   };
 }

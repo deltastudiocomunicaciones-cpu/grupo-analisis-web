@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://grupoayc.co"),
+  metadataBase: new URL("https://www.grupoayc.co"),
 
   title: {
     default: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
@@ -40,30 +40,30 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
-    description:
-      "Arquitectura financiera, tributaria y estratégica para empresas que piensan a largo plazo.",
-    url: "https://grupoayc.co",
-    siteName: "Grupo A&C",
-    locale: "es_CO",
-    type: "website",
-    images: [
-  {
-    url: "https://grupoayc.co/og/grupo-ayc-og-v2.png",
-    width: 1200,
-    height: 630,
-    alt: "Grupo Análisis & Consultorías",
-  },
-],
-  },
+  title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
+  description:
+    "Arquitectura financiera, tributaria y estratégica para empresas que piensan a largo plazo.",
+  url: "https://www.grupoayc.co",
+  siteName: "Grupo A&C",
+  locale: "es_CO",
+  type: "website",
+  images: [
+    {
+      url: "https://www.grupoayc.co/og/grupo-ayc-og-v2.png",
+      width: 1200,
+      height: 630,
+      alt: "Grupo Análisis & Consultorías",
+    },
+  ],
+},
 
-  twitter: {
-    card: "summary_large_image",
-    title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
-    description:
-      "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
-    images: ["https://grupoayc.co/og/grupo-ayc-og-v1.png"],
-  },
+twitter: {
+  card: "summary_large_image",
+  title: "Grupo Análisis & Consultorías | Inteligencia Estratégica",
+  description:
+    "Planeación tributaria, auditoría financiera, protección patrimonial y tecnología empresarial en Colombia.",
+  images: ["https://www.grupoayc.co/og/grupo-ayc-og-v2.png"],
+},
 
   robots: {
     index: true,

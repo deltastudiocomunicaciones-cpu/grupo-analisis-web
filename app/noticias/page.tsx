@@ -14,20 +14,29 @@ export const metadata: Metadata = {
     canonical: "/noticias",
   },
   openGraph: {
-    title: "Noticias empresariales, tributarias y financieras | Grupo A&C",
-    description:
-      "Noticias, novedades y actualidad empresarial para organizaciones que necesitan información clara para tomar mejores decisiones.",
-    url: "/noticias",
-    type: "website",
-    images: [
-      {
-        url: "/og/grupo-ayc-og-v1.png",
-        width: 1200,
-        height: 630,
-        alt: "Noticias empresariales Grupo A&C",
-      },
-    ],
-  },
+  title: "Noticias empresariales, tributarias y financieras | Grupo A&C",
+  description:
+    "Noticias, novedades y actualidad empresarial para organizaciones que necesitan información clara para tomar mejores decisiones.",
+  url: "https://www.grupoayc.co/noticias",
+  type: "website",
+  siteName: "Grupo A&C",
+  locale: "es_CO",
+  images: [
+    {
+      url: "https://www.grupoayc.co/og/grupo-ayc-og-v2.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Noticias empresariales Grupo A&C",
+    },
+  ],
+},
+twitter: {
+  card: "summary_large_image",
+  title: "Noticias empresariales, tributarias y financieras | Grupo A&C",
+  description:
+    "Noticias, novedades y actualidad empresarial para organizaciones que necesitan información clara para tomar mejores decisiones.",
+  images: ["https://www.grupoayc.co/og/grupo-ayc-og-v2.jpg"],
+},
 };
 
 function formatDate(date?: string) {
