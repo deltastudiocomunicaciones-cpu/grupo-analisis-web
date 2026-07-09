@@ -5,10 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { label: "Nosotros", href: "/nosotros" },
-  { label: "Ecosistema", href: "/#ecosystem" }
+  { label: "Ecosistema", href: "/#ecosystem" },
   { label: "Servicios", href: "/soluciones" },
   { label: "Noticias", href: "/noticias" },
   { label: "Artículos", href: "/inteligencia" },
+  { label: "Inversiones", href: "/inversiones" },
   { label: "Podcast", href: "/#ecosystem" },
   { label: "Contactar", href: "/contacto" },
 ];
