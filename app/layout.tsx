@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
   {
-    url: "https://grupoayc.co/og/grupo-ayc-og-v1.png",
+    url: "https://grupoayc.co/og/grupo-ayc-og-v2.png",
     width: 1200,
     height: 630,
     alt: "Grupo Análisis & Consultorías",
