@@ -88,7 +88,7 @@ export default function OrganizationSchema() {
       {
         "@type": "Brand",
         name: "CEC - Contadores en Colombia",
-        url: "https://www.grupoayc.co/cec",
+        url: "https://www.grupoayc.co/contadores-en-colombia",
       },
       {
         "@type": "Brand",
