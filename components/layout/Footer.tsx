@@ -1,5 +1,6 @@
 "use client";
 
+import { contactLinks } from "@/data/contact";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -93,31 +94,38 @@ hover:text-[#c96a1b]
             </div>
 
             {/* CONTACT */}
-            <div>
+<div>
+  <p className="uppercase tracking-[0.3em] text-xs text-white/40 mb-8">
+    Contacto
+  </p>
 
-              <p className="uppercase tracking-[0.3em] text-xs text-white/40 mb-8">
-                Contacto
-              </p>
+  <div className="flex flex-col gap-5 text-white/70">
+    <p>Sabaneta, Antioquia · Colombia</p>
 
-              <div className="flex flex-col gap-5 text-white/70">
+    <a
+      href={`mailto:${contactLinks.email}`}
+      className="transition-colors duration-300 hover:text-[#c96a1b]"
+    >
+      {contactLinks.email}
+    </a>
 
-                <p>Medellín, Colombia</p>
+    <a
+      href={contactLinks.whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#c96a1b]"
+    >
+      WhatsApp Business
+    </a>
 
-                <a
-                  href="mailto:grupoayc@gmail.com"
-                  className="hover:text-[#c96a1b] transition-colors duration-300"
-                >
-                  grupoayc@gmail.com
-                </a>
-
-                <a
-  href="https://wa.me/573126901475"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="hover:text-[#c96a1b] transition-colors duration-300"
->
-  WhatsApp Business
-</a>
+    <a
+      href={contactLinks.instagram}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-colors duration-300 hover:text-[#c96a1b]"
+    >
+      Instagram
+    </a>
 
               </div>
 
