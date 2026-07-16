@@ -1,16 +1,27 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 export default function Loader() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     const checkScreen = () => {
-      setIsMobile(window.innerWidth < 768);
+      const mobile = window.innerWidth < 768;
+
+      setIsMobile(mobile);
+
+      // En móvil no mostramos loader de video para mejorar PageSpeed.
+      if (mobile) {
+        setLoading(false);
+        return;
+      }
+
+      // En desktop sí mostramos el loader premium.
+      setLoading(true);
     };
 
     checkScreen();
@@ -20,30 +31,32 @@ export default function Loader() {
   }, []);
 
   useEffect(() => {
-    // Seguridad: si algo falla, nunca bloquea la web.
+    if (!loading) return;
+
+    // Seguridad: si el video se demora o falla, no bloquea la web.
     const fallbackTimer = setTimeout(() => {
       setLoading(false);
-    }, 12000);
+    }, 4200);
 
     return () => clearTimeout(fallbackTimer);
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
+    if (!loading || isMobile) return;
+
     const video = videoRef.current;
 
-    if (video) {
-      video.currentTime = 0;
+    if (!video) return;
 
-      video.play().catch(() => {
-        // Si autoplay falla, deja visible la intro un momento antes de salir.
-        setTimeout(() => setLoading(false), 3500);
-      });
-    }
-  }, [isMobile]);
+    video.currentTime = 0;
 
-  const videoSrc = isMobile
-    ? "/videos/intro-grupo-ayc-mobile.mp4"
-    : "/videos/optimized/intro-grupo-ayc.mp4";
+    video.play().catch(() => {
+      setTimeout(() => setLoading(false), 2500);
+    });
+  }, [loading, isMobile]);
+
+  const videoSrc = "/videos/optimized/intro-grupo-ayc.mp4";
+
   return (
     <AnimatePresence>
       {loading && (
@@ -56,9 +69,7 @@ export default function Loader() {
           }}
           className="fixed inset-0 z-[99999] overflow-hidden bg-black"
         >
-          {/* Video único según dispositivo */}
           <video
-            key={videoSrc}
             ref={videoRef}
             src={videoSrc}
             autoPlay
@@ -73,16 +84,12 @@ export default function Loader() {
               w-full
               object-cover
               object-center
-              md:object-center
             "
           />
 
-          {/* Capas cinematográficas */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/65 md:from-black/35 md:via-black/20 md:to-black/75" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-black/55" />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 md:from-black/70 md:to-black/55" />
-
-          {/* Halo premium */}
           <motion.div
             initial={{ opacity: 0, scale: 0.7 }}
             animate={{
@@ -97,35 +104,31 @@ export default function Loader() {
               absolute
               left-1/2
               top-1/2
-              h-[220px]
-              w-[360px]
+              h-[280px]
+              w-[720px]
               -translate-x-1/2
               -translate-y-1/2
               rounded-full
               bg-[#c96a1b]/20
-              blur-[90px]
-              md:h-[280px]
-              md:w-[720px]
-              md:blur-[120px]
+              blur-[120px]
             "
           />
 
-          {/* Botón para saltar intro */}
           <button
+            type="button"
             onClick={() => setLoading(false)}
             className="
               absolute
-              bottom-6
-              left-1/2
+              bottom-8
+              right-8
               z-20
-              -translate-x-1/2
               rounded-full
               border
               border-white/15
               bg-black/30
               px-5
               py-3
-              text-[10px]
+              text-xs
               uppercase
               tracking-[0.28em]
               text-white/55
@@ -135,11 +138,6 @@ export default function Loader() {
               hover:border-[#c96a1b]/40
               hover:bg-[#c96a1b]/10
               hover:text-white
-              md:bottom-8
-              md:left-auto
-              md:right-8
-              md:translate-x-0
-              md:text-xs
             "
           >
             Saltar
