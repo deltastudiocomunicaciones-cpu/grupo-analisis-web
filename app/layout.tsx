@@ -1,9 +1,10 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Script from "next/script";
 import PageTransition from "@/components/providers/PageTransition";
 import ClientOnlyLoader from "@/components/providers/ClientOnlyLoader";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 import OrganizationSchema from "@/components/seo/OrganizationSchema";
-import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -84,3 +85,34 @@ export const metadata: Metadata = {
     },
   },
 };
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="es" data-scroll-behavior="smooth">
+      <body>
+        <OrganizationSchema />
+
+        <ClientOnlyLoader />
+
+        <SmoothScroll>
+          <PageTransition>{children}</PageTransition>
+        </SmoothScroll>
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GMYHDFLBH0"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-GMYHDFLBH0');
+          `}
+        </Script>
+      </body>
+    </html>
+  );
+}
