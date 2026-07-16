@@ -120,6 +120,33 @@ export default function Navbar() {
     "
   />
 </Link>
+
+<Link
+  href="/grupo-ayc"
+  className="
+    hidden
+    shrink-0
+    whitespace-nowrap
+    rounded-full
+    border
+    border-white/10
+    bg-white/[0.035]
+    px-4
+    py-2
+    text-[10px]
+    uppercase
+    tracking-[0.26em]
+    text-white/45
+    transition-all
+    duration-300
+    hover:border-[#c96a1b]/40
+    hover:bg-[#c96a1b]/10
+    hover:text-white
+    2xl:inline-flex
+  "
+>
+  Grupo A&C
+</Link>
             <nav className="hidden items-center gap-8 text-sm tracking-[0.16em] xl:flex">
               <Link
                 href="/nosotros"
@@ -190,9 +217,12 @@ export default function Navbar() {
               </Link>
 
               <div className="group relative">
-  <button className="text-white/70 transition-colors hover:text-white">
-    Podcast
-  </button>
+  <button
+  type="button"
+  className="text-white/70 transition-colors hover:text-white"
+>
+  Podcast
+</button>
 
   <div className="invisible absolute left-1/2 top-full mt-5 w-[360px] -translate-x-1/2 rounded-[1.6rem] border border-white/10 bg-black/75 px-5 py-5 opacity-0 shadow-[0_20px_80px_rgba(0,0,0,0.55)] backdrop-blur-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100">
     <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
