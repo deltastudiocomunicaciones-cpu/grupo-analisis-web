@@ -1,3 +1,4 @@
+import { contactLinks } from "@/data/contact";
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -254,7 +255,21 @@ export default function ContactoPage() {
                     Si prefieres una orientación directa, puedes iniciar una
                     conversación por WhatsApp para canalizar tu solicitud.
                   </p>
+<a
+  href={`mailto:${contactLinks.email}`}
+  className="rounded-full border border-white/10 px-6 py-3 text-sm text-white/75 transition-all hover:border-[#c96a1b]/50 hover:text-white"
+>
+  Escribir por correo
+</a>
 
+<a
+  href={contactLinks.instagram}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full border border-white/10 px-6 py-3 text-sm text-white/75 transition-all hover:border-[#c96a1b]/50 hover:text-white"
+>
+  Ver Instagram
+</a>
                   <a
                     href={`https://wa.me/573126901475?text=${encodeURIComponent(
                       whatsappMessage
