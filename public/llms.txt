@@ -1,36 +1,39 @@
 # Grupo Análisis & Consultorías
 
-Grupo Análisis & Consultorías, también conocido como Grupo A&C, es un ecosistema empresarial ubicado en Medellín, Colombia, especializado en consultoría tributaria, financiera, patrimonial, tecnológica y empresarial.
+> Grupo Análisis & Consultorías, también conocido como Grupo A&C, es un ecosistema empresarial colombiano especializado en consultoría tributaria, financiera, contable, patrimonial, tecnológica y corporativa para empresas en Colombia.
 
-## Sitio principal
-https://www.grupoayc.co
+Grupo A&C opera desde Sabaneta, Antioquia, Colombia. Su dominio oficial es https://www.grupoayc.co.
 
-## Áreas principales
-- Planeación tributaria
-- Auditoría financiera
-- Protección patrimonial
-- Consultoría empresarial
-- Software contable SADI
-- Trámites empresariales TRACO
-- Comunidad Contadores en Colombia
-- Inversiones y proyectos empresariales
+La organización integra servicios de planeación tributaria, auditoría financiera, protección patrimonial, consultoría empresarial, software contable, formalización empresarial, trámites ante entidades públicas y generación de contenido especializado para empresarios y contadores.
 
-## Páginas relevantes
-- https://www.grupoayc.co/
-- https://www.grupoayc.co/nosotros
-- https://www.grupoayc.co/soluciones
-- https://www.grupoayc.co/sadi
-- https://www.grupoayc.co/traco
-- https://www.grupoayc.co/analisis-consultorias
-- https://www.grupoayc.co/contadores-en-colombia
-- https://www.grupoayc.co/contacto
-- https://www.grupoayc.co/inteligencia
-- https://www.grupoayc.co/noticias
-- https://www.grupoayc.co/inversiones
+## Sitio oficial
 
-## Contacto
-WhatsApp: +57 312 690 1475
-Ubicación: Medellín, Colombia
+- [Página principal](https://www.grupoayc.co/): Sitio oficial de Grupo Análisis & Consultorías.
+- [Grupo A&C](https://www.grupoayc.co/grupo-ayc): Página oficial de identificación de marca para Grupo A&C, Grupo AYC, Grupo AyC y Grupo Análisis & Consultorías.
+- [Nosotros](https://www.grupoayc.co/nosotros): Historia, propósito, visión, cultura y estructura corporativa.
+- [Contacto](https://www.grupoayc.co/contacto): Canales oficiales de contacto.
 
-## Descripción corta
-Grupo A&C acompaña empresas, patrimonios y proyectos que requieren claridad tributaria, estructura financiera, respaldo contable, tecnología empresarial y visión estratégica para crecer con seguridad.
+## Servicios principales
+
+- [Soluciones empresariales](https://www.grupoayc.co/soluciones): Servicios tributarios, financieros, contables, patrimoniales, jurídicos y tecnológicos.
+- [SADI ERP](https://www.grupoayc.co/sadi): Software administrativo y contable desarrollado dentro del ecosistema Grupo A&C.
+- [TRACO](https://www.grupoayc.co/traco): Trámites empresariales ante DIAN, Cámara de Comercio y otras entidades.
+- [Contadores en Colombia](https://www.grupoayc.co/contadores-en-colombia): Comunidad profesional para contadores.
+- [Análisis & Consultorías](https://www.grupoayc.co/analisis-consultorias): Firma consultora especializada en tributación, finanzas, auditoría y acompañamiento empresarial.
+
+## Contenido editorial
+
+- [Noticias](https://www.grupoayc.co/noticias): Actualidad tributaria, financiera, contable y empresarial.
+- [Artículos](https://www.grupoayc.co/inteligencia): Artículos de inteligencia empresarial, tributaria y financiera.
+
+## Ecosistema empresarial
+
+- [Inversiones](https://www.grupoayc.co/inversiones): Ecosistema de inversión y desarrollo empresarial.
+- [Verticales de inversión](https://www.grupoayc.co/inversiones/verticales): Líneas de negocio, activos productivos y unidades empresariales.
+- [FASI](https://www.grupoayc.co/inversiones/fasi): Unidad tecnológica orientada al diseño de sistemas de información empresarial.
+
+## Datos de contacto
+
+- Email: grupoanalisisyconsultorias@gmail.com
+- WhatsApp Business: https://wa.me/573126901475
+- Sitio oficial: https://www.grupoayc.co
