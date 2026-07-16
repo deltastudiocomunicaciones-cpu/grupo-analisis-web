@@ -121,32 +121,6 @@ export default function Navbar() {
   />
 </Link>
 
-<Link
-  href="/grupo-ayc"
-  className="
-    hidden
-    shrink-0
-    whitespace-nowrap
-    rounded-full
-    border
-    border-white/10
-    bg-white/[0.035]
-    px-4
-    py-2
-    text-[10px]
-    uppercase
-    tracking-[0.26em]
-    text-white/45
-    transition-all
-    duration-300
-    hover:border-[#c96a1b]/40
-    hover:bg-[#c96a1b]/10
-    hover:text-white
-    2xl:inline-flex
-  "
->
-  Grupo A&C
-</Link>
             <nav className="hidden items-center gap-8 text-sm tracking-[0.16em] xl:flex">
               <Link
                 href="/nosotros"
