@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { type MouseEvent, useState } from "react";
+import { useState } from "react";
 
 type ShowcaseItem = {
   title: string;
@@ -40,16 +40,7 @@ export default function ServicesShowcaseCarousel({
     return rawOffset;
   };
 
-  const handleCardClick = (
-    event: MouseEvent<HTMLAnchorElement>,
-    index: number,
-    isActive: boolean
-  ) => {
-    if (!isActive) {
-      event.preventDefault();
-      goToCard(index);
-    }
-  };
+  
 
   return (
     <section className="relative overflow-hidden bg-[#efe8dd] py-20 text-[#111] md:py-28">
@@ -82,7 +73,7 @@ export default function ServicesShowcaseCarousel({
             <Link
               href={item.href}
               key={`${item.title}-${index}`}
-              onClick={(event) => handleCardClick(event, index, isActive)}
+              onClick={() => goToCard(index)}
               aria-label={`Ver ${item.title}`}
               className="
                 group

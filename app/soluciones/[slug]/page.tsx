@@ -8,9 +8,9 @@ import Container from "@/components/ui/Container";
 import { getServiceBySlug, services } from "@/data/services";
 
 type ServicePageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
@@ -19,8 +19,11 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: ServicePageProps): Metadata {
-  const service = getServiceBySlug(params.slug);
+export async function generateMetadata({
+  params,
+}: ServicePageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
 
   if (!service) {
     return {
@@ -61,8 +64,11 @@ export function generateMetadata({ params }: ServicePageProps): Metadata {
   };
 }
 
-export default function ServiceDetailPage({ params }: ServicePageProps) {
-  const service = getServiceBySlug(params.slug);
+export default async function ServiceDetailPage({
+  params,
+}: ServicePageProps) {
+  const { slug } = await params;
+  const service = getServiceBySlug(slug);
 
   if (!service) {
     notFound();
