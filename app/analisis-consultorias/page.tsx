@@ -43,22 +43,22 @@ export const metadata: Metadata = {
 const insightCards = [
   {
     title: "Diagnóstico Financiero",
-    image: "/fotos/ecosistema_webp/analisis-card-1.webp",
+    image: "/fotos/ecosistema_webp/analisis-card-1.png",
     text: "Lectura profunda de la información financiera para identificar riesgos, oportunidades, márgenes, estructuras de costo y puntos críticos de decisión.",
   },
   {
     title: "Planeación Tributaria",
-    image: "/fotos/ecosistema_webp/analisis-card-2.webp",
+    image: "/fotos/ecosistema_webp/analisis-card-2.png",
     text: "Acompañamiento estratégico para anticipar impactos fiscales, ordenar obligaciones y construir decisiones tributarias con visión de largo plazo.",
   },
   {
-    title: "Auditoría y Control",
-    image: "/fotos/ecosistema_webp/analisis-card-3.webp",
-    text: "Revisión técnica de procesos, cifras, soportes y criterios contables para fortalecer la confianza, la trazabilidad y el gobierno empresarial.",
-  },
+  title: "Insolvencias",
+  image: "/fotos/ecosistema_webp/analisis-card-3.png",
+  text: "Estructuración y acompañamiento en procesos de insolvencia para empresas que necesitan reorganizar sus obligaciones, proteger su operación y recuperar estabilidad financiera con criterio técnico y estratégico.",
+},
   {
     title: "Estrategia Patrimonial",
-    image: "/fotos/ecosistema_webp/analisis-card-4.webp",
+    image: "/fotos/ecosistema_webp/analisis-card-4.png",
     text: "Análisis y estructuración de decisiones empresariales y patrimoniales para proteger valor, reducir exposición y acompañar procesos de crecimiento.",
   },
 ];
