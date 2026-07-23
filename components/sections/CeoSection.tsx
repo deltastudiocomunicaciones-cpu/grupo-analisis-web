@@ -44,7 +44,7 @@ export default function CeoSection() {
           className="relative rounded-[40px] overflow-hidden min-h-[560px] bg-white/[0.04] border border-white/10"
         >
           <img
-            src="https://i.imgur.com/7gAfOGy.jpeg"
+            src="https://i.imgur.com/kklMWtF.png"
             alt="Dirección Estratégica Grupo A&C"
             className="absolute inset-0 w-full h-full object-cover opacity-85"
           />

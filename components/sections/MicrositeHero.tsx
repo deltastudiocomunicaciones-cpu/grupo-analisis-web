@@ -13,6 +13,7 @@ interface MicrositeHeroProps {
   imageSrc?: string;
   imageAlt?: string;
   backgroundImage?: string;
+  imageClassName?: string;
 }
 
 export default function MicrositeHero({
@@ -20,11 +21,12 @@ export default function MicrositeHero({
   title,
   description,
   button,
-  buttonLink = "#",
-  ambientColor = "#c96a1b",
+  buttonLink,
+  ambientColor,
   imageSrc,
-  imageAlt = "Brand visual",
+  imageAlt,
   backgroundImage,
+  imageClassName,
 }: MicrositeHeroProps) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden px-6 pt-32 bg-black text-white">
@@ -136,10 +138,18 @@ export default function MicrositeHero({
               className="relative"
             >
               <img
-                src={imageSrc}
-                alt={imageAlt}
-                className="w-[800px] object-contain drop-shadow-[0_20px_80px_rgba(255,120,0,0.35)]"
-              />
+  src={imageSrc}
+  alt={imageAlt}
+  className={`
+    relative
+    z-10
+    object-contain
+    drop-shadow-[0_35px_90px_rgba(0,0,0,0.45)]
+    transition-all
+    duration-700
+    ${imageClassName ?? "h-[260px] w-auto md:h-[360px] lg:h-[430px]"}
+  `}
+/>
             </motion.div>
           </motion.div>
         )}
