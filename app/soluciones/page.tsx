@@ -1,3 +1,4 @@
+import { operationalServices, strategicServices } from "@/data/services";
 import type { Metadata } from "next";
 import ServicesShowcaseCarousel from "@/components/sections/ServicesShowcaseCarousel";
 import Link from "next/link";
@@ -30,95 +31,6 @@ export const metadata: Metadata = {
   },
 };
 
-const strategicServices = [
-  {
-    title: "Asesoría Tributaria y Financiera",
-    description: "Asesoría integral en materia tributaria y financiera, diseñada para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
-    brand: "Grupo A&C",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/asesoria-tributaria.webp",
-  },
-  {
-    title: "Auditorías Financieras",
-    description: "Auditorías financieras diseñadas para identificar riesgos, optimizar recursos y fortalecer la confianza de inversionistas, socios y entidades de control.",
-    brand: "Grupo A&C",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/auditorias-financieras.webp",
-  },
-  {
-    title: "Reestructuración Patrimonial",
-    description: "Diseño de estrategias de reestructuración patrimonial para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
-    brand: "Grupo A&C",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/reestructuracion-patrimonial.webp",
-  },
-  {
-    title: "Estrategia Tributaria",
-    description: "Diseño de estrategias tributarias personalizadas para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
-    brand: "Grupo A&C",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/estrategia-tributaria.webp",
-  },
-  {
-    title: "Estructura Empresarial",
-    description: "Diseño y optimización de la estructura organizacional de las empresas para mejorar su eficiencia y competitividad.",
-    brand: "Grupo A&C",
-    href: "/traco",
-    image: "/fotos/servicios/estructura-empresarial.webp",
-  },
-  {
-    title: "Simplificación de Procesos",
-    description: "Optimización de procesos contables, financieros y administrativos para mejorar la eficiencia operativa y la toma de decisiones.",
-    brand: "Grupo A&C",
-    href: "/sadi",
-    image: "/fotos/servicios/simplicidad-procesos.webp",
-  },
-];
-
-const operationalServices = [
-  {
-    title: "Devoluciones de IVA",
-    description: "Servicio de gestión integral de devoluciones de IVA, diseñado para optimizar tiempos, reducir costos y garantizar el cumplimiento normativo en empresas de todos los tamaños.",
-    brand: "Grupo A&C",
-    href: "/analisis-consultorias",
-    image: "/fotos/servicios/devoluciones-iva.webp"
-  },
-  {
-    title: "Contabilidad Total o Por Eventos",
-    description: "Servicio de outsourcing contable, con opción de contabilidad total o por eventos específicos, adaptado a las necesidades y capacidades de cada empresa.",
-    brand: "Grupo A&C",
-    href: "/contadores-en-colombia",
-    image: "/fotos/servicios/contabilidad.webp",
-  },
-  {
-    title: "Formación Profesional Contable",
-    description: "Formación personalizada para equipos contables, financieros y administrativos, orientada a fortalecer capacidades internas y autonomía en la gestión de la información financiera.",
-    brand: "Grupo A&C",
-    href: "/contadores-en-colombia",
-    image: "/fotos/servicios/formacion-profesional.webp",
-  },
-  {
-    title: "Fin de la auditoría",
-    description: "Solución para empresas que buscan finalizar procesos de auditoría fiscal o financiera, con el fin de reducir costos, tiempos y complejidad.",
-    brand: "Grupo A&C",
-    href: "/contadores-en-colombia",
-    image: "/fotos/servicios/fin-auditoria.webp",
-  },
-  {
-    title: "Trámites DIAN",
-    description: "RUT, NIT, RISE, entre otros trámites relacionados con la DIAN.",
-    brand: "TRACO",
-    href: "/traco",
-    image: "/fotos/servicios/tramites-dian-v1.webp",
-  },
-  {
-    title: "Trámites Cámara de Comercio",
-    description: "Constitución, renovación y demás trámites relacionados con la Cámara de Comercio.",
-    brand: "TRACO",
-    href: "/traco",
-    image: "/fotos/servicios/camara-comercio-v1.webp",
-  },
-];
 
 
 

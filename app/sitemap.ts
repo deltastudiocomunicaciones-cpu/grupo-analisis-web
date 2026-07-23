@@ -1,3 +1,4 @@
+import { services } from "@/data/services";
 import { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
 
@@ -112,5 +113,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...articleRoutes];
+  const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
+  url: `${baseUrl}/soluciones/${service.slug}`,
+  lastModified: currentDate,
+  changeFrequency: "monthly",
+  priority: 0.82,
+}));
+
+ return [...staticRoutes, ...articleRoutes, ...serviceRoutes];
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 
 type ShowcaseItem = {
   title: string;
@@ -40,6 +40,17 @@ export default function ServicesShowcaseCarousel({
     return rawOffset;
   };
 
+  const handleCardClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    index: number,
+    isActive: boolean
+  ) => {
+    if (!isActive) {
+      event.preventDefault();
+      goToCard(index);
+    }
+  };
+
   return (
     <section className="relative overflow-hidden bg-[#efe8dd] py-20 text-[#111] md:py-28">
       <div className="pointer-events-none absolute left-1/2 top-[-200px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#c96a1b]/10 blur-[180px]" />
@@ -71,9 +82,10 @@ export default function ServicesShowcaseCarousel({
             <Link
               href={item.href}
               key={`${item.title}-${index}`}
-              onClick={() => goToCard(index)}
+              onClick={(event) => handleCardClick(event, index, isActive)}
               aria-label={`Ver ${item.title}`}
               className="
+                group
                 absolute
                 left-1/2
                 top-0
@@ -103,34 +115,58 @@ export default function ServicesShowcaseCarousel({
                   alt={item.title}
                   fill
                   sizes="340px"
-                  className="object-cover object-center"
+                  className="
+                    object-cover
+                    object-center
+                    transition-transform
+                    duration-700
+                    group-hover:scale-[1.04]
+                  "
                 />
               </div>
 
-              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
-              <div className="absolute inset-x-0 bottom-8 text-center">
-  <p
-    className="
-      inline-flex
-      items-center
-      rounded-full
-      border
-      border-white/20
-      bg-black/30
-      px-5
-      py-2
-      text-xs
-      font-medium
-      uppercase
-      tracking-[0.25em]
-      text-white
-      backdrop-blur-md
-    "
-  >
-    Ver solución →
-  </p>
-</div>
+              <div className="absolute left-6 right-6 top-7">
+                <p className="mb-3 text-[10px] font-medium uppercase tracking-[0.28em] text-white/55">
+                  {item.brand}
+                </p>
+
+                <h3 className="max-w-[260px] text-3xl font-semibold leading-[1] tracking-[-0.05em] text-white drop-shadow-[0_8px_28px_rgba(0,0,0,0.55)]">
+                  {item.title}
+                </h3>
+              </div>
+
+              <div className="absolute bottom-8 left-6 right-6">
+                <p className="mb-6 line-clamp-3 text-sm font-light leading-relaxed text-white/72">
+                  {item.description}
+                </p>
+
+                <div
+                  className="
+                    inline-flex
+                    items-center
+                    rounded-full
+                    border
+                    border-white/20
+                    bg-black/30
+                    px-5
+                    py-2
+                    text-xs
+                    font-medium
+                    uppercase
+                    tracking-[0.25em]
+                    text-white
+                    backdrop-blur-md
+                    transition-all
+                    duration-500
+                    group-hover:border-[#c96a1b]/60
+                    group-hover:bg-[#c96a1b]/20
+                  "
+                >
+                  {isActive ? "Ver solución →" : "Seleccionar"}
+                </div>
+              </div>
             </Link>
           );
         })}
