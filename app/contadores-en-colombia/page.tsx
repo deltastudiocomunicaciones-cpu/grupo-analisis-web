@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const generationCards = [
   {
     title: "Actualización Profesional",
-    image: "/fotos/ecosistema_webp/cec-card-1.webp",
+    image: "/fotos/ecosistema_webp/cec-card-1.png",
     text: "Un espacio para que los contadores fortalezcan su conocimiento técnico, se mantengan actualizados y comprendan los cambios que impactan la profesión.",
   },
   {
@@ -56,7 +56,7 @@ const generationCards = [
   },
   {
     title: "Liderazgo Financiero",
-    image: "/fotos/ecosistema_webp/cec-card-4.webp",
+    image: "/fotos/ecosistema_webp/cec-card-4.png",
     text: "El contador deja de ser solo un operador de registros para convertirse en un aliado de la gerencia, la estrategia y la toma de decisiones.",
   },
 ];

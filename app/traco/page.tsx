@@ -41,22 +41,22 @@ export const metadata: Metadata = {
 const impactCards = [
   {
     title: "Constitución de Empresas",
-    image: "/fotos/ecosistema_webp/traco-card-1.webp",
+    image: "/fotos/ecosistema_webp/traco-card-1.png",
     text: "Acompañamiento en la creación formal de empresas, definición de estructura societaria, documentación inicial y registro ante las entidades correspondientes.",
   },
   {
     title: "Trámites DIAN",
-    image: "/fotos/ecosistema_webp/traco-card-2.webp",
+    image: "/fotos/ecosistema_webp/traco-card-2.png",
     text: "Gestión de procesos ante la DIAN para que la empresa pueda operar con claridad tributaria, actualización documental y cumplimiento básico.",
   },
   {
     title: "Cámara de Comercio",
-    image: "/fotos/ecosistema_webp/traco-card-3.webp",
+    image: "/fotos/ecosistema_webp/traco-card-3.png",
     text: "Acompañamiento en registros, renovaciones, actualizaciones, certificados y movimientos empresariales ante Cámara de Comercio.",
   },
   {
     title: "Estructura Corporativa",
-    image: "/fotos/ecosistema_webp/traco-card-4.webp",
+    image: "/fotos/ecosistema_webp/traco-card-4.png",
     text: "Organización documental, legal y administrativa para que la empresa tenga una base sólida para operar, crecer y tomar decisiones.",
   },
 ];

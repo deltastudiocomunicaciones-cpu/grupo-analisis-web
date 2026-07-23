@@ -41,22 +41,22 @@ export const metadata: Metadata = {
 const impactCards = [
   {
     title: "Automatización Contable",
-    image: "/fotos/ecosistema_webp/sadi-impacto-1.webp",
+    image: "/fotos/ecosistema_webp/sadi-impacto-1.png",
     text: "SADI reduce tareas operativas repetitivas y permite que los equipos contables trabajen con información más ordenada, trazable y lista para análisis.",
   },
   {
     title: "Control Administrativo",
-    image: "/fotos/ecosistema_webp/sadi-impacto-v2.webp",
+    image: "/fotos/ecosistema_webp/sadi-impacto-2.png",
     text: "Centraliza procesos administrativos y financieros para que la empresa pueda consultar, validar y controlar su operación con mayor claridad.",
   },
   {
     title: "Información Estratégica",
-    image: "/fotos/ecosistema_webp/sadi-impacto-3.webp",
+    image: "/fotos/ecosistema_webp/sadi-impacto-3.png",
     text: "Convierte datos dispersos en información estructurada para apoyar decisiones gerenciales, auditorías internas y análisis financiero.",
   },
   {
     title: "Evolución del Contador",
-    image: "/fotos/ecosistema_webp/sadi-impacto-4.webp",
+    image: "/fotos/ecosistema_webp/sadi-impacto-4.png",
     text: "Libera al contador de cargas manuales para elevar su rol hacia auditoría, interpretación financiera y acompañamiento estratégico empresarial.",
   },
 ];
