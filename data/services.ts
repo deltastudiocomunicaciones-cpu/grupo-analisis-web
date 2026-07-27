@@ -31,7 +31,7 @@ export const services: ServiceItem[] = [
       "Asesoría integral en materia tributaria y financiera, diseñada para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
     brand: "Grupo A&C",
     href: "/soluciones/asesoria-tributaria-financiera",
-    image: "/fotos/servicios/asesoria-tributaria.webp",
+    image: "/fotos/servicios/asesoria-tributaria-v1.png",
     category: "strategic",
     eyebrow: "Servicio estratégico",
     heroTitle:

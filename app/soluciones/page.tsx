@@ -99,7 +99,7 @@ export default function SolucionesPage() {
           <Reveal>
             <div className="relative h-[360px] overflow-hidden rounded-[1.5rem] md:h-[520px] md:rounded-[2rem]">
               <img
-                src="/fotos/soluciones-main-hero.webp"
+                src="/fotos/soluciones-hero-2.png"
                 alt="Consultoría empresarial Grupo A&C"
                 className="h-full w-full object-cover object-[center_37%]"
               />
