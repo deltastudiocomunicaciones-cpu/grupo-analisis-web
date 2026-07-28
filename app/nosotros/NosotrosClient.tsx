@@ -774,7 +774,7 @@ export default function NosotrosClient() {
       w-full
       object-cover
       object-[20%_20%]
-      md:object-[50%_50%]
+      md:object-[60%_60%]
     "
   />
 </picture>
@@ -806,43 +806,57 @@ export default function NosotrosClient() {
   </div>
 </section>
 
-     <section className="relative z-10 overflow-hidden bg-[#b9631c] px-6 py-24 md:py-32">
-      <div className="pointer-events-none absolute left-1/2 top-[-250px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-white/15 blur-[180px]" />
+     <section
+  className="
+    relative
+    z-10
+    overflow-hidden
+    bg-[linear-gradient(180deg,#d8cec2_0%,#ece4db_56%,#f5f2eb_100%)]
+    px-6
+    py-24
+    text-black
+    md:py-32
+  "
+>
+  {/* Sombra suave que conecta con el hero oscuro */}
+  <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/15 to-transparent" />
+
+  {/* Halo cobre institucional */}
+  <div className="pointer-events-none absolute left-1/2 top-[-300px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#c96a1b]/12 blur-[180px]" />
+
+  {/* Luz ambiental */}
+  <div className="pointer-events-none absolute bottom-[-320px] right-[-180px] h-[720px] w-[720px] rounded-full bg-white/60 blur-[170px]" />
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
   <Reveal>
    <GlassCard className="h-full min-h-[500px] overflow-hidden p-0">
   <div className="relative h-full min-h-[500px] overflow-hidden rounded-[2rem]">
 
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      preload="metadata"
-      poster="/fotos/nosotros-poster.png"
-      className="absolute inset-0 h-full w-full object-cover"
-    >
-      <LazyVideo
-  src="/videos/optimized/intelligence-v2.mp4"
-  className="absolute inset-0"
-  videoClassName="h-full w-full object-cover"
-/>
-    </video>
+   <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/fotos/erp-competitiva.jpg"
+  className="absolute inset-0 h-full w-full object-cover"
+>
+  <source
+    src="/videos/optimized/intelligence-v2.mp4"
+    type="video/mp4"
+  />
+</video>
 
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-    <div className="absolute bottom-0 left-0 right-0 z-10 p-8">
+<div className="absolute bottom-0 left-0 right-0 z-10 p-8 text-white md:p-12">
+  <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/55">
+    Desde 2006
+  </p>
 
-      <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/50">
-        Desde 2006
-      </p>
-
-      <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-5xl">
-        Tranquilidad, respaldo y crecimiento para decisiones de alto impacto.
-      </h2>
-
-    </div>
-
+  <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.05em] md:text-5xl">
+    Tranquilidad, respaldo y crecimiento para decisiones de alto impacto.
+  </h2>
+</div>
   </div>
 </GlassCard>
   </Reveal>
@@ -858,25 +872,28 @@ export default function NosotrosClient() {
     flex-col
     justify-between
     border
-    border-white/10
-    bg-white/[0.04]
+    border-black/10
+    bg-white/60
+    shadow-[0_24px_75px_rgba(0,0,0,0.07)]
     backdrop-blur-xl
     transition-all
     duration-500
-    hover:border-[#c96a1b]/35
-    hover:bg-white/[0.07]
+    hover:-translate-y-1
+    hover:border-[#c96a1b]/30
+    hover:bg-white/80
+    hover:shadow-[0_30px_90px_rgba(0,0,0,0.10)]
   "
 >
-  <p className="text-xs uppercase tracking-[0.3em] text-[#d6a15f]">
+  <p className="text-xs uppercase tracking-[0.3em] text-[#a95d24]">
     0{index + 1}
   </p>
 
   <div>
-    <h3 className="text-4xl font-semibold tracking-[-0.05em] text-white">
+    <h3 className="text-4xl font-semibold tracking-[-0.05em] text-black">
       {item.value}
     </h3>
 
-    <p className="mt-4 text-sm leading-7 text-white/65">
+    <p className="mt-4 text-sm leading-7 text-black/55">
       {item.text}
     </p>
   </div>
