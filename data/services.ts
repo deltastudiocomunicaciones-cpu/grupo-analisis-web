@@ -326,13 +326,13 @@ export const services: ServiceItem[] = [
     accentColor: "#c96a1b",
   },
   {
-    slug: "contabilidad-total-o-por-eventos",
-    title: "Contabilidad Total o Por Eventos",
+    slug: "contabilidad",
+    title: "Contabilidad",
     description:
       "Servicio de outsourcing contable, con opción de contabilidad total o por eventos específicos, adaptado a las necesidades y capacidades de cada empresa.",
     brand: "Grupo A&C",
-    href: "/soluciones/contabilidad-total-o-por-eventos",
-    image: "/fotos/servicios/contabilidad.webp",
+    href: "/soluciones/contabilidad",
+    image: "/fotos/servicios/contabilidad.png",
     category: "operational",
     eyebrow: "Gestión contable",
     heroTitle:
@@ -369,13 +369,13 @@ export const services: ServiceItem[] = [
     accentColor: "#16a34a",
   },
   {
-    slug: "formacion-profesional-contable",
-    title: "Formación Profesional Contable",
+    slug: "declaracion-de-renta",
+    title: "Declaración de Renta",
     description:
-      "Formación personalizada para equipos contables, financieros y administrativos, orientada a fortalecer capacidades internas y autonomía en la gestión de la información financiera.",
+      "Servicio integral para la preparación, revisión y presentación de la declaración de renta, garantizando cumplimiento y optimización fiscal.",
     brand: "CEC",
-    href: "/soluciones/formacion-profesional-contable",
-    image: "/fotos/servicios/formacion-profesional.webp",
+    href: "/soluciones/declaracion-renta",
+    image: "/fotos/servicios/declaracion-renta.png",
     category: "operational",
     eyebrow: "Formación contable",
     heroTitle:
@@ -412,13 +412,13 @@ export const services: ServiceItem[] = [
     accentColor: "#16a34a",
   },
   {
-    slug: "fin-de-la-auditoria",
-    title: "Fin de la auditoría",
+    slug: "software-sadi",
+    title: "Software SADI",
     description:
-      "Solución para empresas que buscan finalizar procesos de auditoría fiscal o financiera, con el fin de reducir costos, tiempos y complejidad.",
-    brand: "Grupo A&C",
-    href: "/soluciones/fin-de-la-auditoria",
-    image: "/fotos/servicios/fin-auditoria.webp",
+      "Solución integral para la gestión contable, con opciones de implementación total o parcial, adaptada a las necesidades de cada empresa.",
+    brand: "SADI",
+    href: "/soluciones/software-sadi",
+    image: "/fotos/servicios/software-sadi.png",
     category: "operational",
     eyebrow: "Cierre técnico",
     heroTitle:
@@ -461,7 +461,7 @@ export const services: ServiceItem[] = [
       "RUT, NIT, RISE, entre otros trámites relacionados con la DIAN.",
     brand: "TRACO",
     href: "/soluciones/tramites-dian",
-    image: "/fotos/servicios/tramites-dian.png",
+    image: "/fotos/servicios/tramites-dian-v2.png",
     category: "operational",
     eyebrow: "Trámites institucionales",
     heroTitle:
@@ -504,7 +504,7 @@ export const services: ServiceItem[] = [
       "Constitución, renovación y demás trámites relacionados con la Cámara de Comercio.",
     brand: "TRACO",
     href: "/soluciones/tramites-camara-de-comercio",
-    image: "/fotos/servicios/tramite-camara-comercio.png",
+    image: "/fotos/servicios/tramite-camara-comercio-v1.png",
     category: "operational",
     eyebrow: "Trámites empresariales",
     heroTitle:
