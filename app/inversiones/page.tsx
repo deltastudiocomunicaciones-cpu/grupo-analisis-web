@@ -271,99 +271,103 @@ hover:shadow-[0_0_30px_rgba(201,106,27,0.18)]
       {/* STRATEGIC STATEMENT */}
 <section className="relative z-10 overflow-hidden bg-[#f4f1ea] px-6 py-20 text-black">
   <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 lg:grid-cols-[0.85fr_1.15fr]">
-
+    {/* VIDEO */}
     <Reveal>
-      <div className="rounded-[1.5rem] border border-black/10 bg-black/[0.10] p-5 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
-        <div className="relative flex min-h-[420px] items-end overflow-hidden rounded-[2rem] bg-black p-8">
+  <div className="rounded-[2rem] border border-black/10 bg-black/[0.10] p-3 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+    <div className="relative min-h-[450px] overflow-hidden rounded-[1.6rem] bg-black">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 h-full w-full object-cover opacity-90"
+      >
+        <source
+          src="/videos/optimized/inversiones-v2.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 h-full w-full object-cover opacity-80"
-          >
-           <LazyVideo
-  src="/videos/optimized/inversiones-v2.mp4"
-  className="absolute inset-0"
-  videoClassName="h-full w-full object-cover"
-/>
-          </video>
+      {/* VELO */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-black/15 via-black/20 to-black/80" />
 
-          <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/30 to-black/85" />
+      {/* GRILLA */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+        }}
+      />
 
-          <div
-            className="absolute inset-0 opacity-[0.02]"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-              backgroundSize: "72px 72px",
-            }}
-          />
+      {/* CONTENIDO */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-6">
+        <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-white/55">
+          
+        </p>
 
-          <div className="relative z-10">
-            <p className="mb-5 text-xs uppercase tracking-[0.35em] text-white/45">
-              Capital → Operación → Tecnología → Expansión
-            </p>
-
-            <h2 className="text-4xl font-semibold leading-[1] tracking-[-0.05em] text-white md:text-5xl">
-              No solo asesoramos crecimiento. Lo hemos construido.
-            </h2>
-          </div>
-
-        </div>
+        <h2 className="max-w-xl text-2xl font-semibold leading-[1.05] tracking-[-0.045em] text-white md:text-3xl">
+          
+        </h2>
       </div>
-    </Reveal>
-
-    <Reveal delay={0.1}>
-  <div className="grid h-full grid-cols-1 gap-6 sm:grid-cols-2">
-
-    {metrics.map((metric, index) => (
-      <Link key={metric.value} href={metric.href}>
-        <div
-          className="
-            flex
-            min-h-[220px]
-            flex-col
-            justify-between
-            rounded-[2rem]
-            border
-            border-black/10
-            bg-white/55
-            p-5
-            text-black
-            shadow-[0_24px_70px_rgba(0,0,0,0.10)]
-            backdrop-blur-xl
-            transition-all
-            duration-500
-            hover:-translate-y-1
-            hover:bg-[#c96a1b]/[0.12]
-hover:border-[#c96a1b]/40
-hover:shadow-[0_0_40px_rgba(201,106,27,0.12)]
-          "
-        >
-          <p className="text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
-            0{index + 1}
-          </p>
-
-          <h3 className="text-4xl font-semibold tracking-[-0.05em]">
-            {metric.value}
-          </h3>
-
-          <p className="text-sm leading-7 text-black/55">
-            {metric.label}
-          </p>
-
-          <p className="mt-6 text-xs uppercase tracking-[0.25em] text-black/35">
-            Explorar →
-          </p>
-        </div>
-      </Link>
-    ))}
-
+    </div>
   </div>
 </Reveal>
+
+    {/* MÉTRICAS */}
+    <Reveal delay={0.1}>
+      <div className="grid h-full grid-cols-1 gap-6 sm:grid-cols-2">
+        {metrics.map((metric, index) => (
+          <Link
+            key={`${metric.value}-${metric.href}`}
+            href={metric.href}
+            className="block h-full"
+          >
+            <div
+              className="
+                flex
+                h-full
+                min-h-[220px]
+                flex-col
+                justify-between
+                rounded-[2rem]
+                border
+                border-black/10
+                bg-white/55
+                p-5
+                text-black
+                shadow-[0_24px_70px_rgba(0,0,0,0.10)]
+                backdrop-blur-xl
+                transition-all
+                duration-500
+                hover:-translate-y-1
+                hover:border-[#c96a1b]/40
+                hover:bg-[#c96a1b]/[0.12]
+                hover:shadow-[0_0_40px_rgba(201,106,27,0.12)]
+              "
+            >
+              <p className="text-xs uppercase tracking-[0.3em] text-[#c96a1b]">
+                0{index + 1}
+              </p>
+
+              <h3 className="text-4xl font-semibold tracking-[-0.05em]">
+                {metric.value}
+              </h3>
+
+              <p className="text-sm leading-7 text-black/55">
+                {metric.label}
+              </p>
+
+              <p className="mt-6 text-xs uppercase tracking-[0.25em] text-black/35">
+                Explorar →
+              </p>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </Reveal>
   </div>
 </section>
 

@@ -2425,7 +2425,7 @@ export const articles: Article[] = [
   author: "Mesa Editorial Grupo A&C",
   date: "2026-07-05",
   readTime: "4 min",
-  coverImage: "/fotos/planeacion-tributaria.webp",
+  coverImage: "/fotos/noticias/actualizacion-uvt-2026.png",
   featured: false,
   sourceName: "Mesa Editorial Grupo A&C",
   sourceTitle: "Actualización de la UVT 2026 redefine topes y obligaciones tributarias para empresas en Colombia",

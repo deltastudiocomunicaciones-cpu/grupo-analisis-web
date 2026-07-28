@@ -21,6 +21,10 @@ const ecosystem = [
     name: "CEC",
     href: "/contadores-en-colombia",
   },
+   {
+    name: "ASPRO S.A.S.",
+    href: "/aspro",
+  },
 ];
 
 export default function Footer() {
@@ -65,31 +69,27 @@ export default function Footer() {
               </p>
 
               <div className="flex flex-col gap-5">
+  {ecosystem.map((item) => (
+    <Link
+      key={item.name}
+      href={item.href}
+      className="
+        group
+        flex
+        items-center
+        gap-2
+        text-white/70
+        transition-all
+        duration-300
+        hover:text-[#c96a1b]
+      "
+    >
+      <span className="h-px w-0 bg-[#c96a1b] transition-all duration-300 group-hover:w-4" />
 
-                {ecosystem.map((item) => (
-  <Link
-    key={item.name}
-    href={item.href}
-    className="
-group
-flex
-items-center
-gap-2
-text-white/70
-transition-all
-duration-300
-hover:text-[#c96a1b]
-"
-  >
-    <>
-  <span className="w-0 h-px bg-[#c96a1b] transition-all duration-300 group-hover:w-4" />
-  
-</>
-    {item.name}
-  </Link>
-))}
-
-              </div>
+      {item.name}
+    </Link>
+  ))}
+</div>
 
             </div>
 
