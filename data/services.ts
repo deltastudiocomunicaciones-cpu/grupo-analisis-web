@@ -74,7 +74,7 @@ export const services: ServiceItem[] = [
       "Auditorías financieras diseñadas para identificar riesgos, optimizar recursos y fortalecer la confianza de inversionistas, socios y entidades de control.",
     brand: "Grupo A&C",
     href: "/soluciones/auditorias-financieras",
-    image: "/fotos/servicios/auditorias-financieras.webp",
+    image: "/fotos/servicios/auditorias-financieras.png",
     category: "strategic",
     eyebrow: "Control financiero",
     heroTitle:
@@ -117,7 +117,7 @@ export const services: ServiceItem[] = [
       "Diseño de estrategias de reestructuración patrimonial para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
     brand: "Grupo A&C",
     href: "/soluciones/reestructuracion-patrimonial",
-    image: "/fotos/servicios/reestructuracion-patrimonial.webp",
+    image: "/fotos/servicios/reestructuracion-patrimonial-v1.png",
     category: "strategic",
     eyebrow: "Estrategia patrimonial",
     heroTitle:
@@ -160,7 +160,7 @@ export const services: ServiceItem[] = [
       "Diseño de estrategias tributarias personalizadas para optimizar la carga fiscal, mejorar la rentabilidad y asegurar el cumplimiento normativo de las empresas.",
     brand: "Grupo A&C",
     href: "/soluciones/estrategia-tributaria",
-    image: "/fotos/servicios/estrategia-tributaria.webp",
+    image: "/fotos/servicios/estrategia-tributaria-v1.png",
     category: "strategic",
     eyebrow: "Planeación tributaria",
     heroTitle:
@@ -203,7 +203,7 @@ export const services: ServiceItem[] = [
       "Diseño y optimización de la estructura organizacional de las empresas para mejorar su eficiencia y competitividad.",
     brand: "TRACO",
     href: "/soluciones/estructura-empresarial",
-    image: "/fotos/servicios/estructura-empresarial.webp",
+    image: "/fotos/servicios/estructura-empresarial.png",
     category: "strategic",
     eyebrow: "Estructura corporativa",
     heroTitle:
@@ -246,7 +246,7 @@ export const services: ServiceItem[] = [
       "Optimización de procesos contables, financieros y administrativos para mejorar la eficiencia operativa y la toma de decisiones.",
     brand: "SADI ERP",
     href: "/soluciones/simplificacion-de-procesos",
-    image: "/fotos/servicios/simplicidad-procesos.webp",
+    image: "/fotos/servicios/simplificacion-de-procesos.png",
     category: "strategic",
     eyebrow: "Procesos y tecnología",
     heroTitle:
@@ -283,17 +283,17 @@ export const services: ServiceItem[] = [
     accentColor: "#d97706",
   },
   {
-    slug: "devoluciones-de-iva",
-    title: "Devoluciones de IVA",
+    slug: "devolucion-impuestos",
+    title: "Devolución de Impuestos",
     description:
-      "Servicio de gestión integral de devoluciones de IVA, diseñado para optimizar tiempos, reducir costos y garantizar el cumplimiento normativo en empresas de todos los tamaños.",
+      "Servicio de gestión integral de devolución de impuestos, diseñado para optimizar tiempos, reducir costos y garantizar el cumplimiento normativo en empresas de todos los tamaños.",
     brand: "Grupo A&C",
-    href: "/soluciones/devoluciones-de-iva",
-    image: "/fotos/servicios/devoluciones-iva.webp",
+    href: "/soluciones/devolucion-impuestos",
+    image: "/fotos/servicios/devolucion-impuestos.png",
     category: "operational",
     eyebrow: "Gestión tributaria",
     heroTitle:
-      "Devoluciones de IVA gestionadas con técnica, evidencia y control documental.",
+      "Devolución de impuestos gestionados con técnica, evidencia y control documental.",
     technicalIntro:
       "Este servicio acompaña a empresas en la preparación, revisión y gestión de solicitudes de devolución de IVA, cuidando soportes, requisitos y trazabilidad.",
     sections: [
@@ -461,7 +461,7 @@ export const services: ServiceItem[] = [
       "RUT, NIT, RISE, entre otros trámites relacionados con la DIAN.",
     brand: "TRACO",
     href: "/soluciones/tramites-dian",
-    image: "/fotos/servicios/tramites-dian-v1.webp",
+    image: "/fotos/servicios/tramites-dian.png",
     category: "operational",
     eyebrow: "Trámites institucionales",
     heroTitle:
@@ -504,7 +504,7 @@ export const services: ServiceItem[] = [
       "Constitución, renovación y demás trámites relacionados con la Cámara de Comercio.",
     brand: "TRACO",
     href: "/soluciones/tramites-camara-de-comercio",
-    image: "/fotos/servicios/camara-comercio-v1.webp",
+    image: "/fotos/servicios/tramite-camara-comercio.png",
     category: "operational",
     eyebrow: "Trámites empresariales",
     heroTitle:
