@@ -7,7 +7,7 @@ const cases = [
   {
     name: "Tuercas y Pernos",
     sector: "Industria",
-    logo: "/brands/casos/tuercas-pernos.png",
+    logo: "/brands/casos/tuercas-pernos.webp",
     url: "https://tuercasypernos.co",
     title: "Estructura financiera y tributaria para una operación industrial en crecimiento.",
     description:
@@ -16,7 +16,7 @@ const cases = [
   {
     name: "Nombre Empresa Aliada 2",
     sector: "Alto Patrimonio",
-    logo: "/brands/casos/aliado-2.png",
+    logo: "/brands/casos/aliado-2.webp",
     url: "https://www.empresa2.com",
     title: "Arquitectura patrimonial para visión familiar de largo plazo.",
     description:
@@ -25,7 +25,7 @@ const cases = [
   {
     name: "Nombre Empresa Aliada 3",
     sector: "Empresa Mediana",
-    logo: "/brands/casos/aliado-3.png",
+    logo: "/brands/casos/aliado-3.webp",
     url: "https://www.empresa3.com",
     title: "Diagnóstico contable para convertir datos en decisiones estratégicas.",
     description:

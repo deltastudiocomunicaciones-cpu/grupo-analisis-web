@@ -11,7 +11,7 @@ export default function SadiPage() {
       <div className="absolute inset-0 overflow-hidden">
 
   <img
-    src="/fotos/sadi-hero-v1.png"
+    src="/fotos/sadi-hero-v1.webp"
     alt="SADI ERP"
     className="
       absolute
