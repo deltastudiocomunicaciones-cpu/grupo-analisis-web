@@ -8,7 +8,7 @@ const cases = [
   {
     name: "Tuercas y Pernos",
     sector: "Industria",
-    logo: "/brands/tuercas-pernos.png",
+    logo: "/brands/tuercas-pernos.webp",
     logoClass: "max-h-28 md:max-h-32",
     url: "https://tuercasypernos.co",
     backgroundLogo: "",
@@ -18,7 +18,7 @@ const cases = [
   {
     name: "Industrias OSBE",
     sector: "Comercio",
-    logo: "/brands/osbe.png",
+    logo: "/brands/osbe.webp",
     logoClass: "max-h-36 md:max-h-58",
     url: "https://industriasosbe.com/",
     backgroundLogo: "",
