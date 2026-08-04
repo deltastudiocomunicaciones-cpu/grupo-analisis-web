@@ -25,6 +25,10 @@ const ecosystem = [
     name: "ASPRO S.A.S.",
     href: "/aspro",
   },
+  {
+    name: "CULTURA CONECTA",
+    href: "/cultura-conecta",
+  },
 ];
 
 export default function Footer() {
