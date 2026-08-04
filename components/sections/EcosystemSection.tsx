@@ -68,7 +68,7 @@ const brands = [
       "Liderazgo, inteligencia colectiva y evolución organizacional para conectar talento, visión y resultados.",
     href: "/cultura-conecta",
     glow: "#a0c82b",
-    logo: "/brands/cultura-conecta-isotipo.webp",
+    logo: "/brands/cultura-conecta-isotype-3d.webp",
     logoClass: "h-[52px] max-w-[78px]",
     titleClassName: "text-[1.4rem] md:text-[1.55rem]",
   },
