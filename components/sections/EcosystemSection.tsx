@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Reveal from "@/components/ui/Reveal";
@@ -13,7 +14,7 @@ const brands = [
     href: "/sadi",
     glow: "#78ffbe",
     logo: "/brands/sadi-isotype.png",
-    logoClass: "h-[58px] max-w-[82px]",
+    logoClass: "h-[68px] max-w-[98px]",
     titleClassName: "text-2xl",
   },
   {
@@ -24,7 +25,7 @@ const brands = [
     href: "/traco",
     glow: "#2563eb",
     logo: "/brands/traco-isotype.png",
-    logoClass: "h-[58px] max-w-[82px]",
+    logoClass: "h-[68px] max-w-[98px]",
     titleClassName: "text-2xl",
   },
   {
@@ -35,7 +36,7 @@ const brands = [
     href: "/contadores-en-colombia",
     glow: "#16a34a",
     logo: "/brands/cec-isotype.png",
-    logoClass: "h-[54px] max-w-[86px]",
+    logoClass: "h-[64px] max-w-[86px]",
     titleClassName: "text-2xl",
   },
   {
@@ -46,7 +47,7 @@ const brands = [
     href: "/aspro",
     glow: "#dc2626",
     logo: "/brands/aspro-isotype.png",
-    logoClass: "h-[68px] max-w-[88px]",
+    logoClass: "h-[58px] max-w-[78px]",
     titleClassName: "text-2xl",
   },
   {
@@ -57,8 +58,19 @@ const brands = [
     href: "/analisis-consultorias",
     glow: "#c96a1b",
     logo: "/brands/analisis-isotype.png",
-    logoClass: "h-[52px] max-w-[92px]",
+    logoClass: "h-[62px] max-w-[92px]",
     titleClassName: "text-[1.35rem] md:text-[1.45rem]",
+  },
+    {
+    name: "Cultura Conecta",
+    category: "Liderazgo & Cultura",
+    description:
+      "Liderazgo, inteligencia colectiva y evolución organizacional para conectar talento, visión y resultados.",
+    href: "/cultura-conecta",
+    glow: "#a0c82b",
+    logo: "/brands/cultura-conecta-isotipo.webp",
+    logoClass: "h-[52px] max-w-[78px]",
+    titleClassName: "text-[1.4rem] md:text-[1.55rem]",
   },
 ];
 
@@ -94,15 +106,16 @@ export default function EcosystemSection() {
               </p>
 
               <h2 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.06em] md:text-7xl">
-                Cinco núcleos conectados por inteligencia empresarial.
+                Seis núcleos conectados por inteligencia empresarial.
               </h2>
             </div>
 
             <p className="max-w-xl text-base font-light leading-[1.9] text-black/55 lg:justify-self-end">
-              El ecosistema Grupo A&C integra tecnología, trámites, comunidad,
-              aseguramiento de procesos y consultoría estratégica para construir
-              empresas más controladas, eficientes y preparadas para crecer.
-            </p>
+  El ecosistema Grupo A&amp;C conecta tecnología, trámites,
+  comunidad, aseguramiento, consultoría estratégica y evolución
+  organizacional para construir empresas más controladas,
+  inteligentes y preparadas para crecer.
+</p>
           </div>
         </Reveal>
 
@@ -124,7 +137,7 @@ export default function EcosystemSection() {
               sm:auto-cols-[minmax(330px,1fr)]
               md:auto-cols-[minmax(285px,1fr)]
               xl:grid-flow-row
-              xl:grid-cols-5
+              xl:grid-cols-3
               xl:overflow-visible
               xl:pb-0
               xl:pr-0
