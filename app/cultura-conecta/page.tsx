@@ -369,12 +369,22 @@ export default function CulturaConectaPage() {
       <section className="bg-[#071d32] px-4 py-4 text-white sm:px-6 sm:py-6">
         <div className="relative mx-auto min-h-[720px] max-w-[1600px] overflow-hidden rounded-[2rem] md:min-h-[820px]">
           <Image
-            src="/fotos/cultura-conecta-hero.webp"
-            alt="Miiroku Café, espacio para ideas, encuentros e impacto"
-            fill
-            sizes="(max-width: 1600px) 100vw, 1600px"
-            className="object-cover"
-          />
+  src="/fotos/cultura-conecta-hero.webp"
+  alt="Espacio de encuentro y formación de Cultura Conecta"
+  fill
+  preload
+  fetchPriority="high"
+  sizes="100vw"
+  quality={78}
+  className="
+    object-cover
+    object-[58%_center]
+    saturate-[1.06]
+    contrast-[1.03]
+    sm:object-[55%_center]
+    md:object-[center_30%]
+  "
+/>
           <div className="absolute inset-0 bg-gradient-to-t from-[#041422]/95 via-[#041422]/20 to-[#041422]/10" />
 
           <div className="absolute inset-x-0 bottom-0 p-7 sm:p-12 md:p-16">
