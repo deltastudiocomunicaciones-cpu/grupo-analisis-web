@@ -9,7 +9,7 @@ import Reveal from "@/components/ui/Reveal";
 
 const siteUrl = "https://www.grupoayc.co";
 
-const ogImage = `${siteUrl}/brands/cultura-conecta/cultura-conecta-og-v1.png`;
+const ogImage = `${siteUrl}/brands/cultura-conecta-og-v1.png`;
 
 export const metadata: Metadata = {
   title: "Cultura Conecta | Liderazgo y evolución organizacional",
