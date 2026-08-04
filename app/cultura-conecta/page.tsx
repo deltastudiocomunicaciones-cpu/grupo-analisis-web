@@ -9,6 +9,8 @@ import Reveal from "@/components/ui/Reveal";
 
 const siteUrl = "https://www.grupoayc.co";
 
+const ogImage = `${siteUrl}/brands/cultura-conecta/cultura-conecta-og-v1.png`;
+
 export const metadata: Metadata = {
   title: "Cultura Conecta | Liderazgo y evolución organizacional",
   description:
@@ -16,30 +18,31 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/cultura-conecta",
   },
-  openGraph: {
-    title: "Cultura Conecta | Inteligencia colectiva que transforma",
-    description:
-      "Liderazgo, cultura y evolución para organizaciones que quieren convertir su talento en resultados sostenibles.",
-    url: `${siteUrl}/cultura-conecta`,
-    siteName: "Grupo Análisis & Consultorías",
-    locale: "es_CO",
-    type: "website",
-    images: [
-      {
-        url: `${siteUrl}/fotos/cultura-conecta/cultura-conecta-hero.webp`,
-        width: 1920,
-        height: 1080,
-        alt: "Cultura Conecta - evolución organizacional",
-      },
-    ],
-  },
+ openGraph: {
+  title: "Cultura Conecta | Inteligencia colectiva que transforma",
+  description:
+    "Liderazgo, cultura y evolución para organizaciones que quieren convertir su talento en resultados sostenibles.",
+  url: `${siteUrl}/cultura-conecta`,
+  siteName: "Grupo Análisis & Consultorías",
+  locale: "es_CO",
+  type: "website",
+  images: [
+    {
+      url: ogImage,
+      width: 1350,
+      height: 1165,
+      type: "image/png",
+      alt: "Isotipo 3D de Cultura Conecta",
+    },
+  ],
+},
   twitter: {
-    card: "summary_large_image",
-    title: "Cultura Conecta | Inteligencia colectiva que transforma",
-    description:
-      "Conectamos talento, conocimiento y dirección para construir organizaciones de alto desempeño.",
-    images: [`${siteUrl}/fotos/cultura-conecta-hero.webp`],
-  },
+  card: "summary_large_image",
+  title: "Cultura Conecta | Inteligencia colectiva que transforma",
+  description:
+    "Conectamos talento, conocimiento y dirección para construir organizaciones de alto desempeño.",
+  images: [ogImage],
+},
 };
 
 const capabilities = [
