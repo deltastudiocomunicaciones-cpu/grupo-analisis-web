@@ -30,7 +30,7 @@ const brands: Brand[] = [
     visual: "/brands/sadi-isotype.png",
     glow: "#f28a2b",
     panel: "#101a27",
-    visualClassName: "max-h-[165px] max-w-[210px]",
+    visualClassName: "max-h-[92px] max-w-[96px] md:max-h-[165px] md:max-w-[210px]",
     features: ["Automatización", "Información", "Control", "Escala"],
   },
   {
@@ -43,7 +43,7 @@ const brands: Brand[] = [
     visual: "/brands/traco-isotype.png",
     glow: "#3b82f6",
     panel: "#0d1b33",
-    visualClassName: "max-h-[175px] max-w-[220px]",
+    visualClassName: "max-h-[96px] max-w-[100px] md:max-h-[175px] md:max-w-[220px]",
     features: ["Formalización", "DIAN", "Cámara", "Seguimiento"],
   },
   {
@@ -56,7 +56,7 @@ const brands: Brand[] = [
     visual: "/brands/cec-isotype.png",
     glow: "#60a5fa",
     panel: "#10233d",
-    visualClassName: "max-h-[175px] max-w-[230px]",
+    visualClassName: "max-h-[92px] max-w-[105px] md:max-h-[175px] md:max-w-[230px]",
     features: ["Networking", "Formación", "Eventos", "Oportunidades"],
   },
   {
@@ -69,7 +69,7 @@ const brands: Brand[] = [
     visual: "/brands/aspro-isotype.png",
     glow: "#ef4444",
     panel: "#251316",
-    visualClassName: "max-h-[180px] max-w-[215px]",
+    visualClassName: "max-h-[104px] max-w-[96px] md:max-h-[180px] md:max-w-[215px]",
     features: ["Control", "Auditoría", "Cumplimiento", "Mejora"],
   },
   {
@@ -82,7 +82,7 @@ const brands: Brand[] = [
     visual: "/brands/analisis-isotype.png",
     glow: "#c96a1b",
     panel: "#211914",
-    visualClassName: "max-h-[150px] max-w-[240px]",
+    visualClassName: "max-h-[76px] max-w-[104px] md:max-h-[150px] md:max-w-[240px]",
     features: ["Estrategia", "Finanzas", "Tributación", "Decisión"],
   },
   {
@@ -95,7 +95,7 @@ const brands: Brand[] = [
     visual: "/brands/cultura-conecta-isotype-3d.webp",
     glow: "#a0c82b",
     panel: "#0a2138",
-    visualClassName: "max-h-[190px] max-w-[245px]",
+    visualClassName: "max-h-[102px] max-w-[105px] md:max-h-[190px] md:max-w-[245px]",
     features: ["Liderazgo", "Cultura", "Formación", "Espacios"],
   },
 ];
@@ -190,41 +190,43 @@ export default function EcosystemSection() {
           </div>
         </Reveal>
 
-        <div
-          className="
-            grid
-            snap-x
-            snap-mandatory
-            auto-cols-[88vw]
-            grid-flow-col
-            gap-6
-            overflow-x-auto
-            pb-8
-            pr-6
-            [scrollbar-width:none]
-            sm:auto-cols-[76vw]
-            lg:auto-cols-auto
-            lg:grid-flow-row
-            lg:grid-cols-2
-            lg:overflow-visible
-            lg:pb-0
-            lg:pr-0
-            [&::-webkit-scrollbar]:hidden
-          "
-        >
+        <div className="grid grid-cols-1 items-stretch gap-5 md:gap-6 lg:grid-cols-2">
           {brands.map((brand, index) => (
             <Reveal key={brand.name} delay={(index % 2) * 0.06}>
               <Link
                 href={brand.href}
                 aria-label={`Explorar ${brand.name}`}
-                className="group block h-full snap-center"
+                className="group block h-full"
               >
                 <motion.article
-                  whileHover={{ y: -6 }}
-                  transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative flex h-full min-h-[620px] flex-col overflow-hidden rounded-[2.4rem] border border-white/35 p-6 text-white shadow-[0_30px_90px_rgba(8,20,38,0.18)] md:min-h-[570px] md:p-8 lg:min-h-[520px] xl:p-9"
-                  style={{ backgroundColor: brand.panel }}
-                >
+  whileHover={{ y: -6 }}
+  transition={{
+    duration: 0.45,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+  className={`
+    relative
+    flex
+    h-auto
+    min-h-0
+    flex-col
+    overflow-hidden
+    rounded-[1.8rem]
+    border
+    border-white/35
+    p-5
+    text-white
+    shadow-[0_24px_70px_rgba(8,20,38,0.16)]
+    md:h-[570px]
+    md:rounded-[2.4rem]
+    md:p-8
+    lg:h-[520px]
+    ${index >= 4 ? "xl:h-[580px]" : "xl:h-[510px]"}
+    xl:p-8
+  `}
+  style={{ backgroundColor: brand.panel }}
+>
+
                   {/* LIGHT, DEPTH AND GLASS */}
                   <div
                     className="pointer-events-none absolute inset-0 opacity-75"
@@ -232,13 +234,13 @@ export default function EcosystemSection() {
                       background: `radial-gradient(circle at 16% 18%, ${brand.glow}38 0%, transparent 34%), radial-gradient(circle at 82% 18%, ${brand.glow}18 0%, transparent 38%)`,
                     }}
                   />
-                  <div className="pointer-events-none absolute inset-[1px] rounded-[2.34rem] border border-white/20" />
+                  <div className="pointer-events-none absolute inset-[1px] rounded-[1.74rem] border border-white/20 md:rounded-[2.34rem]" />
                   <div className="pointer-events-none absolute -right-[18%] top-[-35%] h-[88%] w-[58%] rotate-[34deg] rounded-[45%] bg-white/[0.055] blur-[1px]" />
                   <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent shadow-[0_0_20px_rgba(255,255,255,0.75)]" />
 
                   {/* MAIN AREA */}
-                  <div className="relative z-10 grid flex-1 gap-8 md:grid-cols-[0.38fr_0.62fr] md:items-center">
-                    <div className="relative flex min-h-[190px] items-center justify-center border-b border-white/12 pb-7 md:min-h-0 md:border-b-0 md:border-r md:pb-0 md:pr-8">
+                  <div className="relative z-10 grid flex-1 grid-cols-[92px_minmax(0,1fr)] items-center gap-5 md:grid-cols-[0.38fr_0.62fr] md:gap-8">
+                    <div className="relative flex min-h-[138px] items-center justify-center border-r border-white/12 pr-4 md:min-h-0 md:pr-8">
                       <div
                         className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[55px]"
                         style={{ backgroundColor: `${brand.glow}38` }}
@@ -252,49 +254,49 @@ export default function EcosystemSection() {
                       />
                     </div>
 
-                    <div className="flex flex-col justify-center">
+                    <div className="min-w-0 flex flex-col justify-center">
                       <div className="flex items-center gap-3">
                         <span
                           className="h-2 w-2 rounded-full shadow-[0_0_14px_currentColor]"
                           style={{ backgroundColor: brand.glow, color: brand.glow }}
                         />
-                        <p className="text-[9px] uppercase tracking-[0.28em] text-white/42 sm:text-[10px]">
+                        <p className="text-[8px] uppercase leading-[1.5] tracking-[0.22em] text-white/42 sm:text-[10px] sm:tracking-[0.28em]">
                           {brand.category}
                         </p>
                       </div>
 
-                      <h3 className="mt-5 text-4xl font-semibold leading-[0.94] tracking-[-0.055em] sm:text-5xl lg:text-[2.7rem] xl:text-5xl">
+                      <h3 className="mt-3 text-[1.75rem] font-semibold leading-[0.94] tracking-[-0.055em] sm:text-4xl md:mt-5 md:text-5xl lg:text-[2.7rem] xl:text-[2.85rem]">
                         {brand.name}
                       </h3>
-                      <p className="mt-3 text-base font-light text-white/52 sm:text-lg">
+                      <p className="mt-2 text-sm font-light leading-[1.5] text-white/52 sm:text-base md:mt-3 md:text-lg">
                         {brand.tagline}
                       </p>
-                      <div className="my-6 h-px w-full bg-gradient-to-r from-white/22 to-transparent" />
-                      <p className="max-w-xl text-sm font-light leading-[1.8] text-white/72 sm:text-base">
+                      <div className="my-4 h-px w-full bg-gradient-to-r from-white/22 to-transparent md:my-6" />
+                      <p className="max-w-xl text-[13px] font-light leading-[1.65] text-white/72 sm:text-sm md:text-base md:leading-[1.8]">
                         {brand.description}
                       </p>
                     </div>
                   </div>
 
                   {/* CAPABILITIES AND CTA */}
-                  <div className="relative z-10 mt-9 grid gap-7 border-t border-white/12 pt-7 xl:grid-cols-[1fr_auto] xl:items-end">
-                    <div className="grid grid-cols-2 gap-x-3 gap-y-5 sm:grid-cols-4">
+                  <div className="relative z-10 mt-6 grid gap-5 border-t border-white/12 pt-6 md:mt-9 md:gap-7 md:pt-7 xl:grid-cols-[1fr_auto] xl:items-end">
+                    <div className="grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-4">
                       {brand.features.map((feature, featureIndex) => (
                         <div
                           key={feature}
                           className="flex min-w-0 flex-col items-center border-white/10 text-center sm:border-r sm:last:border-r-0"
                         >
-                          <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-white/[0.07] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-xl">
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/[0.07] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-xl md:h-12 md:w-12 md:rounded-2xl">
                             <CapabilityIcon index={featureIndex} />
                           </span>
-                          <span className="mt-3 max-w-full truncate text-[10px] font-light tracking-[0.04em] text-white/58 sm:text-[11px]">
+                          <span className="mt-2 max-w-full text-[9px] font-light tracking-[0.03em] text-white/58 sm:mt-3 sm:text-[11px]">
                             {feature}
                           </span>
                         </div>
                       ))}
                     </div>
 
-                    <span className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/45 bg-white/90 px-6 py-3.5 text-sm font-semibold text-[#0a1b2e] shadow-[0_0_24px_rgba(255,255,255,0.16)] transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_0_32px_rgba(255,255,255,0.32)] sm:w-auto">
+                    <span className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/45 bg-white/90 px-6 py-3 text-xs font-semibold text-[#0a1b2e] shadow-[0_0_24px_rgba(255,255,255,0.16)] transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_0_32px_rgba(255,255,255,0.32)] sm:w-auto md:py-3.5 md:text-sm">
                       Explorar
                       <ArrowUpRight />
                     </span>
@@ -305,9 +307,6 @@ export default function EcosystemSection() {
           ))}
         </div>
 
-        <p className="mt-5 text-center text-[9px] uppercase tracking-[0.25em] text-black/35 lg:hidden">
-          Desliza para explorar el ecosistema →
-        </p>
       </div>
     </section>
   );
