@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Container from "@/components/ui/Container";
-import Reveal from "@/components/ui/Reveal";
 import CulturaConectaLeadForm from "@/components/forms/CulturaConectaLeadForm";
 
 const siteUrl = "https://www.grupoayc.co";
@@ -192,7 +192,14 @@ function ArrowUpRight() {
     </svg>
   );
 }
+type RevealProps = {
+  children: ReactNode;
+  delay?: number;
+};
 
+function Reveal({ children }: RevealProps) {
+  return <>{children}</>;
+}
 export default function CulturaConectaPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f4f5ef] text-[#082947]">
