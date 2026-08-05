@@ -92,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-  url: `${siteUrl}/cultura-conecta`,
+  url: `${baseUrl}/cultura-conecta`,
   lastModified: new Date(),
   changeFrequency: "monthly",
   priority: 0.9,
