@@ -144,19 +144,22 @@ const spaces = [
     name: "Auditorio",
     capacity: "30 personas",
     description:
-      "Capacitaciones, presentaciones, conversatorios y experiencias empresariales con infraestructura audiovisual.",
+      "Un espacio diseñado para conferencias, diplomados, conversatorios y procesos de formación empresarial.",
+    image: "/fotos/cultura-conecta-auditorio.webp",
   },
   {
-    name: "Sala de juntas",
-    capacity: "12 personas",
-    description:
-      "Sesiones directivas, planeación estratégica y conversaciones que requieren foco, privacidad y claridad.",
-  },
-  {
-    name: "Sala audiovisual",
+    name: "Sala Audiovisual",
     capacity: "6 personas",
     description:
-      "Podcast, entrevistas, contenidos y conversaciones de marca en un entorno preparado para producción.",
+      "Un entorno preparado para podcast, entrevistas, producción de contenidos y conversaciones estratégicas.",
+    image: "/fotos/cultura-conecta-podcast.png",
+  },
+  {
+    name: "Sala de Juntas",
+    capacity: "12 personas",
+    description:
+      "Un espacio reservado para reuniones directivas, planeación, talleres y trabajo colaborativo.",
+    image: "/fotos/cultura-conecta-sala-de-juntas.png",
   },
 ];
 
@@ -573,28 +576,122 @@ export default function CulturaConectaPage() {
             </div>
           </Reveal>
 
-          <div className="grid gap-5 lg:grid-cols-3">
-            {spaces.map((space, index) => (
-              <Reveal key={space.name} delay={index * 0.06}>
-                <article className="h-full rounded-[2rem] border border-[#082947]/12 bg-white/70 p-8 shadow-[0_24px_70px_rgba(8,41,71,0.06)]">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] tracking-[0.26em] text-[#7c9f18]">
-                      0{index + 1}
-                    </span>
-                    <span className="rounded-full bg-[#a0c82b]/15 px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-[#617d0d]">
-                      {space.capacity}
-                    </span>
-                  </div>
-                  <h3 className="mt-16 text-3xl font-semibold tracking-[-0.045em]">
-                    {space.name}
-                  </h3>
-                  <p className="mt-5 text-sm font-light leading-[1.8] text-[#082947]/60">
-                    {space.description}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
+          <div className="grid items-stretch gap-5 lg:grid-cols-3">
+  {spaces.map((space, index) => (
+    <Reveal key={space.name} delay={index * 0.05}>
+      <article
+        className="
+          group
+          relative
+          flex
+          min-h-[390px]
+          h-full
+          flex-col
+          justify-between
+          overflow-hidden
+          rounded-[2rem]
+          border
+          border-white/20
+          p-7
+          text-white
+          shadow-[0_24px_70px_rgba(8,41,71,0.14)]
+          md:min-h-[420px]
+          md:p-8
+        "
+      >
+        {/* FOTOGRAFÍA DEL ESPACIO */}
+        <Image
+          src={space.image}
+          alt={space.name}
+          fill
+          sizes="(max-width: 1024px) 100vw, 33vw"
+          className="
+            object-cover
+            transition-transform
+            duration-1000
+            group-hover:scale-105
+          "
+        />
+
+        {/* TRANSPARENCIA SOBRE LA FOTOGRAFÍA */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-0
+            bg-gradient-to-b
+            from-[#082947]/30
+            via-[#082947]/55
+            to-[#061b2e]/95
+          "
+        />
+
+        {/* RESPLANDOR */}
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-[#a0c82b]/10 via-transparent to-white/5" />
+
+        {/* BORDE INTERIOR */}
+        <div className="pointer-events-none absolute inset-[1px] rounded-[1.95rem] border border-white/20" />
+
+        {/* PARTE SUPERIOR */}
+        <div className="relative z-10 flex items-center justify-between">
+          <span className="text-[10px] tracking-[0.26em] text-[#c4e851]">
+            0{index + 1}
+          </span>
+
+          <span
+            className="
+              rounded-full
+              border
+              border-white/20
+              bg-black/20
+              px-3
+              py-1.5
+              text-[9px]
+              uppercase
+              tracking-[0.16em]
+              text-white/80
+              backdrop-blur-xl
+            "
+          >
+            {space.capacity}
+          </span>
+        </div>
+
+        {/* CONTENIDO INFERIOR */}
+        <div className="relative z-10 mt-auto pt-24">
+          <div className="mb-6 h-px w-12 bg-[#a0c82b]" />
+
+          <h3
+            className={`
+              max-w-[280px]
+              font-semibold
+              leading-[0.95]
+              tracking-[-0.045em]
+              ${
+                space.name === "Sala Audiovisual"
+                  ? "text-[1.8rem] md:text-[2rem]"
+                  : "text-3xl md:text-[2.15rem]"
+              }
+            `}
+          >
+            {space.name}
+          </h3>
+
+          <p className="mt-5 max-w-sm text-sm font-light leading-[1.75] text-white/72">
+            {space.description}
+          </p>
+
+          <div className="mt-7 flex items-center gap-3 text-[9px] uppercase tracking-[0.22em] text-white/55">
+            Conocer el espacio
+            <span className="transition-transform duration-500 group-hover:translate-x-1">
+              →
+            </span>
           </div>
+        </div>
+      </article>
+    </Reveal>
+  ))}
+</div>
 
           <Reveal>
             <div className="mt-8 rounded-[2rem] border border-[#082947]/12 bg-[#e9ecdf] p-7 md:p-9">
