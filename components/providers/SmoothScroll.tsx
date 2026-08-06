@@ -1,30 +1,11 @@
-"use client";
+import type { ReactNode } from "react";
 
-import { ReactNode, useEffect } from "react";
-import Lenis from "lenis";
+type SmoothScrollProps = {
+  children?: ReactNode;
+};
 
 export default function SmoothScroll({
   children,
-}: {
-  children?: ReactNode;
-}) {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    let frame: number;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      frame = requestAnimationFrame(raf);
-    }
-
-    frame = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(frame);
-      lenis.destroy();
-    };
-  }, []);
-
+}: SmoothScrollProps) {
   return <>{children}</>;
 }
