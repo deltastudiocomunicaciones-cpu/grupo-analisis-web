@@ -30,7 +30,7 @@ const brands: Brand[] = [
     visual: "/brands/sadi-isotype.png",
     glow: "#f28a2b",
     panel: "#101a27",
-    visualClassName: "max-h-[92px] max-w-[96px] md:max-h-[165px] md:max-w-[210px]",
+    visualClassName: "max-h-[92px] max-w-[96px] md:max-h-[220px] md:max-w-[210px]",
     features: ["Automatización", "Información", "Control", "Escala"],
   },
   {
@@ -43,7 +43,7 @@ const brands: Brand[] = [
     visual: "/brands/traco-isotype.png",
     glow: "#3b82f6",
     panel: "#0d1b33",
-    visualClassName: "max-h-[96px] max-w-[100px] md:max-h-[175px] md:max-w-[220px]",
+    visualClassName: "max-h-[150px] max-w-[100px] md:max-h-[120px] md:max-w-[220px]",
     features: ["Formalización", "DIAN", "Cámara", "Seguimiento"],
   },
   {
@@ -56,7 +56,7 @@ const brands: Brand[] = [
     visual: "/brands/cec-isotype.png",
     glow: "#60a5fa",
     panel: "#10233d",
-    visualClassName: "max-h-[92px] max-w-[105px] md:max-h-[175px] md:max-w-[230px]",
+    visualClassName: "max-h-[150px] max-w-[105px] md:max-h-[175px] md:max-w-[230px]",
     features: ["Networking", "Formación", "Eventos", "Oportunidades"],
   },
   {
@@ -69,7 +69,7 @@ const brands: Brand[] = [
     visual: "/brands/aspro-isotype.png",
     glow: "#ef4444",
     panel: "#251316",
-    visualClassName: "max-h-[104px] max-w-[96px] md:max-h-[180px] md:max-w-[215px]",
+    visualClassName: "max-h-[80px] max-w-[96px] md:max-h-[120px] md:max-w-[215px]",
     features: ["Control", "Auditoría", "Cumplimiento", "Mejora"],
   },
   {
@@ -95,7 +95,7 @@ const brands: Brand[] = [
     visual: "/brands/cultura-conecta-isotype-3d.webp",
     glow: "#a0c82b",
     panel: "#0a2138",
-    visualClassName: "max-h-[102px] max-w-[105px] md:max-h-[190px] md:max-w-[245px]",
+    visualClassName: "max-h-[102px] max-w-[105px] md:max-h-[100px] md:max-w-[245px]",
     features: ["Liderazgo", "Cultura", "Formación", "Espacios"],
   },
 ];
