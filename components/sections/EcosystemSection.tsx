@@ -95,7 +95,7 @@ const brands: Brand[] = [
     visual: "/brands/cultura-conecta-isotype-3d.webp",
     glow: "#a0c82b",
     panel: "#0a2138",
-    visualClassName: "max-h-[102px] max-w-[105px] md:max-h-[100px] md:max-w-[245px]",
+    visualClassName: "max-h-[105px] max-w-[110px] md:max-h-[100px] md:max-w-[245px]",
     features: ["Liderazgo", "Cultura", "Formación", "Espacios"],
   },
 ];

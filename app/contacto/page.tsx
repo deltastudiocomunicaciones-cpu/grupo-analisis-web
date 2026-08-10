@@ -271,7 +271,7 @@ export default function ContactoPage() {
   Ver Instagram
 </a>
                   <a
-                    href={`https://wa.me/573126901475?text=${encodeURIComponent(
+                    href={`https://wa.me/573118687774?text=${encodeURIComponent(
                       whatsappMessage
                     )}`}
                     target="_blank"
