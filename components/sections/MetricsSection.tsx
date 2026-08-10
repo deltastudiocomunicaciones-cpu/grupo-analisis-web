@@ -17,7 +17,7 @@ const metrics = [
     label: "Retención de clientes",
   },
   {
-    value: "+$40B",
+    value: "+$12B",
     label: "Activos analizados",
   },
 ];

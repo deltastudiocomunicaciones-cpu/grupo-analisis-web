@@ -172,23 +172,50 @@ export default function EcosystemSection() {
 
       <div className="relative z-10 mx-auto max-w-[1480px] px-6">
         <Reveal>
-          <div className="mb-16 grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end md:mb-20">
-            <div>
-              <p className="mb-7 text-xs uppercase tracking-[0.45em] text-[#c96a1b]">
-                Ecosistema Estratégico
-              </p>
-              <h2 className="max-w-5xl text-5xl font-semibold leading-[0.93] tracking-[-0.065em] md:text-7xl">
-                Seis núcleos. Una inteligencia empresarial conectada.
-              </h2>
-            </div>
+  <div className="mb-14 max-w-7xl">
+    {/* TÍTULO */}
+    <h2
+      className="
+        max-w-6xl
+        text-4xl
+        font-semibold
+        leading-[0.98]
+        tracking-[-0.055em]
+        text-black
+        sm:text-5xl
+        md:text-6xl
+        lg:max-w-none
+        lg:text-[clamp(3.8rem,5vw,5.8rem)]
+        lg:leading-[0.94]
+        lg:whitespace-nowrap
+      "
+    >
+      {/* DEJA AQUÍ TU TÍTULO ACTUAL */}
+      Un ecosistema diseñado para hacer crecer empresas.
+    </h2>
 
-            <p className="max-w-xl text-base font-light leading-[1.9] text-black/55 lg:justify-self-end">
-              Tecnología, trámites, comunidad, aseguramiento, consultoría y
-              evolución organizacional reunidos para construir empresas más
-              controladas, inteligentes y preparadas para crecer.
-            </p>
-          </div>
-        </Reveal>
+    {/* DESCRIPCIÓN */}
+    <p
+      className="
+        mt-7
+        max-w-4xl
+        text-base
+        font-light
+        leading-[1.9]
+        text-black/55
+        md:text-lg
+        lg:mt-8
+        lg:max-w-5xl
+        lg:text-[1.15rem]
+        lg:leading-[1.8]
+      "
+    >
+      Tecnología, trámites, comunidad, aseguramiento, consultoría y
+      evolución organizacional reunidos para construir empresas más
+      controladas, inteligentes y preparadas para crecer.
+    </p>
+  </div>
+</Reveal>
 
         <div className="grid grid-cols-1 items-stretch gap-5 md:gap-6 lg:grid-cols-2">
           {brands.map((brand, index) => (

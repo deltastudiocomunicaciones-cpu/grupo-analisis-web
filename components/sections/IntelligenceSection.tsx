@@ -66,9 +66,7 @@ export default function IntelligenceSection() {
 
         <div className="mt-16">
             <a href="/inteligencia">
-          <PremiumButton>
-            Explorar Inteligencia
-          </PremiumButton>
+
             </a>
         </div>
       </Container>

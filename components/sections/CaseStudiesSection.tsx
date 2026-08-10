@@ -18,7 +18,7 @@ const cases = [
   {
     name: "Industrias OSBE",
     sector: "Comercio",
-    logo: "/brands/osbe.webp",
+    logo: "/brands/osbe.png",
     logoClass: "max-h-36 md:max-h-58",
     url: "https://industriasosbe.com/",
     backgroundLogo: "",
@@ -44,7 +44,7 @@ export default function CaseStudiesSection() {
 
       <Container className="relative z-10">
         <Reveal>
-          <SectionEyebrow>Visión Directiva</SectionEyebrow>
+          <SectionEyebrow>Casos de Estudio</SectionEyebrow>
 
           <h2 className="mb-20 max-w-5xl text-4xl font-semibold leading-[0.95] tracking-[-0.04em] sm:text-5xl md:text-7xl">
             Resultados estratégicos construidos desde estructura, criterio y confianza.

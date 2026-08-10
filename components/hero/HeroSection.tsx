@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import {
   motion,
@@ -8,12 +7,10 @@ import {
   useTransform,
 } from "framer-motion";
 
-import MagneticButton from "@/components/ui/MagneticButton";
-
 const VIDEOS = [
   "/videos/optimized/chess_final.mp4",
-"/videos/optimized/chess_final1.mp4",
-"/videos/optimized/chess_final2.mp4",
+  "/videos/optimized/chess_final1.mp4",
+  "/videos/optimized/chess_final2.mp4",
 ];
 
 export default function HeroSection() {
@@ -50,7 +47,7 @@ export default function HeroSection() {
         onEnded={() => {
           setVideoIndex((prev) => (prev + 1) % VIDEOS.length);
         }}
-        className="absolute inset-0 h-full w-full object-cover opacity-40 scale-105"
+        className="absolute inset-0 h-full w-full scale-105 object-cover opacity-40"
       >
         <source src={VIDEOS[videoIndex]} type="video/mp4" />
       </motion.video>
@@ -69,7 +66,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="absolute top-1/2 left-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 bg-[#c96a1b]/10 blur-[180px]" />
+      <div className="absolute left-1/2 top-1/2 h-[1000px] w-[1000px] -translate-x-1/2 -translate-y-1/2 bg-[#c96a1b]/10 blur-[180px]" />
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-black/20 to-black/85" />
 
@@ -81,7 +78,7 @@ export default function HeroSection() {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-[20%] right-[12%] h-40 w-40 rounded-full bg-[#c96a1b]/10 blur-[80px]"
+        className="absolute right-[12%] top-[20%] h-40 w-40 rounded-full bg-[#c96a1b]/10 blur-[80px]"
       />
 
       <motion.div
@@ -95,8 +92,7 @@ export default function HeroSection() {
       />
 
       {/* CONTENT */}
-      <div className="relative z-10 min-h-screen flex items-center pt-28 pb-16">
-
+      <div className="relative z-10 flex min-h-screen items-center pb-16 pt-28">
         <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
 
           <motion.div
@@ -112,7 +108,7 @@ export default function HeroSection() {
             {/* EYEBROW */}
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{
                 delay: 0.3,
                 duration: 1,
@@ -138,19 +134,19 @@ export default function HeroSection() {
                 duration: 1.2,
               }}
               className="
+                mb-6
                 max-w-[820px]
                 text-[2.6rem]
                 font-semibold
                 leading-[0.92]
                 tracking-[-0.06em]
                 text-white
-                mb-6
                 sm:text-[3.4rem]
+                md:mb-8
                 md:text-[4.2rem]
                 lg:text-[4.8rem]
                 xl:text-[5.6rem]
                 2xl:text-[6.6rem]
-                md:mb-8
               "
             >
               Inteligencia
@@ -173,64 +169,63 @@ export default function HeroSection() {
                 duration: 1,
               }}
               className="
+                mb-10
                 max-w-2xl
                 text-sm
                 font-light
                 leading-[1.8]
                 text-white/65
-                mb-10
                 sm:text-base
-                md:text-[1.05rem]
                 md:mb-12
+                md:text-[1.05rem]
               "
             >
-              Grupo Análisis & Consultorías desarrolla estructuras
+              Grupo Análisis &amp; Consultorías desarrolla estructuras
               tributarias, financieras y estratégicas para organizaciones
               que entienden el valor de anticiparse.
             </motion.p>
 
-            {/* BUTTONS */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{
-    delay: 1,
-    duration: 1,
-  }}
-  className="flex flex-col gap-4 sm:flex-row sm:gap-6"
->
+            {/* BUTTONS — TEMPORALMENTE DESACTIVADOS
 
-  <Link href="/contacto">
-    <MagneticButton>
-      Agendar Consultoría
-    </MagneticButton>
-  </Link>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                delay: 1,
+                duration: 1,
+              }}
+              className="flex flex-col gap-4 sm:flex-row sm:gap-6"
+            >
+              <Link href="/contacto">
+                <MagneticButton>
+                  Agendar Consultoría
+                </MagneticButton>
+              </Link>
 
-  <Link href="/inversiones/verticales">
-    <button
-      className="
-        rounded-full
-        border
-        border-white/20
-        px-8
-        py-4
-        text-white
-        transition-all
-        duration-500
-        hover:bg-white
-        hover:text-black
-      "
-    >
-      Explorar Ecosistema
-    </button>
-  </Link>
+              <Link href="/inversiones/verticales">
+                <button
+                  className="
+                    rounded-full
+                    border
+                    border-white/20
+                    px-8
+                    py-4
+                    text-white
+                    transition-all
+                    duration-500
+                    hover:bg-white
+                    hover:text-black
+                  "
+                >
+                  Explorar Ecosistema
+                </button>
+              </Link>
+            </motion.div>
 
-</motion.div>
+            */}
 
           </motion.div>
-
         </div>
-
       </div>
 
     </section>
