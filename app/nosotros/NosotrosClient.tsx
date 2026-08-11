@@ -728,7 +728,7 @@ const sections = [
 ];
 const stats = [
   {
-    value: "20+ años",
+    value: "+20 años",
     text: "Experiencia construyendo confianza empresarial.",
   },
   {
@@ -736,7 +736,7 @@ const stats = [
     text: "Tecnología propia para información en tiempo real.",
   },
   {
-    value: "2027-2037",
+    value: "2027-2047",
     text: "Meta de expansión, innovación y liderazgo.",
   },
   {
@@ -747,6 +747,39 @@ const stats = [
 export default function NosotrosClient() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
+  const handleSectionToggle = (index: number) => {
+    const isCurrentlyOpen = openIndex === index;
+
+    // Si ya está abierta, simplemente la cerramos.
+    if (isCurrentlyOpen) {
+      setOpenIndex(null);
+      return;
+    }
+
+    // Abrimos la nueva sección.
+    setOpenIndex(index);
+
+    // Solo hacemos scroll automático en mobile.
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(max-width: 767px)").matches
+    ) {
+      /*
+       * Esperamos a que termine la transición de apertura/cierre
+       * para calcular correctamente la nueva posición de la card.
+       */
+      window.setTimeout(() => {
+        const element = document.getElementById(
+          `institutional-section-${index}`
+        );
+
+        element?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 520);
+    }
+  };
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
       <Navbar />
@@ -811,7 +844,7 @@ export default function NosotrosClient() {
     relative
     z-10
     overflow-hidden
-    bg-[linear-gradient(180deg,#d8cec2_0%,#ece4db_56%,#f5f2eb_100%)]
+    bg-[linear-gradient(180deg,#c8844f_0%,#ddb894_32%,#ece2d8_64%,#f5f2eb_100%)]
     px-6
     py-24
     text-black
@@ -822,12 +855,13 @@ export default function NosotrosClient() {
   <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black/15 to-transparent" />
 
   {/* Halo cobre institucional */}
-  <div className="pointer-events-none absolute left-1/2 top-[-300px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#c96a1b]/12 blur-[180px]" />
-
+  <div className="pointer-events-none absolute left-1/2 top-[-300px] h-[900px] w-[900px] -translate-x-1/2 rounded-full bg-[#c96a1b]/18 blur-[180px]" />
   {/* Luz ambiental */}
   <div className="pointer-events-none absolute bottom-[-320px] right-[-180px] h-[720px] w-[720px] rounded-full bg-white/60 blur-[170px]" />
         <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-2">
   <Reveal>
+
+    
    <GlassCard className="h-full min-h-[500px] overflow-hidden p-0">
   <div className="relative h-full min-h-[500px] overflow-hidden rounded-[2rem]">
 
@@ -903,6 +937,69 @@ export default function NosotrosClient() {
           </Reveal>
         </div>
       </section>
+
+      {/* CINTA EDITORIAL */}
+<Reveal>
+  <section
+    className="
+      relative
+      overflow-hidden
+      border-y
+      border-black/10
+      bg-[#d8d4ce]
+      px-6
+      py-10
+      text-black
+      md:py-12
+    "
+  >
+    {/* LUZ MUY SUAVE */}
+    <div className="pointer-events-none absolute left-1/2 top-1/2 h-[220px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/35 blur-[90px]" />
+
+    {/* ACENTO COBRE SUPERIOR */}
+    <div className="absolute left-1/2 top-0 h-px w-[180px] -translate-x-1/2 bg-gradient-to-r from-transparent via-[#c96a1b]/70 to-transparent" />
+
+    <div className="relative z-10 mx-auto max-w-7xl">
+      <div
+        className="
+          flex
+          flex-col
+          items-center
+          justify-center
+          gap-3
+          text-center
+          md:flex-row
+          md:gap-5
+        "
+      >
+        <span className="text-[10px] uppercase tracking-[0.38em] text-black/35">
+          Grupo A&amp;C
+        </span>
+
+        <span className="hidden h-5 w-px bg-black/15 md:block" />
+
+        <h2
+          className="
+            font-serif
+            text-2xl
+            font-normal
+            italic
+            leading-[1.15]
+            tracking-[-0.035em]
+            text-black/75
+            sm:text-3xl
+            md:text-[2.4rem]
+          "
+        >
+          Cuando todo se hace difícil,{" "}
+          <span className="text-[#b76023]">
+            nosotros podemos ayudarte.
+          </span>
+        </h2>
+      </div>
+    </div>
+  </section>
+</Reveal>
 
       <section className="relative bg-[#f5f2eb] px-6 py-32 text-black">
         <div className="mx-auto max-w-7xl">
