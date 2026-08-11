@@ -41,7 +41,7 @@ const offices = [
   {
     name: "Sede Medellín",
     address:
-      "Calle 52 N° 49-28 · Ed. La Lonja · Of. 201-202-203-204-205-206",
+      "Calle 52 N° 49-28 · Ed. La Lonja · Piso 2",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+49-28+Edificio+La+Lonja+Medellin+Antioquia",
   },

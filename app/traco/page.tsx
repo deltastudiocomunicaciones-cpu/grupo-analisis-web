@@ -70,8 +70,8 @@ export default function TracoPage() {
         eyebrow="TRACO"
         title="Estructura legal y corporativa para empresas en Colombia."
         description="Constitución de empresas, trámites institucionales y acompañamiento frente a entidades de control."
-        button="Iniciar Trámite"
-        buttonLink="https://portalgrupoayc.com"
+        button="Cotizar Trámite"
+        buttonLink="https://portalgrupoayc.com/cotizar"
         ambientColor="#2563eb"
         imageSrc="/brands/traco-isotype.png"
         imageAlt="Isotipo TRACO"
@@ -164,7 +164,7 @@ export default function TracoPage() {
                   </p>
 
                   <Link
-                    href="https://portalgrupoayc.com"
+                    href="https://www.grupoayc.co/contacto"
                     className="mt-8 inline-flex items-center gap-3 rounded-full border border-black/10 bg-black/[0.04] px-4 py-2 text-[10px] uppercase tracking-[0.25em] text-black/45 transition-all duration-700 group-hover:border-[#2563eb]/35 group-hover:bg-[#2563eb]/10 group-hover:text-black"
                   >
                     Iniciar trámite
@@ -203,7 +203,7 @@ export default function TracoPage() {
         title="Conversaciones sobre formalización, trámites y estructura empresarial."
         description="Un espacio para explicar cómo la correcta gestión documental, tributaria y societaria permite que una empresa opere con mayor control y seguridad."
         youtubeUrl="https://www.youtube.com/"
-        embedUrl="https://www.youtube.com/embed/VIDEO_ID"
+        embedUrl="https://youtube.com/@grupoanalisisyconsultorias?si=F7RSk_K89cYMwg7X"
         accentColor="#2563eb"
       />
 
