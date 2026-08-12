@@ -192,6 +192,153 @@ function ArrowUpRight() {
     </svg>
   );
 }
+
+function PlatformConectaButton() {
+  return (
+    <a
+      href="https://plataforma-conecta-eight.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Ingresar a Plataforma Conecta"
+      className="
+        conecta-platform-button
+        group
+        relative
+        inline-flex
+        min-h-[60px]
+        items-center
+        justify-center
+        overflow-hidden
+        rounded-full
+        border
+        border-[#b7d65e]/35
+        bg-[#041422]/82
+        px-2
+        pr-6
+        text-white
+        shadow-[0_18px_55px_rgba(0,0,0,0.28)]
+        backdrop-blur-xl
+        transition-all
+        duration-500
+        hover:-translate-y-1
+        hover:border-[#b7d65e]/70
+        hover:shadow-[0_20px_70px_rgba(160,200,43,0.22)]
+      "
+    >
+      {/* RESPLANDOR INTERNO */}
+      <span
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          inset-0
+          bg-[radial-gradient(circle_at_25%_50%,rgba(160,200,43,0.18),transparent_38%)]
+          opacity-80
+          transition-opacity
+          duration-500
+          group-hover:opacity-100
+        "
+      />
+
+      {/* SCAN SUTIL */}
+      <span
+        aria-hidden="true"
+        className="
+          conecta-platform-scan
+          pointer-events-none
+          absolute
+          bottom-0
+          top-0
+          w-24
+          bg-gradient-to-r
+          from-transparent
+          via-white/[0.08]
+          to-transparent
+          blur-sm
+        "
+      />
+
+      {/* NÚCLEO / ACCESO */}
+      <span
+        className="
+          relative
+          z-10
+          mr-4
+          flex
+          h-12
+          w-12
+          shrink-0
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-[#b7d65e]/25
+          bg-[#a0c82b]/10
+          shadow-[inset_0_0_20px_rgba(160,200,43,0.06)]
+        "
+      >
+        <span
+          className="
+            conecta-platform-core
+            h-2.5
+            w-2.5
+            rounded-full
+            bg-[#b7d65e]
+            shadow-[0_0_18px_rgba(183,214,94,0.95)]
+          "
+        />
+        <span className="absolute inset-[7px] rounded-full border border-[#b7d65e]/20" />
+      </span>
+
+      {/* TEXTO */}
+      <span className="relative z-10 flex flex-col items-start">
+        <span className="flex items-center gap-2">
+          <span className="text-[9px] font-medium uppercase tracking-[0.3em] text-[#b7d65e]">
+            Acceso piloto
+          </span>
+
+          <span className="flex items-center gap-1.5 rounded-full border border-[#b7d65e]/20 bg-[#a0c82b]/10 px-2 py-0.5">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#b7d65e] shadow-[0_0_8px_rgba(183,214,94,0.9)]" />
+            <span className="text-[7px] font-semibold uppercase tracking-[0.18em] text-[#cbe77a]">
+              Live
+            </span>
+          </span>
+        </span>
+
+        <span className="mt-0.5 text-sm font-medium tracking-[-0.02em] text-white">
+          Plataforma Conecta
+        </span>
+      </span>
+
+      {/* FLECHA */}
+      <span
+        className="
+          relative
+          z-10
+          ml-5
+          flex
+          h-8
+          w-8
+          items-center
+          justify-center
+          rounded-full
+          border
+          border-white/10
+          bg-white/[0.05]
+          text-[#b7d65e]
+          transition-all
+          duration-500
+          group-hover:translate-x-1
+          group-hover:border-[#b7d65e]/30
+          group-hover:bg-[#a0c82b]/10
+        "
+      >
+        <ArrowUpRight />
+      </span>
+    </a>
+  );
+}
+
 type RevealProps = {
   children: ReactNode;
   delay?: number;
@@ -254,23 +401,25 @@ export default function CulturaConectaPage() {
               cultura y talento para convertir su conocimiento en resultados.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#solicitud"
-                className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#a0c82b] px-7 py-4 text-sm font-medium text-[#082947] transition-transform duration-300 hover:scale-[1.025]"
-              >
-                Conversemos sobre tu empresa
-                <ArrowUpRight />
-              </a>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+  <a
+    href="#solicitud"
+    className="group inline-flex items-center justify-center gap-3 rounded-full bg-[#a0c82b] px-7 py-4 text-sm font-medium text-[#082947] transition-transform duration-300 hover:scale-[1.025]"
+  >
+    Conversemos sobre tu empresa
+    <ArrowUpRight />
+  </a>
 
-              <a
-                href="#soluciones"
-                className="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-4 text-sm text-white transition-colors duration-300 hover:border-white/60 hover:bg-white/10"
-              >
-                Explorar soluciones
-              </a>
+  <a
+    href="#soluciones"
+    className="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-4 text-sm text-white transition-colors duration-300 hover:border-white/60 hover:bg-white/10"
+  >
+    Explorar soluciones
+  </a>
+
+  <PlatformConectaButton />
+</div>
             </div>
-          </div>
         </Container>
 
         <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/10 bg-[#041422]/55 backdrop-blur-md">
@@ -896,22 +1045,84 @@ export default function CulturaConectaPage() {
       <Footer />
 
       <style>{`
-        @keyframes conectaFloat {
-          0%, 100% { transform: translate3d(0, 0, 0) rotate(-2deg); }
-          50% { transform: translate3d(0, -18px, 0) rotate(1deg); }
-        }
+  @keyframes conectaFloat {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(-2deg);
+    }
+    50% {
+      transform: translate3d(0, -18px, 0) rotate(1deg);
+    }
+  }
 
-        .conecta-float {
-          animation: conectaFloat 8s ease-in-out infinite;
-          will-change: transform;
-        }
+  .conecta-float {
+    animation: conectaFloat 8s ease-in-out infinite;
+    will-change: transform;
+  }
 
-        @media (prefers-reduced-motion: reduce) {
-          .conecta-float {
-            animation: none;
-          }
-        }
-      `}</style>
+  @keyframes conectaPlatformPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+      box-shadow: 0 0 12px rgba(183, 214, 94, 0.65);
+    }
+    50% {
+      transform: scale(1.35);
+      opacity: 0.75;
+      box-shadow: 0 0 28px rgba(183, 214, 94, 1);
+    }
+  }
+
+  @keyframes conectaPlatformScan {
+    0% {
+      left: -30%;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      left: 115%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes conectaPlatformBreath {
+    0%, 100% {
+      box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.28),
+        0 0 0 rgba(160, 200, 43, 0);
+    }
+    50% {
+      box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.28),
+        0 0 38px rgba(160, 200, 43, 0.12);
+    }
+  }
+
+  .conecta-platform-button {
+    animation: conectaPlatformBreath 5s ease-in-out infinite;
+  }
+
+  .conecta-platform-core {
+    animation: conectaPlatformPulse 2.4s ease-in-out infinite;
+  }
+
+  .conecta-platform-scan {
+    animation: conectaPlatformScan 5.5s ease-in-out infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .conecta-float,
+    .conecta-platform-button,
+    .conecta-platform-core,
+    .conecta-platform-scan {
+      animation: none;
+    }
+  }
+`}</style>
     </main>
   );
 }

@@ -40,8 +40,7 @@ const offices = [
   },
   {
     name: "Sede Medellín",
-    address:
-      "Calle 52 N° 49-28 · Ed. La Lonja · Piso 2",
+    address: "Calle 52 N° 49-28 · Ed. La Lonja · Piso 2",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+49-28+Edificio+La+Lonja+Medellin+Antioquia",
   },
@@ -59,7 +58,13 @@ function InstagramIcon() {
     >
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      <circle
+        cx="17.5"
+        cy="6.5"
+        r="1"
+        fill="currentColor"
+        stroke="none"
+      />
     </svg>
   );
 }
@@ -95,37 +100,188 @@ function YoutubeIcon() {
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-black text-white">
-      {/* AMBIENT LIGHT */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-[1000px] -translate-x-1/2 bg-[#c96a1b]/10 blur-[180px]" />
+    <footer className="relative overflow-hidden border-t border-white/[0.06] bg-[#090b0d] text-white">
+      {/* =====================================================
+          LÍNEA CROMÁTICA
+          Inspirada en Vanilla · Butter · Honey · Ochre · Gold
+      ====================================================== */}
 
-      <div className="pointer-events-none absolute bottom-[-300px] right-[-200px] h-[600px] w-[600px] rounded-full bg-white/[0.025] blur-[160px]" />
+      <div
+        className="
+          absolute
+          inset-x-0
+          top-0
+          z-20
+          h-[3px]
+          bg-[linear-gradient(90deg,#f5e7d2_0%,#f6daa8_20%,#e9aa34_46%,#c5771b_74%,#b2762d_100%)]
+        "
+      />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24">
-        {/* TOP */}
-        <div className="grid grid-cols-1 gap-20 border-b border-white/10 pb-20 lg:grid-cols-[1.05fr_0.95fr]">
+      <div
+        className="
+          pointer-events-none
+          absolute
+          inset-x-0
+          top-0
+          h-20
+          bg-[linear-gradient(180deg,rgba(233,170,52,0.10)_0%,transparent_100%)]
+          blur-2xl
+        "
+      />
+
+      {/* =====================================================
+          LUCES AMBIENTALES
+      ====================================================== */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-[18%]
+          top-[-250px]
+          h-[650px]
+          w-[650px]
+          rounded-full
+          bg-[#e9aa34]/[0.08]
+          blur-[180px]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-180px]
+          top-[20%]
+          h-[550px]
+          w-[550px]
+          rounded-full
+          bg-[#c5771b]/[0.08]
+          blur-[170px]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          bottom-[-300px]
+          left-[35%]
+          h-[600px]
+          w-[600px]
+          rounded-full
+          bg-[#f5e7d2]/[0.025]
+          blur-[170px]
+        "
+      />
+
+      {/* =====================================================
+          PALETA ESCULTÓRICA DECORATIVA
+          Solo desktop
+      ====================================================== */}
+
+      <div
+        aria-hidden="true"
+        className="
+          pointer-events-none
+          absolute
+          right-[-75px]
+          top-[105px]
+          hidden
+          w-[250px]
+          rotate-[-5deg]
+          flex-col
+          gap-2.5
+          opacity-20
+          xl:flex
+        "
+      >
+        <div className="h-12 rounded-full bg-[#f5e7d2]" />
+        <div className="h-12 rounded-full bg-[#f6daa8]" />
+        <div className="h-12 rounded-full bg-[#e9aa34]" />
+        <div className="h-12 rounded-full bg-[#c5771b]" />
+        <div className="h-12 rounded-full bg-[#b2762d]" />
+      </div>
+
+      {/* SOMBRA SOBRE PALETA */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          right-[-100px]
+          top-[70px]
+          hidden
+          h-[420px]
+          w-[390px]
+          bg-[#090b0d]/45
+          blur-[65px]
+          xl:block
+        "
+      />
+
+      {/* =====================================================
+          CONTENIDO
+      ====================================================== */}
+
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-28">
+        {/* ===================================================
+            TOP
+        ==================================================== */}
+
+        <div className="grid grid-cols-1 gap-20 border-b border-[#f5e7d2]/10 pb-20 lg:grid-cols-[1.05fr_0.95fr]">
           {/* LEFT */}
-          <div>
-            <p className="mb-8 text-sm uppercase tracking-[0.45em] text-[#c96a1b]">
-              Grupo A&amp;C
-            </p>
 
-            <h2 className="mb-10 max-w-2xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] md:text-6xl">
-              Inteligencia estratégica para empresas que piensan a largo plazo.
+          <div>
+            <div className="mb-8 flex items-center gap-4">
+              <span className="h-px w-9 bg-[#e9aa34]" />
+
+              <p className="text-xs uppercase tracking-[0.45em] text-[#e9aa34]">
+                Grupo A&amp;C
+              </p>
+            </div>
+
+            <h2
+              className="
+                mb-10
+                max-w-2xl
+                text-5xl
+                font-semibold
+                leading-[0.95]
+                tracking-[-0.045em]
+                text-[#f8f3eb]
+                md:text-6xl
+              "
+            >
+              Inteligencia estratégica para empresas que piensan{" "}
+              <span className="text-[#e5bd75]">
+                a largo plazo.
+              </span>
             </h2>
 
-            <p className="max-w-xl font-light leading-[1.9] text-white/55">
+            <p className="max-w-xl font-light leading-[1.9] text-[#f5e7d2]/50">
               Planeación tributaria, protección patrimonial, estructura
               financiera, tecnología y evolución empresarial para organizaciones
               que requieren visión.
             </p>
+
+            {/* FIRMA CROMÁTICA */}
+
+            <div className="mt-10 flex items-center gap-2">
+              <span className="h-1.5 w-10 rounded-full bg-[#f5e7d2]/70" />
+              <span className="h-1.5 w-10 rounded-full bg-[#f6daa8]/70" />
+              <span className="h-1.5 w-10 rounded-full bg-[#e9aa34]/80" />
+              <span className="h-1.5 w-10 rounded-full bg-[#c5771b]/80" />
+              <span className="h-1.5 w-10 rounded-full bg-[#b2762d]/80" />
+            </div>
           </div>
 
           {/* RIGHT */}
+
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
             {/* ECOSYSTEM */}
+
             <div>
-              <p className="mb-8 text-xs uppercase tracking-[0.3em] text-white/40">
+              <p className="mb-8 text-[10px] uppercase tracking-[0.35em] text-[#f5e7d2]/35">
                 Ecosistema
               </p>
 
@@ -138,14 +294,23 @@ export default function Footer() {
                       group
                       flex
                       items-center
-                      gap-2
-                      text-white/70
+                      gap-3
+                      text-[#f5e7d2]/65
                       transition-all
                       duration-300
-                      hover:text-[#c96a1b]
+                      hover:text-[#f6daa8]
                     "
                   >
-                    <span className="h-px w-0 bg-[#c96a1b] transition-all duration-300 group-hover:w-4" />
+                    <span
+                      className="
+                        h-px
+                        w-0
+                        bg-[#e9aa34]
+                        transition-all
+                        duration-300
+                        group-hover:w-5
+                      "
+                    />
 
                     {item.name}
                   </Link>
@@ -154,26 +319,28 @@ export default function Footer() {
             </div>
 
             {/* CONTACT */}
+
             <div>
-              <p className="mb-8 text-xs uppercase tracking-[0.3em] text-white/40">
+              <p className="mb-8 text-[10px] uppercase tracking-[0.35em] text-[#f5e7d2]/35">
                 Contacto
               </p>
 
-              <div className="flex flex-col gap-5 text-white/70">
+              <div className="flex flex-col gap-5 text-[#f5e7d2]/65">
                 <a
                   href={`mailto:${contactLinks.email}`}
-                  className="transition-colors duration-300 hover:text-[#c96a1b]"
+                  className="transition-colors duration-300 hover:text-[#f6daa8]"
                 >
                   {contactLinks.email}
                 </a>
 
                 {/* WHATSAPP */}
+
                 <div>
                   <a
                     href={contactLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors duration-300 hover:text-[#c96a1b]"
+                    className="transition-colors duration-300 hover:text-[#f6daa8]"
                   >
                     WhatsApp Business
                   </a>
@@ -182,26 +349,28 @@ export default function Footer() {
                     href={contactLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-1 block text-sm text-white/40 transition-colors duration-300 hover:text-white/70"
+                    className="mt-1 block text-sm text-[#f5e7d2]/35 transition-colors duration-300 hover:text-[#f5e7d2]/70"
                   >
                     +57 311 868 7774
                   </a>
                 </div>
 
-                {/* SOCIAL ICONS */}
+                {/* SOCIAL */}
+
                 <div className="pt-3">
-                  <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-white/30">
+                  <p className="mb-4 text-[9px] uppercase tracking-[0.32em] text-[#f5e7d2]/25">
                     Síguenos
                   </p>
 
                   <div className="flex items-center gap-3">
+                    {/* INSTAGRAM */}
+
                     <a
                       href={contactLinks.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Instagram Grupo A&C"
                       className="
-                        group
                         flex
                         h-11
                         w-11
@@ -209,81 +378,87 @@ export default function Footer() {
                         justify-center
                         rounded-full
                         border
-                        border-white/10
-                        bg-white/[0.035]
-                        text-white/60
+                        border-[#f5e7d2]/10
+                        bg-[#f5e7d2]/[0.035]
+                        text-[#f5e7d2]/55
                         backdrop-blur-xl
                         transition-all
                         duration-300
                         hover:-translate-y-1
-                        hover:border-[#c96a1b]/50
-                        hover:bg-[#c96a1b]/10
-                        hover:text-[#d98945]
-                        hover:shadow-[0_0_28px_rgba(201,106,27,0.18)]
+                        hover:border-[#e9aa34]/45
+                        hover:bg-[#e9aa34]/10
+                        hover:text-[#f6daa8]
+                        hover:shadow-[0_0_30px_rgba(233,170,52,0.16)]
                       "
                     >
                       <InstagramIcon />
                     </a>
 
-                    <a
-                      href={contactLinks.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Facebook Grupo A&C"
-                      className="
-                        group
-                        flex
-                        h-11
-                        w-11
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-white/10
-                        bg-white/[0.035]
-                        text-white/60
-                        backdrop-blur-xl
-                        transition-all
-                        duration-300
-                        hover:-translate-y-1
-                        hover:border-[#c96a1b]/50
-                        hover:bg-[#c96a1b]/10
-                        hover:text-[#d98945]
-                        hover:shadow-[0_0_28px_rgba(201,106,27,0.18)]
-                      "
-                    >
-                      <FacebookIcon />
-                    </a>
+                    {/* FACEBOOK */}
 
-                    <a
-                      href={contactLinks.youtube}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="YouTube Grupo A&C"
-                      className="
-                        group
-                        flex
-                        h-11
-                        w-11
-                        items-center
-                        justify-center
-                        rounded-full
-                        border
-                        border-white/10
-                        bg-white/[0.035]
-                        text-white/60
-                        backdrop-blur-xl
-                        transition-all
-                        duration-300
-                        hover:-translate-y-1
-                        hover:border-[#c96a1b]/50
-                        hover:bg-[#c96a1b]/10
-                        hover:text-[#d98945]
-                        hover:shadow-[0_0_28px_rgba(201,106,27,0.18)]
-                      "
-                    >
-                      <YoutubeIcon />
-                    </a>
+                    {contactLinks.facebook && (
+                      <a
+                        href={contactLinks.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook Grupo A&C"
+                        className="
+                          flex
+                          h-11
+                          w-11
+                          items-center
+                          justify-center
+                          rounded-full
+                          border
+                          border-[#f5e7d2]/10
+                          bg-[#f5e7d2]/[0.035]
+                          text-[#f5e7d2]/55
+                          backdrop-blur-xl
+                          transition-all
+                          duration-300
+                          hover:-translate-y-1
+                          hover:border-[#e9aa34]/45
+                          hover:bg-[#e9aa34]/10
+                          hover:text-[#f6daa8]
+                          hover:shadow-[0_0_30px_rgba(233,170,52,0.16)]
+                        "
+                      >
+                        <FacebookIcon />
+                      </a>
+                    )}
+
+                    {/* YOUTUBE */}
+
+                    {contactLinks.youtube && (
+                      <a
+                        href={contactLinks.youtube}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="YouTube Grupo A&C"
+                        className="
+                          flex
+                          h-11
+                          w-11
+                          items-center
+                          justify-center
+                          rounded-full
+                          border
+                          border-[#f5e7d2]/10
+                          bg-[#f5e7d2]/[0.035]
+                          text-[#f5e7d2]/55
+                          backdrop-blur-xl
+                          transition-all
+                          duration-300
+                          hover:-translate-y-1
+                          hover:border-[#e9aa34]/45
+                          hover:bg-[#e9aa34]/10
+                          hover:text-[#f6daa8]
+                          hover:shadow-[0_0_30px_rgba(233,170,52,0.16)]
+                        "
+                      >
+                        <YoutubeIcon />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -291,15 +466,18 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* SEDES */}
-        <div className="border-b border-white/10 py-12">
+        {/* ===================================================
+            SEDES
+        ==================================================== */}
+
+        <div className="border-b border-[#f5e7d2]/10 py-14">
           <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
             <div>
-              <p className="text-xs uppercase tracking-[0.35em] text-[#c96a1b]">
+              <p className="text-[10px] uppercase tracking-[0.38em] text-[#e9aa34]">
                 Presencia
               </p>
 
-              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-white">
+              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[#f8f3eb]">
                 Nuestras sedes
               </h3>
             </div>
@@ -315,67 +493,103 @@ export default function Footer() {
                     group
                     relative
                     overflow-hidden
-                    rounded-[1.5rem]
+                    rounded-[1.7rem]
                     border
-                    border-white/10
-                    bg-white/[0.035]
-                    p-6
+                    border-[#f5e7d2]/10
+                    bg-[linear-gradient(145deg,rgba(245,231,210,0.055)_0%,rgba(233,170,52,0.025)_100%)]
+                    p-7
+                    shadow-[0_20px_60px_rgba(0,0,0,0.12)]
+                    backdrop-blur-xl
                     transition-all
                     duration-500
                     hover:-translate-y-1
-                    hover:border-[#c96a1b]/35
-                    hover:bg-white/[0.055]
+                    hover:border-[#e9aa34]/30
+                    hover:bg-[linear-gradient(145deg,rgba(245,231,210,0.075)_0%,rgba(233,170,52,0.045)_100%)]
+                    hover:shadow-[0_25px_80px_rgba(0,0,0,0.20)]
                   "
                 >
-                  <div className="mb-8 flex items-center justify-between">
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-[#c96a1b]">
-                      0{index + 1}
-                    </span>
+                  {/* GOLD LIGHT */}
 
-                    <span className="text-xs text-white/25 transition-all duration-300 group-hover:text-[#c96a1b]">
-                      Google Maps ↗
-                    </span>
+                  <div
+                    className="
+                      pointer-events-none
+                      absolute
+                      -right-12
+                      -top-12
+                      h-36
+                      w-36
+                      rounded-full
+                      bg-[#e9aa34]/0
+                      blur-[50px]
+                      transition-all
+                      duration-700
+                      group-hover:bg-[#e9aa34]/10
+                    "
+                  />
+
+                  {/* TOP LINE */}
+
+                  <div
+                    className="
+                      absolute
+                      left-8
+                      right-8
+                      top-0
+                      h-px
+                      bg-gradient-to-r
+                      from-transparent
+                      via-[#e9aa34]/50
+                      to-transparent
+                    "
+                  />
+
+                  <div className="relative z-10">
+                    <div className="mb-10 flex items-center justify-between">
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-[#e9aa34]">
+                        0{index + 1}
+                      </span>
+
+                      <span className="text-xs text-[#f5e7d2]/25 transition-all duration-300 group-hover:text-[#f6daa8]/70">
+                        Google Maps ↗
+                      </span>
+                    </div>
+
+                    <h4 className="text-xl font-medium tracking-[-0.03em] text-[#f8f3eb]">
+                      {office.name}
+                    </h4>
+
+                    <p className="mt-3 max-w-md text-sm font-light leading-7 text-[#f5e7d2]/40">
+                      {office.address}
+                    </p>
                   </div>
-
-                  <h4 className="text-xl font-medium tracking-[-0.03em] text-white">
-                    {office.name}
-                  </h4>
-
-                  <p className="mt-3 max-w-md text-sm font-light leading-7 text-white/45">
-                    {office.address}
-                  </p>
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        {/* BOTTOM */}
-        <div className="flex flex-col items-center justify-between gap-6 pt-10 md:flex-row">
+        {/* ===================================================
+            BOTTOM
+        ==================================================== */}
+
+        <div className="flex flex-col items-center justify-between gap-8 pt-10 md:flex-row">
           <div>
-            <p className="text-sm text-white/35">
+            <p className="text-sm text-[#f5e7d2]/30">
               © 2006-2026 Grupo Análisis &amp; Consultorías.
             </p>
 
-            <p className="mt-2 text-xs text-white/20">
+            <p className="mt-2 text-xs text-[#f5e7d2]/18">
               Sabaneta · Medellín · Antioquia · Colombia
             </p>
           </div>
 
           {/* SEMA */}
+
           <div className="flex items-center gap-4">
-            <div className="h-px w-12 bg-fuchsia-500/40" />
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-fuchsia-500/40" />
 
             <div className="relative">
-              <div
-                className="
-                  absolute
-                  inset-0
-                  scale-100
-                  bg-fuchsia-500/20
-                  blur-3xl
-                "
-              />
+              <div className="absolute inset-0 scale-100 bg-fuchsia-500/20 blur-3xl" />
 
               <Image
                 src="/brands/sema-footer-v2.png"
@@ -388,12 +602,12 @@ export default function Footer() {
                   h-auto
                   w-[160px]
                   opacity-100
-                  drop-shadow-[0_0_30px_rgba(236,72,153,0.75)]
+                  drop-shadow-[0_0_30px_rgba(236,72,153,0.65)]
                 "
               />
             </div>
 
-            <div className="h-px w-12 bg-fuchsia-500/40" />
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-fuchsia-500/40" />
           </div>
         </div>
       </div>
