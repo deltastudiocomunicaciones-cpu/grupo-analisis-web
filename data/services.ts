@@ -369,91 +369,91 @@ export const services: ServiceItem[] = [
     accentColor: "#16a34a",
   },
   {
-    slug: "declaracion-de-renta",
-    title: "Declaración de Renta",
-    description:
-      "Servicio integral para la preparación, revisión y presentación de la declaración de renta, garantizando cumplimiento y optimización fiscal.",
-    brand: "CEC",
-    href: "/soluciones/declaracion-renta",
-    image: "/fotos/servicios/declaracion-renta.png",
-    category: "operational",
-    eyebrow: "Formación contable",
-    heroTitle:
-      "Formación profesional para contadores que quieren evolucionar hacia estrategia.",
-    technicalIntro:
-      "Este servicio fortalece las capacidades de equipos contables, financieros y administrativos mediante formación aplicada a la realidad empresarial.",
-    sections: [
-      {
-        title: "Diagnóstico de capacidades",
-        text: "Identificación del nivel técnico del equipo, brechas de conocimiento y necesidades de formación prioritaria.",
-      },
-      {
-        title: "Formación aplicada",
-        text: "Diseño de sesiones orientadas a resolver problemas reales de la operación contable, tributaria o financiera.",
-      },
-      {
-        title: "Evolución del rol contable",
-        text: "Acompañamiento para que el contador avance hacia análisis, auditoría, criterio financiero y apoyo a la dirección empresarial.",
-      },
-    ],
-    benefits: [
-      "Equipos más autónomos.",
-      "Mejor criterio técnico.",
-      "Actualización profesional aplicada.",
-      "Mayor conexión entre contabilidad y estrategia.",
-    ],
-    deliverables: [
-      "Diagnóstico de formación.",
-      "Plan de sesiones.",
-      "Material de apoyo.",
-      "Recomendaciones de continuidad.",
-    ],
-    ctaLabel: "Solicitar formación",
-    accentColor: "#16a34a",
-  },
+  slug: "declaracion-de-renta",
+  title: "Declaración de Renta",
+  description:
+    "Preparación, revisión y presentación de declaraciones de renta para personas naturales, empresarios y empresas, con acompañamiento técnico y control documental.",
+  brand: "CEC",
+  href: "/soluciones/declaracion-de-renta",
+  image: "/fotos/servicios/declaracion-renta.png",
+  category: "operational",
+  eyebrow: "Gestión tributaria",
+  heroTitle:
+    "Declaración de renta con revisión técnica, orden documental y acompañamiento especializado.",
+  technicalIntro:
+    "Este servicio acompaña la preparación, revisión y presentación de la declaración de renta, verificando soportes, obligaciones, consistencia de la información y oportunidades de mejora dentro del marco normativo.",
+  sections: [
+    {
+      title: "Revisión de información",
+      text: "Validación de ingresos, patrimonio, costos, deducciones, retenciones y soportes necesarios para preparar correctamente la declaración.",
+    },
+    {
+      title: "Preparación y validación",
+      text: "Construcción de la declaración, revisión de consistencia y análisis de posibles riesgos o diferencias antes de su presentación.",
+    },
+    {
+      title: "Presentación y acompañamiento",
+      text: "Acompañamiento durante la presentación y orientación frente a obligaciones posteriores, requerimientos o ajustes necesarios.",
+    },
+  ],
+  benefits: [
+    "Mayor seguridad en la preparación de la declaración.",
+    "Reducción de errores y omisiones.",
+    "Mejor organización de soportes tributarios.",
+    "Acompañamiento técnico durante el proceso.",
+  ],
+  deliverables: [
+    "Revisión de información tributaria.",
+    "Declaración preparada y validada.",
+    "Lista de soportes y observaciones.",
+    "Orientación posterior a la presentación.",
+  ],
+  ctaLabel: "Preparar declaración de renta",
+  accentColor: "#16a34a",
+},
   {
-    slug: "software-sadi",
-    title: "Software SADI",
-    description:
-      "Solución integral para la gestión contable, con opciones de implementación total o parcial, adaptada a las necesidades de cada empresa.",
-    brand: "SADI",
-    href: "/soluciones/software-sadi",
-    image: "/fotos/servicios/software-sadi.png",
-    category: "operational",
-    eyebrow: "Cierre técnico",
-    heroTitle:
-      "Cierre de auditoría para empresas que necesitan resolver procesos abiertos.",
-    technicalIntro:
-      "Este servicio acompaña a empresas que requieren ordenar, responder y cerrar procesos de auditoría fiscal o financiera con criterio técnico.",
-    sections: [
-      {
-        title: "Revisión del estado del proceso",
-        text: "Análisis de antecedentes, requerimientos, soportes, hallazgos y puntos pendientes dentro del proceso de auditoría.",
-      },
-      {
-        title: "Estrategia de cierre",
-        text: "Definición de una ruta técnica para responder, sustentar o resolver los elementos críticos que mantienen abierto el proceso.",
-      },
-      {
-        title: "Soporte documental",
-        text: "Organización de información y evidencias necesarias para fortalecer la posición de la empresa frente al cierre.",
-      },
-    ],
-    benefits: [
-      "Mayor claridad sobre el proceso abierto.",
-      "Reducción de desgaste operativo.",
-      "Mejor organización de soportes.",
-      "Ruta técnica para avanzar hacia el cierre.",
-    ],
-    deliverables: [
-      "Diagnóstico del proceso.",
-      "Matriz de pendientes.",
-      "Recomendaciones de respuesta.",
-      "Soporte para cierre técnico.",
-    ],
-    ctaLabel: "Solicitar revisión",
-    accentColor: "#c96a1b",
-  },
+  slug: "software-sadi",
+  title: "Software SADI",
+  description:
+    "Software contable y administrativo diseñado para organizar información, automatizar procesos y mejorar el control empresarial.",
+  brand: "SADI",
+  href: "/soluciones/software-sadi",
+  image: "/fotos/servicios/software-sadi.png",
+  category: "operational",
+  eyebrow: "Tecnología empresarial",
+  heroTitle:
+    "Software SADI para organizar información, automatizar procesos y mejorar decisiones empresariales.",
+  technicalIntro:
+    "SADI integra información contable, administrativa y financiera en una plataforma diseñada para reducir tareas repetitivas, mejorar la trazabilidad y facilitar el análisis empresarial.",
+  sections: [
+    {
+      title: "Organización de información",
+      text: "Centralización de datos contables, administrativos y financieros para facilitar consulta, seguimiento y control.",
+    },
+    {
+      title: "Automatización de procesos",
+      text: "Reducción de tareas manuales y repetitivas mediante flujos estructurados, controles y herramientas digitales.",
+    },
+    {
+      title: "Información para decidir",
+      text: "Acceso a información organizada y oportuna para apoyar análisis, auditoría y decisiones gerenciales.",
+    },
+  ],
+  benefits: [
+    "Menos tareas operativas repetitivas.",
+    "Mayor trazabilidad de la información.",
+    "Mejor control administrativo y contable.",
+    "Información disponible para análisis y decisión.",
+  ],
+  deliverables: [
+    "Diagnóstico de necesidades.",
+    "Configuración e implementación.",
+    "Acompañamiento de puesta en marcha.",
+    "Soporte y orientación de uso.",
+  ],
+  ctaLabel: "Conocer SADI",
+  accentColor: "#d97706",
+},
   {
     slug: "tramites-dian",
     title: "Trámites DIAN",
