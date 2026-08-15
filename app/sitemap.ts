@@ -1,5 +1,5 @@
-import { services } from "@/data/services";
 import { MetadataRoute } from "next";
+import { services } from "@/data/services";
 import { articles } from "@/data/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -80,11 +80,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-  url: `${baseUrl}/aspro`,
-  lastModified: currentDate,
-  changeFrequency: "monthly",
-  priority: 0.8,
-},
+      url: `${baseUrl}/aspro`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/analisis-consultorias`,
       lastModified: currentDate,
@@ -92,11 +92,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
-  url: `${baseUrl}/cultura-conecta`,
-  lastModified: new Date(),
-  changeFrequency: "monthly",
-  priority: 0.9,
-},
+      url: `${baseUrl}/cultura-conecta`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/contacto`,
       lastModified: currentDate,
@@ -113,18 +113,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return {
       url: `${baseUrl}${path}`,
-      lastModified: currentDate,
+      lastModified: article.date
+        ? new Date(article.date)
+        : currentDate,
       changeFrequency: "monthly",
       priority: article.type === "news" ? 0.7 : 0.72,
     };
   });
 
   const serviceRoutes: MetadataRoute.Sitemap = services.map((service) => ({
-  url: `${baseUrl}/soluciones/${service.slug}`,
-  lastModified: currentDate,
-  changeFrequency: "monthly",
-  priority: 0.82,
-}));
+    url: `${baseUrl}/soluciones/${service.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly",
+    priority: 0.82,
+  }));
 
- return [...staticRoutes, ...articleRoutes, ...serviceRoutes];
+  return [...staticRoutes, ...articleRoutes, ...serviceRoutes];
 }
