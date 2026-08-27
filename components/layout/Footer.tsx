@@ -466,150 +466,226 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ===================================================
-            SEDES
-        ==================================================== */}
+       {/* ===================================================
+    SEDES
+==================================================== */}
 
-        <div className="border-b border-[#f5e7d2]/10 py-14">
-          <div className="grid gap-8 lg:grid-cols-[0.45fr_1.55fr]">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.38em] text-[#e9aa34]">
-                Presencia
+<section
+  className="
+    relative
+    left-1/2
+    w-screen
+    -translate-x-1/2
+    overflow-hidden
+    border-y
+    border-[#b87a18]/15
+    bg-[#f3dfb8]
+    py-14
+    text-[#2c241a]
+  "
+>
+  {/* ATMÓSFERA PASTEL */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-white/45 blur-[100px]" />
+
+    <div className="absolute -bottom-32 right-[5%] h-96 w-96 rounded-full bg-[#e9aa34]/18 blur-[120px]" />
+
+    <div
+      className="absolute inset-0 opacity-[0.035]"
+      style={{
+        backgroundImage: `
+          linear-gradient(to right, #7b5217 1px, transparent 1px),
+          linear-gradient(to bottom, #7b5217 1px, transparent 1px)
+        `,
+        backgroundSize: "90px 90px",
+      }}
+    />
+  </div>
+
+  <div className="relative z-10 mx-auto max-w-7xl px-6">
+    <div className="grid gap-10 lg:grid-cols-[0.45fr_1.55fr] lg:items-center">
+      {/* ENCABEZADO */}
+      <div>
+        <p className="text-[10px] uppercase tracking-[0.38em] text-[#a96a0a]">
+          Presencia
+        </p>
+
+        <h3 className="mt-4 max-w-xs text-3xl font-semibold tracking-[-0.045em] text-[#2c241a]">
+          Nuestras sedes
+        </h3>
+
+        <p className="mt-5 max-w-xs text-sm font-light leading-7 text-[#2c241a]/55">
+          Espacios donde acompañamos decisiones, procesos y crecimiento
+          empresarial.
+        </p>
+      </div>
+
+      {/* SEDES */}
+      <div className="grid gap-5 md:grid-cols-2">
+        {offices.map((office, index) => (
+          <a
+            key={office.name}
+            href={office.maps}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group
+              relative
+              overflow-hidden
+              rounded-[1.7rem]
+              border
+              border-[#815411]/15
+              bg-white/38
+              p-7
+              shadow-[0_20px_60px_rgba(91,61,19,0.08)]
+              backdrop-blur-xl
+              transition-all
+              duration-500
+              hover:-translate-y-1
+              hover:border-[#b87a18]/35
+              hover:bg-white/58
+              hover:shadow-[0_26px_80px_rgba(91,61,19,0.14)]
+            "
+          >
+            {/* LUZ DORADA */}
+            <div
+              className="
+                pointer-events-none
+                absolute
+                -right-12
+                -top-12
+                h-36
+                w-36
+                rounded-full
+                bg-[#e9aa34]/0
+                blur-[50px]
+                transition-all
+                duration-700
+                group-hover:bg-[#e9aa34]/20
+              "
+            />
+
+            {/* LÍNEA SUPERIOR */}
+            <div
+              className="
+                absolute
+                left-8
+                right-8
+                top-0
+                h-px
+                bg-gradient-to-r
+                from-transparent
+                via-[#b87a18]/45
+                to-transparent
+              "
+            />
+
+            <div className="relative z-10">
+              <div className="mb-10 flex items-center justify-between">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-[#a96a0a]">
+                  0{index + 1}
+                </span>
+
+                <span className="text-xs text-[#2c241a]/35 transition-colors duration-300 group-hover:text-[#7c4d08]">
+                  Google Maps ↗
+                </span>
+              </div>
+
+              <h4 className="text-xl font-medium tracking-[-0.03em] text-[#2c241a]">
+                {office.name}
+              </h4>
+
+              <p className="mt-3 max-w-md text-sm font-light leading-7 text-[#2c241a]/55">
+                {office.address}
               </p>
-
-              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[#f8f3eb]">
-                Nuestras sedes
-              </h3>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-2">
-              {offices.map((office, index) => (
-                <a
-                  key={office.name}
-                  href={office.maps}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    group
-                    relative
-                    overflow-hidden
-                    rounded-[1.7rem]
-                    border
-                    border-[#f5e7d2]/10
-                    bg-[linear-gradient(145deg,rgba(245,231,210,0.055)_0%,rgba(233,170,52,0.025)_100%)]
-                    p-7
-                    shadow-[0_20px_60px_rgba(0,0,0,0.12)]
-                    backdrop-blur-xl
-                    transition-all
-                    duration-500
-                    hover:-translate-y-1
-                    hover:border-[#e9aa34]/30
-                    hover:bg-[linear-gradient(145deg,rgba(245,231,210,0.075)_0%,rgba(233,170,52,0.045)_100%)]
-                    hover:shadow-[0_25px_80px_rgba(0,0,0,0.20)]
-                  "
-                >
-                  {/* GOLD LIGHT */}
+            <div className="pointer-events-none absolute inset-[1px] rounded-[1.65rem] border border-white/45" />
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+       {/* ===================================================
+    BOTTOM
+==================================================== */}
 
-                  <div
-                    className="
-                      pointer-events-none
-                      absolute
-                      -right-12
-                      -top-12
-                      h-36
-                      w-36
-                      rounded-full
-                      bg-[#e9aa34]/0
-                      blur-[50px]
-                      transition-all
-                      duration-700
-                      group-hover:bg-[#e9aa34]/10
-                    "
-                  />
+<div
+  className="
+    relative
+    left-1/2
+    w-screen
+    -translate-x-1/2
+    overflow-hidden
+    border-t
+    border-[#8f5b12]/15
+    bg-[#e7bd72]
+  "
+>
+  {/* ATMÓSFERA */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-24 top-0 h-52 w-72 rounded-full bg-white/25 blur-[100px]" />
 
-                  {/* TOP LINE */}
+    <div className="absolute -bottom-24 right-[12%] h-56 w-80 rounded-full bg-[#c67b17]/15 blur-[100px]" />
 
-                  <div
-                    className="
-                      absolute
-                      left-8
-                      right-8
-                      top-0
-                      h-px
-                      bg-gradient-to-r
-                      from-transparent
-                      via-[#e9aa34]/50
-                      to-transparent
-                    "
-                  />
+    <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/65 to-transparent" />
+  </div>
 
-                  <div className="relative z-10">
-                    <div className="mb-10 flex items-center justify-between">
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-[#e9aa34]">
-                        0{index + 1}
-                      </span>
+  <div
+    className="
+      relative
+      z-10
+      mx-auto
+      flex
+      max-w-7xl
+      flex-col
+      items-center
+      justify-between
+      gap-8
+      px-6
+      py-10
+      md:flex-row
+    "
+  >
+    <div className="text-center md:text-left">
+      <p className="text-sm text-[#342618]/65">
+        © 2006-2026 Grupo Análisis &amp; Consultorías.
+      </p>
 
-                      <span className="text-xs text-[#f5e7d2]/25 transition-all duration-300 group-hover:text-[#f6daa8]/70">
-                        Google Maps ↗
-                      </span>
-                    </div>
+      <p className="mt-2 text-xs text-[#342618]/42">
+        Sabaneta · Medellín · Antioquia · Colombia
+      </p>
+    </div>
 
-                    <h4 className="text-xl font-medium tracking-[-0.03em] text-[#f8f3eb]">
-                      {office.name}
-                    </h4>
+    {/* FASI */}
+    <div className="flex items-center gap-4">
+      <div className="h-px w-12 bg-gradient-to-r from-transparent to-fuchsia-700/35" />
 
-                    <p className="mt-3 max-w-md text-sm font-light leading-7 text-[#f5e7d2]/40">
-                      {office.address}
-                    </p>
-                  </div>
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
+      <div className="relative">
+        <div className="absolute inset-0 scale-110 bg-fuchsia-500/18 blur-3xl" />
 
-        {/* ===================================================
-            BOTTOM
-        ==================================================== */}
+        <Image
+          src="/brands/fasi-footer.png"
+          alt="FASI S.A.S."
+          width={160}
+          height={60}
+          className="
+            relative
+            z-10
+            h-auto
+            w-[145px]
+            opacity-100
+            drop-shadow-[0_10px_22px_rgba(92,45,10,0.22)]
+            md:w-[160px]
+          "
+        />
+      </div>
 
-        <div className="flex flex-col items-center justify-between gap-8 pt-10 md:flex-row">
-          <div>
-            <p className="text-sm text-[#f5e7d2]/30">
-              © 2006-2026 Grupo Análisis &amp; Consultorías.
-            </p>
-
-            <p className="mt-2 text-xs text-[#f5e7d2]/18">
-              Sabaneta · Medellín · Antioquia · Colombia
-            </p>
-          </div>
-
-          {/* SEMA */}
-
-          <div className="flex items-center gap-4">
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-fuchsia-500/40" />
-
-            <div className="relative">
-              <div className="absolute inset-0 scale-100 bg-fuchsia-500/20 blur-3xl" />
-
-              <Image
-                src="/brands/sema-footer-v2.png"
-                alt="SEMA Strategic Intelligence Studio"
-                width={160}
-                height={60}
-                className="
-                  relative
-                  z-10
-                  h-auto
-                  w-[160px]
-                  opacity-100
-                  drop-shadow-[0_0_30px_rgba(236,72,153,0.65)]
-                "
-              />
-            </div>
-
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-fuchsia-500/40" />
-          </div>
-        </div>
+      <div className="h-px w-12 bg-gradient-to-l from-transparent to-fuchsia-700/35" />
+    </div>
+  </div>
+</div>
       </div>
     </footer>
   );
