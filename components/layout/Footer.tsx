@@ -34,13 +34,25 @@ const ecosystem = [
 const offices = [
   {
     name: "Sede Sabaneta",
+    location: "Valle de Aburrá · Sur",
+    statement:
+      "Nuestro punto de encuentro para acompañar decisiones, procesos y crecimiento empresarial.",
     address: "Calle 52 Sur N° 43 A 20 · Ed. Scala · Of. 1110",
+    routeLabel: "Cómo llegar a Sabaneta",
+    imageDesktop: "/fotos/sedes/sede-sabaneta-desktop.png",
+    imageMobile: "/fotos/sedes/sede-sabaneta-mobile.png",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+Sur+43A+20+Edificio+Scala+Sabaneta+Antioquia",
   },
   {
     name: "Sede Medellín",
+    location: "Centro de Medellín",
+    statement:
+      "Presencia estratégica en el corazón empresarial de la ciudad para estar más cerca de nuestros clientes.",
     address: "Calle 52 N° 49-28 · Ed. La Lonja · Piso 2",
+    routeLabel: "Cómo llegar a Medellín",
+    imageDesktop: "/fotos/sedes/sede-medellin-desktop.png",
+    imageMobile: "/fotos/sedes/sede-medellin-mobile.png",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+49-28+Edificio+La+Lonja+Medellin+Antioquia",
   },
@@ -223,7 +235,7 @@ export default function Footer() {
           CONTENIDO
       ====================================================== */}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 md:py-28">
+     <div className="relative z-10 mx-auto max-w-7xl px-6 pb-2 pt-24 md:pb-2 md:pt-28">
         {/* ===================================================
             TOP
         ==================================================== */}
@@ -467,7 +479,7 @@ export default function Footer() {
         </div>
 
        {/* ===================================================
-    SEDES
+    SEDES · DESTINOS GRUPO A&C
 ==================================================== */}
 
 <section
@@ -480,130 +492,269 @@ export default function Footer() {
     border-y
     border-[#b87a18]/15
     bg-[#f3dfb8]
-    py-14
+    py-16
     text-[#2c241a]
+    md:py-20
   "
 >
-  {/* ATMÓSFERA PASTEL */}
+  {/* ATMÓSFERA */}
   <div className="pointer-events-none absolute inset-0">
-    <div className="absolute -left-24 -top-28 h-80 w-80 rounded-full bg-white/45 blur-[100px]" />
+    <div className="absolute -left-24 -top-32 h-96 w-96 rounded-full bg-white/45 blur-[120px]" />
 
-    <div className="absolute -bottom-32 right-[5%] h-96 w-96 rounded-full bg-[#e9aa34]/18 blur-[120px]" />
+    <div className="absolute -bottom-40 right-[8%] h-[440px] w-[440px] rounded-full bg-[#e9aa34]/15 blur-[140px]" />
 
     <div
-      className="absolute inset-0 opacity-[0.035]"
+      className="absolute inset-0 opacity-[0.025]"
       style={{
         backgroundImage: `
           linear-gradient(to right, #7b5217 1px, transparent 1px),
           linear-gradient(to bottom, #7b5217 1px, transparent 1px)
         `,
-        backgroundSize: "90px 90px",
+        backgroundSize: "100px 100px",
       }}
     />
   </div>
 
   <div className="relative z-10 mx-auto max-w-7xl px-6">
-    <div className="grid gap-10 lg:grid-cols-[0.45fr_1.55fr] lg:items-center">
-      {/* ENCABEZADO */}
+    {/* ENCABEZADO */}
+    <div className="mb-12 grid gap-7 md:mb-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
       <div>
         <p className="text-[10px] uppercase tracking-[0.38em] text-[#a96a0a]">
-          Presencia
+          Presencia Grupo A&amp;C
         </p>
 
-        <h3 className="mt-4 max-w-xs text-3xl font-semibold tracking-[-0.045em] text-[#2c241a]">
-          Nuestras sedes
+        <h3 className="mt-5 max-w-xl text-4xl font-semibold leading-[0.98] tracking-[-0.05em] text-[#2c241a] md:text-5xl">
+          Dos sedes.
+          <br />
+          Una misma forma de acompañar.
         </h3>
-
-        <p className="mt-5 max-w-xs text-sm font-light leading-7 text-[#2c241a]/55">
-          Espacios donde acompañamos decisiones, procesos y crecimiento
-          empresarial.
-        </p>
       </div>
 
-      {/* SEDES */}
-      <div className="grid gap-5 md:grid-cols-2">
-        {offices.map((office, index) => (
-          <a
-            key={office.name}
-            href={office.maps}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              group
-              relative
-              overflow-hidden
-              rounded-[1.7rem]
-              border
-              border-[#815411]/15
-              bg-white/38
-              p-7
-              shadow-[0_20px_60px_rgba(91,61,19,0.08)]
-              backdrop-blur-xl
+      <p className="max-w-xl text-sm font-light leading-[1.9] text-[#2c241a]/55 lg:justify-self-end md:text-base">
+        Elige la ubicación que te resulte más cercana y abre directamente la
+        ruta en Google Maps.
+      </p>
+    </div>
+
+    {/* DUALIDAD DE SEDES */}
+    <div className="grid gap-5 lg:grid-cols-2">
+      {offices.map((office, index) => (
+        <a
+          key={office.name}
+          href={office.maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Abrir ubicación de ${office.name} en Google Maps`}
+          className={`
+            group
+            relative
+            flex
+            min-h-[390px]
+            flex-col
+            justify-between
+            overflow-hidden
+            rounded-[2.2rem]
+            border
+            p-7
+            shadow-[0_25px_80px_rgba(91,61,19,0.10)]
+            transition-all
+            duration-700
+            hover:-translate-y-1
+            hover:shadow-[0_35px_100px_rgba(91,61,19,0.17)]
+            md:min-h-[430px]
+            md:p-10
+            ${
+              index === 0
+                ? "border-[#815411]/15 bg-[#f6e7ca]"
+                : "border-[#815411]/20 bg-[#e8c17e]"
+            }
+          `}
+        >
+
+         {/* FOTOGRAFÍA RESPONSIVA DE LA SEDE */}
+<picture className="pointer-events-none absolute inset-0">
+  {/* DESKTOP */}
+  <source
+    media="(min-width: 768px)"
+    srcSet={office.imageDesktop}
+  />
+
+  {/* MOBILE: ES LA IMAGEN DE RESPALDO */}
+  <img
+    src={office.imageMobile}
+    alt={`Fachada de ${office.name} de Grupo A&C`}
+    width={1080}
+    height={1350}
+    loading="lazy"
+    decoding="async"
+    className="
+      h-full
+      w-full
+      object-cover
+      object-center
+      opacity-[0.32]
+      saturate-[0.72]
+      contrast-[0.95]
+      transition-all
+      duration-[1400ms]
+      md:opacity-[0.3]
+      group-hover:scale-[1.035]
+      group-hover:opacity-[0.46]
+      group-hover:saturate-[0.85]
+    "
+  />
+</picture>
+
+{/* VELO CROMÁTICO PARA CONSERVAR LEGIBILIDAD */}
+<div
+  className={`
+    pointer-events-none
+    absolute
+    inset-0
+    ${
+      index === 0
+        ? "bg-gradient-to-r from-[#f6e7ca]/88 via-[#f6e7ca]/60 to-[#f6e7ca]/22"
+        : "bg-gradient-to-r from-[#e8c17e]/88 via-[#e8c17e]/62 to-[#e8c17e]/24"
+    }
+  `}
+/>
+
+{/* PROFUNDIDAD INFERIOR */}
+<div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2c241a]/10 via-transparent to-white/10" />
+
+          {/* MICRO-MAPA VECTORIAL */}
+          <div
+            className={`
+              pointer-events-none
+              absolute
+              right-[-35px]
+              top-[-25px]
+              h-[275px]
+              w-[360px]
               transition-all
-              duration-500
-              hover:-translate-y-1
-              hover:border-[#b87a18]/35
-              hover:bg-white/58
-              hover:shadow-[0_26px_80px_rgba(91,61,19,0.14)]
-            "
+              duration-1000
+              group-hover:translate-x-[-8px]
+              group-hover:translate-y-[8px]
+              group-hover:scale-105
+              ${
+                index === 0
+                  ? "text-[#a96a0a]/18"
+                  : "text-[#70450b]/20"
+              }
+            `}
           >
-            {/* LUZ DORADA */}
-            <div
-              className="
-                pointer-events-none
-                absolute
-                -right-12
-                -top-12
-                h-36
-                w-36
-                rounded-full
-                bg-[#e9aa34]/0
-                blur-[50px]
-                transition-all
-                duration-700
-                group-hover:bg-[#e9aa34]/20
-              "
-            />
+            <svg
+              viewBox="0 0 400 280"
+              fill="none"
+              className="h-full w-full"
+              aria-hidden="true"
+            >
+              <path
+                d="M-10 225C54 196 64 109 132 119C197 129 184 218 256 198C321 180 304 88 417 65"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeDasharray="7 9"
+              />
 
-            {/* LÍNEA SUPERIOR */}
-            <div
-              className="
-                absolute
-                left-8
-                right-8
-                top-0
-                h-px
-                bg-gradient-to-r
-                from-transparent
-                via-[#b87a18]/45
-                to-transparent
-              "
-            />
+              <path
+                d="M24 76C91 88 112 43 178 56C245 69 238 137 315 129C353 125 378 103 417 96"
+                stroke="currentColor"
+                strokeWidth="1"
+              />
 
-            <div className="relative z-10">
-              <div className="mb-10 flex items-center justify-between">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-[#a96a0a]">
-                  0{index + 1}
-                </span>
+              <circle
+                cx="256"
+                cy="198"
+                r="22"
+                fill="currentColor"
+                opacity="0.16"
+              />
 
-                <span className="text-xs text-[#2c241a]/35 transition-colors duration-300 group-hover:text-[#7c4d08]">
-                  Google Maps ↗
-                </span>
-              </div>
+              <circle
+                cx="256"
+                cy="198"
+                r="7"
+                fill="currentColor"
+              />
 
-              <h4 className="text-xl font-medium tracking-[-0.03em] text-[#2c241a]">
-                {office.name}
-              </h4>
+              <circle
+                cx="256"
+                cy="198"
+                r="3"
+                fill="currentColor"
+                opacity="0.95"
+              />
+            </svg>
+          </div>
 
-              <p className="mt-3 max-w-md text-sm font-light leading-7 text-[#2c241a]/55">
-                {office.address}
+          {/* BRILLO SUPERIOR */}
+          <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/75 to-transparent" />
+
+          {/* CABECERA */}
+          <div className="relative z-10 flex items-start justify-between gap-6">
+            <div>
+              <span className="text-[10px] uppercase tracking-[0.32em] text-[#8b570d]/65">
+                Ubicación oficial
+              </span>
+
+              <p className="mt-3 text-xs uppercase tracking-[0.18em] text-[#2c241a]/40">
+                {office.location}
               </p>
             </div>
 
-            <div className="pointer-events-none absolute inset-[1px] rounded-[1.65rem] border border-white/45" />
-          </a>
-        ))}
-      </div>
+            <span className="font-serif text-5xl font-semibold text-[#8b570d]/18 md:text-6xl">
+              0{index + 1}
+            </span>
+          </div>
+
+          {/* INFORMACIÓN */}
+          <div className="relative z-10 mt-24 max-w-md">
+            <div className="mb-6 h-px w-12 bg-[#a96a0a]/60 transition-all duration-500 group-hover:w-20" />
+
+            <h4 className="text-3xl font-semibold tracking-[-0.045em] text-[#2c241a] md:text-4xl">
+              {office.name}
+            </h4>
+
+            <p className="mt-5 max-w-sm text-sm font-light leading-[1.8] text-[#2c241a]/58">
+              {office.statement}
+            </p>
+
+            <address className="mt-7 not-italic text-sm font-medium leading-[1.7] text-[#2c241a]/72">
+              {office.address}
+            </address>
+          </div>
+
+          {/* CTA */}
+          <div className="relative z-10 mt-10 flex items-center justify-between border-t border-[#815411]/12 pt-6">
+            <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#754708]/70">
+              {office.routeLabel}
+            </span>
+
+            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#815411]/15 bg-white/35 text-lg text-[#754708] transition-all duration-500 group-hover:rotate-45 group-hover:border-[#a96a0a]/40 group-hover:bg-[#a96a0a] group-hover:text-white">
+              ↗
+            </span>
+          </div>
+
+          {/* BORDE INTERIOR */}
+          <div className="pointer-events-none absolute inset-[1px] rounded-[2.15rem] border border-white/45" />
+        </a>
+      ))}
+    </div>
+
+    {/* APOYO DE CONTACTO */}
+    <div className="mt-8 flex flex-col items-center justify-between gap-4 border-t border-[#815411]/12 pt-7 text-center sm:flex-row sm:text-left">
+      <p className="text-xs font-light leading-6 text-[#2c241a]/45">
+        ¿Prefieres confirmar tu visita antes de desplazarte?
+      </p>
+
+      <a
+        href={contactLinks.whatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#8b570d] transition-colors hover:text-[#c96a1b]"
+      >
+        Consultar por WhatsApp →
+      </a>
     </div>
   </div>
 </section>
@@ -644,7 +795,7 @@ export default function Footer() {
       justify-between
       gap-8
       px-6
-      py-10
+      py-7
       md:flex-row
     "
   >
@@ -658,33 +809,39 @@ export default function Footer() {
       </p>
     </div>
 
-    {/* FASI */}
-    <div className="flex items-center gap-4">
-      <div className="h-px w-12 bg-gradient-to-r from-transparent to-fuchsia-700/35" />
+    {/* FASI · CRÉDITO TECNOLÓGICO */}
+<div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
+  <div className="hidden h-px w-10 bg-gradient-to-r from-transparent to-[#815411]/35 sm:block" />
 
-      <div className="relative">
-        <div className="absolute inset-0 scale-110 bg-fuchsia-500/18 blur-3xl" />
+  <div className="max-w-[230px] text-center sm:text-right">
+    <p className="text-[8px] uppercase leading-[1.7] tracking-[0.2em] text-[#342618]/38">
+      Diseño y desarrollo de plataforma
+    </p>
 
-        <Image
-          src="/brands/fasi-footer.png"
-          alt="FASI S.A.S."
-          width={160}
-          height={60}
-          className="
-            relative
-            z-10
-            h-auto
-            w-[145px]
-            opacity-100
-            drop-shadow-[0_10px_22px_rgba(92,45,10,0.22)]
-            md:w-[160px]
-          "
-        />
-      </div>
-
-      <div className="h-px w-12 bg-gradient-to-l from-transparent to-fuchsia-700/35" />
-    </div>
+    <p className="mt-1 text-[11px] font-medium leading-[1.45] text-[#342618]/62">
+      Fábrica de Sistemas de Información
+    </p>
   </div>
+
+  <Image
+    src="/brands/fasi-footer-v2.png"
+    alt="FASI · Fábrica de Sistemas de Información"
+    width={120}
+    height={45}
+    className="
+      h-auto
+      w-[58px]
+      object-contain
+      opacity-85
+      drop-shadow-[0_7px_14px_rgba(92,45,10,0.14)]
+      md:w-[52px]
+    "
+  />
+</div>
+
+      
+    </div>
+
 </div>
       </div>
     </footer>

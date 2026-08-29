@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import ServiceLandingRenderer from "@/components/solutions/ServiceLandingRenderer";import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
@@ -73,6 +73,10 @@ export default async function ServiceDetailPage({
   if (!service) {
     notFound();
   }
+
+  if (service.landing) {
+  return <ServiceLandingRenderer service={service} />;
+}
 
   return (
     <main className="min-h-screen bg-[#f5f2eb] text-black">

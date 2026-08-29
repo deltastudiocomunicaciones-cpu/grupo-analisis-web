@@ -17,30 +17,60 @@ export async function POST(request: Request) {
     const formData = await request.formData();
 
     const nombre = String(formData.get("nombre") || "").trim();
-    const empresa = String(formData.get("empresa") || "").trim();
-    const telefono = String(formData.get("telefono") || "").trim();
-    const correo = String(formData.get("correo") || "").trim();
-    const servicio = String(formData.get("servicio") || "").trim();
-    const mensaje = String(formData.get("mensaje") || "").trim();
+const empresa = String(formData.get("empresa") || "").trim();
 
-    if (!nombre || !telefono || !correo || !mensaje) {
-      return NextResponse.json(
-        { error: "Faltan campos obligatorios." },
-        { status: 400 }
-      );
-    }
+let telefono = String(formData.get("telefono") || "").trim();
+let correo = String(formData.get("correo") || "").trim();
 
+const contacto = String(formData.get("contacto") || "").trim();
+const perfil = String(formData.get("perfil") || "").trim();
+const autorizacion = String(
+  formData.get("autorizacion") || ""
+).trim();
+
+const servicio = String(formData.get("servicio") || "").trim();
+const mensaje = String(formData.get("mensaje") || "").trim();
+const redirectTo = String(formData.get("redirectTo") || "").trim();
+
+if (contacto) {
+  if (contacto.includes("@")) {
+    correo = correo || contacto;
+  } else {
+    telefono = telefono || contacto;
+  }
+}
+
+if (!nombre || (!telefono && !correo) || !mensaje) {
+  return NextResponse.json(
+    {
+      error:
+        "Debes indicar tu nombre, un medio de contacto y la información solicitada.",
+    },
+    { status: 400 }
+  );
+}
+
+if (perfil && autorizacion !== "si") {
+  return NextResponse.json(
+    {
+      error:
+        "Debes autorizar el tratamiento de datos para solicitar la evaluación.",
+    },
+    { status: 400 }
+  );
+}
     const safeNombre = escapeHtml(nombre);
     const safeEmpresa = escapeHtml(empresa || "No especificada");
-    const safeTelefono = escapeHtml(telefono);
-    const safeCorreo = escapeHtml(correo);
+    const safeTelefono = escapeHtml(telefono || "No especificado");
+    const safeCorreo = escapeHtml(correo || "No especificado");
+    const safePerfil = escapeHtml(perfil || "No especificado");
     const safeServicio = escapeHtml(servicio || "No especificado");
     const safeMensaje = escapeHtml(mensaje).replaceAll("\n", "<br />");
 
     const { error } = await resend.emails.send({
       from: "Grupo A&C <contacto@grupoayc.co>",
       to: ["grupoanalisisyconsultoria@gmail.com"],
-      replyTo: correo,
+     replyTo: correo || undefined,
       subject: `Nueva solicitud web · ${nombre}`,
 
       html: `
@@ -173,14 +203,32 @@ export async function POST(request: Request) {
                     </tr>
 
                     <tr>
-                      <td style="padding:14px 0;border-bottom:1px solid #ececec;color:#777;">
-                        Servicio
-                      </td>
-                      <td style="padding:14px 0;border-bottom:1px solid #ececec;font-weight:600;">
-                        ${safeServicio}
-                      </td>
-                    </tr>
-                  </table>
+  <td style="padding:14px 0;border-bottom:1px solid #ececec;color:#777;">
+    Servicio
+  </td>
+
+  <td style="padding:14px 0;border-bottom:1px solid #ececec;font-weight:600;">
+    ${safeServicio}
+  </td>
+</tr>
+
+${
+  perfil
+    ? `
+      <tr>
+        <td style="padding:14px 0;border-bottom:1px solid #ececec;color:#777;">
+          Perfil tributario
+        </td>
+
+        <td style="padding:14px 0;border-bottom:1px solid #ececec;font-weight:600;">
+          ${safePerfil}
+        </td>
+      </tr>
+    `
+    : ""
+}
+
+</table>
 
                   <div style="margin-top:28px;">
                     <p
@@ -238,10 +286,15 @@ export async function POST(request: Request) {
       );
     }
 
-    return NextResponse.redirect(
-      new URL("/contacto?enviado=1#formulario-contacto", request.url),
-      303
-    );
+    const finalRedirect =
+  redirectTo.startsWith("/") && !redirectTo.startsWith("//")
+    ? redirectTo
+    : "/contacto?enviado=1#formulario-contacto";
+
+return NextResponse.redirect(
+  new URL(finalRedirect, request.url),
+  303
+);
   } catch (error) {
     console.error("Error en /api/contacto:", error);
 

@@ -5,6 +5,58 @@ export type ServiceSection = {
   text: string;
 };
 
+export type ServiceCta = {
+  label: string;
+  href: string;
+};
+
+export type ServiceLandingItem = {
+  title: string;
+  text?: string;
+  subtitle?: string;
+  criterion?: string;
+  badge?: string;
+  group?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
+export type ServiceLandingSection = {
+  id?: string;
+  layout:
+    | "cards"
+    | "compact"
+    | "steps"
+    | "profiles"
+    | "split"
+    | "assessment"
+    | "diagnostic"
+    | "faq"
+    | "cta";
+  theme?: "light" | "warm" | "dark";
+  eyebrow?: string;
+  title: string;
+  description?: string;
+  columns?: 2 | 3 | 4 | 6;
+  items?: ServiceLandingItem[];
+  primaryCta?: ServiceCta;
+  secondaryCta?: ServiceCta;
+
+   ctaHeading?: string;
+  trustText?: string;
+};
+
+export type ServiceLanding = {
+  heroEyebrow: string;
+  heroTitle: string;
+  heroDescription: string;
+  heroSupportingText?: string;
+  primaryCta: ServiceCta;
+  secondaryCta?: ServiceCta;
+  trustPoints?: string[];
+  sections: ServiceLandingSection[];
+};
+
 export type ServiceItem = {
   slug: string;
   title: string;
@@ -21,9 +73,11 @@ export type ServiceItem = {
   deliverables: string[];
   ctaLabel: string;
   accentColor: string;
+  landing?: ServiceLanding;
 };
 
 export const services: ServiceItem[] = [
+
   {
     slug: "asesoria-tributaria-financiera",
     title: "Asesoría Tributaria y Financiera",
@@ -370,48 +424,441 @@ export const services: ServiceItem[] = [
   },
   {
   slug: "declaracion-de-renta",
-  title: "Declaración de Renta",
+  title: "Declaración de Renta para Personas Naturales",
   description:
-    "Preparación, revisión y presentación de declaraciones de renta para personas naturales, empresarios y empresas, con acompañamiento técnico y control documental.",
-  brand: "CEC",
+    "Preparación, revisión y presentación de declaraciones de renta para personas naturales, con análisis tributario, patrimonial y financiero especializado.",
+  brand: "Grupo A&C",
   href: "/soluciones/declaracion-de-renta",
   image: "/fotos/servicios/declaracion-renta.png",
   category: "operational",
-  eyebrow: "Gestión tributaria",
+  eyebrow: "Declaración de renta · Personas naturales",
   heroTitle:
-    "Declaración de renta con revisión técnica, orden documental y acompañamiento especializado.",
+    "Su declaración de renta es más que llenar un formulario.",
   technicalIntro:
-    "Este servicio acompaña la preparación, revisión y presentación de la declaración de renta, verificando soportes, obligaciones, consistencia de la información y oportunidades de mejora dentro del marco normativo.",
+    "Analizamos su información tributaria, patrimonial y financiera para preparar una declaración consistente con su realidad económica.",
   sections: [
     {
-      title: "Revisión de información",
-      text: "Validación de ingresos, patrimonio, costos, deducciones, retenciones y soportes necesarios para preparar correctamente la declaración.",
+      title: "Conocemos su situación",
+      text: "Identificamos su actividad económica, fuentes de ingreso, patrimonio y demás características relevantes.",
     },
     {
-      title: "Preparación y validación",
-      text: "Construcción de la declaración, revisión de consistencia y análisis de posibles riesgos o diferencias antes de su presentación.",
+      title: "Analizamos y preparamos",
+      text: "Revisamos la información, clasificamos los conceptos aplicables y estructuramos la declaración.",
     },
     {
-      title: "Presentación y acompañamiento",
-      text: "Acompañamiento durante la presentación y orientación frente a obligaciones posteriores, requerimientos o ajustes necesarios.",
+      title: "Revisamos y presentamos",
+      text: "Aplicamos controles de consistencia y acompañamos la presentación dentro del alcance contratado.",
     },
   ],
   benefits: [
     "Mayor seguridad en la preparación de la declaración.",
     "Reducción de errores y omisiones.",
-    "Mejor organización de soportes tributarios.",
-    "Acompañamiento técnico durante el proceso.",
+    "Aplicación de tratamientos respaldados por la normativa.",
+    "Acompañamiento tributario especializado.",
   ],
   deliverables: [
-    "Revisión de información tributaria.",
+    "Revisión de información tributaria y patrimonial.",
     "Declaración preparada y validada.",
-    "Lista de soportes y observaciones.",
-    "Orientación posterior a la presentación.",
+    "Relación de soportes y observaciones.",
+    "Acompañamiento durante la presentación.",
   ],
-  ctaLabel: "Preparar declaración de renta",
-  accentColor: "#16a34a",
+  ctaLabel: "Preparar mi declaración",
+  accentColor: "#c96a1b",
+
+  landing: {
+  heroEyebrow: "Declaración de renta · Personas naturales",
+
+  heroTitle:
+    "Prepara tu declaración de renta sin enredos y paga lo que legalmente corresponde.",
+
+  heroDescription:
+    "Analizamos tus ingresos, patrimonio y realidad financiera para identificar los tratamientos legales aplicables y preparar una declaración consistente y sustentada.",
+
+  heroSupportingText:
+    "Un proceso digital para empleados, pensionados, independientes, inversionistas y empresarios en Colombia, con el respaldo tributario de Grupo A&C.",
+
+  primaryCta: {
+    label: "Quiero preparar mi declaración con TRACO",
+    href: "#comencemos",
+  },
+
+  secondaryCta: {
+    label: "Evaluar si debo declarar",
+    href: "#debo-declarar",
+  },
+
+  trustPoints: [
+    "Respaldo de Grupo A&C · Desde 2006",
+    "Revisión y rigor técnico",
+    "Atención digital en Colombia",
+  ],
+
+    sections: [
+      {
+        id: "debo-declarar",
+        layout: "assessment",
+        theme: "light",
+        eyebrow: "Identificación",
+        title: "¿Te toca declarar renta este año o te estás arriesgando a una multa?",
+        description:"Declarar no siempre significa pagar. Revisar tu situación a tiempo ayuda a prevenir sanciones de la DIAN y, según el resultado, podría permitir identificar un saldo a favor. Revisa si cumples alguna de estas condiciones:",
+        columns: 2,
+        items: [
+           {
+      title: "Tus ingresos",
+      subtitle:
+        "Salarios, honorarios, servicios independientes o arrendamientos.",
+      criterion:
+        "¿Tus ingresos acumulados durante el año podrían superar el tope legal correspondiente?",
+      badge:
+        "Aplica para empleados, pensionados, rentistas de capital y trabajadores independientes.",
+    },
+    {
+      title: "Tu patrimonio",
+      subtitle:
+        "Casas, apartamentos, vehículos, terrenos, inversiones o cuentas de ahorro.",
+      criterion:
+        "¿El valor total de tus bienes al 31 de diciembre podría exceder el límite fijado para el año gravable?",
+      badge:
+        "Tener propiedades no significa necesariamente tener un impuesto por pagar.",
+    },
+    {
+      title: "Tarjetas y consignaciones",
+      subtitle:
+        "Compras con tarjeta, consumos personales, consignaciones y dinero recibido en cuentas.",
+      criterion:
+        "¿Realizaste compras elevadas o recibiste transferencias frecuentes durante el año?",
+      badge:
+        "Los movimientos de dinero de terceros también pueden aparecer dentro de la información reportada a tu nombre.",
+    },
+    {
+      title: "Tu actividad económica",
+      subtitle:
+        "Comerciantes, prestadores de servicios, empresarios o responsables de IVA.",
+      criterion:
+        "¿Realizas actividades comerciales o tienes responsabilidades tributarias registradas?",
+      badge:
+        "Revisar las obligaciones a tiempo ayuda a prevenir omisiones, intereses y posibles sanciones.",
+    },
+  ],
+  primaryCta: {
+    label: "Validar mi caso",
+    href: "/contacto?servicio=declaracion-de-renta&consulta=validacion",
+  },
 },
-  {
+
+      {
+  id: "educacion",
+  layout: "cards",
+  theme: "dark",
+  eyebrow: "Así protegemos tu declaración",
+  title:
+    "Nos encargamos de la complejidad para que declares con claridad.",
+  description:
+    "No trasladamos datos de un lugar a otro. Analizamos tu realidad económica, identificamos los tratamientos que correspondan y preparamos una declaración sustentada.",
+  columns: 3,
+  items: [
+    {
+      title: "Auditoría integral de activos e ingresos",
+      text:
+        "Revisamos tus cuentas, propiedades, inversiones e ingresos en Colombia o en el exterior para verificar que la información sea completa y consistente frente a la DIAN.",
+    },
+    {
+      title: "Optimización legal de deducciones",
+      text:
+        "Identificamos y aplicamos las deducciones, rentas exentas y retenciones que legalmente correspondan y cuenten con los soportes necesarios, para que no pagues más de lo debido.",
+    },
+    {
+      title: "Presentación segura y oportuna",
+      text:
+        "Preparamos y acompañamos la presentación de tu declaración con rigor técnico, reduciendo riesgos de clasificación, omisiones y presentación extemporánea.",
+    },
+  ],
+},
+      {
+  id: "propuesta",
+  layout: "split",
+  theme: "light",
+  eyebrow: "El cierre de confianza",
+  title:
+    "Declarar bien no es pagar de más. Es pagar lo justo con tranquilidad.",
+  description:
+    "Determinamos tu situación tributaria real, aplicamos los beneficios legalmente procedentes y preparamos una declaración consistente, sustentada y lista para presentar ante la DIAN.",
+  items: [
+    {
+      title: "Prevención de sanciones y recargos",
+      text:
+        "Revisamos tus obligaciones y fechas de presentación para reducir riesgos de extemporaneidad, omisiones y errores que puedan generar sanciones o intereses.",
+    },
+    {
+      title: "Pago justo y optimización legal",
+      text:
+        "Aplicamos las deducciones, rentas exentas y retenciones que correspondan a tu situación y cuenten con el respaldo documental exigido.",
+    },
+    {
+      title: "Rigor financiero y tributario",
+      text:
+        "Cruzamos la información disponible para que tu declaración refleje de forma consistente tu realidad económica y reduzca posibles diferencias frente a la DIAN.",
+    },
+    {
+      title: "Acompañamiento de principio a fin",
+      text:
+        "No te dejamos solo frente a una plataforma. TRACO integra tecnología con el acompañamiento profesional del equipo de Grupo A&C.",
+    },
+  ],
+  ctaHeading:
+    "¿Listo para preparar tu declaración de renta sin complicaciones?",
+  primaryCta: {
+    label: "Quiero preparar mi declaración con TRACO",
+    href:
+      "/contacto?servicio=declaracion-de-renta&marca=traco",
+  },
+  trustText:
+    "Rigor técnico · Proceso digital · Respaldo profesional de Grupo A&C",
+},
+
+      {
+  id: "ruta",
+  layout: "steps",
+  theme: "warm",
+  eyebrow: "La Ruta TRACO",
+  title: "Así de fácil es preparar tu declaración con TRACO.",
+  description:
+    "De tus documentos a una declaración revisada, sustentada y acompañada hasta su presentación, en cuatro pasos.",
+  columns: 4,
+  items: [
+    {
+      title: "Diagnóstico inicial personalizado",
+      text:
+        "Entendemos tu perfil como empleado, pensionado, independiente, inversionista o empresario para solicitarte únicamente los documentos que realmente necesitas.",
+    },
+    {
+      title: "Recepción digital de documentos",
+      text:
+        "Nos compartes extractos, certificados y soportes por los canales definidos para el proceso, sin desplazamientos ni trámites físicos innecesarios.",
+    },
+    {
+      title: "Análisis, optimización y preparación",
+      text:
+        "Los especialistas de Grupo A&C cruzan tu información, aplican los tratamientos legales que correspondan y estructuran una declaración consistente con tu realidad económica.",
+    },
+    {
+      title: "Presentación y entrega",
+      text:
+        "Revisamos el resultado final, acompañamos la presentación ante la DIAN y te entregamos la declaración y los soportes correspondientes al servicio contratado.",
+    },
+  ],
+  ctaHeading: "¿Tienes dudas durante el proceso?",
+  trustText:
+    "Cuentas con acompañamiento profesional para resolver inquietudes sobre tus documentos, obligaciones y fechas de vencimiento.",
+  primaryCta: {
+    label: "Iniciar mi proceso con TRACO",
+    href:
+      "/contacto?servicio=declaracion-de-renta&marca=traco&etapa=inicio",
+  },
+},
+
+      {
+        id: "perfiles",
+        layout: "profiles",
+        theme: "light",
+        eyebrow: "Segmentación",
+        title:
+          "No todas las declaraciones de renta tienen la misma complejidad.",
+        description:
+          "Identifique cuál de estos perfiles se parece más a su situación.",
+        columns: 3,
+        items: [
+          {
+            title: "Empleados y pensionados",
+            text: "Ingresos laborales, pensiones, retenciones, patrimonio y beneficios aplicables.",
+            ctaLabel: "Consultar mi caso",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=empleado",
+          },
+          {
+            title: "Profesionales independientes",
+            text: "Honorarios, prestación de servicios, costos, gastos, aportes y retenciones.",
+            ctaLabel: "Consultar mi caso",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=independiente",
+          },
+          {
+            title: "Propietarios de inmuebles",
+            text: "Vivienda, arrendamientos, ventas, financiación y composición patrimonial.",
+            ctaLabel: "Consultar mi caso",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=propietario",
+          },
+          {
+            title: "Inversionistas",
+            text: "Dividendos, acciones, fondos, inversiones y rendimientos financieros.",
+            ctaLabel: "Consultar mi caso",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=inversionista",
+          },
+          {
+            title: "Empresarios y socios",
+            text: "Participaciones societarias, dividendos, ingresos personales y estructuras patrimoniales.",
+            ctaLabel: "Consultar mi caso",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=empresario",
+          },
+          {
+            title: "Patrimonios u operaciones complejas",
+            text: "Múltiples activos, operaciones especiales o situaciones nacionales e internacionales que exigen mayor análisis.",
+            ctaLabel: "Hablar con especialista",
+            ctaHref:
+              "/contacto?servicio=declaracion-de-renta&perfil=complejo",
+          },
+        ],
+      },
+
+      {
+  id: "respaldo",
+  layout: "cards",
+  theme: "dark",
+  eyebrow: "Confianza y autoridad",
+  title:
+    "El respaldo de una firma experta detrás de tu tranquilidad tributaria.",
+  description:
+    "TRACO integra tecnología, criterio profesional y la rigurosidad tributaria de Grupo A&C para preparar una declaración coherente con tu realidad económica.",
+  columns: 3,
+  items: [
+    {
+      title: "20 años de experiencia tributaria",
+      text:
+        "El respaldo de Grupo A&C, una firma con trayectoria desde 2006 acompañando decisiones contables, tributarias y empresariales de personas y organizaciones en Colombia.",
+    },
+    {
+      title: "Rigor técnico y control de calidad",
+      text:
+        "Tu declaración no depende únicamente de un proceso automatizado. Especialistas tributarios revisan, validan y cruzan la información para reducir errores, omisiones e inconsistencias.",
+    },
+    {
+      title: "Atención digital en Colombia",
+      text:
+        "Recibe orientación y acompañamiento remoto sin importar tu ciudad, mediante los canales definidos para compartir información y avanzar durante cada etapa del proceso.",
+    },
+  ],
+  ctaHeading:
+    "¿Quieres que un especialista revise tu caso antes de declarar?",
+  trustText:
+    "Orientación personalizada · Proceso digital · Respaldo profesional de Grupo A&C",
+  primaryCta: {
+    label: "Hablar con un especialista tributario",
+    href:
+      "/contacto?servicio=declaracion-de-renta&marca=traco&consulta=especialista",
+  },
+},
+     {
+  id: "comencemos",
+  layout: "diagnostic",
+  theme: "warm",
+  eyebrow: "Evaluación inicial",
+  title:
+    "¿No sabes por dónde empezar? Analizamos tu caso sin compromiso.",
+  description:
+    "No necesitas calcular nada ni tener conocimientos contables. Comparte tres datos básicos y un especialista revisará tu situación para indicarte la ruta adecuada.",
+  primaryCta: {
+    label: "Solicitar evaluación inicial sin costo",
+    href: "/api/contacto",
+  },
+  secondaryCta: {
+    label: "Hablar directamente por WhatsApp",
+    href:
+      "https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20solicitar%20una%20evaluaci%C3%B3n%20inicial%20para%20mi%20declaraci%C3%B3n%20de%20renta%20con%20TRACO.",
+  },
+},
+     {
+  id: "preguntas",
+  layout: "faq",
+  theme: "light",
+  eyebrow: "Preguntas frecuentes",
+  title: "Antes de declarar, resolvamos tus dudas.",
+  description:
+    "Encuentra respuestas sobre tus obligaciones, las alternativas legales disponibles y el acompañamiento de TRACO.",
+  items: [
+    {
+      group: "Obligación y sanciones",
+      title: "¿Cómo sé si estoy obligado a declarar renta?",
+      text:
+        "La obligación depende de las condiciones vigentes para el año gravable y de factores como ingresos, patrimonio, compras, consumos, movimientos financieros y responsabilidades frente al IVA. En TRACO revisamos tu situación antes de determinar si debes declarar.",
+    },
+    {
+      group: "Obligación y sanciones",
+      title:
+        "¿Qué sucede si se vence mi fecha de presentación ante la DIAN?",
+      text:
+        "Una presentación extemporánea puede generar sanciones y, cuando existe un saldo por pagar, intereses. Es importante revisar el caso cuanto antes para determinar la obligación y la ruta de regularización correspondiente.",
+    },
+    {
+      group: "Obligación y sanciones",
+      title: "¿Puedo corregir declaraciones de años anteriores?",
+      text:
+        "Sí, cuando proceda según los términos, procedimientos y plazos aplicables. Primero revisamos la declaración presentada para determinar el tipo de corrección y sus posibles efectos tributarios.",
+    },
+
+    {
+      group: "Ahorro y resultado tributario",
+      title:
+        "¿Declarar renta significa necesariamente pagar impuesto?",
+      text:
+        "No. Presentar una declaración y tener un impuesto a cargo son situaciones diferentes. El resultado depende de tus ingresos, patrimonio, retenciones, deducciones y demás tratamientos aplicables.",
+    },
+    {
+      group: "Ahorro y resultado tributario",
+      title: "¿Puedo aplicar deducciones o beneficios para pagar menos?",
+      text:
+        "Podemos aplicar las deducciones, rentas exentas, retenciones y demás tratamientos que legalmente correspondan y cuenten con los soportes requeridos. El objetivo es determinar correctamente el valor que debes pagar, sin excesos ni tratamientos improcedentes.",
+    },
+    {
+      group: "Ahorro y resultado tributario",
+      title:
+        "¿Qué sucede si tengo propiedades, acciones o activos en el exterior?",
+      text:
+        "Estos activos pueden influir en tu patrimonio, ingresos, dividendos, ganancias ocasionales o en otras obligaciones informativas. Tenerlos no significa automáticamente pagar más, pero sí requiere una revisión particular.",
+    },
+
+    {
+      group: "El servicio TRACO",
+      title: "¿Qué documentos necesito enviar?",
+      text:
+        "Depende de tu perfil económico. Después del diagnóstico inicial te indicaremos únicamente los certificados, extractos, soportes patrimoniales, documentos de inversiones y demás información necesaria para tu caso.",
+    },
+    {
+      group: "El servicio TRACO",
+      title:
+        "¿Cómo manejan los casos de independientes o socios de empresas?",
+      text:
+        "Para independientes revisamos honorarios, contratos, aportes, retenciones, costos y gastos soportados. Para socios analizamos participaciones, dividendos, préstamos, pagos recibidos y demás relaciones económicas con la empresa.",
+    },
+    {
+      group: "El servicio TRACO",
+      title: "¿Atienden a personas fuera de Medellín?",
+      text:
+        "Sí. El proceso de TRACO puede gestionarse de manera digital desde diferentes ciudades y municipios de Colombia, desde la recepción de documentos hasta el acompañamiento durante la presentación.",
+    },
+  ],
+},
+   {
+  id: "cierre",
+  layout: "cta",
+  theme: "dark",
+  eyebrow: "Da el siguiente paso",
+  title: "Tu tranquilidad tributaria está a un paso.",
+  description:
+    "Prepara tu declaración con criterio técnico, aprovecha los tratamientos legales que correspondan y reduce el riesgo de errores, inconsistencias y sanciones. TRACO integra una experiencia digital con el respaldo profesional de Grupo A&C.",
+  primaryCta: {
+    label: "Quiero preparar mi declaración con TRACO",
+    href: "#comencemos",
+  },
+  trustText:
+    "Atención digital en Colombia · Rigor técnico · Explicaciones claras · Respaldo de Grupo A&C",
+  },
+      ],
+  },
+},
+{
   slug: "software-sadi",
   title: "Software SADI",
   description:
