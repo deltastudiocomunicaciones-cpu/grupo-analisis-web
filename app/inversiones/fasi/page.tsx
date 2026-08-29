@@ -549,133 +549,397 @@ export default function FasiPage() {
 </section>
 
       {/* DIAGNÓSTICO */}
-      <section
-        id="diagnostico"
-        className="relative bg-[#edf2f3] px-6 py-24 md:py-32"
+<section
+  id="diagnostico"
+  className="
+    relative
+    overflow-hidden
+    bg-[#edf2f3]
+    px-4
+    py-20
+    sm:px-6
+    md:py-28
+    lg:py-32
+  "
+>
+  {/* ATMÓSFERA */}
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-40 top-0 h-[460px] w-[460px] rounded-full bg-white/75 blur-[130px]" />
+
+    <div className="absolute -bottom-40 right-0 h-[420px] w-[420px] rounded-full bg-[#87a8c2]/15 blur-[130px]" />
+  </div>
+
+  <div
+    className="
+      relative
+      mx-auto
+      grid
+      min-w-0
+      max-w-7xl
+      gap-10
+      lg:grid-cols-[0.82fr_1.18fr]
+      lg:gap-14
+    "
+  >
+    {/* INFORMACIÓN */}
+    <div className="min-w-0">
+      <p className="text-[10px] uppercase tracking-[0.3em] text-[#327f75] sm:text-xs sm:tracking-[0.36em]">
+        Conversación inicial
+      </p>
+
+      <h2
+        className="
+          mt-5
+          max-w-2xl
+          text-[2.35rem]
+          font-semibold
+          leading-[0.98]
+          tracking-[-0.055em]
+          text-[#07141f]
+          sm:text-5xl
+          md:text-6xl
+        "
       >
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.82fr_1.18fr]">
-          <div>
-            <p className="text-xs uppercase tracking-[0.36em] text-[#327f75]">
-              Conversación inicial
-            </p>
+        ¿Tu visión empresarial requiere software de alto nivel?
+      </h2>
 
-            <h2 className="mt-6 text-4xl font-semibold leading-[0.98] tracking-[-0.055em] md:text-6xl">
-              ¿Tu visión empresarial requiere software de alto nivel?
-            </h2>
+      <p className="mt-6 max-w-xl text-sm font-light leading-[1.85] text-[#07141f]/60 sm:mt-8 sm:text-base">
+        En una conversación inicial analizamos la necesidad, su viabilidad y
+        la arquitectura que podría requerir tu solución digital.
+      </p>
 
-            <p className="mt-8 max-w-xl text-base font-light leading-[1.85] text-[#07141f]/58">
-              En una conversación inicial analizamos la necesidad, su
-              viabilidad y la arquitectura que podría requerir tu solución
-              digital.
-            </p>
+      {/* CONTACTO DIRECTO */}
+      <div className="mt-8 grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+        <a
+          href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            min-w-0
+            rounded-2xl
+            border
+            border-[#07141f]/10
+            bg-white/55
+            p-4
+            transition
+            hover:border-[#327f75]/30
+            hover:bg-white
+          "
+        >
+          <span className="block text-[9px] uppercase tracking-[0.2em] text-[#327f75]">
+            WhatsApp
+          </span>
 
-            <div className="mt-10 space-y-3 text-sm text-[#07141f]/48">
-              <p>WhatsApp · +57 311 868 7774</p>
-              <p>grupoanalisisyconsultoria@gmail.com</p>
-            </div>
-          </div>
+          <span className="mt-2 block text-sm text-[#07141f]/65">
+            +57 311 868 7774
+          </span>
+        </a>
 
-          <form
-            action="/api/contacto"
-            method="POST"
-            className="rounded-[2rem] border border-[#07141f]/10 bg-white p-7 shadow-[0_28px_90px_rgba(7,20,31,0.08)] md:p-10"
+        <a
+          href="mailto:grupoanalisisyconsultoria@gmail.com"
+          className="
+            min-w-0
+            rounded-2xl
+            border
+            border-[#07141f]/10
+            bg-white/55
+            p-4
+            transition
+            hover:border-[#327f75]/30
+            hover:bg-white
+          "
+        >
+          <span className="block text-[9px] uppercase tracking-[0.2em] text-[#327f75]">
+            Correo
+          </span>
+
+          <span className="mt-2 block break-all text-[13px] leading-5 text-[#07141f]/65">
+            grupoanalisisyconsultoria@gmail.com
+          </span>
+        </a>
+      </div>
+    </div>
+
+    {/* FORMULARIO */}
+    <form
+      action="/api/contacto"
+      method="POST"
+      className="
+        min-w-0
+        w-full
+        overflow-hidden
+        rounded-[1.6rem]
+        border
+        border-[#07141f]/10
+        bg-white
+        p-5
+        shadow-[0_24px_70px_rgba(7,20,31,0.08)]
+        sm:rounded-[2rem]
+        sm:p-7
+        md:p-10
+      "
+    >
+      <input
+        type="hidden"
+        name="servicio"
+        value="FASI · Diagnóstico operativo"
+      />
+
+      <input
+        type="hidden"
+        name="redirectTo"
+        value="/inversiones/fasi?enviado=1#diagnostico"
+      />
+
+      <div className="grid min-w-0 gap-4 sm:gap-5">
+        <div className="min-w-0">
+          <label
+            htmlFor="empresa-fasi"
+            className="mb-2 block text-[10px] uppercase tracking-[0.16em] text-[#07141f]/45"
           >
-            <input
-              type="hidden"
-              name="servicio"
-              value="FASI · Diagnóstico operativo"
-            />
+            Empresa o proyecto
+          </label>
 
-            <input
-              type="hidden"
-              name="redirectTo"
-              value="/inversiones/fasi?enviado=1#diagnostico"
-            />
-
-            <div className="grid gap-5">
-              <input
-                name="empresa"
-                required
-                placeholder="Empresa o proyecto"
-                className="rounded-2xl border border-[#07141f]/12 bg-[#edf2f3] px-5 py-4 outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff]"
-              />
-
-              <input
-                name="nombre"
-                required
-                autoComplete="name"
-                placeholder="Nombre de contacto"
-                className="rounded-2xl border border-[#07141f]/12 bg-[#edf2f3] px-5 py-4 outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff]"
-              />
-
-              <input
-                name="contacto"
-                required
-                placeholder="Correo electrónico o WhatsApp"
-                className="rounded-2xl border border-[#07141f]/12 bg-[#edf2f3] px-5 py-4 outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff]"
-              />
-
-              <select
-                name="mensaje"
-                required
-                defaultValue=""
-                className="rounded-2xl border border-[#07141f]/12 bg-[#edf2f3] px-5 py-4 outline-none transition focus:border-[#4d7cff]"
-              >
-                <option value="" disabled>
-                  ¿Qué tipo de desarrollo necesitas?
-                </option>
-                <option value="ERP o sistema core operativo">
-                  ERP o sistema core operativo
-                </option>
-                <option value="Plataforma web o SaaS">
-                  Plataforma web o SaaS
-                </option>
-                <option value="Aplicación móvil">Aplicación móvil</option>
-                <option value="E-commerce o plataforma transaccional">
-                  E-commerce o plataforma transaccional
-                </option>
-                <option value="Desarrollo web avanzado">
-                  Desarrollo web avanzado
-                </option>
-                <option value="Necesito orientación">
-                  Necesito orientación
-                </option>
-              </select>
-
-              <label className="flex items-start gap-3 text-xs leading-[1.7] text-[#07141f]/48">
-                <input
-                  type="checkbox"
-                  required
-                  name="autorizacion"
-                  value="si"
-                  className="mt-1 h-4 w-4 accent-[#4d7cff]"
-                />
-
-                <span>
-                  Autorizo el tratamiento de mis datos para recibir orientación
-                  sobre esta solicitud.
-                </span>
-              </label>
-
-              <button
-                type="submit"
-                className="mt-2 inline-flex min-h-14 items-center justify-center rounded-full bg-[#07141f] px-7 py-4 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-[#4d7cff]"
-              >
-                Solicitar diagnóstico con FASI →
-              </button>
-
-              <a
-                href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-14 items-center justify-center rounded-full border border-[#07141f]/12 px-7 py-4 text-sm text-[#07141f]/60 transition hover:border-[#327f75]/40 hover:text-[#07141f]"
-              >
-                Hablar directamente por WhatsApp
-              </a>
-            </div>
-          </form>
+          <input
+            id="empresa-fasi"
+            name="empresa"
+            required
+            autoComplete="organization"
+            placeholder="Nombre de la empresa"
+            className="
+              w-full
+              min-w-0
+              rounded-xl
+              border
+              border-[#07141f]/12
+              bg-[#edf2f3]
+              px-4
+              py-4
+              text-base
+              text-[#07141f]
+              outline-none
+              transition
+              placeholder:text-[#07141f]/30
+              focus:border-[#4d7cff]
+              sm:rounded-2xl
+              sm:px-5
+            "
+          />
         </div>
-      </section>
+
+        <div className="min-w-0">
+          <label
+            htmlFor="nombre-fasi"
+            className="mb-2 block text-[10px] uppercase tracking-[0.16em] text-[#07141f]/45"
+          >
+            Nombre de contacto
+          </label>
+
+          <input
+            id="nombre-fasi"
+            name="nombre"
+            required
+            autoComplete="name"
+            placeholder="Tu nombre"
+            className="
+              w-full
+              min-w-0
+              rounded-xl
+              border
+              border-[#07141f]/12
+              bg-[#edf2f3]
+              px-4
+              py-4
+              text-base
+              text-[#07141f]
+              outline-none
+              transition
+              placeholder:text-[#07141f]/30
+              focus:border-[#4d7cff]
+              sm:rounded-2xl
+              sm:px-5
+            "
+          />
+        </div>
+
+        <div className="min-w-0">
+          <label
+            htmlFor="contacto-fasi"
+            className="mb-2 block text-[10px] uppercase tracking-[0.16em] text-[#07141f]/45"
+          >
+            Medio de contacto
+          </label>
+
+          <input
+            id="contacto-fasi"
+            name="contacto"
+            required
+            autoComplete="email"
+            placeholder="Correo o WhatsApp"
+            className="
+              w-full
+              min-w-0
+              rounded-xl
+              border
+              border-[#07141f]/12
+              bg-[#edf2f3]
+              px-4
+              py-4
+              text-base
+              text-[#07141f]
+              outline-none
+              transition
+              placeholder:text-[#07141f]/30
+              focus:border-[#4d7cff]
+              sm:rounded-2xl
+              sm:px-5
+            "
+          />
+        </div>
+
+        <div className="min-w-0">
+          <label
+            htmlFor="desarrollo-fasi"
+            className="mb-2 block text-[10px] uppercase tracking-[0.16em] text-[#07141f]/45"
+          >
+            Tipo de desarrollo
+          </label>
+
+          <select
+            id="desarrollo-fasi"
+            name="mensaje"
+            required
+            defaultValue=""
+            className="
+              w-full
+              min-w-0
+              max-w-full
+              rounded-xl
+              border
+              border-[#07141f]/12
+              bg-[#edf2f3]
+              px-4
+              py-4
+              text-base
+              text-[#07141f]
+              outline-none
+              transition
+              focus:border-[#4d7cff]
+              sm:rounded-2xl
+              sm:px-5
+            "
+          >
+            <option value="" disabled>
+              Selecciona una opción
+            </option>
+
+            <option value="ERP o sistema core operativo">
+              ERP o sistema core
+            </option>
+
+            <option value="Plataforma web o SaaS">
+              Plataforma web o SaaS
+            </option>
+
+            <option value="Aplicación móvil">
+              Aplicación móvil
+            </option>
+
+            <option value="E-commerce o plataforma transaccional">
+              E-commerce o transaccional
+            </option>
+
+            <option value="Desarrollo web avanzado">
+              Desarrollo web avanzado
+            </option>
+
+            <option value="Necesito orientación">
+              Necesito orientación
+            </option>
+          </select>
+        </div>
+
+        {/* AUTORIZACIÓN */}
+        <label className="flex min-w-0 items-start gap-3 rounded-xl bg-[#edf2f3]/70 p-4 text-xs leading-[1.65] text-[#07141f]/52">
+          <input
+            type="checkbox"
+            required
+            name="autorizacion"
+            value="si"
+            className="mt-0.5 h-4 w-4 shrink-0 accent-[#4d7cff]"
+          />
+
+          <span className="min-w-0">
+            Autorizo el tratamiento de mis datos para recibir orientación
+            sobre esta solicitud.
+          </span>
+        </label>
+
+        {/* ACCIONES */}
+        <div className="grid min-w-0 gap-3 pt-1">
+          <button
+            type="submit"
+            className="
+              inline-flex
+              min-h-14
+              w-full
+              items-center
+              justify-center
+              whitespace-normal
+              rounded-full
+              bg-[#07141f]
+              px-5
+              py-4
+              text-center
+              text-xs
+              font-semibold
+              leading-5
+              text-white
+              transition
+              hover:-translate-y-0.5
+              hover:bg-[#4d7cff]
+              sm:px-7
+              sm:text-sm
+            "
+          >
+            Solicitar diagnóstico con FASI
+            <span className="ml-2 shrink-0">→</span>
+          </button>
+
+          <a
+            href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex
+              min-h-14
+              w-full
+              items-center
+              justify-center
+              whitespace-normal
+              rounded-full
+              border
+              border-[#07141f]/12
+              px-5
+              py-4
+              text-center
+              text-xs
+              leading-5
+              text-[#07141f]/62
+              transition
+              hover:border-[#327f75]/40
+              hover:text-[#07141f]
+              sm:px-7
+              sm:text-sm
+            "
+          >
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 
       <Footer />
     </main>
