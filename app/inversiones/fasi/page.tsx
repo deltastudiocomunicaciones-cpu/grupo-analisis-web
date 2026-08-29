@@ -548,58 +548,25 @@ export default function FasiPage() {
   </div>
 </section>
 
-      {/* DIAGNÓSTICO */}
+     {/* DIAGNÓSTICO */}
 <section
   id="diagnostico"
-  className="
-    relative
-    overflow-hidden
-    bg-[#edf2f3]
-    px-4
-    py-20
-    sm:px-6
-    md:py-28
-    lg:py-32
-  "
+  className="relative overflow-hidden bg-[#edf2f3] px-4 py-20 sm:px-6 md:py-28 lg:py-32"
 >
   {/* ATMÓSFERA */}
   <div className="pointer-events-none absolute inset-0">
     <div className="absolute -left-40 top-0 h-[460px] w-[460px] rounded-full bg-white/75 blur-[130px]" />
-
     <div className="absolute -bottom-40 right-0 h-[420px] w-[420px] rounded-full bg-[#87a8c2]/15 blur-[130px]" />
   </div>
 
-  <div
-    className="
-      relative
-      mx-auto
-      grid
-      min-w-0
-      max-w-7xl
-      gap-10
-      lg:grid-cols-[0.82fr_1.18fr]
-      lg:gap-14
-    "
-  >
+  <div className="relative mx-auto grid min-w-0 max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-14">
     {/* INFORMACIÓN */}
     <div className="min-w-0">
       <p className="text-[10px] uppercase tracking-[0.3em] text-[#327f75] sm:text-xs sm:tracking-[0.36em]">
         Conversación inicial
       </p>
 
-      <h2
-        className="
-          mt-5
-          max-w-2xl
-          text-[2.35rem]
-          font-semibold
-          leading-[0.98]
-          tracking-[-0.055em]
-          text-[#07141f]
-          sm:text-5xl
-          md:text-6xl
-        "
-      >
+      <h2 className="mt-5 max-w-2xl text-[2.35rem] font-semibold leading-[0.98] tracking-[-0.055em] text-[#07141f] sm:text-5xl md:text-6xl">
         ¿Tu visión empresarial requiere software de alto nivel?
       </h2>
 
@@ -609,54 +576,128 @@ export default function FasiPage() {
       </p>
 
       {/* CONTACTO DIRECTO */}
-      <div className="mt-8 grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-        <a
-          href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            min-w-0
-            rounded-2xl
-            border
-            border-[#07141f]/10
-            bg-white/55
-            p-4
-            transition
-            hover:border-[#327f75]/30
-            hover:bg-white
-          "
-        >
-          <span className="block text-[9px] uppercase tracking-[0.2em] text-[#327f75]">
-            WhatsApp
-          </span>
+      <div className="mt-9">
+        <p className="mb-4 text-[9px] uppercase tracking-[0.24em] text-[#102a54]/40">
+          Elige cómo iniciar la conversación
+        </p>
 
-          <span className="mt-2 block text-sm text-[#07141f]/65">
-            +57 311 868 7774
-          </span>
-        </a>
+        <div className="grid min-w-0 gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+          {/* WHATSAPP */}
+          <a
+            href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative min-w-0 overflow-hidden rounded-[1.5rem] border border-[#327f75]/15 bg-[#dff3ef] p-5 shadow-[0_18px_45px_rgba(50,127,117,0.10)] transition-all duration-500 hover:-translate-y-1 hover:border-[#327f75]/30 hover:shadow-[0_24px_60px_rgba(50,127,117,0.18)]"
+          >
+            <div className="pointer-events-none absolute -right-14 -top-16 h-40 w-40 rounded-full bg-[#61d4c2]/35 blur-[45px] transition-transform duration-700 group-hover:scale-125" />
 
-        <a
-          href="mailto:grupoanalisisyconsultoria@gmail.com"
-          className="
-            min-w-0
-            rounded-2xl
-            border
-            border-[#07141f]/10
-            bg-white/55
-            p-4
-            transition
-            hover:border-[#327f75]/30
-            hover:bg-white
-          "
-        >
-          <span className="block text-[9px] uppercase tracking-[0.2em] text-[#327f75]">
-            Correo
-          </span>
+            <div className="relative z-10 flex items-start justify-between gap-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#07141f] text-[#61d4c2] shadow-[0_12px_30px_rgba(7,20,31,0.16)]">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 8.5c.4 2.5 2 4.1 4.5 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
 
-          <span className="mt-2 block break-all text-[13px] leading-5 text-[#07141f]/65">
-            grupoanalisisyconsultoria@gmail.com
-          </span>
-        </a>
+              <span className="text-lg text-[#07141f]/35 transition-transform duration-500 group-hover:translate-x-1">
+                ↗
+              </span>
+            </div>
+
+            <div className="relative z-10 mt-7">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#327f75] shadow-[0_0_10px_rgba(50,127,117,0.8)]" />
+
+                <span className="text-[8px] uppercase tracking-[0.2em] text-[#327f75]">
+                  Conversación directa
+                </span>
+              </div>
+
+              <strong className="mt-3 block text-lg font-semibold tracking-[-0.03em] text-[#07141f]">
+                Escribir por WhatsApp
+              </strong>
+
+              <span className="mt-2 block text-xs text-[#07141f]/52">
+                +57 311 868 7774
+              </span>
+            </div>
+
+            <div className="pointer-events-none absolute inset-[1px] rounded-[1.45rem] border border-white/55" />
+          </a>
+
+          {/* CORREO */}
+          <a
+            href="mailto:grupoanalisisyconsultoria@gmail.com?subject=Proyecto%20de%20software%20con%20FASI"
+            className="group relative min-w-0 overflow-hidden rounded-[1.5rem] border border-[#24549a]/30 bg-[#173f79] p-5 text-white shadow-[0_18px_45px_rgba(23,63,121,0.18)] transition-all duration-500 hover:-translate-y-1 hover:bg-[#102a54] hover:shadow-[0_24px_65px_rgba(23,63,121,0.28)]"
+          >
+            <div className="pointer-events-none absolute -right-14 -top-16 h-40 w-40 rounded-full bg-[#87a8c2]/30 blur-[45px] transition-transform duration-700 group-hover:scale-125" />
+
+            <div className="relative z-10 flex items-start justify-between gap-4">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/15 bg-white/[0.08] text-[#bbcdde]">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 6.5h16v11H4v-11Z"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="m5 8 7 5 7-5"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+
+              <span className="text-lg text-white/35 transition-transform duration-500 group-hover:translate-x-1">
+                ↗
+              </span>
+            </div>
+
+            <div className="relative z-10 mt-7">
+              <div className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#87a8c2] shadow-[0_0_10px_rgba(135,168,194,0.8)]" />
+
+                <span className="text-[8px] uppercase tracking-[0.2em] text-[#bbcdde]">
+                  Proyecto estructurado
+                </span>
+              </div>
+
+              <strong className="mt-3 block text-lg font-semibold tracking-[-0.03em]">
+                Enviar un correo
+              </strong>
+
+              <span className="mt-2 block break-all text-[11px] leading-5 text-white/52">
+                grupoanalisisyconsultoria@gmail.com
+              </span>
+            </div>
+
+            <div className="pointer-events-none absolute inset-[1px] rounded-[1.45rem] border border-white/10" />
+          </a>
+        </div>
       </div>
     </div>
 
@@ -664,20 +705,7 @@ export default function FasiPage() {
     <form
       action="/api/contacto"
       method="POST"
-      className="
-        min-w-0
-        w-full
-        overflow-hidden
-        rounded-[1.6rem]
-        border
-        border-[#07141f]/10
-        bg-white
-        p-5
-        shadow-[0_24px_70px_rgba(7,20,31,0.08)]
-        sm:rounded-[2rem]
-        sm:p-7
-        md:p-10
-      "
+      className="min-w-0 w-full overflow-hidden rounded-[1.6rem] border border-[#07141f]/10 bg-white p-5 shadow-[0_24px_70px_rgba(7,20,31,0.08)] sm:rounded-[2rem] sm:p-7 md:p-10"
     >
       <input
         type="hidden"
@@ -706,24 +734,7 @@ export default function FasiPage() {
             required
             autoComplete="organization"
             placeholder="Nombre de la empresa"
-            className="
-              w-full
-              min-w-0
-              rounded-xl
-              border
-              border-[#07141f]/12
-              bg-[#edf2f3]
-              px-4
-              py-4
-              text-base
-              text-[#07141f]
-              outline-none
-              transition
-              placeholder:text-[#07141f]/30
-              focus:border-[#4d7cff]
-              sm:rounded-2xl
-              sm:px-5
-            "
+            className="w-full min-w-0 rounded-xl border border-[#07141f]/12 bg-[#edf2f3] px-4 py-4 text-base text-[#07141f] outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff] sm:rounded-2xl sm:px-5"
           />
         </div>
 
@@ -741,24 +752,7 @@ export default function FasiPage() {
             required
             autoComplete="name"
             placeholder="Tu nombre"
-            className="
-              w-full
-              min-w-0
-              rounded-xl
-              border
-              border-[#07141f]/12
-              bg-[#edf2f3]
-              px-4
-              py-4
-              text-base
-              text-[#07141f]
-              outline-none
-              transition
-              placeholder:text-[#07141f]/30
-              focus:border-[#4d7cff]
-              sm:rounded-2xl
-              sm:px-5
-            "
+            className="w-full min-w-0 rounded-xl border border-[#07141f]/12 bg-[#edf2f3] px-4 py-4 text-base text-[#07141f] outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff] sm:rounded-2xl sm:px-5"
           />
         </div>
 
@@ -774,26 +768,8 @@ export default function FasiPage() {
             id="contacto-fasi"
             name="contacto"
             required
-            autoComplete="email"
             placeholder="Correo o WhatsApp"
-            className="
-              w-full
-              min-w-0
-              rounded-xl
-              border
-              border-[#07141f]/12
-              bg-[#edf2f3]
-              px-4
-              py-4
-              text-base
-              text-[#07141f]
-              outline-none
-              transition
-              placeholder:text-[#07141f]/30
-              focus:border-[#4d7cff]
-              sm:rounded-2xl
-              sm:px-5
-            "
+            className="w-full min-w-0 rounded-xl border border-[#07141f]/12 bg-[#edf2f3] px-4 py-4 text-base text-[#07141f] outline-none transition placeholder:text-[#07141f]/30 focus:border-[#4d7cff] sm:rounded-2xl sm:px-5"
           />
         </div>
 
@@ -810,24 +786,7 @@ export default function FasiPage() {
             name="mensaje"
             required
             defaultValue=""
-            className="
-              w-full
-              min-w-0
-              max-w-full
-              rounded-xl
-              border
-              border-[#07141f]/12
-              bg-[#edf2f3]
-              px-4
-              py-4
-              text-base
-              text-[#07141f]
-              outline-none
-              transition
-              focus:border-[#4d7cff]
-              sm:rounded-2xl
-              sm:px-5
-            "
+            className="w-full min-w-0 max-w-full rounded-xl border border-[#07141f]/12 bg-[#edf2f3] px-4 py-4 text-base text-[#07141f] outline-none transition focus:border-[#4d7cff] sm:rounded-2xl sm:px-5"
           >
             <option value="" disabled>
               Selecciona una opción
@@ -859,7 +818,6 @@ export default function FasiPage() {
           </select>
         </div>
 
-        {/* AUTORIZACIÓN */}
         <label className="flex min-w-0 items-start gap-3 rounded-xl bg-[#edf2f3]/70 p-4 text-xs leading-[1.65] text-[#07141f]/52">
           <input
             type="checkbox"
@@ -875,72 +833,26 @@ export default function FasiPage() {
           </span>
         </label>
 
-        {/* ACCIONES */}
-        <div className="grid min-w-0 gap-3 pt-1">
-          <button
-            type="submit"
-            className="
-              inline-flex
-              min-h-14
-              w-full
-              items-center
-              justify-center
-              whitespace-normal
-              rounded-full
-              bg-[#07141f]
-              px-5
-              py-4
-              text-center
-              text-xs
-              font-semibold
-              leading-5
-              text-white
-              transition
-              hover:-translate-y-0.5
-              hover:bg-[#4d7cff]
-              sm:px-7
-              sm:text-sm
-            "
-          >
-            Solicitar diagnóstico con FASI
-            <span className="ml-2 shrink-0">→</span>
-          </button>
+        <button
+          type="submit"
+          className="inline-flex min-h-14 w-full items-center justify-center whitespace-normal rounded-full bg-[#07141f] px-5 py-4 text-center text-xs font-semibold leading-5 text-white transition hover:-translate-y-0.5 hover:bg-[#4d7cff] sm:px-7 sm:text-sm"
+        >
+          Solicitar diagnóstico con FASI
+          <span className="ml-2 shrink-0">→</span>
+        </button>
 
-          <a
-            href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="
-              inline-flex
-              min-h-14
-              w-full
-              items-center
-              justify-center
-              whitespace-normal
-              rounded-full
-              border
-              border-[#07141f]/12
-              px-5
-              py-4
-              text-center
-              text-xs
-              leading-5
-              text-[#07141f]/62
-              transition
-              hover:border-[#327f75]/40
-              hover:text-[#07141f]
-              sm:px-7
-              sm:text-sm
-            "
-          >
-            Hablar por WhatsApp
-          </a>
-        </div>
+        <a
+          href="https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20conversar%20sobre%20un%20desarrollo%20con%20FASI."
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-h-14 w-full items-center justify-center whitespace-normal rounded-full border border-[#07141f]/12 px-5 py-4 text-center text-xs leading-5 text-[#07141f]/62 transition hover:border-[#327f75]/40 hover:text-[#07141f] sm:px-7 sm:text-sm"
+        >
+          Hablar directamente por WhatsApp
+        </a>
       </div>
     </form>
   </div>
 </section>
-
       <Footer />
     </main>
   );
