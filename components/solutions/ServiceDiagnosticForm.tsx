@@ -36,7 +36,7 @@ export default function ServiceDiagnosticForm({ section }: Props) {
               htmlFor="diagnostico-nombre"
               className="mb-2 block text-xs font-semibold uppercase tracking-[0.12em] text-[#071e2e]/55"
             >
-              Nombre
+              Nombre Completo
             </label>
 
             <input

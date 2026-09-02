@@ -6,21 +6,6 @@ import { useState } from "react";
 
 import MobileMenu from "@/components/layout/MobileMenu";
 
-const services = [
-  { label: "Devoluciones de IVA", href: "/soluciones" },
-  { label: "Declaraciones de Renta", href: "/soluciones" },
-  { label: "Reestructuración Patrimonial", href: "/soluciones" },
-  { label: "Asesoría Tributaria y Financiera", href: "/soluciones" },
-  { label: "Contabilidad Total o por Eventos", href: "/soluciones" },
-  { label: "Software Contable SADI", href: "/soluciones" },
-  { label: "Trámites DIAN", href: "/soluciones" },
-  { label: "Trámites Cámara de Comercio", href: "/soluciones" },
-  { label: "Auditorías Financieras", href: "/soluciones" },
-  { label: "Diseño de Procesos", href: "/soluciones" },
-  { label: "Insolvencias", href: "/soluciones" },
-  { label: "Asesoría Jurídica", href: "/soluciones" },
-];
-
 const podcasts = [
   { label: "Análisis & Consultorías", href: "/analisis-consultorias" },
   { label: "SADI ERP", href: "/sadi" },
@@ -39,88 +24,82 @@ export default function Navbar() {
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
-           className="relative flex items-center justify-between gap-8 rounded-full border border-white/10 bg-black/55 px-6 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:px-8"
+            className="relative flex items-center justify-between gap-8 rounded-full border border-white/10 bg-black/55 px-6 py-4 shadow-[0_10px_50px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:px-8"
           >
-           <Link
-  href="/"
-  className="group relative isolate flex min-w-[210px] items-center"
->
-  {/* Resplandor principal detrás del logo */}
-  <motion.div
-    aria-hidden="true"
-    animate={{
-      opacity: [0.45, 0.68, 0.45],
-      scale: [1, 1.06, 1],
-    }}
-    transition={{
-      duration: 5.5,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-    className="
-      pointer-events-none
-      absolute
-      left-1/2
-      top-1/2
-      -z-10
-      h-24
-      w-72
-      -translate-x-1/2
-      -translate-y-1/2
-      rounded-full
-      bg-[radial-gradient(circle,rgba(255,255,255,0.22)_0%,rgba(201,106,27,0.18)_32%,rgba(201,106,27,0.08)_52%,transparent_74%)]
-      blur-[34px]
-      transition-all
-      duration-700
-      group-hover:opacity-70
-    "
-  />
+            {/* LOGO */}
+            <Link
+              href="/"
+              className="group relative isolate flex min-w-[210px] items-center"
+            >
+              <motion.div
+                aria-hidden="true"
+                animate={{
+                  opacity: [0.45, 0.68, 0.45],
+                  scale: [1, 1.06, 1],
+                }}
+                transition={{
+                  duration: 5.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                className="
+                  pointer-events-none
+                  absolute
+                  left-1/2
+                  top-1/2
+                  -z-10
+                  h-24
+                  w-72
+                  -translate-x-1/2
+                  -translate-y-1/2
+                  rounded-full
+                  bg-[radial-gradient(circle,rgba(255,255,255,0.22)_0%,rgba(201,106,27,0.18)_32%,rgba(201,106,27,0.08)_52%,transparent_74%)]
+                  blur-[34px]
+                "
+              />
 
-  {/* Luz blanca interna tipo reflejo premium */}
-  <div
-    aria-hidden="true"
-    className="
-      pointer-events-none
-      absolute
-      left-[42%]
-      top-1/2
-      -z-10
-      h-16
-      w-40
-      -translate-x-1/2
-      -translate-y-1/2
-      rounded-full
-      bg-white/12
-      blur-[28px]
-      opacity-70
-      transition-all
-      duration-700
-      group-hover:opacity-100
-    "
-  />
+              <div
+                aria-hidden="true"
+                className="
+                  pointer-events-none
+                  absolute
+                  left-[42%]
+                  top-1/2
+                  -z-10
+                  h-16
+                  w-40
+                  -translate-x-1/2
+                  -translate-y-1/2
+                  rounded-full
+                  bg-white/12
+                  opacity-70
+                  blur-[28px]
+                "
+              />
 
-  <img
-    src="/logos/logo-final.png"
-    alt="Grupo Análisis & Consultorías"
-    className="
-      relative
-      z-10
-      h-12
-      w-auto
-      max-w-[230px]
-      object-contain
-      opacity-100
-      transition-all
-      duration-500
-      drop-shadow-[0_0_18px_rgba(255,255,255,0.12)]
-      group-hover:scale-[1.025]
-      group-hover:drop-shadow-[0_0_26px_rgba(201,106,27,0.38)]
-      md:h-14
-      md:max-w-[270px]
-    "
-  />
-</Link>
+              <img
+                src="/logos/logo-final.png"
+                alt="Grupo Análisis & Consultorías"
+                className="
+                  relative
+                  z-10
+                  h-12
+                  w-auto
+                  max-w-[230px]
+                  object-contain
+                  opacity-100
+                  drop-shadow-[0_0_18px_rgba(255,255,255,0.12)]
+                  transition-all
+                  duration-500
+                  group-hover:scale-[1.025]
+                  group-hover:drop-shadow-[0_0_26px_rgba(201,106,27,0.38)]
+                  md:h-14
+                  md:max-w-[270px]
+                "
+              />
+            </Link>
 
+            {/* NAVEGACIÓN DESKTOP */}
             <nav className="hidden items-center gap-8 text-sm tracking-[0.16em] xl:flex">
               <Link
                 href="/nosotros"
@@ -136,38 +115,13 @@ export default function Navbar() {
                 Ecosistema
               </Link>
 
-              <div className="group relative">
-                <Link
-                  href="/soluciones"
-                  className="text-white/70 transition-colors hover:text-white"
-                >
-                  Servicios
-                </Link>
-
-                <div className="invisible absolute left-1/2 top-full mt-5 w-[520px] -translate-x-1/2 rounded-[1.6rem] border border-white/10 bg-black/75 px-5 py-5 opacity-0 shadow-[0_20px_80px_rgba(0,0,0,0.55)] backdrop-blur-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100">
-                  <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
-                    <p className="text-[10px] uppercase tracking-[0.32em] text-[#c96a1b]">
-                      Servicios
-                    </p>
-
-                    <p className="text-[10px] uppercase tracking-[0.24em] text-white/30">
-                      12 áreas
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2.5">
-                    {services.map((service) => (
-                      <Link
-                        key={service.label}
-                        href={service.href}
-                        className="rounded-xl border border-white/5 bg-white/[0.025] px-4 py-3 text-[12px] leading-tight tracking-normal text-white/62 transition-all duration-300 hover:border-[#c96a1b]/35 hover:bg-[#c96a1b]/10 hover:text-white"
-                      >
-                        {service.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              {/* ENLACE DIRECTO: SIN DESPLEGABLE */}
+              <Link
+                href="/soluciones"
+                className="text-white/70 transition-colors hover:text-white"
+              >
+                Servicios
+              </Link>
 
               <Link
                 href="/noticias"
@@ -190,40 +144,81 @@ export default function Navbar() {
                 Inversiones
               </Link>
 
+              {/* PODCAST */}
               <div className="group relative">
-  <button
-  type="button"
-  className="text-white/70 transition-colors hover:text-white"
->
-  Podcast
-</button>
+                <button
+                  type="button"
+                  className="text-white/70 transition-colors hover:text-white"
+                >
+                  Podcast
+                </button>
 
-  <div className="invisible absolute left-1/2 top-full mt-5 w-[360px] -translate-x-1/2 rounded-[1.6rem] border border-white/10 bg-black/75 px-5 py-5 opacity-0 shadow-[0_20px_80px_rgba(0,0,0,0.55)] backdrop-blur-2xl transition-all duration-300 group-hover:visible group-hover:opacity-100">
-    <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
-      <p className="text-[10px] uppercase tracking-[0.32em] text-[#c96a1b]">
-        Podcast
-      </p>
+                <div
+                  className="
+                    invisible
+                    absolute
+                    left-1/2
+                    top-full
+                    mt-5
+                    w-[360px]
+                    -translate-x-1/2
+                    rounded-[1.6rem]
+                    border
+                    border-white/10
+                    bg-black/75
+                    px-5
+                    py-5
+                    opacity-0
+                    shadow-[0_20px_80px_rgba(0,0,0,0.55)]
+                    backdrop-blur-2xl
+                    transition-all
+                    duration-300
+                    group-hover:visible
+                    group-hover:opacity-100
+                  "
+                >
+                  <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-3">
+                    <p className="text-[10px] uppercase tracking-[0.32em] text-[#c96a1b]">
+                      Podcast
+                    </p>
 
-      <p className="text-[10px] uppercase tracking-[0.24em] text-white/30">
-        04 canales
-      </p>
-    </div>
+                    <p className="text-[10px] uppercase tracking-[0.24em] text-white/30">
+                      04 canales
+                    </p>
+                  </div>
 
-    <div className="grid grid-cols-1 gap-2.5">
-      {podcasts.map((podcast) => (
-        <Link
-          key={podcast.label}
-          href={podcast.href}
-          className="rounded-xl border border-white/5 bg-white/[0.025] px-4 py-3 text-[12px] leading-tight tracking-normal text-white/62 transition-all duration-300 hover:border-[#c96a1b]/35 hover:bg-[#c96a1b]/10 hover:text-white"
-        >
-          {podcast.label}
-        </Link>
-      ))}
-    </div>
-  </div>
-</div>
+                  <div className="grid grid-cols-1 gap-2.5">
+                    {podcasts.map((podcast) => (
+                      <Link
+                        key={podcast.label}
+                        href={podcast.href}
+                        className="
+                          rounded-xl
+                          border
+                          border-white/5
+                          bg-white/[0.025]
+                          px-4
+                          py-3
+                          text-[12px]
+                          leading-tight
+                          tracking-normal
+                          text-white/62
+                          transition-all
+                          duration-300
+                          hover:border-[#c96a1b]/35
+                          hover:bg-[#c96a1b]/10
+                          hover:text-white
+                        "
+                      >
+                        {podcast.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </nav>
 
+            {/* ACCIONES */}
             <div className="flex items-center gap-4">
               <Link
                 href="/contacto"
@@ -233,9 +228,11 @@ export default function Navbar() {
               </Link>
 
               <button
+                type="button"
                 onClick={() => setMenuOpen(true)}
                 className="flex flex-col gap-1.5 xl:hidden"
                 aria-label="Abrir menú"
+                aria-expanded={menuOpen}
               >
                 <span className="h-px w-7 bg-white" />
                 <span className="h-px w-7 bg-white/60" />
@@ -245,7 +242,10 @@ export default function Navbar() {
         </div>
       </header>
 
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+      />
     </>
   );
 }

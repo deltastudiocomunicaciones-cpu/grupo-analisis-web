@@ -341,6 +341,9 @@ export default async function ServiceDetailPage({
         </Container>
       </section>
 
+      
+<Footer />
+
       <Footer />
     </main>
   );

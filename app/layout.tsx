@@ -1,3 +1,4 @@
+import FloatingWhatsApp from "@/components/ui/FloatingWhatsApp";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Script from "next/script";
@@ -90,29 +91,35 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es" data-scroll-behavior="smooth">
       <body>
-        <OrganizationSchema />
+  <OrganizationSchema />
 
-        <ClientOnlyLoader />
+  <ClientOnlyLoader />
 
-        <SmoothScroll>
-          <PageTransition>{children}</PageTransition>
-        </SmoothScroll>
+  <SmoothScroll>
+    <PageTransition>{children}</PageTransition>
+  </SmoothScroll>
 
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-GMYHDFLBH0"
-          strategy="afterInteractive"
-        />
+  {/* WHATSAPP FLOTANTE: SOLO DECLARACIÓN DE RENTA */}
+  <FloatingWhatsApp />
 
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-GMYHDFLBH0"
+    strategy="afterInteractive"
+  />
 
-            gtag('config', 'G-GMYHDFLBH0');
-          `}
-        </Script>
-      </body>
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-GMYHDFLBH0');
+    `}
+  </Script>
+</body>
     </html>
   );
 }

@@ -586,7 +586,7 @@ export default function ServiceLandingRenderer({ service }: Props) {
           fill
           priority
           sizes="100vw"
-          quality={78}
+          quality={75}
           className="object-cover object-center"
         />
 

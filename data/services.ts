@@ -508,7 +508,7 @@ export const services: ServiceItem[] = [
       subtitle:
         "Salarios, honorarios, servicios independientes o arrendamientos.",
       criterion:
-        "¿Tus ingresos acumulados durante el año podrían superar el tope legal correspondiente?",
+        "¿Tus ingresos acumulados durante el año 2025 fueron iguales o superiores a $69,719,000?",
       badge:
         "Aplica para empleados, pensionados, rentistas de capital y trabajadores independientes.",
     },
@@ -517,7 +517,7 @@ export const services: ServiceItem[] = [
       subtitle:
         "Casas, apartamentos, vehículos, terrenos, inversiones o cuentas de ahorro.",
       criterion:
-        "¿El valor total de tus bienes al 31 de diciembre podría exceder el límite fijado para el año gravable?",
+        "¿SU patrimonio? al 31 de diciembre de 2025 fue igual o superior a $163,000,000?",
       badge:
         "Tener propiedades no significa necesariamente tener un impuesto por pagar.",
     },
@@ -526,7 +526,7 @@ export const services: ServiceItem[] = [
       subtitle:
         "Compras con tarjeta, consumos personales, consignaciones y dinero recibido en cuentas.",
       criterion:
-        "¿Realizaste compras elevadas o recibiste transferencias frecuentes durante el año?",
+  "¿Durante 2025, alguno de estos movimientos alcanzó o superó los $69.719.000: consumos con tarjeta de crédito, compras y consumos totales, o consignaciones, depósitos e inversiones financieras?",
       badge:
         "Los movimientos de dinero de terceros también pueden aparecer dentro de la información reportada a tu nombre.",
     },
@@ -535,7 +535,7 @@ export const services: ServiceItem[] = [
       subtitle:
         "Comerciantes, prestadores de servicios, empresarios o responsables de IVA.",
       criterion:
-        "¿Realizas actividades comerciales o tienes responsabilidades tributarias registradas?",
+        "¿Fue responsable del IVA al 31 de diciembre de 2025?",
       badge:
         "Revisar las obligaciones a tiempo ayuda a prevenir omisiones, intereses y posibles sanciones.",
     },
@@ -673,42 +673,42 @@ export const services: ServiceItem[] = [
             text: "Ingresos laborales, pensiones, retenciones, patrimonio y beneficios aplicables.",
             ctaLabel: "Consultar mi caso",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=empleado",
+              "#comencemos",
           },
           {
             title: "Profesionales independientes",
             text: "Honorarios, prestación de servicios, costos, gastos, aportes y retenciones.",
             ctaLabel: "Consultar mi caso",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=independiente",
+              "#comencemos",
           },
           {
             title: "Propietarios de inmuebles",
             text: "Vivienda, arrendamientos, ventas, financiación y composición patrimonial.",
             ctaLabel: "Consultar mi caso",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=propietario",
+              "#comencemos",
           },
           {
             title: "Inversionistas",
             text: "Dividendos, acciones, fondos, inversiones y rendimientos financieros.",
             ctaLabel: "Consultar mi caso",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=inversionista",
+              "#comencemos",
           },
           {
             title: "Empresarios y socios",
             text: "Participaciones societarias, dividendos, ingresos personales y estructuras patrimoniales.",
             ctaLabel: "Consultar mi caso",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=empresario",
+              "#comencemos",
           },
           {
             title: "Patrimonios u operaciones complejas",
             text: "Múltiples activos, operaciones especiales o situaciones nacionales e internacionales que exigen mayor análisis.",
             ctaLabel: "Hablar con especialista",
             ctaHref:
-              "/contacto?servicio=declaracion-de-renta&perfil=complejo",
+              "#comencemos",
           },
         ],
       },
@@ -760,7 +760,7 @@ export const services: ServiceItem[] = [
   description:
     "No necesitas calcular nada ni tener conocimientos contables. Comparte tres datos básicos y un especialista revisará tu situación para indicarte la ruta adecuada.",
   primaryCta: {
-    label: "Solicitar evaluación inicial sin costo",
+    label: "Cotizar mi declaración de renta",
     href: "/api/contacto",
   },
   secondaryCta: {
