@@ -35,6 +35,16 @@ export async function POST(request: Request) {
     const servicio = String(formData.get("servicio") || "").trim();
     const mensaje = String(formData.get("mensaje") || "").trim();
     const redirectTo = String(formData.get("redirectTo") || "").trim();
+    const website = String(formData.get("website") || "").trim();
+
+    /*
+ * Honeypot antispam.
+ * Los usuarios reales nunca completan este campo.
+ * Respondemos como si hubiera funcionado para no enseñar al bot.
+ */
+if (website) {
+  return new NextResponse(null, { status: 204 });
+}
 
     /*
      * El formulario de FASI utiliza un único campo llamado "contacto".
@@ -47,6 +57,120 @@ export async function POST(request: Request) {
         telefono = telefono || contacto;
       }
     }
+
+    /*
+ * Límites para evitar cargas abusivas.
+ */
+const camposExcedidos =
+  nombre.length > 100 ||
+  empresa.length > 160 ||
+  telefono.length > 40 ||
+  correo.length > 160 ||
+  contacto.length > 160 ||
+  perfil.length > 100 ||
+  servicio.length > 160 ||
+  mensaje.length > 3000 ||
+  redirectTo.length > 300;
+
+if (camposExcedidos) {
+  return NextResponse.json(
+    {
+      error: "La información enviada supera el tamaño permitido.",
+    },
+    {
+      status: 400,
+    }
+  );
+}
+
+/*
+ * Evita inyección de saltos de línea en encabezados del correo.
+ */
+const contieneSaltosPeligrosos = [nombre, correo, telefono].some(
+  (value) => /[\r\n]/.test(value)
+);
+
+if (contieneSaltosPeligrosos) {
+  return NextResponse.json(
+    {
+      error: "La información enviada no es válida.",
+    },
+    {
+      status: 400,
+    }
+  );
+}
+
+/*
+ * Validación básica de correo.
+ */
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (correo && !emailPattern.test(correo)) {
+  return NextResponse.json(
+    {
+      error: "El correo electrónico no tiene un formato válido.",
+    },
+    {
+      status: 400,
+    }
+  );
+}
+
+/*
+ * Validación básica del teléfono.
+ */
+const telefonoNumerico = telefono.replace(/\D/g, "");
+
+if (
+  telefono &&
+  (telefonoNumerico.length < 7 || telefonoNumerico.length > 15)
+) {
+  return NextResponse.json(
+    {
+      error: "El número de teléfono no tiene un formato válido.",
+    },
+    {
+      status: 400,
+    }
+  );
+}
+
+/*
+ * Detección de enlaces y expresiones frecuentes en spam.
+ * No bloquea automáticamente un único enlace legítimo.
+ */
+const contenidoCompleto = [
+  nombre,
+  empresa,
+  correo,
+  telefono,
+  servicio,
+  mensaje,
+].join(" ");
+
+const enlacesEncontrados =
+  contenidoCompleto.match(/https?:\/\/|www\./gi) ?? [];
+
+const enlaceSospechoso =
+  /telegr\.ph|t\.me\/|bit\.ly|tinyurl\.com|cutt\.ly|shorturl/i.test(
+    contenidoCompleto
+  );
+
+const lenguajeSospechoso =
+  /\b(jackpot|casino|promo code|prize|winner|lottery|bonus|crypto giveaway|get ignited)\b/i.test(
+    contenidoCompleto
+  );
+
+if (
+  enlacesEncontrados.length > 2 ||
+  enlaceSospechoso ||
+  (enlacesEncontrados.length > 0 && lenguajeSospechoso)
+) {
+  console.warn("Solicitud bloqueada por señales de spam.");
+
+  return new NextResponse(null, { status: 204 });
+}
 
     if (!nombre || (!telefono && !correo) || !mensaje) {
       return NextResponse.json(

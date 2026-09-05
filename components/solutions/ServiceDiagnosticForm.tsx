@@ -30,6 +30,24 @@ export default function ServiceDiagnosticForm({ section }: Props) {
           value="/soluciones/declaracion-de-renta?enviado=1#comencemos"
         />
 
+        {/* CAMPO TRAMPA ANTISPAM: NO ELIMINAR */}
+<div
+  aria-hidden="true"
+  className="pointer-events-none absolute -left-[9999px] h-px w-px overflow-hidden opacity-0"
+>
+  <label htmlFor="diagnostico-website">
+    No completar este campo
+  </label>
+
+  <input
+    id="diagnostico-website"
+    type="text"
+    name="website"
+    tabIndex={-1}
+    autoComplete="off"
+  />
+</div>
+
         <div className="grid gap-5">
           <div>
             <label
