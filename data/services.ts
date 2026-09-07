@@ -754,19 +754,18 @@ export const services: ServiceItem[] = [
   id: "comencemos",
   layout: "diagnostic",
   theme: "warm",
-  eyebrow: "Evaluación inicial",
-  title:
-    "¿No sabes por dónde empezar? Analizamos tu caso sin compromiso.",
+  eyebrow: "Cotización inicial",
+  title: "Cotiza tu declaración de renta según la complejidad de tu caso.",
   description:
-    "No necesitas calcular nada ni tener conocimientos contables. Comparte tres datos básicos y un especialista revisará tu situación para indicarte la ruta adecuada.",
+    "Comparte tus datos básicos y selecciona los rangos aproximados de ingresos y patrimonio. Al continuar, abriremos WhatsApp con la información lista para enviar.",
   primaryCta: {
     label: "Cotizar mi declaración de renta",
-    href: "/api/contacto",
+    href: "https://wa.me/573118687774",
   },
   secondaryCta: {
     label: "Hablar directamente por WhatsApp",
     href:
-      "https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20solicitar%20una%20evaluaci%C3%B3n%20inicial%20para%20mi%20declaraci%C3%B3n%20de%20renta%20con%20TRACO.",
+      "https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20quiero%20recibir%20orientaci%C3%B3n%20sobre%20mi%20declaraci%C3%B3n%20de%20renta%20con%20TRACO.",
   },
 },
      {
