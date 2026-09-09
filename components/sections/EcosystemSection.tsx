@@ -12,11 +12,15 @@ type Brand = {
   tagline: string;
   description: string;
   href: string;
+
   visual: string;
+  image?: string;
+
   glow: string;
-  panel: string;
-  visualClassName: string;
+
   features: string[];
+
+  featured?: boolean;
 };
 
 const brands: Brand[] = [
@@ -25,78 +29,85 @@ const brands: Brand[] = [
     category: "Tecnología & Automatización",
     tagline: "Simplificamos lo complejo.",
     description:
-      "Infraestructura ERP para conectar operación, información contable y expansión empresarial.",
+      "Infraestructura ERP adaptable para conectar operación, información contable, automatización y crecimiento empresarial.",
     href: "/sadi",
     visual: "/brands/sadi-isotype.png",
     glow: "#f28a2b",
-    panel: "#101a27",
-    visualClassName: "max-h-[92px] max-w-[96px] md:max-h-[220px] md:max-w-[210px]",
-    features: ["Automatización", "Información", "Control", "Escala"],
+    features: ["ERP", "Automatización", "Datos", "Escalabilidad"],
   },
+
+  {
+    name: "CEC",
+    category: "Conocimiento & Comunidad",
+    tagline: "Conocimiento que impulsa.",
+    description:
+      "Comunidad, formación y actualización para contadores y profesionales que evolucionan con el entorno empresarial colombiano.",
+    href: "/contadores-en-colombia",
+    visual: "/brands/cec-isotype.png",
+    glow: "#3b82f6",
+    features: ["Formación", "Comunidad", "Actualidad"],
+  },
+
+  {
+  name: "Cultura Conecta",
+  category: "Personas & Transformación",
+  tagline: "Personas que transforman organizaciones.",
+  description:
+    "Liderazgo, formación y evolución organizacional para fortalecer cultura, talento y capacidad de transformación.",
+  href: "/cultura-conecta",
+  visual: "/brands/cultura-conecta-isotype-3d.webp",
+  image: "/fotos/ecosistema_webp/cultura-conecta.jpeg",
+  glow: "#a0c82b",
+  features: ["Liderazgo", "Formación", "Transformación"],
+},
+
+  {
+    name: "Análisis & Consultorías",
+    category: "Núcleo Estratégico",
+    tagline: "Inteligencia empresarial para mejores decisiones.",
+    description:
+      "Integramos estrategia, tributación, finanzas y consultoría para transformar información compleja en decisiones empresariales con mayor control.",
+    href: "/analisis-consultorias",
+    visual: "/brands/analisis-isotype.png",
+    glow: "#c96a1b",
+    features: ["Estrategia", "Finanzas", "Tributación", "Consultoría"],
+    featured: true,
+  },
+
   {
     name: "TRACO",
     category: "Trámites & Formalización",
     tagline: "Formalizar nunca fue tan simple.",
     description:
-      "Gestión empresarial ante DIAN, Cámara de Comercio y entidades clave, con claridad y seguimiento.",
+      "Gestión empresarial ante DIAN, Cámara de Comercio y entidades clave, con claridad documental y seguimiento especializado.",
     href: "/traco",
     visual: "/brands/traco-isotype.png",
-    glow: "#3b82f6",
-    panel: "#0d1b33",
-    visualClassName: "max-h-[150px] max-w-[100px] md:max-h-[120px] md:max-w-[220px]",
-    features: ["Formalización", "DIAN", "Cámara", "Seguimiento"],
+    glow: "#2563eb",
+    features: ["DIAN", "Cámara", "Trámites"],
   },
-  {
-    name: "CEC",
-    category: "Comunidad de Contadores Colombia",
-    tagline: "Conecta, aprende y crece.",
-    description:
-      "La comunidad donde conocimiento, evolución profesional y oportunidades conectan a los contadores del país.",
-    href: "/contadores-en-colombia",
-    visual: "/brands/cec-isotype.png",
-    glow: "#60a5fa",
-    panel: "#10233d",
-    visualClassName: "max-h-[150px] max-w-[105px] md:max-h-[175px] md:max-w-[230px]",
-    features: ["Networking", "Formación", "Eventos", "Oportunidades"],
-  },
+
   {
     name: "ASPRO",
     category: "Aseguramiento de Procesos",
-    tagline: "Control que anticipa.",
+    tagline: "Confianza en cada proceso.",
     description:
-      "Auditoría, cumplimiento y blindaje operativo para procesos empresariales que no pueden dejarse al azar.",
+      "Aseguramiento, control y mejora continua para organizaciones que necesitan operar con mayor consistencia y trazabilidad.",
     href: "/aspro",
     visual: "/brands/aspro-isotype.png",
     glow: "#ef4444",
-    panel: "#251316",
-    visualClassName: "max-h-[80px] max-w-[96px] md:max-h-[120px] md:max-w-[215px]",
-    features: ["Control", "Auditoría", "Cumplimiento", "Mejora"],
+    features: ["Control", "Procesos", "Cumplimiento"],
   },
+
   {
-    name: "Análisis & Consultorías",
-    category: "Inteligencia Estratégica",
-    tagline: "Decisiones con mayor claridad.",
+    name: "FASI",
+    category: "Ingeniería Digital",
+    tagline: "Ideas que se convierten en soluciones.",
     description:
-      "Diagnóstico financiero, tributario y corporativo para organizaciones que necesitan pensar y actuar a largo plazo.",
-    href: "/analisis-consultorias",
-    visual: "/brands/analisis-isotype.png",
-    glow: "#c96a1b",
-    panel: "#211914",
-    visualClassName: "max-h-[76px] max-w-[104px] md:max-h-[150px] md:max-w-[240px]",
-    features: ["Estrategia", "Finanzas", "Tributación", "Decisión"],
-  },
-  {
-    name: "Cultura Conecta",
-    category: "Liderazgo & Evolución",
-    tagline: "Cultura que conecta. Liderazgo que transforma.",
-    description:
-      "Transformación empresarial, formación ejecutiva y espacios para movilizar talento, visión y resultados.",
-    href: "/cultura-conecta",
-    visual: "/brands/cultura-conecta-isotype-3d.webp",
-    glow: "#a0c82b",
-    panel: "#0a2138",
-    visualClassName: "max-h-[105px] max-w-[110px] md:max-h-[100px] md:max-w-[245px]",
-    features: ["Liderazgo", "Cultura", "Formación", "Espacios"],
+      "Desarrollo de software, plataformas empresariales, experiencias digitales y e-commerce construidos para necesidades reales de negocio.",
+    href: "/fasi",
+    visual: "/brands/fasi-isotype.png",
+    glow: "#0891b2",
+    features: ["Software", "Plataformas", "E-commerce"],
   },
 ];
 
@@ -152,7 +163,366 @@ function CapabilityIcon({ index }: { index: number }) {
   );
 }
 
+function EcosystemCompanyCard({ brand }: { brand: Brand }) {
+  return (
+    <Link
+      href={brand.href}
+      aria-label={`Explorar ${brand.name}`}
+      className="group block h-full"
+    >
+      <motion.article
+        whileHover={{ y: -3 }}
+        transition={{
+          duration: 0.3,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="
+          relative
+          flex
+          min-h-[220px]
+          h-full
+          flex-col
+          overflow-hidden
+          rounded-[1.65rem]
+          border border-black/[0.07]
+          bg-white/90
+          p-6
+          shadow-[0_20px_55px_rgba(15,23,42,0.06)]
+          backdrop-blur-xl
+          transition-shadow
+          duration-300
+          group-hover:shadow-[0_28px_70px_rgba(15,23,42,0.11)]
+          md:p-6
+          lg:h-[245px]
+          lg:min-h-0
+          xl:h-[250px]
+          xl:p-7
+        "
+      >
+        {/* BRAND COLOR */}
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 z-0 w-[38%] opacity-[0.08]"
+          style={{
+            background: `linear-gradient(135deg, transparent, ${brand.glow})`,
+          }}
+        />
+
+        {/* PHOTO */}
+        {brand.image && (
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-y-0
+              right-0
+              z-[1]
+              hidden
+              w-[34%]
+              overflow-hidden
+              md:block
+            "
+          >
+            <Image
+              src={brand.image}
+              alt=""
+              fill
+              className="
+                object-cover
+                object-[center_56%]
+                transition-transform
+                duration-700
+                group-hover:scale-[1.035]
+              "
+              sizes="(min-width: 1280px) 13vw, (min-width: 768px) 24vw, 0px"
+            />
+
+            {/* Only soften the left edge of the image */}
+            <div
+              className="
+                absolute
+                inset-y-0
+                left-0
+                w-[42%]
+                bg-gradient-to-r
+                from-white
+                via-white/75
+                to-transparent
+              "
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/[0.04] via-transparent to-white/[0.04]" />
+          </div>
+        )}
+
+        {/* CONTENT */}
+        <div className="relative z-10 flex h-full flex-col">
+          <div
+            className={brand.image ? "md:max-w-[68%]" : ""}
+          >
+            {/* CATEGORY */}
+            <div className="flex items-center gap-2.5">
+              <span
+                className="h-2 w-2 shrink-0 rounded-full"
+                style={{
+                  backgroundColor: brand.glow,
+                  boxShadow: `0 0 16px ${brand.glow}`,
+                }}
+              />
+
+              <p className="text-[9px] font-medium uppercase tracking-[0.23em] text-black/40">
+                {brand.category}
+              </p>
+            </div>
+
+            {/* BRAND */}
+            <div className="mt-4 flex items-center gap-4">
+              <div className="flex h-[58px] w-[58px] shrink-0 items-center justify-center">
+                <Image
+                  src={brand.visual}
+                  alt={`Identidad visual de ${brand.name}`}
+                  width={100}
+                  height={100}
+                  className="
+                    max-h-[58px]
+                    max-w-[58px]
+                    object-contain
+                    transition-transform
+                    duration-500
+                    group-hover:scale-[1.04]
+                  "
+                />
+              </div>
+
+              <div className="min-w-0">
+                <h3 className="text-xl font-semibold leading-[1] tracking-[-0.045em] text-[#071524] xl:text-[1.55rem]">
+                  {brand.name}
+                </h3>
+
+                <p className="mt-1.5 text-[12px] font-light leading-[1.4] text-black/50">
+                  {brand.tagline}
+                </p>
+              </div>
+            </div>
+
+            {/* DESCRIPTION */}
+            <p className="mt-4 text-[11px] font-light leading-[1.65] text-black/60 xl:text-[12px]">
+              {brand.description}
+            </p>
+          </div>
+
+          {/* FEATURES + CTA */}
+          <div className="mt-auto flex items-end justify-between gap-3 pt-4">
+            <div className="flex flex-wrap gap-1.5">
+              {brand.features.map((feature) => (
+                <span
+                  key={feature}
+                  style={{
+                    borderColor: `${brand.glow}22`,
+                  }}
+                  className="
+                    rounded-full
+                    border
+                    bg-white/80
+                    px-2.5
+                    py-1
+                    text-[8px]
+                    font-medium
+                    text-[#344256]
+                    shadow-[0_4px_12px_rgba(15,23,42,0.035)]
+                    xl:text-[9px]
+                  "
+                >
+                  {feature}
+                </span>
+              ))}
+            </div>
+
+            <span
+              style={{
+                borderColor: `${brand.glow}30`,
+              }}
+              className="
+                flex
+                h-9
+                w-9
+                shrink-0
+                items-center
+                justify-center
+                rounded-full
+                border
+                bg-white
+                text-[#0a1b2e]
+                shadow-sm
+                transition-all
+                duration-300
+                group-hover:translate-x-0.5
+                group-hover:-translate-y-0.5
+              "
+            >
+              <ArrowUpRight />
+            </span>
+          </div>
+        </div>
+      </motion.article>
+    </Link>
+  );
+}
+
+function EcosystemCoreCard({ brand }: { brand: Brand }) {
+  return (
+    <Link
+      href={brand.href}
+      aria-label="Explorar Grupo Análisis & Consultorías"
+      className="group block h-full"
+    >
+      <motion.article
+        whileHover={{ y: -3 }}
+        transition={{
+          duration: 0.35,
+          ease: [0.16, 1, 0.3, 1],
+        }}
+        className="
+          relative
+          flex
+          h-full
+          min-h-[600px]
+          flex-col
+          items-center
+          justify-center
+          overflow-hidden
+          rounded-[2.25rem]
+          border border-[#c96a1b]/20
+          bg-[#fbf8f2]
+          px-9 py-14 xl:px-10 xl:py-16
+          text-center
+          shadow-[0_28px_90px_rgba(44,31,20,0.10)]
+        "
+      >
+        <div
+          className="
+            pointer-events-none
+            absolute left-1/2 top-1/2
+            h-[520px] w-[520px]
+            -translate-x-1/2 -translate-y-1/2
+            rounded-full
+            border border-[#c96a1b]/10
+          "
+        />
+
+        <div
+          className="
+            pointer-events-none
+            absolute left-1/2 top-1/2
+            h-[390px] w-[390px]
+            -translate-x-1/2 -translate-y-1/2
+            rounded-full
+            border border-black/[0.05]
+          "
+        />
+
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,106,27,0.10),transparent_52%)]" />
+
+        <div className="relative z-10 flex flex-col items-center">
+          <span
+            className="
+              rounded-full
+              border border-black/[0.06]
+              bg-white/75
+              px-5 py-2
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.28em]
+              text-black/45
+              shadow-sm
+            "
+          >
+            El núcleo que integra
+          </span>
+
+          <div className="mt-10 flex h-[150px] items-center justify-center">
+            <Image
+              src={brand.visual}
+              alt="Grupo Análisis & Consultorías"
+              width={260}
+              height={180}
+              className="max-h-[145px] w-auto object-contain"
+            />
+          </div>
+
+          <span
+            className="
+              mt-8
+              rounded-full
+              bg-[#c96a1b]/10
+              px-5 py-2
+              text-[9px]
+              font-semibold
+              uppercase
+              tracking-[0.25em]
+              text-[#8f4d17]
+            "
+          >
+            Núcleo estratégico
+          </span>
+
+          <h3 className="mt-7 max-w-md text-3xl font-semibold leading-[1.05] tracking-[-0.045em] text-[#15100d]">
+            {brand.tagline}
+          </h3>
+
+          <p className="mt-5 max-w-md text-sm font-light leading-[1.8] text-black/58">
+            {brand.description}
+          </p>
+
+          <div className="mt-8 flex max-w-md flex-wrap justify-center gap-2">
+            {brand.features.map((feature) => (
+              <span
+                key={feature}
+                className="
+                  rounded-full
+                  border border-black/[0.05]
+                  bg-white/80
+                  px-3.5 py-1.5
+                  text-[10px]
+                  font-medium
+                  text-[#5e5046]
+                  shadow-sm
+                "
+              >
+                {feature}
+              </span>
+            ))}
+          </div>
+
+          <span
+            className="
+              mt-10
+              flex h-12 w-12
+              items-center justify-center
+              rounded-full
+              bg-[#0b2135]
+              text-white
+              shadow-[0_12px_30px_rgba(11,33,53,0.20)]
+              transition-transform
+              duration-300
+              group-hover:translate-x-0.5
+            "
+          >
+            <ArrowUpRight />
+          </span>
+        </div>
+      </motion.article>
+    </Link>
+  );
+}
+
 export default function EcosystemSection() {
+  const coreBrand = brands.find((brand) => brand.featured);
+  const satelliteBrands = brands.filter((brand) => !brand.featured);
+
+  const leftBrands = satelliteBrands.slice(0, 3);
+  const rightBrands = satelliteBrands.slice(3, 6);
+
   return (
     <section
       id="ecosystem"
@@ -217,124 +587,48 @@ export default function EcosystemSection() {
   </div>
 </Reveal>
 
-        <div className="grid grid-cols-1 items-stretch gap-5 md:gap-6 lg:grid-cols-2">
-          {brands.map((brand, index) => (
-            <Reveal key={brand.name} delay={(index % 2) * 0.06}>
-              <Link
-                href={brand.href}
-                aria-label={`Explorar ${brand.name}`}
-                className="group block h-full"
-              >
-                <motion.article
-  whileHover={{ y: -6 }}
-  transition={{
-    duration: 0.45,
-    ease: [0.16, 1, 0.3, 1],
-  }}
-  className={`
-    relative
-    flex
-    h-auto
-    min-h-0
-    flex-col
-    overflow-hidden
-    rounded-[1.8rem]
-    border
-    border-white/35
-    p-5
-    text-white
-    shadow-[0_24px_70px_rgba(8,20,38,0.16)]
-    md:h-[570px]
-    md:rounded-[2.4rem]
-    md:p-8
-    lg:h-[520px]
-    ${index >= 4 ? "xl:h-[580px]" : "xl:h-[510px]"}
-    xl:p-8
-  `}
-  style={{ backgroundColor: brand.panel }}
+<div
+  className="
+    grid
+    grid-cols-1
+    items-stretch
+    gap-5
+    md:gap-6
+    lg:grid-cols-[1fr_1.22fr_1fr]
+    lg:gap-6
+    xl:gap-7
+  "
 >
+  {/* LEFT SIDE */}
+  <div className="order-2 flex flex-col gap-5 md:gap-6 lg:order-1">
+    {leftBrands.map((brand, index) => (
+      <Reveal key={brand.name} delay={index * 0.05}>
+        <EcosystemCompanyCard brand={brand} />
+      </Reveal>
+    ))}
+  </div>
 
-                  {/* LIGHT, DEPTH AND GLASS */}
-                  <div
-                    className="pointer-events-none absolute inset-0 opacity-75"
-                    style={{
-                      background: `radial-gradient(circle at 16% 18%, ${brand.glow}38 0%, transparent 34%), radial-gradient(circle at 82% 18%, ${brand.glow}18 0%, transparent 38%)`,
-                    }}
-                  />
-                  <div className="pointer-events-none absolute inset-[1px] rounded-[1.74rem] border border-white/20 md:rounded-[2.34rem]" />
-                  <div className="pointer-events-none absolute -right-[18%] top-[-35%] h-[88%] w-[58%] rotate-[34deg] rounded-[45%] bg-white/[0.055] blur-[1px]" />
-                  <div className="pointer-events-none absolute inset-x-10 top-0 h-px bg-gradient-to-r from-transparent via-white/80 to-transparent shadow-[0_0_20px_rgba(255,255,255,0.75)]" />
+  {/* STRATEGIC CORE */}
+  <div className="order-1 flex h-full items-center lg:order-2">
+    {coreBrand && (
+  <div className="w-full">
+    <Reveal>
+      <EcosystemCoreCard brand={coreBrand} />
+    </Reveal>
+  </div>
+)}
+  </div>
 
-                  {/* MAIN AREA */}
-                  <div className="relative z-10 grid flex-1 grid-cols-[92px_minmax(0,1fr)] items-center gap-5 md:grid-cols-[0.38fr_0.62fr] md:gap-8">
-                    <div className="relative flex min-h-[138px] items-center justify-center border-r border-white/12 pr-4 md:min-h-0 md:pr-8">
-                      <div
-                        className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[55px]"
-                        style={{ backgroundColor: `${brand.glow}38` }}
-                      />
-                      <Image
-                        src={brand.visual}
-                        alt={`Identidad visual de ${brand.name}`}
-                        width={280}
-                        height={220}
-                        className={`relative z-10 h-auto w-auto object-contain drop-shadow-[0_25px_40px_rgba(0,0,0,0.42)] transition-transform duration-700 group-hover:scale-[1.06] group-hover:-rotate-1 ${brand.visualClassName}`}
-                      />
-                    </div>
-
-                    <div className="min-w-0 flex flex-col justify-center">
-                      <div className="flex items-center gap-3">
-                        <span
-                          className="h-2 w-2 rounded-full shadow-[0_0_14px_currentColor]"
-                          style={{ backgroundColor: brand.glow, color: brand.glow }}
-                        />
-                        <p className="text-[8px] uppercase leading-[1.5] tracking-[0.22em] text-white/42 sm:text-[10px] sm:tracking-[0.28em]">
-                          {brand.category}
-                        </p>
-                      </div>
-
-                      <h3 className="mt-3 text-[1.75rem] font-semibold leading-[0.94] tracking-[-0.055em] sm:text-4xl md:mt-5 md:text-5xl lg:text-[2.7rem] xl:text-[2.85rem]">
-                        {brand.name}
-                      </h3>
-                      <p className="mt-2 text-sm font-light leading-[1.5] text-white/52 sm:text-base md:mt-3 md:text-lg">
-                        {brand.tagline}
-                      </p>
-                      <div className="my-4 h-px w-full bg-gradient-to-r from-white/22 to-transparent md:my-6" />
-                      <p className="max-w-xl text-[13px] font-light leading-[1.65] text-white/72 sm:text-sm md:text-base md:leading-[1.8]">
-                        {brand.description}
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* CAPABILITIES AND CTA */}
-                  <div className="relative z-10 mt-6 grid gap-5 border-t border-white/12 pt-6 md:mt-9 md:gap-7 md:pt-7 xl:grid-cols-[1fr_auto] xl:items-end">
-                    <div className="grid grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-4">
-                      {brand.features.map((feature, featureIndex) => (
-                        <div
-                          key={feature}
-                          className="flex min-w-0 flex-col items-center border-white/10 text-center sm:border-r sm:last:border-r-0"
-                        >
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/[0.07] text-white/82 shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_30px_rgba(0,0,0,0.16)] backdrop-blur-xl md:h-12 md:w-12 md:rounded-2xl">
-                            <CapabilityIcon index={featureIndex} />
-                          </span>
-                          <span className="mt-2 max-w-full text-[9px] font-light tracking-[0.03em] text-white/58 sm:mt-3 sm:text-[11px]">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <span className="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/45 bg-white/90 px-6 py-3 text-xs font-semibold text-[#0a1b2e] shadow-[0_0_24px_rgba(255,255,255,0.16)] transition-all duration-500 group-hover:bg-white group-hover:shadow-[0_0_32px_rgba(255,255,255,0.32)] sm:w-auto md:py-3.5 md:text-sm">
-                      Explorar
-                      <ArrowUpRight />
-                    </span>
-                  </div>
-                </motion.article>
-              </Link>
-            </Reveal>
-          ))}
+  {/* RIGHT SIDE */}
+  <div className="order-3 flex flex-col gap-5 md:gap-6">
+    {rightBrands.map((brand, index) => (
+      <Reveal key={brand.name} delay={index * 0.05}>
+        <EcosystemCompanyCard brand={brand} />
+      </Reveal>
+    ))}
+  </div>
+</div>
         </div>
-
-      </div>
-    </section>
-  );
+      </section>
+    );
 }

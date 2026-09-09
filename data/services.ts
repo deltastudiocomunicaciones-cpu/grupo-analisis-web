@@ -337,48 +337,457 @@ export const services: ServiceItem[] = [
     accentColor: "#d97706",
   },
   {
-    slug: "devolucion-impuestos",
-    title: "Devolución de Impuestos",
-    description:
-      "Servicio de gestión integral de devolución de impuestos, diseñado para optimizar tiempos, reducir costos y garantizar el cumplimiento normativo en empresas de todos los tamaños.",
-    brand: "Grupo A&C",
-    href: "/soluciones/devolucion-impuestos",
-    image: "/fotos/servicios/devolucion-impuestos.png",
-    category: "operational",
-    eyebrow: "Gestión tributaria",
+  slug: "devolucion-impuestos",
+  title: "Devolución de Impuestos",
+  description:
+    "Acompañamiento especializado para evaluar, preparar y gestionar solicitudes de devolución de saldos a favor ante la DIAN, con revisión tributaria, contable y documental.",
+  brand: "Grupo A&C",
+  href: "/soluciones/devolucion-impuestos",
+  image: "/fotos/servicios/devolucion-impuestos.png",
+  category: "operational",
+  eyebrow: "Devolución de impuestos · Empresas",
+  heroTitle:
+    "Recupere los saldos a favor de su empresa con respaldo tributario especializado.",
+  technicalIntro:
+    "Evaluamos la procedencia del saldo a favor, revisamos la información que lo sustenta y acompañamos la preparación y gestión de la solicitud ante la DIAN.",
+  sections: [
+    {
+      title: "Evaluación de procedencia",
+      text:
+        "Revisamos inicialmente el origen del saldo a favor, los períodos involucrados y la información tributaria relacionada para determinar la viabilidad del proceso.",
+    },
+    {
+      title: "Revisión y preparación",
+      text:
+        "Analizamos la información tributaria, contable y documental necesaria para estructurar una solicitud consistente y técnicamente sustentada.",
+    },
+    {
+      title: "Acompañamiento ante la DIAN",
+      text:
+        "Acompañamos la presentación, seguimiento y atención de las actuaciones que correspondan dentro del alcance contratado.",
+    },
+  ],
+  benefits: [
+    "Evaluación previa antes de iniciar la solicitud.",
+    "Mayor consistencia tributaria, contable y documental.",
+    "Reducción de reprocesos y errores evitables.",
+    "Acompañamiento especializado durante el trámite.",
+  ],
+  deliverables: [
+    "Evaluación inicial de procedencia.",
+    "Relación de información y soportes requeridos.",
+    "Preparación y organización del expediente.",
+    "Acompañamiento durante el proceso.",
+  ],
+  ctaLabel: "Evaluar mi saldo a favor",
+  accentColor: "#c96a1b",
+
+  landing: {
+    heroEyebrow: "Devolución de impuestos · Empresas",
+
     heroTitle:
-      "Devolución de impuestos gestionados con técnica, evidencia y control documental.",
-    technicalIntro:
-      "Este servicio acompaña a empresas en la preparación, revisión y gestión de solicitudes de devolución de IVA, cuidando soportes, requisitos y trazabilidad.",
+      "Recupere los saldos a favor de su empresa.",
+
+    heroDescription:
+      "Devolución de IVA e impuestos con respaldo tributario especializado. Revisamos la procedencia de su saldo a favor, preparamos la documentación y acompañamos integralmente el proceso de solicitud ante la DIAN.",
+
+    heroSupportingText:
+      "Antes de solicitar una devolución, verificamos que la información tributaria, contable y documental que sustenta el saldo sea consistente.",
+
+    primaryCta: {
+      label: "Quiero evaluar mi saldo a favor",
+      href: "#evaluacion",
+    },
+
+    secondaryCta: {
+      label: "Conocer cómo lo hacemos",
+      href: "#proceso",
+    },
+
+    trustPoints: [
+      "Grupo A&C · Desde 2006",
+      "Especialistas tributarios",
+      "Acompañamiento integral",
+      "Atención nacional",
+    ],
+
     sections: [
       {
-        title: "Revisión de procedencia",
-        text: "Evaluación técnica para determinar si la empresa cuenta con condiciones, soportes y saldos que permitan solicitar la devolución.",
+        id: "identificacion",
+        layout: "cards",
+        theme: "light",
+        eyebrow: "Identifique la oportunidad",
+        title:
+          "¿Su empresa tiene dinero a favor ante la DIAN?",
+        description:
+          "Un saldo a favor puede representar recursos que permanecen inmovilizados. Estas son algunas situaciones en las que vale la pena evaluar si existe una oportunidad de devolución o compensación.",
+        columns: 3,
+
+        items: [
+          {
+            title: "Saldos a favor en IVA o renta",
+            text:
+              "Su empresa registra saldos a favor en declaraciones tributarias y quiere determinar si cumplen las condiciones para ser solicitados.",
+          },
+          {
+            title: "Retenciones superiores al impuesto",
+            text:
+              "Las retenciones, autorretenciones o anticipos acumulados superan recurrentemente el impuesto generado.",
+          },
+          {
+            title: "Operaciones exentas de IVA",
+            text:
+              "La actividad de la empresa puede generar saldos a favor derivados de operaciones exentas o tratamientos tributarios aplicables.",
+          },
+          {
+            title: "Empresas exportadoras",
+            text:
+              "Realiza exportaciones de bienes o servicios y puede encontrarse dentro de escenarios que generan saldos susceptibles de devolución.",
+          },
+          {
+            title: "Saldos acumulados de varios períodos",
+            text:
+              "La empresa viene acumulando saldos a favor y necesita establecer qué períodos y valores podrían ser objeto de solicitud.",
+          },
+          {
+            title: "Solicitudes con inconvenientes",
+            text:
+              "Ya presentó una solicitud y recibió requerimientos, inadmisión, devolución del expediente o necesita revisar los antecedentes del trámite.",
+          },
+        ],
+
+        ctaHeading:
+          "Su empresa podría tener una oportunidad de recuperación.",
+
+        trustText:
+          "Antes de iniciar el proceso, evaluamos la situación tributaria y la procedencia del saldo.",
+
+        primaryCta: {
+          label: "Revisar mi caso",
+          href: "#evaluacion",
+        },
       },
+
       {
-        title: "Preparación documental",
-        text: "Organización de información contable, fiscal y documental requerida para sustentar la solicitud ante la entidad correspondiente.",
+        id: "revision-previa",
+        layout: "split",
+        theme: "dark",
+        eyebrow: "Antes de solicitar",
+        title:
+          "Tener un saldo a favor no significa que la devolución sea automática.",
+        description:
+          "Una solicitud puede implicar la revisión de declaraciones tributarias, información exógena, facturación electrónica, retenciones, soportes contables y demás información relacionada con el saldo solicitado.",
+
+        items: [
+          {
+            title: "Requerimientos",
+            text:
+              "Diferencias o información insuficiente pueden generar solicitudes adicionales de información por parte de la administración tributaria.",
+          },
+          {
+            title: "Reprocesos",
+            text:
+              "Una preparación incompleta puede obligar a reconstruir soportes, revisar períodos o corregir información antes de continuar.",
+          },
+          {
+            title: "Inadmisiones",
+            text:
+              "El incumplimiento de requisitos aplicables puede impedir que la solicitud avance en la forma esperada.",
+          },
+          {
+            title: "Demoras",
+            text:
+              "Inconsistencias entre declaraciones, soportes e información reportada pueden extender innecesariamente el proceso.",
+          },
+        ],
+
+        ctaHeading:
+          "Primero revisamos. Después solicitamos.",
+
+        trustText:
+          "Nuestro trabajo comienza determinando la procedencia del saldo e identificando posibles inconsistencias antes de iniciar el trámite.",
+
+        primaryCta: {
+          label: "Evaluar la procedencia de mi saldo",
+          href: "#evaluacion",
+        },
       },
+
       {
-        title: "Acompañamiento en el proceso",
-        text: "Seguimiento a la radicación, requerimientos, respuestas y etapas asociadas al trámite de devolución.",
+        id: "proceso",
+        layout: "steps",
+        theme: "warm",
+        eyebrow: "Metodología Grupo A&C",
+        title:
+          "Así gestionamos su devolución.",
+        description:
+          "No nos limitamos a preparar una solicitud. Analizamos la información que la sustenta y acompañamos cada etapa dentro del alcance contratado.",
+
+        items: [
+          {
+            title: "Evaluamos",
+            text:
+              "Realizamos una revisión inicial del saldo a favor y de la situación tributaria relacionada para determinar su procedencia, identificar riesgos y establecer la viabilidad inicial.",
+          },
+          {
+            title: "Revisamos y preparamos",
+            text:
+              "Analizamos la información tributaria, contable y documental necesaria, validamos su consistencia e identificamos aspectos que requieran aclaración o soporte adicional.",
+          },
+          {
+            title: "Solicitamos",
+            text:
+              "Una vez realizada la revisión y completados los requisitos aplicables, preparamos la solicitud y acompañamos su presentación ante la DIAN.",
+          },
+          {
+            title: "Acompañamos",
+            text:
+              "Realizamos seguimiento al proceso y brindamos acompañamiento frente a actuaciones o requerimientos dentro del alcance del servicio contratado.",
+          },
+          {
+            title: "Cerramos",
+            text:
+              "Acompañamos la culminación del proceso conforme al alcance contratado y entregamos la documentación correspondiente para conservar su trazabilidad.",
+          },
+        ],
+
+        ctaHeading:
+          "Usted no tiene que enfrentarse solo al proceso.",
+
+        trustText:
+          "Un equipo tributario acompaña la evaluación, preparación y gestión de su solicitud.",
+
+        primaryCta: {
+          label: "Quiero iniciar la evaluación",
+          href: "#evaluacion",
+        },
+      },
+
+      {
+        id: "riesgo",
+        layout: "cards",
+        theme: "dark",
+        eyebrow: "Rigor antes de radicar",
+        title:
+          "Solicitar una devolución es fácil. Sustentarla correctamente es lo importante.",
+        description:
+          "Recuperar un saldo a favor no comienza con un formulario. Comienza demostrando que ese saldo está correctamente determinado y sustentado.",
+        columns: 3,
+
+        items: [
+          {
+            title: "Consistencia tributaria",
+            text:
+              "Revisamos la relación entre declaraciones, retenciones, información exógena y demás elementos tributarios relacionados con la determinación del saldo.",
+          },
+          {
+            title: "Evidencia documental",
+            text:
+              "Identificamos los documentos y soportes necesarios para construir un expediente organizado y coherente con la solicitud.",
+          },
+          {
+            title: "Revisión contable",
+            text:
+              "Cuando el caso lo requiere, analizamos la información contable relacionada para verificar que el saldo solicitado tenga respaldo y trazabilidad.",
+          },
+        ],
+
+        ctaHeading:
+          "Una revisión previa puede evitar errores, reprocesos e inconsistencias.",
+
+        trustText:
+          "Grupo A&C trabaja bajo un principio sencillo: primero revisamos, después solicitamos.",
+
+        primaryCta: {
+          label: "Evaluar mi saldo a favor",
+          href: "#evaluacion",
+        },
+      },
+
+      {
+        id: "respaldo",
+        layout: "split",
+        theme: "light",
+        eyebrow: "Confianza y autoridad",
+        title:
+          "¿Por qué gestionar su devolución con Grupo A&C?",
+        description:
+          "Detrás de una devolución existe información financiera, contable, tributaria y documental que debe guardar coherencia. Por eso abordamos el proceso desde una perspectiva integral.",
+
+        items: [
+          {
+            title: "Experiencia tributaria",
+            text:
+              "Desde 2006 acompañamos empresas y personas en procesos contables, tributarios y financieros.",
+          },
+          {
+            title: "Revisión antes de solicitar",
+            text:
+              "No partimos de la premisa de que todo saldo a favor necesariamente debe solicitarse. Primero evaluamos su procedencia.",
+          },
+          {
+            title: "Visión integral",
+            text:
+              "Contabilidad, impuestos, información financiera y soportes documentales forman parte de una misma realidad empresarial.",
+          },
+          {
+            title: "Acompañamiento especializado",
+            text:
+              "Su empresa cuenta con profesionales que acompañan las diferentes etapas del proceso dentro del alcance contratado.",
+          },
+        ],
+
+        ctaHeading:
+          "Más que gestionar un trámite, construimos un proceso técnicamente sustentado.",
+
+        trustText:
+          "Experiencia · Revisión · Trazabilidad · Acompañamiento",
+
+        primaryCta: {
+          label: "Quiero revisar mi caso",
+          href: "#evaluacion",
+        },
+      },
+
+      {
+        id: "evaluacion",
+        layout: "cta",
+        theme: "warm",
+        eyebrow: "Evaluación inicial",
+        title:
+          "¿Podría su empresa tener dinero por recuperar?",
+        description:
+          "Antes de iniciar una devolución queremos entender su caso. Cuéntenos brevemente la situación de su empresa para realizar una evaluación inicial y orientarlo sobre el siguiente paso.",
+
+        primaryCta: {
+          label: "Evaluar mi caso",
+          href:
+            "/contacto?servicio=devolucion-impuestos&consulta=evaluacion",
+        },
+
+        secondaryCta: {
+          label: "Hablar con un especialista",
+          href:
+            "/contacto?servicio=devolucion-impuestos&consulta=especialista",
+        },
+
+        trustText:
+          "La evaluación inicial permite conocer las características del saldo antes de definir el alcance del proceso.",
+      },
+
+      {
+        id: "preguntas",
+        layout: "faq",
+        theme: "light",
+        eyebrow: "Preguntas frecuentes",
+        title:
+          "Antes de solicitar una devolución, resolvamos sus dudas.",
+        description:
+          "Cada saldo a favor tiene un origen y unas condiciones particulares. Estas respuestas permiten comprender mejor el proceso antes de iniciar una evaluación.",
+
+        items: [
+          {
+            group: "Viabilidad",
+            title:
+              "¿Tener un saldo a favor significa que automáticamente puedo solicitar su devolución?",
+            text:
+              "No necesariamente. La procedencia depende del tipo de impuesto, origen del saldo, período correspondiente, requisitos aplicables y consistencia de la información que lo soporta. Por eso recomendamos realizar una evaluación previa.",
+          },
+          {
+            group: "Viabilidad",
+            title:
+              "¿Qué saldos a favor pueden ser objeto de devolución?",
+            text:
+              "Dependiendo de las condiciones particulares del contribuyente y de la normatividad aplicable, pueden existir saldos susceptibles de devolución o compensación en impuestos como IVA y renta.",
+          },
+          {
+            group: "Viabilidad",
+            title:
+              "¿Puedo solicitar una devolución de períodos anteriores?",
+            text:
+              "Puede ser posible dependiendo del impuesto, período, origen del saldo y términos legales aplicables. Es necesario revisar cada caso particular.",
+          },
+
+          {
+            group: "Proceso",
+            title:
+              "¿Cuánto tarda una devolución?",
+            text:
+              "Los tiempos pueden variar según el tipo de solicitud, características del contribuyente, documentación presentada, verificaciones de la DIAN y particularidades del proceso.",
+          },
+          {
+            group: "Proceso",
+            title:
+              "¿Qué documentos necesito?",
+            text:
+              "Dependerá del origen del saldo y del tipo de devolución. Generalmente se requiere revisar información tributaria, contable y documental relacionada con su determinación.",
+          },
+          {
+            group: "Proceso",
+            title:
+              "¿Qué sucede si existen inconsistencias en la información?",
+            text:
+              "Nuestro enfoque busca identificarlas antes de avanzar cuando sea posible. Si encontramos diferencias o situaciones que requieran aclaración, definimos los pasos necesarios antes de continuar.",
+          },
+
+          {
+            group: "Acompañamiento",
+            title:
+              "¿Qué ocurre si la DIAN solicita información adicional?",
+            text:
+              "Una solicitud puede estar sujeta a verificaciones y actuaciones por parte de la autoridad tributaria. Grupo A&C brinda acompañamiento dentro del alcance del servicio contratado.",
+          },
+          {
+            group: "Acompañamiento",
+            title:
+              "Ya intenté solicitar la devolución y tuve inconvenientes. ¿Pueden revisar mi caso?",
+            text:
+              "Sí. Podemos revisar los antecedentes del trámite y la documentación disponible para establecer qué ocurrió y determinar las alternativas que correspondan.",
+          },
+          {
+            group: "Acompañamiento",
+            title:
+              "¿Grupo A&C atiende empresas fuera de Medellín?",
+            text:
+              "Sí. Podemos acompañar empresas ubicadas en diferentes ciudades de Colombia mediante nuestros canales de atención y herramientas digitales, según las características del proceso.",
+          },
+          {
+            group: "Acompañamiento",
+            title:
+              "¿Cuánto cuesta el servicio?",
+            text:
+              "El valor depende del tipo de impuesto, monto del saldo, períodos involucrados, complejidad de la información y alcance requerido. Después de conocer el caso podremos presentar una propuesta acorde con el proceso.",
+          },
+        ],
+      },
+
+      {
+        id: "cierre",
+        layout: "cta",
+        theme: "dark",
+        eyebrow: "Devolución de impuestos",
+        title:
+          "Su empresa ya generó el saldo. Ahora determinemos si puede recuperarlo.",
+        description:
+          "Mantener recursos inmovilizados sin evaluar su posibilidad de devolución puede significar dejar capital que podría regresar al flujo financiero de su empresa. Permítanos revisar su caso y determinar si existe una oportunidad viable de recuperación.",
+
+        primaryCta: {
+          label: "Quiero revisar mi saldo a favor",
+          href: "#evaluacion",
+        },
+
+        secondaryCta: {
+          label: "Hablar con un especialista",
+          href:
+            "/contacto?servicio=devolucion-impuestos&consulta=especialista",
+        },
+
+        trustText:
+          "Primero revisamos. Después solicitamos. · Grupo Análisis & Consultorías · Desde 2006",
       },
     ],
-    benefits: [
-      "Mayor control documental.",
-      "Reducción de errores en la solicitud.",
-      "Mejor trazabilidad del proceso.",
-      "Acompañamiento técnico ante requerimientos.",
-    ],
-    deliverables: [
-      "Diagnóstico de procedencia.",
-      "Lista de soportes requeridos.",
-      "Preparación de expediente.",
-      "Acompañamiento del trámite.",
-    ],
-    ctaLabel: "Solicitar revisión de IVA",
-    accentColor: "#c96a1b",
   },
+},
   {
     slug: "contabilidad",
     title: "Contabilidad",
