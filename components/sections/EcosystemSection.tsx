@@ -32,6 +32,7 @@ const brands: Brand[] = [
       "Infraestructura ERP adaptable para conectar operación, información contable, automatización y crecimiento empresarial.",
     href: "/sadi",
     visual: "/brands/sadi-isotype.png",
+    image: "/fotos/ecosistema_webp/sadi-erp-v1.png",
     glow: "#f28a2b",
     features: ["ERP", "Automatización", "Datos", "Escalabilidad"],
   },
@@ -206,6 +207,22 @@ function EcosystemCompanyCard({ brand }: { brand: Brand }) {
             background: `linear-gradient(135deg, transparent, ${brand.glow})`,
           }}
         />
+
+{/* MOBILE PHOTO */}
+{brand.image && (
+  <div className="relative -mx-6 -mt-6 mb-5 h-[150px] overflow-hidden md:hidden">
+    <Image
+      src={brand.image}
+      alt=""
+      fill
+      className="object-cover object-[center_55%]"
+      sizes="100vw"
+    />
+
+    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+  </div>
+)}
+
 
         {/* PHOTO */}
         {brand.image && (
