@@ -21,6 +21,7 @@ type Brand = {
   features: string[];
 
   featured?: boolean;
+  logoScale?: string;
 };
 
 const brands: Brand[] = [
@@ -32,6 +33,7 @@ const brands: Brand[] = [
       "Infraestructura ERP adaptable para conectar operación, información contable, automatización y crecimiento empresarial.",
     href: "/sadi",
     visual: "/brands/sadi-isotype.png",
+    logoScale: "scale-[2]",
     image: "/fotos/ecosistema_webp/sadi-erp-v1.png",
     glow: "#f28a2b",
     features: ["ERP", "Automatización", "Datos", "Escalabilidad"],
@@ -45,6 +47,8 @@ const brands: Brand[] = [
       "Comunidad, formación y actualización para contadores y profesionales que evolucionan con el entorno empresarial colombiano.",
     href: "/contadores-en-colombia",
     visual: "/brands/cec-isotype.png",
+    logoScale: "scale-[1.4]",
+    image: "/fotos/ecosistema_webp/cec-formacion.png",
     glow: "#3b82f6",
     features: ["Formación", "Comunidad", "Actualidad"],
   },
@@ -57,6 +61,7 @@ const brands: Brand[] = [
     "Liderazgo, formación y evolución organizacional para fortalecer cultura, talento y capacidad de transformación.",
   href: "/cultura-conecta",
   visual: "/brands/cultura-conecta-isotype-3d.webp",
+  logoScale: "scale-[1.05]",
   image: "/fotos/ecosistema_webp/cultura-conecta.jpeg",
   glow: "#a0c82b",
   features: ["Liderazgo", "Formación", "Transformación"],
@@ -70,6 +75,7 @@ const brands: Brand[] = [
       "Integramos estrategia, tributación, finanzas y consultoría para transformar información compleja en decisiones empresariales con mayor control.",
     href: "/analisis-consultorias",
     visual: "/brands/analisis-isotype.png",
+    logoScale: "scale-[1.5]",
     glow: "#c96a1b",
     features: ["Estrategia", "Finanzas", "Tributación", "Consultoría"],
     featured: true,
@@ -83,6 +89,8 @@ const brands: Brand[] = [
       "Gestión empresarial ante DIAN, Cámara de Comercio y entidades clave, con claridad documental y seguimiento especializado.",
     href: "/traco",
     visual: "/brands/traco-isotype.png",
+    logoScale: "scale-[1.7]",
+    image: "/fotos/ecosistema_webp/traco-tramites.png",
     glow: "#2563eb",
     features: ["DIAN", "Cámara", "Trámites"],
   },
@@ -95,21 +103,25 @@ const brands: Brand[] = [
       "Aseguramiento, control y mejora continua para organizaciones que necesitan operar con mayor consistencia y trazabilidad.",
     href: "/aspro",
     visual: "/brands/aspro-isotype.png",
+    logoScale: "scale-[1.2]",
+    image: "/fotos/ecosistema_webp/aspro-auditoria.png",
     glow: "#ef4444",
     features: ["Control", "Procesos", "Cumplimiento"],
   },
 
   {
-    name: "FASI",
-    category: "Ingeniería Digital",
-    tagline: "Ideas que se convierten en soluciones.",
-    description:
-      "Desarrollo de software, plataformas empresariales, experiencias digitales y e-commerce construidos para necesidades reales de negocio.",
-    href: "/fasi",
-    visual: "/brands/fasi-isotype.png",
-    glow: "#0891b2",
-    features: ["Software", "Plataformas", "E-commerce"],
-  },
+  name: "FASI",
+  category: "Ingeniería Digital",
+  tagline: "Ideas que se convierten en soluciones.",
+  description:
+    "Software, plataformas empresariales y e-commerce construidos para necesidades reales de negocio.",
+  href: "/inversiones/fasi",
+  visual: "/brands/fasi-isotype.png",
+  logoScale: "scale-[1.3]",
+  image: "/fotos/ecosistema_webp/fasi-desarrollo.png",
+  glow: "#0891b2",
+  features: ["Software", "Plataformas", "E-commerce"],
+},
 ];
 
 function ArrowUpRight() {
@@ -299,14 +311,15 @@ function EcosystemCompanyCard({ brand }: { brand: Brand }) {
                   alt={`Identidad visual de ${brand.name}`}
                   width={100}
                   height={100}
-                  className="
-                    max-h-[58px]
-                    max-w-[58px]
-                    object-contain
-                    transition-transform
-                    duration-500
-                    group-hover:scale-[1.04]
-                  "
+                 className={`
+  max-h-[64px]
+  max-w-[86px]
+  object-contain
+  transition-transform
+  duration-500
+  group-hover:scale-[1.04]
+  ${brand.logoScale ?? ""}
+`}
                 />
               </div>
 
@@ -322,13 +335,13 @@ function EcosystemCompanyCard({ brand }: { brand: Brand }) {
             </div>
 
             {/* DESCRIPTION */}
-            <p className="mt-4 text-[11px] font-light leading-[1.65] text-black/60 xl:text-[12px]">
+            <p className="mt-3.5 text-[11px] font-light leading-[1.6] text-black/60 xl:text-[12px]">
               {brand.description}
             </p>
           </div>
 
           {/* FEATURES + CTA */}
-          <div className="mt-auto flex items-end justify-between gap-3 pt-4">
+          <div className="mt-auto flex shrink-0 items-end justify-between gap-3 pt-3">
             <div className="flex flex-wrap gap-1.5">
               {brand.features.map((feature) => (
                 <span
@@ -397,6 +410,11 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
         transition={{
           duration: 0.35,
           ease: [0.16, 1, 0.3, 1],
+}}
+  style={{
+    background:
+      "linear-gradient(145deg, #f8ebe4 0%, #f3ded2 48%, #edcfbe 100%)",
+          
         }}
         className="
           relative
@@ -408,13 +426,15 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
           justify-center
           overflow-hidden
           rounded-[2.25rem]
-          border border-[#c96a1b]/20
-          bg-[#fbf8f2]
-          px-9 py-14 xl:px-10 xl:py-16
+          border border-[#c96a1b]/25
+bg-[#f3ded2]
+px-9 py-14 xl:px-10 xl:py-16
           text-center
           shadow-[0_28px_90px_rgba(44,31,20,0.10)]
         "
       >
+<div className="pointer-events-none absolute inset-x-12 top-0 h-px bg-gradient-to-r from-transparent via-[#c96a1b]/80 to-transparent" />
+
         <div
           className="
             pointer-events-none
@@ -422,7 +442,7 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
             h-[520px] w-[520px]
             -translate-x-1/2 -translate-y-1/2
             rounded-full
-            border border-[#c96a1b]/10
+            border border-[#c96a1b]/16
           "
         />
 
@@ -437,25 +457,28 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
           "
         />
 
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(201,106,27,0.10),transparent_52%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.42),transparent_52%)]" />
 
         <div className="relative z-10 flex flex-col items-center">
           <span
-            className="
-              rounded-full
-              border border-black/[0.06]
-              bg-white/75
-              px-5 py-2
-              text-[9px]
-              font-semibold
-              uppercase
-              tracking-[0.28em]
-              text-black/45
-              shadow-sm
-            "
-          >
-            El núcleo que integra
-          </span>
+  className="
+    rounded-full
+    border
+    border-[#c96a1b]/15
+    bg-white/55
+    px-5
+    py-2
+    text-[9px]
+    font-semibold
+    uppercase
+    tracking-[0.28em]
+    text-black/45
+    shadow-sm
+    backdrop-blur-sm
+  "
+>
+  El núcleo que integra
+</span>
 
           <div className="mt-10 flex h-[150px] items-center justify-center">
             <Image
@@ -471,13 +494,16 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
             className="
               mt-8
               rounded-full
-              bg-[#c96a1b]/10
-              px-5 py-2
+              bg-[#c96a1b]/14
+              border 
+              border-[#c96a1b]/15
+              px-5 
+              py-2
               text-[9px]
               font-semibold
               uppercase
               tracking-[0.25em]
-              text-[#8f4d17]
+              text-[#7a3e14]
             "
           >
             Núcleo estratégico
