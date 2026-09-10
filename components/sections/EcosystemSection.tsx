@@ -420,7 +420,7 @@ function EcosystemCoreCard({ brand }: { brand: Brand }) {
           relative
           flex
           h-full
-          min-h-[600px]
+          min-h-[520px] xl:min-h-[600px]
           flex-col
           items-center
           justify-center
@@ -600,7 +600,6 @@ export default function EcosystemSection() {
         lg:max-w-none
         lg:text-[clamp(3.8rem,5vw,5.8rem)]
         lg:leading-[0.94]
-        lg:whitespace-nowrap
       "
     >
       {/* DEJA AQUÍ TU TÍTULO ACTUAL */}
@@ -637,7 +636,7 @@ export default function EcosystemSection() {
     items-stretch
     gap-5
     md:gap-6
-    lg:grid-cols-[1fr_1.22fr_1fr]
+    xl:grid-cols-[1fr_1.22fr_1fr]
     lg:gap-6
     xl:gap-7
   "
