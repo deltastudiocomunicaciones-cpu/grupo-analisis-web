@@ -33,6 +33,7 @@ export type ServiceLandingSection = {
     | "diagnostic"
     | "faq"
     | "cta";
+    diagnosticVariant?: "renta" | "devolucion";
   theme?: "light" | "warm" | "dark";
   eyebrow?: string;
   title: string;
@@ -650,30 +651,24 @@ export const services: ServiceItem[] = [
       },
 
       {
-        id: "evaluacion",
-        layout: "cta",
-        theme: "warm",
-        eyebrow: "Evaluación inicial",
-        title:
-          "¿Podría su empresa tener dinero por recuperar?",
-        description:
-          "Antes de iniciar una devolución queremos entender su caso. Cuéntenos brevemente la situación de su empresa para realizar una evaluación inicial y orientarlo sobre el siguiente paso.",
-
-        primaryCta: {
-          label: "Evaluar mi caso",
-          href:
-            "/contacto?servicio=devolucion-impuestos&consulta=evaluacion",
-        },
-
-        secondaryCta: {
-          label: "Hablar con un especialista",
-          href:
-            "/contacto?servicio=devolucion-impuestos&consulta=especialista",
-        },
-
-        trustText:
-          "La evaluación inicial permite conocer las características del saldo antes de definir el alcance del proceso.",
-      },
+  id: "evaluacion",
+  layout: "diagnostic",
+  diagnosticVariant: "devolucion",
+  theme: "warm",
+  eyebrow: "Evaluación inicial",
+  title: "Evaluemos si su saldo a favor puede ser solicitado.",
+  description:
+    "Antes de iniciar una devolución queremos entender su caso. Comparta algunos datos de su empresa y del saldo a favor para realizar una evaluación inicial de la situación.",
+  primaryCta: {
+    label: "Evaluar mi saldo a favor",
+    href: "https://wa.me/573118687774",
+  },
+  secondaryCta: {
+    label: "Hablar directamente por WhatsApp",
+    href:
+      "https://wa.me/573118687774?text=Hola%20Grupo%20A%26C%2C%20estoy%20interesado%20en%20evaluar%20una%20devoluci%C3%B3n%20de%20impuestos%20y%20un%20saldo%20a%20favor%20ante%20la%20DIAN.",
+  },
+},
 
       {
         id: "preguntas",

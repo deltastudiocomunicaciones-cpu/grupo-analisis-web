@@ -1,4 +1,6 @@
+import ServiceWhatsAppFloat from "@/components/solutions/ServiceWhatsAppFloat";
 import ServiceDiagnosticForm from "@/components/solutions/ServiceDiagnosticForm";
+import TaxRefundDiagnosticForm from "@/components/solutions/TaxRefundDiagnosticForm";
 import ServiceAssessmentCards from "@/components/solutions/ServiceAssessmentCards";
 import Image from "next/image";
 import Link from "next/link";
@@ -125,6 +127,13 @@ function ContentSection({
 }
 
 if (section.layout === "diagnostic") {
+  const diagnosticForm =
+    section.diagnosticVariant === "devolucion" ? (
+      <TaxRefundDiagnosticForm section={section} />
+    ) : (
+      <ServiceDiagnosticForm section={section} />
+    );
+
   return (
     <section
       id={section.id}
@@ -132,7 +141,7 @@ if (section.layout === "diagnostic") {
     >
       <Container>
         <SectionHeader section={section} />
-        <ServiceDiagnosticForm section={section} />
+        {diagnosticForm}
       </Container>
     </section>
   );
@@ -639,6 +648,14 @@ export default function ServiceLandingRenderer({ service }: Props) {
           section={section}
         />
       ))}
+
+      {service.slug === "devolucion-impuestos" && (
+  <ServiceWhatsAppFloat
+    message="Hola Grupo A&C, estoy interesado en evaluar una devolución de impuestos y quiero revisar si mi empresa puede solicitar un saldo a favor ante la DIAN."
+  />
+)}
+
+<Footer />
 
       <Footer />
     </main>
