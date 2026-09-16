@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <PageTransition>{children}</PageTransition>
   </SmoothScroll>
 
-  {/* WHATSAPP FLOTANTE: SOLO DECLARACIÓN DE RENTA */}
+  {/* WHATSAPP FLOTANTE GLOBAL */}
   <FloatingWhatsApp />
 
   <Script
