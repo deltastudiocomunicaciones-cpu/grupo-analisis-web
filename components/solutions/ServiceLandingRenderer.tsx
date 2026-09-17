@@ -1,4 +1,3 @@
-import ServiceWhatsAppFloat from "@/components/solutions/ServiceWhatsAppFloat";
 import ServiceDiagnosticForm from "@/components/solutions/ServiceDiagnosticForm";
 import TaxRefundDiagnosticForm from "@/components/solutions/TaxRefundDiagnosticForm";
 import ServiceAssessmentCards from "@/components/solutions/ServiceAssessmentCards";
@@ -649,11 +648,7 @@ export default function ServiceLandingRenderer({ service }: Props) {
         />
       ))}
 
-      {service.slug === "devolucion-impuestos" && (
-  <ServiceWhatsAppFloat
-    message="Hola Grupo A&C, estoy interesado en evaluar una devolución de impuestos y quiero revisar si mi empresa puede solicitar un saldo a favor ante la DIAN."
-  />
-)}
+    
 
 <Footer />
 
