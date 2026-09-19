@@ -1,3 +1,4 @@
+import ContactCrmEmbed from "@/components/contact/ContactCrmEmbed";
 import { contactLinks } from "@/data/contact";
 import type { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
@@ -125,166 +126,111 @@ export default function ContactoPage() {
           </Reveal>
 
           {/* Formulario */}
-          <Reveal delay={0.2}>
-            <div
-              id="formulario-contacto"
-              className="rounded-[30px] border border-white/15 bg-[#050505]/88 p-5 shadow-[0_40px_140px_rgba(0,0,0,0.58)] backdrop-blur-2xl sm:p-6 md:rounded-[40px] md:p-10"
-            >
-              <div className="mb-8">
-                <p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-[#c96a1b]">
-                  Solicitud privada
-                </p>
+<Reveal delay={0.2}>
+  <div
+    id="formulario-contacto"
+    className="rounded-[30px] border border-white/15 bg-[#050505]/88 p-5 shadow-[0_40px_140px_rgba(0,0,0,0.58)] backdrop-blur-2xl sm:p-6 md:rounded-[40px] md:p-10"
+  >
+    <div className="mb-8">
+      <p className="mb-3 text-[10px] uppercase tracking-[0.35em] text-[#c96a1b]">
+        Canal estratégico · SADI CRM
+      </p>
 
-                <h2 className="text-3xl font-semibold tracking-[-0.045em] text-white md:text-4xl">
-                  Cuéntanos qué necesitas estructurar.
-                </h2>
+      <h2 className="text-3xl font-semibold tracking-[-0.045em] text-white md:text-4xl">
+        Cuéntanos qué necesitas estructurar.
+      </h2>
 
-                <p className="mt-4 text-sm leading-[1.8] text-white/45">
-                  Tu información será revisada por el equipo correspondiente
-                  dentro del ecosistema Grupo A&C.
-                </p>
-              </div>
+      <p className="mt-4 text-sm leading-[1.8] text-white/45">
+        Tu solicitud será registrada, clasificada y dirigida al equipo
+        correspondiente dentro del ecosistema Grupo A&C.
+      </p>
+    </div>
 
-              <form action="/api/contacto" method="POST" className="grid gap-4 md:gap-5">
-                <input
-                  name="nombre"
-                  required
-                  placeholder="Nombre completo"
-                  className="w-full rounded-[22px] border border-white/12 bg-black/45 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/30 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-full"
-                />
+    <ContactCrmEmbed />
 
-                <input
-                  name="empresa"
-                  placeholder="Empresa"
-                  className="w-full rounded-[22px] border border-white/12 bg-black/45 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/30 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-full"
-                />
+    {/* CARD HUMANA */}
+    <div
+      className="
+        mt-8
+        overflow-hidden
+        rounded-[30px]
+        border
+        border-white/12
+        bg-[#080808]/92
+        p-6
+        shadow-[0_28px_90px_rgba(0,0,0,0.42)]
+        backdrop-blur-2xl
+        md:p-7
+      "
+    >
+      <div className="grid gap-7">
+        {/* IDENTIDAD */}
+        <div className="flex items-center gap-5">
+          <div className="h-[110px] w-[92px] shrink-0 overflow-hidden rounded-[20px] border border-white/10 bg-black">
+            <img
+              src="/fotos/asesor-contacto.webp"
+              alt="Asesor Grupo A&C"
+              className="h-full w-full object-cover"
+            />
+          </div>
 
-                <div className="grid gap-4 md:grid-cols-2">
-                  <input
-                    name="telefono"
-                    type="tel"
-                    required
-                    placeholder="Teléfono"
-                    className="w-full rounded-[22px] border border-white/12 bg-black/45 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/30 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-full"
-                  />
+          <div className="min-w-0">
+            <p className="text-[9px] uppercase tracking-[0.32em] text-[#c96a1b]">
+              Atención humana
+            </p>
 
-                  <input
-                    name="correo"
-                    type="email"
-                    required
-                    placeholder="Correo electrónico"
-                    className="w-full rounded-[22px] border border-white/12 bg-black/45 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/30 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-full"
-                  />
-                </div>
+            <h3 className="mt-3 text-xl font-semibold leading-[1.08] tracking-[-0.035em] text-white">
+              Habla con un asesor del equipo Grupo A&C.
+            </h3>
 
-                <select
-                  name="servicio"
-                  defaultValue=""
-                  className="w-full rounded-[22px] border border-white/12 bg-black/45 px-5 py-4 text-white/80 outline-none transition-all duration-300 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-full"
-                >
-                  <option value="" disabled>
-                    Servicio de interés
-                  </option>
-                  <option value="Diagnóstico financiero">
-                    Diagnóstico financiero
-                  </option>
-                  <option value="Planeación tributaria">
-                    Planeación tributaria
-                  </option>
-                  <option value="Software SADI">Software SADI</option>
-                  <option value="Trámites empresariales">
-                    Trámites empresariales
-                  </option>
-                  <option value="Comunidad contable">
-                    Comunidad contable
-                  </option>
-                  <option value="Inversiones / proyectos">
-                    Inversiones / proyectos
-                  </option>
-                  <option value="Otro">Otro</option>
-                </select>
-
-                <textarea
-                  name="mensaje"
-                  required
-                  placeholder="Describe brevemente la situación o necesidad"
-                  rows={6}
-                  className="w-full resize-none rounded-[24px] border border-white/12 bg-black/45 px-5 py-4 text-white outline-none transition-all duration-300 placeholder:text-white/30 focus:border-[#c96a1b] focus:bg-black/65 md:rounded-[28px]"
-                />
-
-                <button
-                  type="submit"
-                  className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#c96a1b] px-8 py-4 text-sm font-medium text-white shadow-[0_20px_70px_rgba(201,106,27,0.28)] transition-all duration-500 hover:bg-white hover:text-black"
-                >
-                  Enviar solicitud
-                </button>
-
-                <p className="mt-4 text-center text-[10px] uppercase tracking-[0.26em] text-white/30">
-                  Una conversación puede cambiar el rumbo de una empresa.
-                </p>
-              </form>
-
-              {/* Card humana */}
-              <div className="mt-8 flex flex-col items-center gap-6 rounded-[28px] border border-white/15 bg-[#080808]/88 p-5 shadow-[0_25px_90px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:p-6 md:flex-row md:gap-8 md:rounded-[32px] md:p-8">
-                <div className="flex w-full flex-col items-center md:w-[190px]">
-                  <div className="h-[170px] w-[140px] overflow-hidden rounded-[22px] border border-white/10 md:h-[220px] md:w-[180px] md:rounded-[24px]">
-                    <img
-                      src="/fotos/asesor-contacto.webp"
-                      alt="Asesor Grupo A&C"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-
-                  <p className="mt-6 text-center text-[10px] uppercase tracking-[0.35em] text-[#c96a1b]/80">
-                    Consultor Senior
-                  </p>
-
-                  <div className="mt-4 h-px w-12 bg-[#c96a1b]/30" />
-                </div>
-
-                <div className="flex-1 text-center md:text-left">
-                  <p className="mb-2 text-[10px] uppercase tracking-[0.32em] text-[#c96a1b]">
-                    Atención humana
-                  </p>
-
-                  <h3 className="text-xl font-semibold tracking-[-0.03em]">
-                    Habla con un asesor del equipo Grupo A&C.
-                  </h3>
-
-                  <p className="mt-3 text-sm leading-[1.7] text-white/50">
-                    Si prefieres una orientación directa, puedes iniciar una
-                    conversación por WhatsApp para canalizar tu solicitud.
-                  </p>
-<a
-  href={`mailto:${contactLinks.email}`}
-  className="rounded-full border border-white/10 px-6 py-3 text-sm text-white/75 transition-all hover:border-[#c96a1b]/50 hover:text-white"
->
-  Escribir por correo
-</a>
-
-<a
-  href={contactLinks.instagram}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full border border-white/10 px-6 py-3 text-sm text-white/75 transition-all hover:border-[#c96a1b]/50 hover:text-white"
->
-  Ver Instagram
-</a>
-                  <a
-                    href={`https://wa.me/573118687774?text=${encodeURIComponent(
-                      whatsappMessage
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-5 inline-flex w-full justify-center rounded-full border border-[#c96a1b]/30 bg-[#c96a1b]/10 px-5 py-3 text-sm text-[#c96a1b] transition-all duration-500 hover:bg-[#c96a1b] hover:text-white md:w-auto"
-                  >
-                    Escribir por WhatsApp →
-                  </a>
-                </div>
-              </div>
-            </div>
-          </Reveal>
+            <p className="mt-3 text-[10px] uppercase tracking-[0.28em] text-white/30">
+              Consultor Senior
+            </p>
+          </div>
         </div>
+
+        <div className="h-px w-full bg-white/10" />
+
+        {/* TEXTO */}
+        <p className="text-sm leading-[1.8] text-white/50">
+          Si prefieres una orientación directa, puedes iniciar una conversación
+          con nuestro equipo para canalizar tu solicitud.
+        </p>
+
+        {/* ACCIONES */}
+        <div className="grid gap-3 sm:grid-cols-2">
+          <a
+            href={`mailto:${contactLinks.email}`}
+            className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/12 px-5 py-3 text-center text-xs font-medium text-white/70 transition-all duration-300 hover:border-[#c96a1b]/50 hover:bg-white/[0.04] hover:text-white"
+          >
+            Escribir por correo
+          </a>
+
+          <a
+            href={contactLinks.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[46px] items-center justify-center rounded-full border border-white/12 px-5 py-3 text-center text-xs font-medium text-white/70 transition-all duration-300 hover:border-[#c96a1b]/50 hover:bg-white/[0.04] hover:text-white"
+          >
+            Ver Instagram
+          </a>
+
+          <a
+            href={`https://wa.me/573118687774?text=${encodeURIComponent(
+              whatsappMessage
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-[#c96a1b]/30 bg-[#c96a1b]/10 px-5 py-3 text-center text-xs font-medium text-[#df781f] transition-all duration-300 hover:bg-[#c96a1b] hover:text-white sm:col-span-2"
+          >
+            Escribir por WhatsApp →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Reveal>
+</div>
       </section>
 
       {/* Franja de confianza fundida con el footer */}
