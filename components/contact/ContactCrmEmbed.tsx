@@ -17,25 +17,32 @@ export default function ContactCrmEmbed() {
         "
       >
         <iframe
-          src="https://api.sitioss.com/widget/form/NcSNz3yP9PW9MlGj2UbO"
-          id="inline-NcSNz3yP9PW9MlGj2UbO"
-          title="Contacto Web"
-          className="block min-h-[989px] w-full border-0"
-          data-layout='{"id":"INLINE"}'
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Contacto Web"
-          data-height="989"
-          data-layout-iframe-id="inline-NcSNz3yP9PW9MlGj2UbO"
-          data-form-id="NcSNz3yP9PW9MlGj2UbO"
-          data-cookie-consent="true"
-          data-cookie-consent-provider="auto"
-          loading="lazy"
-        />
+  src="https://api.sitioss.com/widget/form/NcSNz3yP9PW9MlGj2UbO"
+  id="inline-NcSNz3yP9PW9MlGj2UbO"
+  title="Contacto Web"
+  className="block w-full border-0"
+  style={{
+    width: "100%",
+    height: "989px",
+    minHeight: "989px",
+    border: "none",
+    borderRadius: "0",
+    background: "#ffffff",
+  }}
+  data-layout='{"id":"INLINE"}'
+  data-trigger-type="alwaysShow"
+  data-trigger-value=""
+  data-activation-type="alwaysActivated"
+  data-activation-value=""
+  data-deactivation-type="neverDeactivate"
+  data-deactivation-value=""
+  data-form-name="Contacto Web"
+  data-height="989"
+  data-layout-iframe-id="inline-NcSNz3yP9PW9MlGj2UbO"
+  data-form-id="NcSNz3yP9PW9MlGj2UbO"
+  data-cookie-consent="true"
+  data-cookie-consent-provider="auto"
+/>
       </div>
 
       {/* CAPA COMERCIAL SADI */}
