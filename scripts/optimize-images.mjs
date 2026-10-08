@@ -143,10 +143,36 @@ const images = [
     width: 1200,
     quality: 78,
   },
-  {
+    {
     input: "public/fotos/servicios/tramites-dian-v1.png",
     output: "public/fotos/servicios/tramites-dian-v1.webp",
     width: 1200,
+    quality: 78,
+  },
+
+  // SEDES
+  {
+    input: "public/fotos/sedes/sede-sabaneta-desktop.png",
+    output: "public/fotos/sedes/sede-sabaneta-desktop.webp",
+    width: 1600,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sedes/sede-sabaneta-mobile.png",
+    output: "public/fotos/sedes/sede-sabaneta-mobile.webp",
+    width: 900,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sedes/sede-medellin-desktop.png",
+    output: "public/fotos/sedes/sede-medellin-desktop.webp",
+    width: 1600,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sedes/sede-medellin-mobile.png",
+    output: "public/fotos/sedes/sede-medellin-mobile.webp",
+    width: 900,
     quality: 78,
   },
 

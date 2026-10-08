@@ -16,6 +16,33 @@ const VIDEOS = [
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoIndex, setVideoIndex] = useState(0);
+  const [videoEnabled, setVideoEnabled] = useState(false);
+
+  useEffect(() => {
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  const connection = (
+    navigator as Navigator & {
+      connection?: {
+        saveData?: boolean;
+      };
+    }
+  ).connection;
+
+  if (prefersReducedMotion || connection?.saveData) {
+    return;
+  }
+
+  const timer = window.setTimeout(() => {
+    setVideoEnabled(true);
+  }, 1200);
+
+  return () => {
+    window.clearTimeout(timer);
+  };
+}, []);
 
   const { scrollY } = useScroll();
 
@@ -24,33 +51,34 @@ export default function HeroSection() {
   const scale = useTransform(scrollY, [0, 1000], [1, 1.08]);
 
   useEffect(() => {
-    const video = videoRef.current;
+  const video = videoRef.current;
 
-    if (!video) return;
+  if (!video || !videoEnabled) return;
 
-    video.muted = true;
-    video.load();
-    video.play().catch(() => {});
-  }, [videoIndex]);
+  video.muted = true;
+  video.play().catch(() => {});
+}, [videoEnabled, videoIndex]);
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
 
-      {/* VIDEO */}
-      <motion.video
-        key={videoIndex}
-        ref={videoRef}
-        style={{ y, opacity, scale }}
-        autoPlay
-        muted
-        playsInline
-        onEnded={() => {
-          setVideoIndex((prev) => (prev + 1) % VIDEOS.length);
-        }}
-        className="absolute inset-0 h-full w-full scale-105 object-cover opacity-40"
-      >
-        <source src={VIDEOS[videoIndex]} type="video/mp4" />
-      </motion.video>
+{videoEnabled && (
+  <motion.video
+    key={videoIndex}
+    ref={videoRef}
+    style={{ y, opacity, scale }}
+    autoPlay
+    muted
+    playsInline
+    preload="metadata"
+    onEnded={() => {
+      setVideoIndex((prev) => (prev + 1) % VIDEOS.length);
+    }}
+    className="absolute inset-0 h-full w-full scale-105 object-cover opacity-40"
+  >
+    <source src={VIDEOS[videoIndex]} type="video/mp4" />
+  </motion.video>
+)}
 
       {/* OVERLAYS */}
       <div className="absolute inset-0 bg-black/45" />

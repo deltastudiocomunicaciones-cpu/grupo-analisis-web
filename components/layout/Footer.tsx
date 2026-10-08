@@ -1,4 +1,3 @@
-"use client";
 
 import { contactLinks } from "@/data/contact";
 import Image from "next/image";
@@ -39,8 +38,8 @@ const offices = [
       "Nuestro punto de encuentro para acompañar decisiones, procesos y crecimiento empresarial.",
     address: "Calle 52 Sur N° 43 A 20 · Ed. Scala · Of. 1110",
     routeLabel: "Cómo llegar a Sabaneta",
-    imageDesktop: "/fotos/sedes/sede-sabaneta-desktop.png",
-    imageMobile: "/fotos/sedes/sede-sabaneta-mobile.png",
+    imageDesktop: "/fotos/sedes/sede-sabaneta-desktop.webp",
+    imageMobile: "/fotos/sedes/sede-sabaneta-mobile.webp",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+Sur+43A+20+Edificio+Scala+Sabaneta+Antioquia",
   },
@@ -51,8 +50,8 @@ const offices = [
       "Presencia estratégica en el corazón empresarial de la ciudad para estar más cerca de nuestros clientes.",
     address: "Calle 52 N° 49-28 · Ed. La Lonja · Piso 2",
     routeLabel: "Cómo llegar a Medellín",
-    imageDesktop: "/fotos/sedes/sede-medellin-desktop.png",
-    imageMobile: "/fotos/sedes/sede-medellin-mobile.png",
+    imageDesktop: "/fotos/sedes/sede-medellin-desktop.webp",
+    imageMobile: "/fotos/sedes/sede-medellin-mobile.webp",
     maps:
       "https://www.google.com/maps/search/?api=1&query=Calle+52+49-28+Edificio+La+Lonja+Medellin+Antioquia",
   },
