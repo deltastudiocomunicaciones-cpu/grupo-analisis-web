@@ -41,22 +41,22 @@ export const metadata: Metadata = {
 const services = [
   {
     title: "Aseguramiento de Procesos",
-    image: "/fotos/ecosistema_webp/aspro-servicio-1.png",
+    image: "/fotos/ecosistema_webp/aspro-servicio-1.webp",
     text: "Revisión, diseño y fortalecimiento de procesos empresariales para reducir riesgos, mejorar trazabilidad y elevar el nivel de control interno.",
   },
   {
     title: "Auditoría y Control Interno",
-    image: "/fotos/ecosistema_webp/aspro-servicio-2.png",
+    image: "/fotos/ecosistema_webp/aspro-servicio-2.webp",
     text: "Evaluación de procedimientos, evidencias, responsables, puntos críticos y mecanismos de control para anticipar fallas operativas.",
   },
   {
     title: "Cumplimiento Organizacional",
-    image: "/fotos/ecosistema_webp/aspro-servicio-3.png",
+    image: "/fotos/ecosistema_webp/aspro-servicio-3.webp",
     text: "Alineación de procesos con políticas internas, estándares, documentación, responsables y buenas prácticas empresariales.",
   },
   {
     title: "Blindaje Operativo",
-    image: "/fotos/ecosistema_webp/aspro-servicio-4.png",
+    image: "/fotos/ecosistema_webp/aspro-servicio-4.webp",
     text: "Construcción de estructuras de prevención, seguimiento y mejora continua para proteger la operación y la toma de decisiones.",
   },
 ];

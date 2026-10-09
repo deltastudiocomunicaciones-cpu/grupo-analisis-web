@@ -176,6 +176,68 @@ const images = [
     quality: 78,
   },
 
+    // FASE 2 · HEROES Y LANDINGS
+  {
+    input: "public/fotos/patrimonio-hero.png",
+    output: "public/fotos/patrimonio-hero.webp",
+    width: 1800,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/planeacion-tributaria.png",
+    output: "public/fotos/planeacion-tributaria.webp",
+    width: 1600,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/aspro-ecosistema-hero.png",
+    output: "public/fotos/aspro-ecosistema-hero.webp",
+    width: 1800,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/analisis-ecosistema-hero.png",
+    output: "public/fotos/analisis-ecosistema-hero.webp",
+    width: 1800,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/soluciones-hero-2.png",
+    output: "public/fotos/soluciones-hero-2.webp",
+    width: 1800,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sinapsis-empresarial.png",
+    output: "public/fotos/sinapsis-empresarial.webp",
+    width: 1800,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sinapsis-empresarial-mobile.png",
+    output: "public/fotos/sinapsis-empresarial-mobile.webp",
+    width: 900,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/inversiones.png",
+    output: "public/fotos/inversiones.webp",
+    width: 1600,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sadi-erp-card.png",
+    output: "public/fotos/sadi-erp-card.webp",
+    width: 1200,
+    quality: 78,
+  },
+  {
+    input: "public/fotos/sadi-cdf-card.png",
+    output: "public/fotos/sadi-cdf-card.webp",
+    width: 1200,
+    quality: 78,
+  },
+
   // LOGOS / MARCAS
   {
     input: "public/logos/grupoayc-logo.png",

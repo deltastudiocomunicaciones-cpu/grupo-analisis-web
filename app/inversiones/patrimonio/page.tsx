@@ -11,7 +11,7 @@ export default function PatrimonioPage() {
 
       <div className="absolute inset-0 z-0 h-screen">
   <img
-    src="/fotos/patrimonio-hero.png"
+    src="/fotos/patrimonio-hero.webp"
     alt="Patrimonio Grupo A&C"
     className="h-full w-full object-cover opacity-80"
   />
