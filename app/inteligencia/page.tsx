@@ -62,7 +62,7 @@ export default function InteligenciaPage() {
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden px-6 pt-44 pb-20">
         <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72"
+          src="/fotos/inteligencia/inteligencia-hero.webp"
           alt="Centro de Inteligencia Grupo A&C"
           className="absolute inset-0 h-full w-full object-cover brightness-110 contrast-105"
         />

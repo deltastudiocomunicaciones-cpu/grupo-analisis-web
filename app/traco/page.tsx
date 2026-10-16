@@ -202,8 +202,7 @@ export default function TracoPage() {
         eyebrow="Podcast · TRACO"
         title="Conversaciones sobre formalización, trámites y estructura empresarial."
         description="Un espacio para explicar cómo la correcta gestión documental, tributaria y societaria permite que una empresa opere con mayor control y seguridad."
-        youtubeUrl="https://www.youtube.com/"
-        embedUrl="https://youtube.com/@grupoanalisisyconsultorias?si=F7RSk_K89cYMwg7X"
+        youtubeUrl="https://youtube.com/@grupoanalisisyconsultorias?si=F7RSk_K89cYMwg7X"
         accentColor="#2563eb"
       />
 

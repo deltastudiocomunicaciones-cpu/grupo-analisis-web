@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MicrositeHero from "@/components/sections/MicrositeHero";
 import Reveal from "@/components/ui/Reveal";
+import YouTubeLite from "@/components/ui/YouTubeLite";
 
 export const metadata: Metadata = {
   title: "SADI ERP | Software contable para empresas y contadores",
@@ -907,17 +908,12 @@ export default function SadiPage() {
                 </a>
               </div>
 
-              {/* VIDEO YOUTUBE */}
-              <div className="relative min-h-[330px] bg-black md:min-h-[400px] lg:min-h-[460px]">
-                <iframe
-                  src="https://www.youtube.com/embed/HVvMr-08xbI"
-                  title="SADI ERP"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
-              </div>
+              {/* VIDEO YOUTUBE · ZERO LOAD */}
+              <YouTubeLite
+               videoId="HVvMr-08xbI"
+               title="SADI ERP"
+               accentColor="#d97706"
+               />
             </div>
           </Reveal>
         </div>

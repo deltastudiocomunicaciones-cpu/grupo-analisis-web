@@ -198,8 +198,7 @@ export default function ContadoresEnColombiaPage() {
         eyebrow="Podcast · Contadores en Colombia"
         title="La nueva generación del pensamiento contable."
         description="Conversaciones sobre actualización profesional, tributación, auditoría, tecnología y el futuro de la profesión contable."
-        youtubeUrl="https://www.youtube.com/"
-        embedUrl="https://www.youtube.com/embed/VIDEO_ID"
+        youtubeUrl="https://youtube.com/@grupoanalisisyconsultorias?si=F7RSk_K89cYMwg7X"
         accentColor="#16a34a"
       />
 

@@ -201,7 +201,7 @@ export default function CeoSection() {
             "
           >
             <img
-              src="https://i.imgur.com/KWeew6c.png"
+              src="/fotos/ceo/direccion-estrategica.webp"
               alt="Dirección Estratégica Grupo A&C"
               className="absolute inset-0 h-full w-full object-cover opacity-85"
             />

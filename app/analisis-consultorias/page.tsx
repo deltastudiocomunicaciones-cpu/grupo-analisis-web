@@ -202,8 +202,7 @@ export default function AnalisisConsultoriasPage() {
         eyebrow="Podcast · Análisis & Consultorías"
         title="Conversaciones para quienes toman decisiones empresariales."
         description="Un espacio para analizar estrategia tributaria, patrimonio, finanzas, auditoría y crecimiento empresarial desde una perspectiva práctica y ejecutiva."
-        youtubeUrl="https://www.youtube.com/"
-        embedUrl="https://www.youtube.com/embed/VIDEO_ID"
+        youtubeUrl="https://youtube.com/@grupoanalisisyconsultorias?si=F7RSk_K89cYMwg7X"
         accentColor="#c96a1b"
       />
 

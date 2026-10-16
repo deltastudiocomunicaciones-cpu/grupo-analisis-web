@@ -110,7 +110,7 @@ export default function NoticiasPage() {
       {/* HERO EDITORIAL */}
       <section className="relative overflow-hidden bg-black px-6 pt-44 pb-24 text-white">
         <img
-          src="https://images.unsplash.com/photo-1495020689067-958852a7765e"
+          src="/fotos/noticias/noticias-hero.webp"
           alt="Noticias Grupo A&C"
           className="absolute inset-0 h-full w-full object-cover opacity-90 brightness-95"
         />

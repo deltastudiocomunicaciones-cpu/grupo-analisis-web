@@ -1,9 +1,12 @@
+import YouTubeLite from "@/components/ui/YouTubeLite";
+
 interface MicrositePodcastProps {
   eyebrow: string;
   title: string;
   description: string;
-  youtubeUrl: string;
-  embedUrl: string;
+  youtubeUrl?: string;
+  videoId?: string;
+  poster?: string;
   accentColor?: string;
 }
 
@@ -12,7 +15,8 @@ export default function MicrositePodcast({
   title,
   description,
   youtubeUrl,
-  embedUrl,
+  videoId,
+  poster,
   accentColor = "#c96a1b",
 }: MicrositePodcastProps) {
   return (
@@ -43,26 +47,25 @@ export default function MicrositePodcast({
             {description}
           </p>
 
-          <a
-            href={youtubeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-flex rounded-full border border-black/10 bg-black/[0.03] px-6 py-3 text-sm text-black/60 transition-all duration-500 hover:border-black/20 hover:bg-black/5 hover:text-black"
-          >
-            Ver en YouTube →
-          </a>
+          {youtubeUrl && (
+            <a
+              href={youtubeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-10 inline-flex rounded-full border border-black/10 bg-black/[0.03] px-6 py-3 text-sm text-black/60 transition-all duration-500 hover:border-black/20 hover:bg-black/5 hover:text-black"
+            >
+              Ver en YouTube →
+            </a>
+          )}
         </div>
 
         <div className="overflow-hidden rounded-[2rem] border border-black/10 bg-black shadow-[0_30px_100px_rgba(0,0,0,0.22)]">
-          <div className="aspect-video">
-            <iframe
-              src={embedUrl}
-              title={title}
-              className="h-full w-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
+          <YouTubeLite
+            videoId={videoId}
+            title={title}
+            poster={poster}
+            accentColor={accentColor}
+          />
         </div>
       </div>
     </section>
