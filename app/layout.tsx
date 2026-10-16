@@ -92,8 +92,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="es" data-scroll-behavior="smooth">
 
   <head>
-  <link rel="dns-prefetch" href="//api.sitioss.com" />
-  <link rel="preconnect" href="https://api.sitioss.com" />
+
 </head>
 
       <body>

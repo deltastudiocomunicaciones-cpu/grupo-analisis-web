@@ -1161,7 +1161,7 @@ export const services: ServiceItem[] = [
   eyebrow: "Cotización inicial",
   title: "Cotiza tu declaración de renta según la complejidad de tu caso.",
   description:
-    "Comparte tus datos básicos y selecciona los rangos aproximados de ingresos y patrimonio. Al continuar, abriremos WhatsApp con la información lista para enviar.",
+  "Comparte tus datos básicos para iniciar tu cotización. Tu solicitud ingresará directamente a nuestro sistema comercial para clasificación, seguimiento y atención por el equipo de Grupo A&C.",
   primaryCta: {
     label: "Cotizar mi declaración de renta",
     href: "https://wa.me/573118687774",

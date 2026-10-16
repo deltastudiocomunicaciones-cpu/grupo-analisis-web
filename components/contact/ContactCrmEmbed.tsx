@@ -1,50 +1,22 @@
-"use client";
 
-import Script from "next/script";
+
+import CrmEmbedGate from "@/components/ui/CrmEmbedGate";
 
 export default function ContactCrmEmbed() {
   return (
     <div className="space-y-5">
-      {/* MARCO CRM */}
-      <div
-        className="
-          overflow-hidden
-          rounded-[26px]
-          border
-          border-white/12
-          bg-white
-          shadow-[0_24px_80px_rgba(0,0,0,0.30)]
-        "
-      >
-        <iframe
-  src="https://api.sitioss.com/widget/form/NcSNz3yP9PW9MlGj2UbO"
-  id="inline-NcSNz3yP9PW9MlGj2UbO"
+     {/* MARCO CRM · ZERO LOAD */}
+<CrmEmbedGate
+  formId="NcSNz3yP9PW9MlGj2UbO"
+  formName="Contacto Web"
   title="Contacto Web"
-  className="block w-full border-0"
-  style={{
-    width: "100%",
-    height: "989px",
-    minHeight: "989px",
-    border: "none",
-    borderRadius: "0",
-    background: "#ffffff",
-  }}
-  data-layout='{"id":"INLINE"}'
-  data-trigger-type="alwaysShow"
-  data-trigger-value=""
-  data-activation-type="alwaysActivated"
-  data-activation-value=""
-  data-deactivation-type="neverDeactivate"
-  data-deactivation-value=""
-  data-form-name="Contacto Web"
-  data-height="989"
-  data-layout-iframe-id="inline-NcSNz3yP9PW9MlGj2UbO"
-  data-form-id="NcSNz3yP9PW9MlGj2UbO"
-  data-cookie-consent="true"
-  data-cookie-consent-provider="auto"
+  height={989}
+  eyebrow="Contacto Grupo A&C"
+  heading="Cuéntenos qué necesita resolver su empresa."
+  description="Al iniciar, su solicitud ingresará directamente a nuestro sistema comercial para clasificación, seguimiento y atención por el equipo correspondiente."
+  buttonLabel="Iniciar solicitud"
+  accentColor="#c96a1b"
 />
-      </div>
-
       {/* CAPA COMERCIAL SADI */}
       <div
         className="
@@ -151,10 +123,7 @@ export default function ContactCrmEmbed() {
         </div>
       </div>
 
-      <Script
-        src="https://api.sitioss.com/js/form_embed.js"
-        strategy="afterInteractive"
-      />
+
     </div>
   );
 }
