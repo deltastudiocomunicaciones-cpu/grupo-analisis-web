@@ -42,3 +42,6 @@ next-env.d.ts
 
 .vercel
 public/videos/intelligence.mp4
+
+# Multimedia masters - local only
+/media-source/

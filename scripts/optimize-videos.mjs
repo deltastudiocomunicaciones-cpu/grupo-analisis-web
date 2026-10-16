@@ -10,44 +10,38 @@ if (!ffmpegPath) {
 
 const videos = [
   {
-    input: "public/videos/chess_final.mp4",
+    input: "media-source/videos/chess_final.mp4",
     output: "public/videos/optimized/chess_final.mp4",
     width: 1920,
     crf: 28,
   },
   {
-    input: "public/videos/chess_final1.mp4",
+    input: "media-source/videos/chess_final1.mp4",
     output: "public/videos/optimized/chess_final1.mp4",
     width: 1920,
     crf: 30,
   },
   {
-    input: "public/videos/chess_final2.mp4",
+    input: "media-source/videos/chess_final2.mp4",
     output: "public/videos/optimized/chess_final2.mp4",
     width: 1920,
     crf: 30,
   },
   {
-    input: "public/videos/articulo-destacado.mp4",
+    input: "media-source/videos/articulo-destacado.mp4",
     output: "public/videos/optimized/articulo-destacado.mp4",
     width: 1600,
     crf: 30,
   },
   {
-    input: "public/videos/inversiones-v2.mp4",
+    input: "media-source/videos/inversiones-v2.mp4",
     output: "public/videos/optimized/inversiones-v2.mp4",
     width: 1600,
     crf: 30,
   },
   {
-    input: "public/videos/intelligence-v2.mp4",
+    input: "media-source/videos/intelligence-v2.mp4",
     output: "public/videos/optimized/intelligence-v2.mp4",
-    width: 1600,
-    crf: 30,
-  },
-  {
-    input: "public/videos/intro-grupo-ayc.mp4",
-    output: "public/videos/optimized/intro-grupo-ayc.mp4",
     width: 1600,
     crf: 30,
   },
@@ -67,6 +61,20 @@ function optimizeVideo(video) {
       return;
     }
 
+    const outputDirectory = path.dirname(video.output);
+    const outputName = path.basename(video.output, path.extname(video.output));
+
+    fs.mkdirSync(outputDirectory, { recursive: true });
+
+    const candidate = path.join(
+      outputDirectory,
+      `${outputName}.candidate.mp4`
+    );
+
+    if (fs.existsSync(candidate)) {
+      fs.rmSync(candidate, { force: true });
+    }
+
     const args = [
       "-y",
       "-i",
@@ -79,27 +87,61 @@ function optimizeVideo(video) {
       String(video.crf),
       "-preset",
       "slow",
+      "-pix_fmt",
+      "yuv420p",
       "-an",
       "-movflags",
       "+faststart",
-      video.output,
+      candidate,
     ];
 
-    console.log(`Optimizando: ${video.input}`);
+    console.log(`\nOptimizando: ${video.input}`);
 
     execFile(ffmpegPath, args, (error) => {
       if (error) {
+        if (fs.existsSync(candidate)) {
+          fs.rmSync(candidate, { force: true });
+        }
+
         reject(error);
         return;
       }
 
       const originalSize = fs.statSync(video.input).size;
-      const optimizedSize = fs.statSync(video.output).size;
+      const candidateSize = fs.statSync(candidate).size;
+
+      if (fs.existsSync(video.output)) {
+        const productionSize = fs.statSync(video.output).size;
+
+        console.log(
+          `Master: ${formatMB(originalSize)} MB | Producción actual: ${formatMB(
+            productionSize
+          )} MB | Candidato: ${formatMB(candidateSize)} MB`
+        );
+
+        if (candidateSize >= productionSize) {
+          fs.rmSync(candidate, { force: true });
+
+          console.log(
+            `RECHAZADO: el candidato no mejora el peso de ${video.output}`
+          );
+
+          resolve();
+          return;
+        }
+      } else {
+        console.log(
+          `Master: ${formatMB(originalSize)} MB | Nuevo candidato: ${formatMB(
+            candidateSize
+          )} MB`
+        );
+      }
+
+      fs.copyFileSync(candidate, video.output);
+      fs.rmSync(candidate, { force: true });
 
       console.log(
-        `Listo: ${video.output} | ${formatMB(originalSize)} MB → ${formatMB(
-          optimizedSize
-        )} MB`
+        `ACEPTADO: ${video.output} → ${formatMB(candidateSize)} MB`
       );
 
       resolve();
@@ -111,4 +153,4 @@ for (const video of videos) {
   await optimizeVideo(video);
 }
 
-console.log("Optimización de videos terminada.");
+console.log("\nOptimización de videos terminada.");
